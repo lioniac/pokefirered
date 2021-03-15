@@ -172,7 +172,7 @@ extern const u8 gText_ReturnToPC[];
 extern const u8 gText_OakForbidsUseOfItemHere[];
 extern const u8 gUnknown_8416451[];
 extern const u8 gUnknown_8416537[];
-extern const u8 gUnknown_841658C[];
+extern const u8 gText_PlayerUsedVar2[]; //gUnknown_841658C[]
 extern const u8 gUnknown_841659E[];
 extern const u8 gUnknown_84165D2[];
 extern const u8 gUnknown_8416600[];

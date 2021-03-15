@@ -78,7 +78,7 @@ bool32 sub_806E1C0(void)
 
 void sub_806E204(void)
 {
-    u16 *ptr = GetVarPointer(VAR_0x404E);
+    u16 *ptr = GetVarPointer(VAR_REPEL_LAST_USED);
     gSaveBlock2Ptr->pokedex.unknown2 = 0;
     *ptr = 0;
     FlagClear(FLAG_SYS_NATIONAL_DEX);
@@ -86,7 +86,7 @@ void sub_806E204(void)
 
 void EnableNationalPokedex(void)
 {
-    u16 *ptr = GetVarPointer(VAR_0x404E);
+    u16 *ptr = GetVarPointer(VAR_REPEL_LAST_USED);
     gSaveBlock2Ptr->pokedex.unknown2 = 0xB9;
     *ptr = 0x6258;
     FlagSet(FLAG_SYS_NATIONAL_DEX);
@@ -96,7 +96,7 @@ bool32 IsNationalPokedexEnabled(void)
 {
     if (gSaveBlock2Ptr->pokedex.unknown2 != 0xB9)
         return FALSE;
-    if (VarGet(VAR_0x404E) != 0x6258)
+    if (VarGet(VAR_REPEL_LAST_USED) != 0x6258)
         return FALSE;
     if (!FlagGet(FLAG_SYS_NATIONAL_DEX))
         return FALSE;
