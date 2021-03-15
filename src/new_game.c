@@ -168,6 +168,9 @@ void NewGameInitData(void)
     gSaveBlock1Ptr->seasonPedometer = 0;
     gSaveBlock1Ptr->season = 3;
     FlagSet(FLAG_SEASON_CHANGE);
+
+    //Gen6 Exp. Share
+    gSaveBlock2Ptr->expShare = 0;
 }
 
 static void ResetMiniGamesResults(void)
