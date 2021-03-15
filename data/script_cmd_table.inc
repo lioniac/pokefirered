@@ -137,7 +137,7 @@ gScriptCmdTable:: @ 815F9B4
 	.4byte ScrCmd_bufferstring
 	.4byte ScrCmd_pokemart
 	.4byte ScrCmd_pokemartdecoration
-	.4byte ScrCmd_pokemartdecoration2
+	.4byte ScrCmd_badgemart
 	.4byte ScrCmd_playslotmachine
 	.4byte ScrCmd_setberrytree
 	.4byte ScrCmd_choosecontestmon

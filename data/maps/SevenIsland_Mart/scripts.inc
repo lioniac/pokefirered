@@ -7,7 +7,7 @@ SevenIsland_Mart_EventScript_Clerk:: @ 8170B31
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart SevenIsland_Mart_Items
+	badgemart
 	msgbox Text_PleaseComeAgain
 	release
 	end

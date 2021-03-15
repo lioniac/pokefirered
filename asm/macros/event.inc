@@ -986,10 +986,10 @@
 	.4byte \products
 	.endm
 
-	@ Apparent clone of pokemart.
-	.macro pokemartbp products:req
+	@ Opens the Pokemart system, offering the specified products for sale,
+	@ based on number of badges.
+	.macro badgemart
 	.byte 0x88
-	.4byte \products
 	.endm
 
 	@ Starts up the slot machine minigame.

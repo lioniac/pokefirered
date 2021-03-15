@@ -1965,11 +1965,11 @@ bool8 ScrCmd_pokemartdecoration(struct ScriptContext * ctx)
     return TRUE;
 }
 
-bool8 ScrCmd_pokemartdecoration2(struct ScriptContext * ctx)
+bool8 ScrCmd_badgemart(struct ScriptContext * ctx)
 {
     const void *ptr = (void *)ScriptReadWord(ctx);
 
-    CreateDecorationShop2Menu(ptr);
+    CreatePokemartMenu(NULL);
     ScriptContext1_Stop();
     return TRUE;
 }

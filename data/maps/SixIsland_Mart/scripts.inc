@@ -7,7 +7,7 @@ SixIsland_Mart_EventScript_Clerk:: @ 8171E66
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart SixIsland_Mart_Items
+	badgemart
 	msgbox Text_PleaseComeAgain
 	release
 	end

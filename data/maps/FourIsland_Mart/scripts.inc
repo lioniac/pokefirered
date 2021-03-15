@@ -7,7 +7,7 @@ FourIsland_Mart_EventScript_Clerk:: @ 8171CAE
 	faceplayer
 	message Text_MayIHelpYou
 	waitmessage
-	pokemart FourIsland_Mart_Items
+	badgemart
 	msgbox Text_PleaseComeAgain
 	release
 	end
