@@ -20,6 +20,7 @@
 #include "script.h"
 #include "strings.h"
 #include "wild_encounter.h"
+#include "follow_me.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/songs.h"
@@ -224,7 +225,7 @@ static const struct {
     bool8 (*check)(u8 metatileBehavior);
     bool8 (*apply)(void);
 } sForcedMovementFuncs[] = {
-    {MetatileBehavior_IsUnknownMovement48, ForcedMovement_Slip},
+    {MetatileBehavior_IsTrickHouseSlipperyFloor, ForcedMovement_Slip},
     {MetatileBehavior_IsIce_2, ForcedMovement_Slip},
     {MetatileBehavior_IsWalkSouth, ForcedMovement_WalkSouth},
     {MetatileBehavior_IsWalkNorth, ForcedMovement_WalkNorth},
@@ -1584,6 +1585,7 @@ static void CreateStopSurfingTask(u8 direction)
     taskId = CreateTask(Task_StopSurfingInit, 0xFF);
     gTasks[taskId].data[0] = direction;
     Task_StopSurfingInit(taskId);
+    PrepareFollowerDismountSurf();
 }
 
 void CreateStopSurfingTask_NoMusicChange(u8 direction)
@@ -1618,7 +1620,7 @@ static void Task_StopSurfingInit(u8 taskId)
         if (!ObjectEventClearHeldMovementIfFinished(playerObjEvent))
             return;
     }
-    sub_80DC44C(playerObjEvent->fieldEffectSpriteId, 2);
+    BindFieldEffectToSprite(playerObjEvent->fieldEffectSpriteId, 2);
     QL_TryRecordPlayerStepWithDuration0(playerObjEvent, sub_80641EC((u8)gTasks[taskId].data[0]));
     gTasks[taskId].func = Task_WaitStopSurfing;
 }

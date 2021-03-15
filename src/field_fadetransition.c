@@ -20,24 +20,24 @@
 #include "field_specials.h"
 #include "event_object_lock.h"
 #include "start_menu.h"
+#include "follow_me.h"
 #include "constants/songs.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/field_weather.h"
 
 static void sub_807DF4C(u8 a0);
-static void sub_807DFBC(u8 taskId);
-static void task_map_chg_seq_0807E20C(u8 taskId);
+static void Task_ExitDoor(u8 taskId);
+static void Task_ExitNonAnimDoor(u8 taskId);
 static void task_map_chg_seq_0807E2CC(u8 taskId);
 static void Task_TeleportWarpIn(u8 taskId);
-static void Task_Teleport2Warp(u8 taskId);
 static void Task_TeleportWarp(u8 taskId);
 static void Task_DoorWarp(u8 taskId);
 static void Task_StairWarp(u8 taskId);
 static void sub_807EB64(u16, s16*, s16*);
 static void sub_807EBBC(u8 a0, s16 *a1, s16 *a2);
 static void sub_807EAC4(s16, s16, s16*, s16*, s16*);
-static void sub_807EC34(u8 taskId);
+static void task_map_chg_seq_with_enter_movement(u8 taskId);
 static void sub_807ECBC(s16 *, s16 *, s16 *, s16 *, s16 *);
 static bool8 sub_807EDA0(s16 *, s16 *, s16 *, s16 *, s16 *);
 
@@ -124,7 +124,7 @@ static void sub_807DC70(void)
     }
 }
 
-static void sub_807DCB0(bool8 arg)
+void SetPlayerVisibility(bool8 arg)
 {
     SetPlayerInvisibility(!arg);
 }
@@ -236,7 +236,7 @@ void FieldCB_ReturnToFieldWirelessLink(void)
     CreateTask(sub_807DDF0, 10);
 }
 
-static void sub_807DE78(bool8 a0)
+static void SetUpWarpExitTask(bool8 a0)
 {
     s16 x, y;
     u32 behavior;
@@ -246,7 +246,7 @@ static void sub_807DE78(bool8 a0)
     behavior = MapGridGetMetatileBehaviorAt(x, y);
     if (MetatileBehavior_IsWarpDoor_2(behavior) == TRUE)
     {
-        func = sub_807DFBC;
+        func = Task_ExitDoor;
         switch (MapTransitionIsExit(GetLastUsedWarpMapType(), GetCurrentMapType()))
         {
         case 0:
@@ -261,13 +261,13 @@ static void sub_807DE78(bool8 a0)
     {
         sub_807DF4C(a0);
         if (MetatileBehavior_IsNonAnimDoor(behavior) == TRUE)
-            func = task_map_chg_seq_0807E20C;
+            func = Task_ExitNonAnimDoor;
         else if (MetatileBehavior_IsDirectionalStairWarp(behavior) == TRUE)
         {
             u8 tmp = gUnknown_2031DE0;
             func = task_map_chg_seq_0807E2CC;
             if (!tmp)
-                func = sub_807EC34;
+                func = task_map_chg_seq_with_enter_movement;
         }
         else
             func = task_map_chg_seq_0807E2CC;
@@ -288,7 +288,8 @@ void FieldCB_DefaultWarpExit(void)
 {
     Overworld_PlaySpecialMapMusic();
     QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
-    sub_807DE78(FALSE);
+    SetUpWarpExitTask(FALSE);
+    FollowMe_WarpSetEnd();
     ScriptContext2_Enable();
 }
 
@@ -296,7 +297,7 @@ void FieldCB_WarpExitFadeFromBlack(void)
 {
     Overworld_PlaySpecialMapMusic();
     QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
-    sub_807DE78(TRUE);
+    SetUpWarpExitTask(TRUE);
     ScriptContext2_Enable();
 }
 
@@ -310,7 +311,7 @@ static void FieldCB_TeleportWarpIn(void)
     ScriptContext2_Enable();
 }
 
-static void sub_807DFBC(u8 taskId)
+static void Task_ExitDoor(u8 taskId)
 {
     struct Task * task = &gTasks[taskId];
     s16 *x = &task->data[2];
@@ -322,14 +323,15 @@ static void sub_807DFBC(u8 taskId)
     switch (task->data[0])
     {
     case 0: // Never reached
-        sub_807DCB0(0);
+        HideFollower();
+        SetPlayerVisibility(0);
         FreezeObjectEvents();
         PlayerGetDestCoords(x, y);
         FieldSetDoorOpened(*x, *y);
         task->data[0] = 1;
         break;
     case 5:
-        sub_807DCB0(0);
+        SetPlayerVisibility(0);
         FreezeObjectEvents();
         DoOutwardBarnDoorWipe();
         sub_807DBAC();
@@ -349,7 +351,7 @@ static void sub_807DFBC(u8 taskId)
         if (!FieldIsDoorAnimationRunning())
         {
             PlayerGetDestCoords(&task->data[12], &task->data[13]);
-            sub_807DCB0(TRUE);
+            SetPlayerVisibility(TRUE);
             ObjectEventSetHeldMovement(&gObjectEvents[GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0)], MOVEMENT_ACTION_WALK_NORMAL_DOWN);
             task->data[0] = 8;
         }
@@ -363,7 +365,7 @@ static void sub_807DFBC(u8 taskId)
         }
         break;
     case 9:
-        if (FieldFadeTransitionBackgroundEffectIsFinished() && walkrun_is_standing_still() && !FieldIsDoorAnimationRunning() && !FuncIsActiveTask(Task_BarnDoorWipe))
+        if (FieldFadeTransitionBackgroundEffectIsFinished() && IsPlayerStandingStill() && !FieldIsDoorAnimationRunning() && !FuncIsActiveTask(Task_BarnDoorWipe))
         {
             ObjectEventClearHeldMovementIfFinished(&gObjectEvents[GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0)]);
             task->data[0] = 4;
@@ -373,13 +375,13 @@ static void sub_807DFBC(u8 taskId)
     case 1:
         if (FieldFadeTransitionBackgroundEffectIsFinished())
         {
-            sub_807DCB0(TRUE);
+            SetPlayerVisibility(TRUE);
             ObjectEventSetHeldMovement(&gObjectEvents[GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0)], MOVEMENT_ACTION_WALK_NORMAL_DOWN);
             task->data[0] = 2;
         }
         break;
     case 2:
-        if (walkrun_is_standing_still())
+        if (IsPlayerStandingStill())
         {
             task->data[1] = FieldAnimateDoorClose(*x, *y);
             ObjectEventClearHeldMovementIfFinished(&gObjectEvents[GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0)]);
@@ -388,7 +390,11 @@ static void sub_807DFBC(u8 taskId)
         break;
     case 3:
         if (task->data[1] < 0 || gTasks[task->data[1]].isActive != TRUE)
+        {
+            FollowMe_SetIndicatorToComeOutDoor();
+            FollowMe_WarpSetEnd();
             task->data[0] = 4;
+        }
         break;
     case 4:
         UnfreezeObjectEvents();
@@ -398,7 +404,7 @@ static void sub_807DFBC(u8 taskId)
     }
 }
 
-static void task_map_chg_seq_0807E20C(u8 taskId)
+static void Task_ExitNonAnimDoor(u8 taskId)
 {
     struct Task * task = &gTasks[taskId];
     s16 *x = &task->data[2];
@@ -407,7 +413,8 @@ static void task_map_chg_seq_0807E20C(u8 taskId)
     switch (task->data[0])
     {
     case 0:
-        sub_807DCB0(0);
+        HideFollower();
+        SetPlayerVisibility(0);
         FreezeObjectEvents();
         PlayerGetDestCoords(x, y);
         task->data[0] = 1;
@@ -415,14 +422,16 @@ static void task_map_chg_seq_0807E20C(u8 taskId)
     case 1:
         if (FieldFadeTransitionBackgroundEffectIsFinished())
         {
-            sub_807DCB0(TRUE);
+            SetPlayerVisibility(TRUE);
             ObjectEventSetHeldMovement(&gObjectEvents[GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0)], GetWalkNormalMovementAction(GetPlayerFacingDirection()));
             task->data[0] = 2;
         }
         break;
     case 2:
-        if (walkrun_is_standing_still())
+        if (IsPlayerStandingStill())
         {
+            FollowMe_SetIndicatorToComeOutDoor();
+            FollowMe_WarpSetEnd();
             task->data[0] = 3;
         }
         break;
@@ -467,6 +476,7 @@ static void Task_TeleportWarpIn(u8 taskId)
     case 1:
         if (FieldFadeTransitionBackgroundEffectIsFinished() && WaitTeleportInPlayerAnim() != TRUE)
         {
+            FollowMe_WarpSetEnd();
             UnfreezeObjectEvents();
             ScriptContext2_Disable();
             DestroyTask(taskId);
@@ -683,9 +693,10 @@ void ReturnFromLinkRoom(void)
     CreateTask(Task_ReturnFromLinkRoomWarp, 10);
 }
 
-static void Task_Teleport2Warp(u8 taskId)
+void Task_Teleport2Warp(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
+
     switch (task->data[0])
     {
     case 0:
@@ -759,11 +770,11 @@ static void Task_DoorWarp(u8 taskId)
         }
         break;
     case 2:
-        if (walkrun_is_standing_still())
+        if (IsPlayerStandingStill())
         {
             task->data[1] = FieldAnimateDoorClose(*xp, *yp - 1);
             ObjectEventClearHeldMovementIfFinished(&gObjectEvents[GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0)]);
-            sub_807DCB0(FALSE);
+            SetPlayerVisibility(FALSE);
             task->data[0] = 3;
         }
         break;
@@ -849,8 +860,9 @@ static void sub_807EAC4(s16 a0, s16 a1, s16 *a2, s16 *a3, s16 *a4)
         *a3 += a1;
     *a2 += a0;
     (*a4)++;
-    playerSpr->x2 = *a2 >> 5;
-    playerSpr->y2 = *a3 >> 5;
+    playerSpr->pos2.x = *a2 >> 5;
+    playerSpr->pos2.y = *a3 >> 5;
+    StairsMoveFollower();
     if (playerObj->heldMovementFinished)
     {
         ObjectEventForceSetHeldMovement(playerObj, GetWalkInPlaceNormalMovementAction(GetPlayerFacingDirection()));
@@ -892,7 +904,7 @@ static void sub_807EBBC(u8 a0, s16 *a1, s16 *a2)
     }
 }
 
-static void sub_807EC34(u8 taskId)
+static void task_map_chg_seq_with_enter_movement(u8 taskId)
 {
     s16 * data = gTasks[taskId].data;
     switch (data[0])
@@ -900,6 +912,7 @@ static void sub_807EC34(u8 taskId)
     default:
         if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
         {
+            FollowMe_WarpSetEnd();
             CameraObjectReset1();
             ScriptContext2_Disable();
             DestroyTask(taskId);

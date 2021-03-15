@@ -155,6 +155,9 @@ void NewGameInitData(void)
     //Register LR
     gSaveBlock1Ptr->registeredItemL = 0;
     gSaveBlock1Ptr->registeredItemR = 0;
+
+    //FollowMe
+    memset(&gSaveBlock1Ptr->follower, 0, sizeof(gSaveBlock1Ptr->follower));
 }
 
 static void ResetMiniGamesResults(void)

@@ -25,6 +25,7 @@
 #include "trainer_pokemon_sprites.h"
 #include "trig.h"
 #include "util.h"
+#include "follow_me.h"
 #include "constants/event_object_movement.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/songs.h"
@@ -1240,7 +1241,9 @@ static bool8 FallWarpEffect_7(struct Task * task)
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_SURFING);
         SetHelpContext(HELPCONTEXT_SURFING);
     }
+
     DestroyTask(FindTaskIdByFunc(Task_FallWarpFieldEffect));
+    FollowMe_WarpSetEnd();
     return FALSE;
 }
 
@@ -1309,6 +1312,7 @@ static bool8 EscalatorWarpEffect_2(struct Task * task)
         task->data[0]++;
         task->data[2] = 0;
         task->data[3] = 0;
+        EscalatorMoveFollower(task->data[1]);
         if ((u8)task->data[1] == 0)
         {
             task->data[0] = 4;
@@ -1433,6 +1437,7 @@ static bool8 EscalatorWarpInEffect_1(struct Task * task)
     s16 x;
     s16 y;
     u8 behavior;
+
     CameraObjectReset2();
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(DIR_EAST));
@@ -1444,11 +1449,14 @@ static bool8 EscalatorWarpInEffect_1(struct Task * task)
     {
         behavior = 1;
         task->data[0] = 3;
-    } else
+    }
+    else
     {
         behavior = 0;
     }
+
     StartEscalator(behavior);
+    EscalatorMoveFollowerFinish();
     return TRUE;
 }
 
@@ -2947,6 +2955,7 @@ static void UseSurfEffect_4(struct Task * task)
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_RIDE));
         ObjectEventClearHeldMovementIfFinished(objectEvent);
         ObjectEventSetHeldMovement(objectEvent, sub_80641C0(objectEvent->movementDirection));
+        FollowMe_FollowerToWater();
         gFieldEffectArguments[0] = task->data[1];
         gFieldEffectArguments[1] = task->data[2];
         gFieldEffectArguments[2] = gPlayerAvatar.objectEventId;
@@ -2964,7 +2973,7 @@ static void UseSurfEffect_5(struct Task * task)
         gPlayerAvatar.preventStep = FALSE;
         gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_CONTROLLABLE;
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(objectEvent->movementDirection));
-        sub_80DC44C(objectEvent->fieldEffectSpriteId, 1);
+        BindFieldEffectToSprite(objectEvent->fieldEffectSpriteId, 1);
         UnfreezeObjectEvents();
         ScriptContext2_Disable();
         FieldEffectActiveListRemove(FLDEFF_USE_SURF);
@@ -3157,7 +3166,7 @@ static void UseFlyEffect_3(struct Task * task)
         struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         if (task->data[15] & 0x08)
         {
-            sub_80DC44C(objectEvent->fieldEffectSpriteId, 2);
+            BindFieldEffectToSprite(objectEvent->fieldEffectSpriteId, 2);
             sub_80DC478(objectEvent->fieldEffectSpriteId, 0);
         }
         task->data[1] = sub_8087168();
@@ -3441,7 +3450,7 @@ static void FlyInEffect_1(struct Task * task)
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ON_FOOT);
         if (task->data[15] & PLAYER_AVATAR_FLAG_SURFING)
         {
-            sub_80DC44C(objectEvent->fieldEffectSpriteId, 0);
+            BindFieldEffectToSprite(objectEvent->fieldEffectSpriteId, 0);
         }
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_FIELD_MOVE));
         CameraObjectReset2();
@@ -3556,7 +3565,7 @@ static void FlyInEffect_7(struct Task * task)
         if (task->data[15] & PLAYER_AVATAR_FLAG_SURFING)
         {
             state = PLAYER_AVATAR_GFX_RIDE;
-            sub_80DC44C(objectEvent->fieldEffectSpriteId, 1);
+            BindFieldEffectToSprite(objectEvent->fieldEffectSpriteId, 1);
         }
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(state));
         ObjectEventTurn(objectEvent, DIR_SOUTH);

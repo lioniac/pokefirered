@@ -5,6 +5,7 @@
 #include "credits.h"
 #include "event_data.h"
 #include "event_object_movement.h"
+#include "event_object_lock.h"
 #include "event_scripts.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
@@ -47,6 +48,7 @@
 #include "trainer_pokemon_sprites.h"
 #include "vs_seeker.h"
 #include "wild_encounter.h"
+#include "follow_me.h"
 #include "constants/maps.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
@@ -1413,6 +1415,10 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
         }
     }
     RunQuestLogCB();
+
+    // if stop running but keep holding B -> fix follower frame
+    if (PlayerHasFollower() && IsPlayerOnFoot() && IsPlayerStandingStill())
+        ObjectEventSetHeldMovement(&gObjectEvents[GetFollowerObjectId()], GetFaceDirectionAnimNum(gObjectEvents[GetFollowerObjectId()].facingDirection));
 }
 
 static void DoCB1_Overworld_QuestLogPlayback(void)
@@ -1936,6 +1942,7 @@ static bool32 sub_8056CD8(u8 *state)
         sub_8057024(FALSE);
         ReloadObjectsAndRunReturnToFieldMapScript();
         sub_8057114();
+        FollowMe_BindToSurbBlobOnReloadScreen();
         (*state)++;
         break;
     case 1:
@@ -2140,6 +2147,7 @@ static void mli4_mapscripts_and_other(void)
     ResetInitialPlayerAvatarState();
     TrySpawnObjectEvents(0, 0);
     TryRunOnWarpIntoMapScript();
+    FollowMe_HandleSprite();
 }
 
 static void ReloadObjectsAndRunReturnToFieldMapScript(void)

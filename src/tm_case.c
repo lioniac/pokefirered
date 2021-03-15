@@ -1500,8 +1500,8 @@ static void UpdateTMSpritePosition(struct Sprite * sprite, u8 tmId)
         y = 0x2E + (((0x800 * tmId) / NUM_TMHMS) >> 8);
     }
 
-    sprite->pos1.x = x;
-    sprite->pos1.y = y;
+    sprite->x = x;
+    sprite->y = y;
 }
 
 static void InitSelectedTMSpriteData(u8 spriteId, u16 itemId)

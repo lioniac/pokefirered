@@ -25,6 +25,7 @@
 #include "trainer_see.h"
 #include "vs_seeker.h"
 #include "wild_encounter.h"
+#include "follow_me.h"
 #include "constants/songs.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
@@ -624,12 +625,13 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
 
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, u8 direction)
 {
-    if (MetatileBehavior_IsSemiDeepWater(metatileBehavior) == TRUE &&PartyHasMonWithSurf() == TRUE)
+    if (MetatileBehavior_IsSemiDeepWater(metatileBehavior) == TRUE && PartyHasMonWithSurf() == TRUE)
         return EventScript_CurrentTooFast;
-    if (FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
+
+    if (FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE && CheckFollowerFlag(FOLLOWER_FLAG_CAN_SURF))
         return EventScript_UseSurf;
 
-    if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE)
+    if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE && CheckFollowerFlag(FOLLOWER_FLAG_CAN_WATERFALL))
     {
         if (FlagGet(FLAG_BADGE07_GET) == TRUE && IsPlayerSurfingNorth() == TRUE)
             return EventScript_Waterfall;
@@ -638,6 +640,34 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
     }
     return NULL;
 }
+
+#ifdef DIVE_ENABLED //prevent trying to compile until dive is implemented fully
+static bool32 TrySetupDiveDownScript(void)
+{
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_DIVE))
+        return FALSE;
+
+    if (FlagGet(FLAG_BADGE07_GET) && TrySetDiveWarp() == 2)
+    {
+        ScriptContext1_SetupScript(EventScript_UseDive);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupDiveEmergeScript(void)
+{
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_DIVE))
+        return FALSE;
+
+    if (FlagGet(FLAG_BADGE07_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+    {
+        ScriptContext1_SetupScript(EventScript_UseDiveUnderwater);
+        return TRUE;
+    }
+    return FALSE;
+}
+#endif
 
 static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileBehavior, u16 direction)
 {

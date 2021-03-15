@@ -34,7 +34,7 @@ bool8 MetatileBehavior_IsSouthArrowWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_UnusedIsArrowWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior);
 bool8 MetatileBehavior_IsIce_2(u8 metatileBehavior);
-bool8 MetatileBehavior_IsUnknownMovement48(u8 metatileBehavior);
+bool8 MetatileBehavior_IsTrickHouseSlipperyFloor(u8 metatileBehavior);
 bool8 MetatileBehavior_IsWalkNorth(u8 metatileBehavior);
 bool8 MetatileBehavior_IsWalkSouth(u8 metatileBehavior);
 bool8 MetatileBehavior_IsWalkWest(u8 metatileBehavior);

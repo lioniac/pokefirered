@@ -6,7 +6,7 @@
 #include "event_data.h"
 #include "constants/event_objects.h"
 
-bool8 walkrun_is_standing_still(void)
+bool8 IsPlayerStandingStill(void)   //walkrun_is_standing_still
 {
     if (gPlayerAvatar.tileTransitionState == 1)
         return FALSE;
@@ -16,7 +16,7 @@ bool8 walkrun_is_standing_still(void)
 
 void Task_WaitPlayerStopMoving(u8 taskId)
 {
-    if (walkrun_is_standing_still())
+    if (IsPlayerStandingStill())
     {
         HandleEnforcedLookDirectionOnPlayerStopMoving();
         DestroyTask(taskId);
@@ -44,7 +44,7 @@ void Task_WaitPlayerAndTargetNPCStopMoving(u8 taskId)
 {
     struct Task * task = &gTasks[taskId];
 
-    if (task->data[0] == 0 && walkrun_is_standing_still() == TRUE)
+    if (task->data[0] == 0 && IsPlayerStandingStill() == TRUE)
     {
         HandleEnforcedLookDirectionOnPlayerStopMoving();
         task->data[0] = 1;

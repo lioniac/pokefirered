@@ -14,7 +14,7 @@
 // Exported ROM declarations
 
 u8 CreateWarpArrowSprite(void);
-void sub_80DC44C(u8, u8);
+void BindFieldEffectToSprite(u8, u8);
 void sub_80DC478(u8, u8);
 void StartAshFieldEffect(s16, s16, u16, s16);
 void sub_80DCBB8(struct ObjectEvent *);
@@ -40,6 +40,6 @@ void UpdateLongGrassFieldEffect(struct Sprite * sprite);
 void UpdateSandPileFieldEffect(struct Sprite * sprite);
 void UpdateDisguiseFieldEffect(struct Sprite * sprite);
 void UpdateHotSpringsWaterFieldEffect(struct Sprite * sprite);
-u8 CreateDiveBobbingSprite(u8 oldSpriteId);
+u8 CreateDiveBobbingSprite(u8 oldSpriteId); //u8 DoBobbingFieldEffect(u8 oldSpriteId);
 
 #endif //GUARD_FIELD_EFFECT_HELPERS_H

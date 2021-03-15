@@ -79,6 +79,8 @@ void ResetFacingNpcOrSignPostVars(void);
 bool8 CanWalkAwayToCancelMsgBox(void);
 void SetWalkingIntoSignVars(void);
 bool8 IsMsgBoxWalkawayDisabled(void);
+//new
+u8* GetScriptDataPointer(u8 index);
 
 extern const u8 *gRAMScriptPtr;
 extern u8 gWalkAwayFromSignInhibitTimer;

@@ -159,7 +159,7 @@ bool8 CheckBagHasTM(u16 itemId)
     return FALSE;
 }
 
-bool8 CheckHasAtLeastOneBerry(void)
+bool8 HasAtLeastOneBerry(void)
 {
     u8 itemId;
     bool8 exists;

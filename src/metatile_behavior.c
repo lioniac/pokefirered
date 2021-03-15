@@ -282,7 +282,7 @@ bool8 MetatileBehavior_IsIce_2(u8 metatileBehavior)
         return FALSE;
 }
 
-bool8 MetatileBehavior_IsUnknownMovement48(u8 metatileBehavior)
+bool8 MetatileBehavior_IsTrickHouseSlipperyFloor(u8 metatileBehavior) //MetatileBehavior_IsUnknownMovement48
 {
     if(metatileBehavior == MB_UNKNOWN_MOVEMENT_48)
         return TRUE;

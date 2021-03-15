@@ -35,4 +35,7 @@ void FieldCB_ContinueScript(void);
 void FieldCB_ContinueScriptHandleMusic(void);
 void FieldCB_WarpExitFadeFromBlack(void);
 
+void Task_Teleport2Warp(u8 taskId);
+void SetPlayerVisibility(bool8 arg);
+
 #endif // GUARD_FIELD_FADETRANSITION_H

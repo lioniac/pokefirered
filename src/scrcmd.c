@@ -33,6 +33,7 @@
 #include "field_effect.h"
 #include "fieldmap.h"
 #include "field_door.h"
+#include "follow_me.h"
 #include "constants/event_objects.h"
 
 extern u16 (*const gSpecials[])(void);
@@ -2255,5 +2256,30 @@ bool8 ScrCmd_setmonmetlocation(struct ScriptContext * ctx)
 
     if (partyIndex < PARTY_SIZE)
         SetMonData(&gPlayerParty[partyIndex], MON_DATA_MET_LOCATION, &location);
+    return FALSE;
+}
+
+bool8 ScrCmd_handlefollower(struct ScriptContext *ctx)
+{
+    u8 caseId = ScriptReadByte(ctx);
+    u8 localId = ScriptReadByte(ctx);
+    u16 flags = ScriptReadHalfword(ctx);
+
+    switch (caseId)
+    {
+    case FLAG_SET_FOLLOWER:
+        SetUpFollowerSprite(localId, flags);
+        break;
+    case FLAG_REMOVE_FOLLOWER:
+        DestroyFollower();
+        break;
+    case FLAG_FACE_FOLLOWER:
+        PlayerFaceFollowerSprite();
+        break;
+    case FLAG_CHECK_FOLLOWER:
+        CheckPlayerHasFollower();
+        break;
+    }
+
     return FALSE;
 }

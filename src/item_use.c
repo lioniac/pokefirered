@@ -31,6 +31,7 @@
 #include "teachy_tv.h"
 #include "tm_case.h"
 #include "vs_seeker.h"
+#include "follow_me.h"
 #include "constants/fanfares.h"
 #include "constants/items.h"
 #include "constants/maps.h"
@@ -280,6 +281,7 @@ static void ItemUseOnFieldCB_Bicycle(u8 taskId)
     ClearPlayerHeldMovementAndUnfreezeObjectEvents();
     ScriptContext2_Disable();
     DestroyTask(taskId);
+    FollowMe_HandleBike();
 }
 
 void FieldUseFunc_OldRod(u8 taskId)
@@ -614,6 +616,9 @@ static void sub_80A1B48(u8 taskId)
 
 bool8 CanUseEscapeRopeOnCurrMap(void)
 {
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_LEAVE_ROUTE))
+        return FALSE;
+
     if (gMapHeader.flags & MAP_ALLOW_ESCAPE_ROPE)
         return TRUE;
     else
