@@ -1234,7 +1234,7 @@ static bool8 FallWarpEffect_7(struct Task * task)
     InstallCameraPanAheadCallback();
     PlayerGetDestCoords(&x, &y);
     // Seafoam Islands
-    if (sub_8055B38(MapGridGetMetatileBehaviorAt(x, y)) == TRUE)
+    if (MetatileBehavior_IsSurfableWaterOrUnderwater(MapGridGetMetatileBehaviorAt(x, y)) == TRUE)
     {
         VarSet(VAR_TEMP_1, 1);
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_SURFING);
@@ -3192,7 +3192,7 @@ static void UseFlyEffect_6(struct Task * task)
     if ((++task->data[2]) >= 8)
     {
         struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-        ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_RIDE));
+        ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_FIELD_MOVE));
         StartSpriteAnim(&gSprites[objectEvent->spriteId], 0x16);
         objectEvent->inanimate = TRUE;
         ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_JUMP_IN_PLACE_LEFT);
@@ -3443,7 +3443,7 @@ static void FlyInEffect_1(struct Task * task)
         {
             sub_80DC44C(objectEvent->fieldEffectSpriteId, 0);
         }
-        ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_RIDE));
+        ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_FIELD_MOVE));
         CameraObjectReset2();
         ObjectEventTurn(objectEvent, DIR_WEST);
         StartSpriteAnim(&gSprites[objectEvent->spriteId], 0x16);
@@ -3548,6 +3548,7 @@ static void FlyInEffect_7(struct Task * task)
 {
     u8 state;
     struct ObjectEvent * objectEvent;
+
     if ((--task->data[1]) == 0)
     {
         objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];

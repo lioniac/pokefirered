@@ -71,6 +71,9 @@ static bool8 TryDoorWarp(struct MapPosition * position, u16 metatileBehavior, u8
 static s8 GetWarpEventAtPosition(struct MapHeader * mapHeader, u16 x, u16 y, u8 z);
 static const u8 *GetCoordEventScriptAtPosition(struct MapHeader * mapHeader, u16 x, u16 y, u8 z);
 
+static bool32 TrySetupDiveEmergeScript(void);
+static bool32 TrySetupDiveDownScript(void);
+
 struct FieldInput gInputToStoreInQuestLogMaybe;
 
 void FieldClearPlayerInput(struct FieldInput *input)
@@ -214,6 +217,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (TryRunOnFrameMapScript() == TRUE)
         return TRUE;
 
+    if (input->pressedBButton && TrySetupDiveEmergeScript() == TRUE)
+        return TRUE;
+
     if (input->tookStep)
     {
         IncrementGameStat(GAME_STAT_STEPS);
@@ -282,6 +288,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             return TRUE;
         }
     }
+
+    if (input->pressedAButton && TrySetupDiveDownScript() == TRUE)
+        return TRUE;
 
     if (input->pressedStartButton)
     {
@@ -1155,7 +1164,7 @@ bool8 dive_warp(struct MapPosition *position, u16 metatileBehavior)
     return FALSE;
 }
 
-static u8 TrySetDiveWarp(void)
+u8 TrySetDiveWarp(void)
 {
     s16 x, y;
     u8 metatileBehavior;
@@ -1194,4 +1203,25 @@ int SetCableClubWarp(void)
     MapGridGetMetatileBehaviorAt(position.x, position.y);  // unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
+}
+
+//dive
+static bool32 TrySetupDiveDownScript(void)
+{
+    if (FlagGet(FLAG_BADGE07_GET) && TrySetDiveWarp() == 2)
+    {
+        ScriptContext1_SetupScript(EventScript_UseDive);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupDiveEmergeScript(void)
+{
+    if (FlagGet(FLAG_BADGE07_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+    {
+        ScriptContext1_SetupScript(EventScript_UseDiveUnderwater);
+        return TRUE;
+    }
+    return FALSE;
 }

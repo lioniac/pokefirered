@@ -29,14 +29,23 @@ ViridianCity_Gym_EventScript_GiveTM26:: @ 8169F2F
 	msgbox ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis
 	checkitemspace ITEM_TM26, 1
 	compare VAR_RESULT, FALSE
-	goto_if_eq ViridianCity_Gym_EventScript_NoRoomForTM26
+	goto_if_eq ViridianCity_Gym_EventScript_NoRoomForItem
 	giveitem_msg ViridianCity_Gym_Text_ReceivedTM26FromGiovanni, ITEM_TM26
 	setflag FLAG_GOT_TM26_FROM_GIOVANNI
 	msgbox ViridianCity_Gym_Text_ExplainTM26
+	goto ViridianCity_Gym_EventScript_GiveHM08
+	end
+
+ViridianCity_Gym_EventScript_GiveHM08::
+	checkitemspace ITEM_HM08, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq ViridianCity_Gym_EventScript_NoRoomForItem
+	giveitem_msg ViridianCity_Gym_Text_ReceivedHM08FromGiovanni, ITEM_HM08
+	msgbox ViridianCity_Gym_Text_ExplainHM08
 	release
 	end
 
-ViridianCity_Gym_EventScript_NoRoomForTM26:: @ 8169F70
+ViridianCity_Gym_EventScript_NoRoomForItem:: @ 8169F70
 	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace
 	release
 	end

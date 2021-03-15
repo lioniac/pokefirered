@@ -512,12 +512,16 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         return;
     }
 
-    if (heldKeys & B_BUTTON)
+    if (heldKeys & B_BUTTON && !(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER))
         PlayerGoSpeed1(direction);
-    else if (gSaveBlock2Ptr->autoRun && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
+    else if (gSaveBlock2Ptr->autoRun && !(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
     {
         PlayerRun(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
+    }
+    else
+    {
+        PlayerGoSpeed1(direction);
     }
 }
 
@@ -724,7 +728,10 @@ static void PlayerAvatarTransition_Surfing(struct ObjectEvent * playerObjEvent)
 
 static void PlayerAvatarTransition_Underwater(struct ObjectEvent * playerObjEvent)
 {
-
+    ObjectEventSetGraphicsId(playerObjEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_UNDERWATER));
+    ObjectEventTurn(playerObjEvent, playerObjEvent->movementDirection);
+    SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_UNDERWATER);
+    playerObjEvent->fieldEffectSpriteId = CreateDiveBobbingSprite(playerObjEvent->spriteId);
 }
 
 static void PlayerAvatarTransition_ReturnToField(struct ObjectEvent * playerObjEvent)
@@ -1119,6 +1126,7 @@ void StopPlayerAvatar(void)
     }
 }
 
+// this table originally had NOTHING to do with the player avatar state. It has been updated to be more consistent with the player avatar state flags
 static const u8 sPlayerAvatarGfxIds[][GENDER_COUNT] = {
     [PLAYER_AVATAR_GFX_NORMAL]     = {OBJ_EVENT_GFX_RED_NORMAL,     OBJ_EVENT_GFX_GREEN_NORMAL},
     [PLAYER_AVATAR_GFX_BIKE]       = {OBJ_EVENT_GFX_RED_BIKE,       OBJ_EVENT_GFX_GREEN_BIKE},
@@ -1138,6 +1146,7 @@ u8 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gender);
 }
 
+// game freak is dumb and decided to make this state-based table not relate to the states defined in global.fieldmap.h
 u8 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
     return sPlayerAvatarGfxIds[state][gender];
@@ -1224,16 +1233,20 @@ void SetPlayerAvatarStateMask(u8 flags)
     gPlayerAvatar.flags |= flags;
 }
 
-static const u8 sPlayerAvatarGfxToStateFlag[][3][GENDER_COUNT] = {
-    [MALE] = {
+static const u8 sPlayerAvatarGfxToStateFlag[][4][2] = {
+    // Male
+    {
         {OBJ_EVENT_GFX_RED_NORMAL, PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_RED_BIKE,   PLAYER_AVATAR_FLAG_MACH_BIKE},
         {OBJ_EVENT_GFX_RED_SURF,   PLAYER_AVATAR_FLAG_SURFING},
+        {OBJ_EVENT_GFX_RED_SURF,   PLAYER_AVATAR_FLAG_UNDERWATER},  //change to your male dive sprite
     },
-    [FEMALE] = {
+    // Female
+    {
         {OBJ_EVENT_GFX_GREEN_NORMAL, PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_GREEN_BIKE,   PLAYER_AVATAR_FLAG_MACH_BIKE},
         {OBJ_EVENT_GFX_GREEN_SURF,   PLAYER_AVATAR_FLAG_SURFING},
+        {OBJ_EVENT_GFX_GREEN_SURF,   PLAYER_AVATAR_FLAG_UNDERWATER},  //change to your female dive sprite
     }
 };
 

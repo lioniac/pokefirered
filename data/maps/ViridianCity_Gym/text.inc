@@ -49,6 +49,18 @@ ViridianCity_Gym_Text_ExplainTM26:: @ 818F695
     .string "I made it when I ran the GYM here,\n"
     .string "far too long ago… $"
 
+ViridianCity_Gym_Text_ReceivedHM08FromGiovanni::
+    .string "{PLAYER} received HM08\n"
+    .string "from GIOVANNI.$"
+
+ViridianCity_Gym_Text_ExplainHM08::
+    .string "Lastly, take this. The last HM.\n"
+    .string "It contains DIVE. You submerge\p"
+    .string "in deep water and explore.\n"
+    .string "It also a powerful attack where\p"
+    .string "POKéMON dives underwater the\n"
+    .string "first turn and strikes in the next.$"
+
 ViridianCity_Gym_Text_YouDoNotHaveSpace:: @ 818F71B
     .string "You do not have space for this!$"
 
