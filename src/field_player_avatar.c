@@ -504,27 +504,20 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
 
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
-        // speed 2 is fast, same speed as running
-        PlayerGoSpeed2(direction);
+        if (heldKeys & B_BUTTON)
+            PlayerGoSpeed2(direction);
+        else
+            sub_805C164(direction);
+
         return;
     }
 
-    if ((heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
-        && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
+    if (heldKeys & B_BUTTON)
+        PlayerGoSpeed1(direction);
+    else if (gSaveBlock2Ptr->autoRun && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
     {
-        if (PlayerIsMovingOnRockStairs(direction))
-            PlayerRunSlow(direction);
-        else
-            PlayerRun(direction);
+        PlayerRun(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
-        return;
-    }
-    else
-    {
-        if (PlayerIsMovingOnRockStairs(direction))
-            PlayerGoSlow(direction);
-        else
-            PlayerGoSpeed1(direction);
     }
 }
 
