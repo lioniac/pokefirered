@@ -335,6 +335,7 @@ static void Overworld_ResetStateAfterWhitingOut(void)
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_FLASH_ACTIVE);
     FlagClear(FLAG_SYS_QL_DEPARTED);
+    FlagClear(FLAG_DISABLE_BAG);
     VarSet(VAR_QL_ENTRANCE, 0);
 }
 
