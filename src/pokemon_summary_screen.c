@@ -3803,18 +3803,6 @@ static void UpdateCurrentMonBufferFromPartyOrBox(struct Pokemon * mon)
     }
 }
 
-static u8 PokeSum_CanForgetSelectedMove(void)
-{
-    u16 move;
-
-    move = GetMonMoveBySlotId(&sMonSummaryScreen->currentMon, sMoveSelectionCursorPos);
-
-    if (IsMoveHm(move) == TRUE && sMonSummaryScreen->mode != PSS_MODE_FORGET_MOVE)
-        return FALSE;
-
-    return TRUE;
-}
-
 static void Task_InputHandler_SelectOrForgetMove(u8 taskId)
 {
     u8 i;
@@ -3892,18 +3880,10 @@ static void Task_InputHandler_SelectOrForgetMove(u8 taskId)
         }
         else if (JOY_NEW(A_BUTTON))
         {
-            if (PokeSum_CanForgetSelectedMove() == TRUE || sMoveSelectionCursorPos == 4)
-            {
-                PlaySE(SE_SELECT);
-                sMoveSwapCursorPos = sMoveSelectionCursorPos;
-                gSpecialVar_0x8005 = sMoveSwapCursorPos;
-                sMonSummaryScreen->selectMoveInputHandlerState = 6;
-            }
-            else
-            {
-                PlaySE(SE_FAILURE);
-                sMonSummaryScreen->selectMoveInputHandlerState = 5;
-            }
+            PlaySE(SE_SELECT);
+            sMoveSwapCursorPos = sMoveSelectionCursorPos;
+            gSpecialVar_0x8005 = sMoveSwapCursorPos;
+            sMonSummaryScreen->selectMoveInputHandlerState = 6;
         }
         else if (JOY_NEW(B_BUTTON))
         {
