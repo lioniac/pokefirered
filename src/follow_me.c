@@ -988,8 +988,8 @@ static void Task_FollowerHandleEscalatorFinish(u8 taskId)
 
         if (task->data[1] == 0)
         {
-            sprite->pos2.x = 0;
-            sprite->pos2.y = 0;
+            sprite->x = 0;
+            sprite->y = 0;
             task->data[0] = 6;
         }
         break;
@@ -1008,8 +1008,8 @@ static void Task_FollowerHandleEscalatorFinish(u8 taskId)
 
         if (task->data[1] == 0)
         {
-            sprite->pos2.x = 0;
-            sprite->pos2.y = 0;
+            sprite->x = 0;
+            sprite->y = 0;
             task->data[0]++;
         }
         break;
@@ -1026,16 +1026,16 @@ static void CalculateFollowerEscalatorTrajectoryDown(struct Task *task)
 {
     struct Sprite* sprite = &gSprites[gObjectEvents[GetFollowerMapObjId()].spriteId];
     
-    sprite->pos2.x = Cos(0x84, task->data[1]);
-    sprite->pos2.y = Sin(0x94, task->data[1]);
+    sprite->x = Cos(0x84, task->data[1]);
+    sprite->y = Sin(0x94, task->data[1]);
 }
 
 static void CalculateFollowerEscalatorTrajectoryUp(struct Task *task)
 {
     struct Sprite* sprite = &gSprites[gObjectEvents[GetFollowerMapObjId()].spriteId];
     
-    sprite->pos2.x = Cos(0x7c, task->data[1]);
-    sprite->pos2.y = Sin(0x76, task->data[1]);
+    sprite->x = Cos(0x7c, task->data[1]);
+    sprite->y = Sin(0x76, task->data[1]);
 }
 
 bool8 FollowerCanBike(void)
