@@ -252,8 +252,8 @@ static const struct WindowTemplate sNewGameAdventureIntroWindowTemplates[] = {
         .bg = 0x00,
         .tilemapLeft = 0x02,
         .tilemapTop = 0x02,
-        .width = 0x0c,
-        .height = 0x0a,
+        .width = 0x08,
+        .height = 0x04,
         .paletteNum = 0x0f,
         .baseBlock = 0x0001
     }, DUMMY_WIN_TEMPLATE
@@ -390,77 +390,6 @@ static const struct SpriteTemplate sOakSpeech_PikaSpriteTemplates[3] = {
 static const u8 *const sHelpDocsPtrs[] = {
     gNewGame_HelpDocs2, gNewGame_HelpDocs3, gNewGame_HelpDocs4,
     gNewGame_HelpDocs5, gNewGame_HelpDocs6, gNewGame_HelpDocs7
-};
-
-static const u8 *const sMaleNameChoices[] = {
-#if defined(FIRERED)
-    gNameChoice_Red,
-    gNameChoice_Fire,
-    gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki,
-#elif defined(LEAFGREEN)
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru,
-#endif
-    gNameChoice_Jak,
-    gNameChoice_Janne,
-    gNameChoice_Jonn,
-    gNameChoice_Kamon,
-    gNameChoice_Karl,
-    gNameChoice_Taylor,
-    gNameChoice_Oscar,
-    gNameChoice_Hiro,
-    gNameChoice_Max,
-    gNameChoice_Jon,
-    gNameChoice_Ralph,
-    gNameChoice_Kay,
-    gNameChoice_Tosh,
-    gNameChoice_Roak
-};
-
-static const u8 *const sFemaleNameChoices[] = {
-#if defined(FIRERED)
-    gNameChoice_Red,
-    gNameChoice_Fire,
-#elif defined(LEAFGREEN)
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-#endif
-    gNameChoice_Omi,
-    gNameChoice_Jodi,
-    gNameChoice_Amanda,
-    gNameChoice_Hillary,
-    gNameChoice_Makey,
-    gNameChoice_Michi,
-    gNameChoice_Paula,
-    gNameChoice_June,
-    gNameChoice_Cassie,
-    gNameChoice_Rey,
-    gNameChoice_Seda,
-    gNameChoice_Kiko,
-    gNameChoice_Mina,
-    gNameChoice_Norie,
-    gNameChoice_Sai,
-    gNameChoice_Momo,
-    gNameChoice_Suzi
-};
-
-static const u8 *const sRivalNameChoices[] = {
-#if defined(FIRERED)
-    gNameChoice_Green,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru
-#elif defined(LEAFGREEN)
-    gNameChoice_Red,
-    gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki
-#endif
 };
 
 enum
@@ -1856,7 +1785,6 @@ static void CreateFadeOutTask(u8 taskId, u8 state)
 static void PrintNameChoiceOptions(u8 taskId, u8 hasPlayerBeenNamed)
 {
     s16 * data = gTasks[taskId].data;
-    const u8 *const * textPtrs;
     u8 i;
 
     data[13] = AddWindow(&sNewGameAdventureIntroWindowTemplates[3]);
@@ -1865,14 +1793,16 @@ static void PrintNameChoiceOptions(u8 taskId, u8 hasPlayerBeenNamed)
     FillWindowPixelBuffer(gTasks[taskId].data[13], 0x11);
     AddTextPrinterParameterized(data[13], FONT_2, gOtherText_NewName, 8, 1, 0, NULL);
     if (hasPlayerBeenNamed == FALSE)
-        textPtrs = gSaveBlock2Ptr->playerGender == MALE ? sMaleNameChoices : sFemaleNameChoices;
-    else
-        textPtrs = sRivalNameChoices;
-    for (i = 0; i < 4; i++)
     {
-        AddTextPrinterParameterized(data[13], FONT_2, textPtrs[i], 8, 16 * (i + 1) + 1, 0, NULL);
+        if (gSaveBlock2Ptr->playerGender == MALE)
+            AddTextPrinterParameterized(data[13], FONT_2, gNameChoice_Red, 8, 1, 0, NULL);
+        else
+            AddTextPrinterParameterized(data[13], FONT_2, gNameChoice_Green, 8, 1, 0, NULL);
     }
-    Menu_InitCursor(data[13], FONT_2, 0, 1, 16, 5, 0);
+    else
+        AddTextPrinterParameterized(data[13], FONT_2, gNameChoice_Blue, 8, 17, 0, NULL);
+    
+    Menu_InitCursor(data[13], FONT_2, 0, 1, 16, 2, 0);
     CopyWindowToVram(data[13], COPYWIN_FULL);
 }
 
@@ -1885,14 +1815,14 @@ static void GetDefaultName(u8 hasPlayerBeenNamed, u8 rivalNameChoice)
     if (hasPlayerBeenNamed == FALSE)
     {
         if (gSaveBlock2Ptr->playerGender == MALE)
-            src = sMaleNameChoices[Random() % 19];
+            src = gNameChoice_Red;
         else
-            src = sFemaleNameChoices[Random() % 19];
+            src = gNameChoice_Green;
         dest = gSaveBlock2Ptr->playerName;
     }
     else
     {
-        src = sRivalNameChoices[rivalNameChoice];
+        src = gNameChoice_Blue;
         dest = gSaveBlock1Ptr->rivalName;
     }
     for (i = 0; i < PLAYER_NAME_LENGTH && src[i] != EOS; i++)
