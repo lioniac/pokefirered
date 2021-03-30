@@ -452,4 +452,9 @@ gSpecials:: @ 815FD60
 	def_special UpdateLoreleiDollCollection
 	def_special LoopWingFlapSound
 	def_special CreateEventLegalEnemyMon
+	def_special RyuIvCheckerDef
+	def_special RyuIvCheckerOff
+	def_special RyuEvCheckerDef
+	def_special RyuEvCheckerOff
+	def_special RyuResetEvs
 gSpecialsEnd::

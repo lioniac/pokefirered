@@ -9,6 +9,12 @@ struct TrainerMoney
     u8 value;
 };
 
+struct TrainerBall
+{
+    u8 classId;
+    u16 Ball;
+};
+
 struct MultiBattlePokemonTx
 {
     /*0x00*/ u16 species;
