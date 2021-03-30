@@ -84,7 +84,7 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
     input->pressedRButton = FALSE;
-    input->input_field_1_0 = FALSE;
+    input->pressedLButton = FALSE;
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -117,6 +117,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                         input->pressedAButton = TRUE;
                     if (newKeys & B_BUTTON)
                         input->pressedBButton = TRUE;
+                    if (newKeys & L_BUTTON)
+                        input->pressedLButton = TRUE;
                     if (newKeys & R_BUTTON)
                         input->pressedRButton = TRUE;
                 }
@@ -290,9 +292,21 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         return TRUE;
     }
 
-    if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+    // if (input->pressedSelectButton)
+    // {
+    //     gInputToStoreInQuestLogMaybe.pressedSelectButton = TRUE;
+    //     return TRUE;
+    // }
+
+    if (input->pressedLButton && UseRegisteredKeyItemOnField(0) == TRUE)
     {
-        gInputToStoreInQuestLogMaybe.pressedSelectButton = TRUE;
+        gInputToStoreInQuestLogMaybe.pressedLButton = TRUE;
+        return TRUE;
+    }
+
+    if (input->pressedRButton && UseRegisteredKeyItemOnField(1) == TRUE)
+    {
+        gInputToStoreInQuestLogMaybe.pressedRButton = TRUE;
         return TRUE;
     }
 

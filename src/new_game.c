@@ -135,7 +135,6 @@ void NewGameInitData(void)
     ZeroPlayerPartyMons();
     ResetPokemonStorageSystem();
     ClearRoamerData();
-    gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
     NewGameInitPCItems();
     ClearEnigmaBerries();
@@ -152,6 +151,10 @@ void NewGameInitData(void)
 
     //AutoRun    
     gSaveBlock2Ptr->autoRun = TRUE;
+    
+    //Register LR
+    gSaveBlock1Ptr->registeredItemL = 0;
+    gSaveBlock1Ptr->registeredItemR = 0;
 }
 
 static void ResetMiniGamesResults(void)

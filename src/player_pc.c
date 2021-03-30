@@ -105,7 +105,11 @@ static const struct ItemSlot gNewGamePCItems[] = {
     { ITEM_PEARL, 4 },
     { ITEM_THUNDER_STONE, 6 },
     { ITEM_STAR_PIECE, 7 },
-    { ITEM_THICK_CLUB, 1 }, */
+    { ITEM_THICK_CLUB, 1 },
+/* DEBUG: Register LR 
+    { ITEM_OLD_ROD, 1 },
+    { ITEM_BICYCLE, 1 },
+    { ITEM_TOWN_MAP, 1 }, */
     { ITEM_NONE,   0 } 
 };
 

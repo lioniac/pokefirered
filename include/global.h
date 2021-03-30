@@ -805,7 +805,7 @@ struct SaveBlock1
     /*0x0038*/ struct Pokemon playerParty[PARTY_SIZE];
     /*0x0290*/ u32 money;
     /*0x0294*/ u16 coins;
-    /*0x0296*/ u16 registeredItem; // registered for use with SELECT button
+    /*0x0296*/ //Reserved  //OLD: u16 registeredItem;
     /*0x0298*/ struct ItemSlot pcItems[PC_ITEMS_COUNT];
     /*0x0310*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
     /*0x03b8*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
@@ -851,7 +851,9 @@ struct SaveBlock1
     /*0x3D24*/ u8 filler3D24[0x10];
     /*0x3D34*/ u32 towerChallengeId;
     /*0x3D38*/ struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
-}; // size: 0x3D68
+    /*0x3D68*/ u16 registeredItemR;
+    /*0x3D6A*/ u16 registeredItemL;
+}; // size: 0x3D6C
 
 struct MapPosition
 {

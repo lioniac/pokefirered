@@ -854,7 +854,7 @@ Text_WantWhichFloor:: @ 81A535C
 
 Text_BagItemCanBeRegistered:: @ 81A5375
 	.string "An item in the BAG can be\n"
-	.string "registered to SELECT for easy use.$"
+	.string "registered for easy use.$"
 
 @ Unused (email from R/S Rivals computer)
 Text_TrainerSchoolEmail:: @ 81A53B2
