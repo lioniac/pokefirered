@@ -134,7 +134,7 @@
 #define EGG_GROUPS_PER_MON      2
 
 // Pokemon natures
-#define NATURE_HARDY 0
+//#define NATURE_HARDY 0
 #define NATURE_LONELY 1
 #define NATURE_BRAVE 2
 #define NATURE_ADAMANT 3
@@ -160,6 +160,10 @@
 #define NATURE_CAREFUL 23
 #define NATURE_QUIRKY 24
 
+// Used for custom trainer battles, to avoid using default value
+#define NATURE_HARDY 25
+#define NUM_NATURES 26
+
 // Pokemon Stats
 #define STAT_HP 0
 #define STAT_ATK 1
@@ -172,6 +176,15 @@
 
 #define NUM_STATS 6
 #define NUM_BATTLE_STATS 8
+
+#define RIVAL_MON_EARLY_EV_SPREAD    {60, 60, 60, 60, 60, 60}
+#define RIVAL_MON_MIDGAME_EV_SPREAD  {124, 124, 124, 124, 124, 124}
+#define RIVAL_MON_ENDGAME_EV_SPREAD  {192, 192, 192, 192, 192, 192}
+#define MAX_EV_SPREAD                {252, 252, 252, 252, 252, 252}
+#define FRIENDSHIP_FRUSTRATION         1
+#define FRIENDSHIP_RETURN            255
+#define ABILITY_SLOT_1               255
+#define ABILITY_SLOT_2                 1
 
 // Shiny odds
 #define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
@@ -197,6 +210,12 @@
 #define MON_MALE       0x00
 #define MON_FEMALE     0xFE
 #define MON_GENDERLESS 0xFF
+
+// For use in custom trainer battles
+#define NPCMON_RANDOM 0
+#define NPCMON_MALE 1
+#define NPCMON_FEMALE 2
+#define NPCMON_GENDERLESS 3
 
 #define FRIENDSHIP_EVENT_GROW_LEVEL           0
 #define FRIENDSHIP_EVENT_VITAMIN              1

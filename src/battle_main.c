@@ -43,6 +43,9 @@
 #include "constants/pokemon.h"
 #include "constants/songs.h"
 #include "constants/trainer_classes.h"
+#include "constants/trainers.h"
+
+#define MAX_PER_STAT_IVS 31
 
 static void SpriteCB_UnusedDebugSprite(struct Sprite *sprite);
 static void HandleAction_UseMove(void);
@@ -1631,8 +1634,14 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     u32 nameHash = 0;
     u32 personalityValue;
     u8 fixedIV;
+    u8 level;
     s32 i, j;
-    u16 arg;
+    u16 ball;
+    u16 ev;
+    u8 ability;
+    u8 friendship;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    u8 trainerName[(PLAYER_NAME_LENGTH * 3) + 1];
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
@@ -1642,86 +1651,73 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         ZeroEnemyPartyMons();
         for (i = 0; i < gTrainers[trainerNum].partySize; ++i)
         {
+            const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
+            fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-            if (gTrainers[trainerNum].doubleBattle == TRUE)
-                personalityValue = 0x80;
-            else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
-                personalityValue = 0x78;
-            else
-                personalityValue = 0x88;
             for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; ++j)
                 nameHash += gTrainers[trainerNum].trainerName[j];
-            switch (gTrainers[trainerNum].partyFlags)
+
+            CreateMonWithGenderNatureLetter(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, partyData[i].gender, partyData[i].nature, 0);
+            if (partyData[i].friendship == FRIENDSHIP_FRUSTRATION)
             {
-                case 0:
+                friendship = 0;
+                SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
+            }
+            else if (partyData[i].friendship > 0)
+                SetMonData(&party[i], MON_DATA_FRIENDSHIP, &partyData[i].friendship);
+
+            if (partyData[i].nickname[0] != '\0')
+                SetMonData(&party[i], MON_DATA_NICKNAME, &partyData[i].nickname);
+
+            // Should take only constants of ABILITY_SLOT_1, ABILITY_SLOT_2.
+            // If desired, implement else where undefined abilities are chosen between slots 1 and 2, a la gen IV.
+            if (partyData[i].ability > 0)
+            {
+                ability = partyData[i].ability;
+
+                if (partyData[i].ability == ABILITY_SLOT_1)
+                    ability = 0;
+                    
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
+            }
+
+            // Check if ball was defined for that pokemon.
+            if (partyData[i].ball > 0)
+                SetMonData(&party[i], MON_DATA_POKEBALL, &partyData[i].ball);
+
+            // Check if heldItem was defined.
+            if (partyData[i].heldItem > 0)
+                SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                
+            // Check if moves were defined.
+            if (partyData[i].moves[0] != 0)
+            {
+                for (j = 0; j < MAX_MON_MOVES; ++j)
                 {
-                    const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
-
-                    for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; ++j)
-                        nameHash += gSpeciesNames[partyData[i].species][j];
-                    personalityValue += nameHash << 8;
-                    fixedIV = partyData[i].iv * 31 / 255;
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-                    break;
-                }
-                case F_TRAINER_PARTY_CUSTOM_MOVESET:
-                {
-                    const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
-
-                    for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; ++j)
-                        nameHash += gSpeciesNames[partyData[i].species][j];
-                    personalityValue += nameHash << 8;
-                    fixedIV = partyData[i].iv * 31 / 255;
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-                    for (j = 0; j < MAX_MON_MOVES; ++j)
-                    {
-                        SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
-                        SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
-                    }
-                    break;
-                }
-                case F_TRAINER_PARTY_HELD_ITEM:
-                {
-                    const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
-
-                    for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; ++j)
-                        nameHash += gSpeciesNames[partyData[i].species][j];
-                    personalityValue += nameHash << 8;
-                    fixedIV = partyData[i].iv * 31 / 255;
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-
-                    SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
-                    break;
-                }
-                case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
-                {
-                    const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
-
-                    for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; ++j)
-                        nameHash += gSpeciesNames[partyData[i].species][j];
-                    personalityValue += nameHash << 8;
-                    fixedIV = partyData[i].iv * 31 / 255;
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-                    SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
-                    for (j = 0; j < MAX_MON_MOVES; ++j)
-                    {
-                        SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
-                        SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
-                    }
-                    break;
+                    SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
+                    SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                 }
             }
+
+            // Set effort values regardless.  Default is 0.
+            for (j = 0; j < NUM_STATS; j++)
+            {
+                SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
+            }
+
+            StringCopy(trainerName, gTrainers[trainerNum].trainerName);
+            SetMonData(&party[i], MON_DATA_OT_NAME, trainerName);
+            CalculateMonStats(&party[i]);
 
             for (j = 0; gTrainerBallTable[j].classId != 0xFF; j++)
             {
                 if (gTrainerBallTable[j].classId == gTrainers[trainerNum].trainerClass) {
                     break;
                 }
-
             }
 
-            arg = gTrainerBallTable[j].Ball;
-            SetMonData(&party[i], MON_DATA_POKEBALL, &arg);
+            ball = gTrainerBallTable[j].Ball;
+            SetMonData(&party[i], MON_DATA_POKEBALL, &ball);
         }
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
