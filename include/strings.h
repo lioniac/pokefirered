@@ -66,6 +66,8 @@ extern const u8 gText_Poster[];
 extern const u8 gText_PutOutSelectedDecorItem[];
 extern const u8 gText_StoreChosenDecorInPC[];
 extern const u8 gText_ThrowAwayUnwantedDecors[];
+extern const u8 gText_ThrowInPremierBall[];
+extern const u8 gText_ThrowInPremierBalls[];
 extern const u8 gText_Doll[];
 extern const u8 gText_Cushion[];
 extern const u8 gText_Decorate[];
