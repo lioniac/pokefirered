@@ -321,6 +321,7 @@ u8 LaunchBallStarsTask(u8 x, u8 y, u8 priority, u8 subpriority, u8 ballId);
 u8 LaunchBallFadeMonTask(bool8 unFadeLater, u8 battlerId, u32 arg2, u8 ballId);
 void DoLoadHealthboxPalsForLevelUp(u8 *, u8 *, u8 battlerId);
 void DoFreeHealthboxPalsForLevelUp(u8 batterId);
+bool8 IsCriticalCapture(void);
 
 enum
 {

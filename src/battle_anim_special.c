@@ -95,6 +95,7 @@ static void RepeatBallOpenParticleAnimation(u8);
 static void TimerBallOpenParticleAnimation(u8);
 static void PremierBallOpenParticleAnimation(u8);
 static void SpriteCB_SafariBaitOrRock_Init(struct Sprite *);
+static void CB_CriticalCaptureThrownBallMovement(struct Sprite *sprite);
 
 // Data
 struct CaptureStar
@@ -938,8 +939,11 @@ static void SpriteCB_ThrowBall_InitialFall(struct Sprite *sprite)
         sprite->data[5] = 0;
         angle = 0;
         sprite->y += Cos(angle, 40);
-        sprite->y2 = -Cos(angle, sprite->data[4]);
-        sprite->callback = SpriteCB_ThrowBall_Bounce;
+        sprite->y = -Cos(angle, sprite->data[4]);
+        if (IsCriticalCapture())
+            sprite->callback = CB_CriticalCaptureThrownBallMovement;
+        else
+            sprite->callback = SpriteCB_ThrowBall_Bounce;
     }
 }
 
@@ -1131,22 +1135,38 @@ static void SpriteCB_ThrowBall_DoShake(struct Sprite *sprite)
     case 5:
         sprite->data[3] += 0x100;
         state = sprite->data[3] >> 8;
-        if (state == gBattleSpritesDataPtr->animationData->ballThrowCaseId)
+        if (IsCriticalCapture())
         {
-            sprite->affineAnimPaused = TRUE;
-            sprite->callback = SpriteCB_ThrowBall_DelayThenBreakOut;
-        }
-        else
-        {
-            if (gBattleSpritesDataPtr->animationData->ballThrowCaseId == BALL_3_SHAKES_SUCCESS && state == 3)
+            if (gBattleSpritesDataPtr->animationData->criticalCaptureSuccess)
             {
                 sprite->callback = SpriteCB_ThrowBall_InitClick;
-                sprite->affineAnimPaused = TRUE;
+                sprite->affineAnimPaused = 1;
             }
             else
             {
-                sprite->data[3]++;
+                sprite->affineAnimPaused = 1;
+                sprite->callback = SpriteCB_ThrowBall_DelayThenBreakOut;
+            }
+        }
+        else
+        {
+            if (state == gBattleSpritesDataPtr->animationData->ballThrowCaseId)
+            {
                 sprite->affineAnimPaused = TRUE;
+                sprite->callback = SpriteCB_ThrowBall_DelayThenBreakOut;
+            }
+            else
+            {
+                if (gBattleSpritesDataPtr->animationData->ballThrowCaseId == BALL_3_SHAKES_SUCCESS && state == 3)
+                {
+                    sprite->callback = SpriteCB_ThrowBall_InitClick;
+                    sprite->affineAnimPaused = 1;
+                }
+                else
+                {
+                    sprite->data[3]++;
+                    sprite->affineAnimPaused = 1;
+                }
             }
         }
         break;
@@ -2310,4 +2330,58 @@ void AnimTask_GetBattlersFromArg(u8 taskId)
     gBattleAnimAttacker = gBattleSpritesDataPtr->animationData->animArg;
     gBattleAnimTarget = gBattleSpritesDataPtr->animationData->animArg >> 8;
     DestroyAnimVisualTask(taskId);
+}
+
+bool8 IsCriticalCapture(void)
+{
+    return gBattleSpritesDataPtr->animationData->isCriticalCapture;
+}
+
+static void CB_CriticalCaptureThrownBallMovement(struct Sprite *sprite)
+{
+    bool8 lastBounce = FALSE;
+    u8 maxBounces = 6;
+    int bounceCount;
+
+    bounceCount = sprite->data[3] >> 8;
+
+    if (bounceCount == 0)
+        PlaySE(SE_BALL);
+
+    switch (sprite->data[3] & 0xFF)
+    {
+    case 0:
+        if (bounceCount < 3)
+            sprite->x++;
+
+        sprite->data[5]++;
+        if (sprite->data[5] >= 3)
+            sprite->data[3] += 257;
+
+        break;
+    case 1:
+        if (bounceCount < 3 || sprite->x != 0)
+            sprite->x--;
+
+        sprite->data[5]--;
+
+        if (sprite->data[5] <= 0)
+        {
+            sprite->data[5] = 0;
+            sprite->data[3] &= -0x100;
+        }
+
+        if (bounceCount >= maxBounces)
+            lastBounce = TRUE;
+
+        break;
+    }
+
+    if (lastBounce)
+    {
+        sprite->data[3] = 0;
+        sprite->data[4] = 40;   //starting max height
+        sprite->data[5] = 0;
+        sprite->callback = SpriteCB_ThrowBall_Bounce;
+    }
 }

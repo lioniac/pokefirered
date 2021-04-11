@@ -452,6 +452,7 @@ gBattleAnims_Special::
 	.4byte Special_SafariBallThrow
 	.4byte Special_SubstituteToMon
 	.4byte Special_MonToSubstitute
+	.4byte Special_CriticalCaptureBallThrow
 
 Move_NONE:: @ 81C6F34
 Move_POUND:: @ 81C6F34
@@ -11099,3 +11100,13 @@ Special_SubstituteToMon:: @ 81D6594
 Special_MonToSubstitute:: @ 81D659E
 	createvisualtask AnimTask_SwapMonSpriteToFromSubstitute, 2, 0
 	end
+
+Special_CriticalCaptureBallThrow:
+	createvisualtask AnimTask_LoadBallGfx, 2, 
+	delay 0
+	playsewithpan SE_FALL, 0
+	createvisualtask AnimTask_ThrowBall, 2, 
+	createvisualtask AnimTask_IsBallBlockedByTrainerOrDodged, 2, 
+	jumpargeq 7, 65535, BallThrowTrainerBlock
+	jumpargeq 7, 65534, BallThrowGhostDodged
+	goto BallThrowEnd
