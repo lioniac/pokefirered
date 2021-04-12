@@ -1,6 +1,7 @@
 #include "global.h"
 #include "field_weather.h"
 #include "overworld.h"
+#include "event_data.h"
 #include "constants/weather.h"
 
 static u8 TranslateWeatherNum(u8 weather);
@@ -21,7 +22,14 @@ u8 GetSav1Weather(void)
 void SetSav1WeatherFromCurrMapHeader(void)
 {
     u8 oldWeather = gSaveBlock1Ptr->weather;
-    gSaveBlock1Ptr->weather = TranslateWeatherNum(gMapHeader.weather);
+
+// Choose between manually set the weather to WEATHER_RANDOM
+// Or if mapType is Town|City|Route (Default)
+    //if (gMapHeader.weather == WEATHER_RANDOM)
+    if (gMapHeader.mapType >= 1 && gMapHeader.mapType <= 3)
+        gSaveBlock1Ptr->weather = SetRandomWeather();
+    else
+        gSaveBlock1Ptr->weather = TranslateWeatherNum(gMapHeader.weather);
     UpdateRainCounter(gSaveBlock1Ptr->weather, oldWeather);
 }
 

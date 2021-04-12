@@ -524,7 +524,7 @@
 // Unused?
 #define FLAG_0x1FF               0x1FF
 #define FLAG_QUEST_MENU_ACTIVE   0x200
-#define FLAG_0x201               0x201
+#define FLAG_SEASON_CHANGE       0x201
 #define FLAG_0x202               0x202
 #define FLAG_0x203               0x203
 #define FLAG_0x204               0x204

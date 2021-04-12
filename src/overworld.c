@@ -375,6 +375,23 @@ void IncrementGameStat(u8 statId)
     SetGameStat(statId, statVal);
 }
 
+void IncrementSeasonPedometer()
+{
+    u16 stepsNeeded = 10000;
+    u16 stepsRemaining;
+
+    if (gSaveBlock1Ptr->seasonPedometer < 0xFFFFFF)
+        gSaveBlock1Ptr->seasonPedometer++;
+    else
+        gSaveBlock1Ptr->seasonPedometer = 1;
+
+    stepsRemaining = gSaveBlock1Ptr->seasonPedometer % stepsNeeded;
+    VarSet(VAR_STEPS_FOR_NEXT_SEASON, stepsRemaining);
+
+    if (stepsRemaining == 0)
+        FlagSet(FLAG_SEASON_CHANGE);
+}
+
 u32 GetGameStat(u8 statId)
 {
     if (statId >= NUM_USED_GAME_STATS)

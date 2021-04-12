@@ -8,11 +8,25 @@
 #include "field_weather_effects.h"
 #include "task.h"
 #include "trig.h"
+#include "random.h"
+#include "event_data.h"
+#include "quest_log.h"
 #include "constants/field_weather.h"
 #include "constants/weather.h"
 #include "constants/songs.h"
 
 #define DROUGHT_COLOR_INDEX(color) ((((color) >> 1) & 0xF) | (((color) >> 2) & 0xF0) | (((color) >> 3) & 0xF00))
+
+// The drought weather effect uses a precalculated color lookup table. Presumably this
+// is because the underlying color shift calculation is slow.
+const u16 sDroughtWeatherColors[][0x1000] = {
+    INCBIN_U16("graphics/weather/drought/colors_0.bin"),
+    INCBIN_U16("graphics/weather/drought/colors_1.bin"),
+    INCBIN_U16("graphics/weather/drought/colors_2.bin"),
+    INCBIN_U16("graphics/weather/drought/colors_3.bin"),
+    INCBIN_U16("graphics/weather/drought/colors_4.bin"),
+    INCBIN_U16("graphics/weather/drought/colors_5.bin"),
+};
 
 enum
 {
@@ -493,31 +507,31 @@ static void ApplyGammaShift(u8 startPalIndex, u8 numPalettes, s8 gammaIndex)
         // A negative gammIndex value means that the blending will come from the special Drought weather's palette tables.
         // Dummied out in FRLG
 
-        // gammaIndex = -gammaIndex - 1;
-        // palOffset = startPalIndex * 16;
-        // numPalettes += startPalIndex;
-        // curPalIndex = startPalIndex;
-        //
-        // CpuFastCopy(gPlttBufferUnfaded + palOffset, gPlttBufferFaded + palOffset, 16 * sizeof(u16));
-        // while (curPalIndex < numPalettes)
-        // {
-        //     if (sPaletteGammaTypes[curPalIndex] == GAMMA_NONE)
-        //     {
-        //         // No palette change.
-        //         palOffset += 16;
-        //     }
-        //     else
-        //     {
-        //
-        //         for (i = 0; i < 16; i++)
-        //         {
-        //             gPlttBufferFaded[palOffset] = sDroughtWeatherColors[gammaIndex][DROUGHT_COLOR_INDEX(gPlttBufferUnfaded[palOffset])];
-        //             palOffset++;
-        //         }
-        //     }
-        //
-        //     curPalIndex++;
-        // }
+        gammaIndex = -gammaIndex - 1;
+        palOffset = startPalIndex * 16;
+        numPalettes += startPalIndex;
+        curPalIndex = startPalIndex;
+        
+        CpuFastCopy(gPlttBufferUnfaded + palOffset, gPlttBufferFaded + palOffset, 16 * sizeof(u16));
+        while (curPalIndex < numPalettes)
+        {
+            if (sPaletteGammaTypes[curPalIndex] == GAMMA_NONE)
+            {
+                // No palette change.
+                palOffset += 16;
+            }
+            else
+            {
+        
+                for (i = 0; i < 16; i++)
+                {
+                    gPlttBufferFaded[palOffset] = sDroughtWeatherColors[gammaIndex][DROUGHT_COLOR_INDEX(gPlttBufferUnfaded[palOffset])];
+                    palOffset++;
+                }
+            }
+        
+            curPalIndex++;
+        }
     }
     else
     {
@@ -919,8 +933,8 @@ void LoadCustomWeatherSpritePalette(const u16 *palette)
 static void LoadDroughtWeatherPalette(u8 *gammaIndexPtr, u8 *a1)
 {
     // Dummied out in FRLG
-    // *gammaIndexPtr = 0x20;
-    // *a1 = 0x20;
+    *gammaIndexPtr = 0x20;
+    *a1 = 0x20;
 }
 
 void ResetDroughtWeatherPaletteLoading(void)
@@ -1083,6 +1097,98 @@ UNUSED static void Unused_SetWeather(u8 a)
         SetWeather(WEATHER_SHADE);
         break;
     }
+}
+
+//Random Weather
+u8 SetRandomWeather(void)
+{
+    u8 random;
+    u8 weather;
+    
+    if (FlagGet(FLAG_SEASON_CHANGE))
+    {
+        if (gSaveBlock1Ptr->season == 3)
+            gSaveBlock1Ptr->season=0;
+        else
+            gSaveBlock1Ptr->season++;
+
+        //Enforce Season Weather at beginning of each Season
+        switch(gSaveBlock1Ptr->season)
+        {
+        case SEASON_SPRING:
+            weather = WEATHER_SUNNY;
+            break;
+        case SEASON_SUMMER:
+            weather = WEATHER_HARSH_SUN;
+            break;
+        case SEASON_AUTUMN:
+            weather = WEATHER_SANDSTORM;
+            break;
+        case SEASON_WINTER:
+            weather = WEATHER_FLAKES;
+            break;
+        }
+
+        FlagClear(FLAG_SEASON_CHANGE);
+    }
+    else
+    {
+        // 50% Chance of keep current weather
+        random = Random() % 2;
+        if (random)
+            weather = gSaveBlock1Ptr->weather;
+        else
+        {
+            // 20 possibilities from 0 to 19; 5% each number
+            random = Random() % 20;
+            switch (gSaveBlock1Ptr->season)
+            {
+            case SEASON_SPRING:
+                if (random <= 7)
+                    weather = WEATHER_SUNNY;     // 40%
+                else if (random <= 13)
+                    weather = WEATHER_RAIN;      // 30%
+                else if (random <= 17)
+                    weather = WEATHER_THUNDER;   // 20%
+                else if (random <= 19)
+                    weather = WEATHER_HARSH_SUN; // 10%
+                break;
+            case SEASON_SUMMER:
+                if (random <= 7)
+                    weather = WEATHER_HARSH_SUN; // 40%
+                else if (random <= 13)
+                    weather = WEATHER_SUNNY;     // 30%
+                else if (random <= 17)
+                    weather = WEATHER_THUNDER;   // 20%
+                else if (random <= 19)
+                    weather = WEATHER_RAIN;      // 10%
+                break;
+            case SEASON_AUTUMN:
+                if (random <= 7)
+                    weather = WEATHER_SANDSTORM; // 40% 
+                else if (random <= 13)
+                    weather = WEATHER_SUNNY;     // 30% 
+                else if (random <= 17)
+                    weather = WEATHER_SUNNY;     // 20%
+                else if (random <= 19)
+                    weather = WEATHER_SANDSTORM; // 10%
+                break;
+            case SEASON_WINTER:
+                if (random <= 7)
+                    weather = WEATHER_FLAKES;    // 40%
+                else if (random <= 13)
+                    weather = WEATHER_FLAKES;    // 30%
+                else if (random <= 17)
+                    weather = WEATHER_FLAKES;    // 20%
+                else if (random <= 19)
+                    weather = WEATHER_FLAKES;    // 10%
+                break;
+            }
+        }
+    }
+    SetWeather(weather);
+    DoCurrentWeather();
+    return weather;
 }
 
 u8 GetCurrentWeather(void)

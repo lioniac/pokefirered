@@ -148,6 +148,11 @@ void StartWeather(void);
 void ResumePausedWeather(void);
 void FadeSelectedPals(u8 mode, s8 delay, u32 selectedPalettes);
 
+u8 SetRandomWeather(void);
+u16 *GetVarPointer(u16 id);
+u16 VarGet(u16 id);
+bool8 VarSet(u16 id, u16 value);
+
 extern const u16 gCloudsWeatherPalette[];
 extern const u16 gSandstormWeatherPalette[];
 extern const u8 gWeatherFogDiagonalTiles[];

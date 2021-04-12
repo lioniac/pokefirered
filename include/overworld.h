@@ -65,6 +65,7 @@ extern u8 gFieldLinkPlayerCount;
 extern u8 gLocalLinkPlayerId;
 
 void IncrementGameStat(u8 index);
+void IncrementSeasonPedometer();
 
 void Overworld_SetMapObjTemplateCoords(u8, s16, s16);
 void Overworld_SetObjEventTemplateMovementType(u8, u8);
