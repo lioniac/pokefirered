@@ -1727,6 +1727,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 personality;
     u32 value;
     u16 checksum;
+    u32 shinyValue;
 
     ZeroBoxMonData(boxMon);
 
@@ -1735,12 +1736,9 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     else
         personality = Random32();
 
-    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
-
     //Determine original trainer ID
     if (otIdType == OT_ID_RANDOM_NO_SHINY) //Pokemon cannot be shiny
     {
-        u32 shinyValue;
         do
         {
             value = Random32();
@@ -1759,6 +1757,17 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
               | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
     }
 
+    if (VarGet(VAR_GENERATE_SHINY) > 0) // Value of VAR_GENERATE_SHINY will decide how many shiny Pokémon will be generated as the Player's next encounters.
+    {
+        do
+        {
+            personality = Random32();
+            shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+        } while (shinyValue >= 8);
+        VarSet(VAR_GENERATE_SHINY, (VarGet(VAR_GENERATE_SHINY) - 1));
+    }
+
+    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
 
     checksum = CalculateBoxMonChecksum(boxMon);
