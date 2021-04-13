@@ -60,7 +60,7 @@ u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 nature, u32 pokeball, u8 f
     else
         CreateMon(mon, species, level, fixedIv, 0, 0, OT_ID_PLAYER_ID, 0);
 
-    if (pokeball > ITEM_NONE && pokeball <= POKEBALLS_COUNT)
+    if (pokeball > ITEM_NONE && pokeball <= BAG_POKEBALLS_COUNT)
         SetMonData(mon, MON_DATA_POKEBALL, &pokeball);
 
     heldItem[0] = item;
