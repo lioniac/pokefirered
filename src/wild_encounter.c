@@ -197,6 +197,10 @@ static u16 GetCurrentMapWildMonHeaderId(void)
 
                 i += alteringCaveId;
             }
+            else if (gWildMonHeaders[i+gSaveBlock1Ptr->season].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
+                     gWildMonHeaders[i+gSaveBlock1Ptr->season].mapNum == gSaveBlock1Ptr->location.mapNum)
+                // If Wild Mon data for this season exists, use it (otherwise = Spring):
+                i += gSaveBlock1Ptr->season;
 
             if (!UnlockedTanobyOrAreNotInTanoby())
                 break;
