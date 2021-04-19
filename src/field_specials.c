@@ -1747,7 +1747,12 @@ u16 GetHiddenItemAttr(u32 hiddenItem, u8 attr)
     if (attr == 0)
         return hiddenItem & 0xFFFF;
     else if (attr == 1)
-        return ((hiddenItem >> 16) & 0xFF) + 1000;
+    {
+        if (((hiddenItem >> 16) & 0xFF) <= 190)
+            return ((hiddenItem >> 16) & 0xFF) + 1000;
+        else
+            return ((hiddenItem >> 16) & 0xFF);
+    }
     else if (attr == 2)
         return (hiddenItem >> 24) & 0x7F;
     else if (attr == 3)
