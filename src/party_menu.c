@@ -316,7 +316,7 @@ static void Task_PartyMenuReplaceMove(u8 taskId);
 static void Task_StopLearningMoveYesNo(u8 taskId);
 static void Task_HandleStopLearningMoveYesNoInput(u8 taskId);
 static void Task_TryLearningNextMoveAfterText(u8 taskId);
-static void ItemUseCB_RareCandyStep(u8 taskId, UNUSED TaskFunc func);
+void ItemUseCB_RareCandyStep(u8 taskId, UNUSED TaskFunc func);
 static void Task_DisplayLevelUpStatsPg1(u8 taskId);
 static void Task_DisplayLevelUpStatsPg2(u8 taskId);
 static void UpdateMonDisplayInfoAfterRareCandy(u8 slot, struct Pokemon *mon);
@@ -4288,12 +4288,14 @@ static void CB2_ReturnToBerryPouchMenu(void)
     InitBerryPouch(BERRYPOUCH_NA, NULL, 0xFF);
 }
 
+// [R]: Item use animation screen (unused now)
 static void sub_8124DC0(u8 taskId)
 {
     sPartyMenuInternal->exitCallback = sub_8124DE0;
     Task_ClosePartyMenu(taskId);
 }
 
+// [R]: Item use animation screen (unused now)
 static void sub_8124DE0(void)
 {
     if (CheckIfItemIsTMHMOrEvolutionStone(gSpecialVar_ItemId) == 2) // Evolution stone
@@ -4635,10 +4637,9 @@ void ItemUseCB_PPRecovery(u8 taskId, UNUSED TaskFunc func)
     if (!(effect[4] & ITEM4_HEAL_PP_ONE))
     {
         gPartyMenu.data1 = 0;
-        if (gPartyMenu.menuType == PARTY_MENU_TYPE_IN_BATTLE)
-            TryUsePPItem(taskId);
-        else
-            sub_812580C(taskId);
+
+        // [R]: Skip item animation
+        TryUsePPItem(taskId);
     }
     else
     {
@@ -4653,10 +4654,9 @@ static void SetSelectedMoveForPPItem(u8 taskId)
 {
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
     gPartyMenu.data1 = Menu_GetCursorPos();
-    if (gPartyMenu.menuType == PARTY_MENU_TYPE_IN_BATTLE)
-        TryUsePPItem(taskId);
-    else
-        sub_812580C(taskId);
+
+    // [R]: Remove item use animation
+    TryUsePPItem(taskId);
 }
 
 static void ReturnToUseOnWhichMon(u8 taskId)
@@ -4683,7 +4683,7 @@ static void sub_812580C(u8 taskId)
     }
     else
     {
-        sub_8124DC0(taskId);
+        //sub_8124DC0(taskId);
         gItemUseCB = sub_8125898;
     }
 }
@@ -4814,8 +4814,9 @@ void ItemUseCB_TMHM(u8 taskId, UNUSED TaskFunc func)
     if (GiveMoveToMon(mon, move[0]) != MON_HAS_MAX_MOVES)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
-        sub_8124DC0(taskId);
-        gItemUseCB = ItemUseCB_LearnedMove;
+        //sub_8124DC0(taskId);
+        // [R] skip item use animation
+        Task_LearnedMove(taskId);
     }
     else
     {
@@ -4824,6 +4825,7 @@ void ItemUseCB_TMHM(u8 taskId, UNUSED TaskFunc func)
     }
 }
 
+// [R]: Unused now
 static void ItemUseCB_LearnedMove(u8 taskId, UNUSED TaskFunc func)
 {
     Task_LearnedMove(taskId);
@@ -4915,21 +4917,8 @@ static void CB2_ShowSummaryScreenToForgetMove(void)
 
 static void CB2_ReturnToPartyMenuWhileLearningMove(void)
 {
-    u8 moveIdx = GetMoveSlotToReplace();
-    u16 move;
-    s32 learnMoveState = gPartyMenu.learnMoveState;
-
-    if (learnMoveState == 0 && moveIdx != MAX_MON_MOVES)
-    {
-        move = GetMonData(&gPlayerParty[gPartyMenu.slotId], moveIdx + MON_DATA_MOVE1);
-        StartUseItemAnim_ForgetMoveAndLearnTMorHM(gPartyMenu.slotId, gSpecialVar_ItemId, move, sub_8124EFC);
-        gItemUseCB = sub_8125F4C;
-        gPartyMenu.action = learnMoveState;
-    }
-    else
-    {
-        InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
-    }
+    // [R]: Skipped call to item animation routine
+    InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
 }
 
 static void Task_ReturnToPartyMenuWhileLearningMove(u8 taskId)
@@ -4948,6 +4937,7 @@ static void sub_8125F4C(u8 taskId, UNUSED TaskFunc func)
     sub_8125F5C(taskId);
 }
 
+// [R] Replace existing move with 'move'
 static void sub_8125F5C(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
@@ -5046,6 +5036,7 @@ static void Task_TryLearningNextMoveAfterText(u8 taskId)
         Task_TryLearningNextMove(taskId);
 }
 
+// [R]: Unused now (drop item animation)
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
@@ -5071,7 +5062,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
     }
 }
 
-static void ItemUseCB_RareCandyStep(u8 taskId, UNUSED TaskFunc func)
+void ItemUseCB_RareCandyStep(u8 taskId, UNUSED TaskFunc func)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     struct PartyMenuInternal *ptr = sPartyMenuInternal;
@@ -5338,7 +5329,7 @@ void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc func)
     }
     else
     {
-        sub_8124DC0(taskId);
+        sub_8126BD4();
     }
 }
 

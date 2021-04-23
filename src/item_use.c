@@ -408,7 +408,7 @@ static void sub_80A16D0(u8 taskId)
 
 void FieldUseFunc_Medicine(u8 taskId)
 {
-    gItemUseCB = ItemUseCB_Medicine;
+    gItemUseCB = ItemUseCB_MedicineStep;
     sub_80A16D0(taskId);
 }
 
@@ -426,7 +426,7 @@ void FieldUseFunc_PpUp(u8 taskId)
 
 void FieldUseFunc_RareCandy(u8 taskId)
 {
-    gItemUseCB = ItemUseCB_RareCandy;
+    gItemUseCB = ItemUseCB_RareCandyStep;
     sub_80A16D0(taskId);
 }
 
