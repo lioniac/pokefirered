@@ -5185,12 +5185,6 @@ static void atk5D_getmoneyreward(void)
         {
             const struct TrainerMon *party = gTrainers[gTrainerBattleOpponent_A].party.TrainerMon;
             lastMonLevel = party[gTrainers[gTrainerBattleOpponent_A].partySize - 1].lvl;
-
-            for (; gTrainerMoneyTable[i].classId != 0xFF; i++)
-            {
-                if (gTrainerMoneyTable[i].classId == gTrainers[gTrainerBattleOpponent_A].trainerClass)
-                    break;
-            }
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * (gBattleTypeFlags & BATTLE_TYPE_DOUBLE ? 2 : 1) * gTrainerMoneyTable[i].value;
         }
         AddMoney(&gSaveBlock1Ptr->money, moneyReward);
