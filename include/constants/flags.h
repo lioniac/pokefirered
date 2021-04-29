@@ -1268,55 +1268,58 @@
 #define FLAG_0x4CC               0x4CC
 #define FLAG_0x4CD               0x4CD
 #define FLAG_0x4CE               0x4CE
-#define FLAG_0x4CF               0x4CF
-#define FLAG_0x4D0               0x4D0
-#define FLAG_0x4D1               0x4D1
-#define FLAG_0x4D2               0x4D2
-#define FLAG_0x4D3               0x4D3
-#define FLAG_0x4D4               0x4D4
-#define FLAG_0x4D5               0x4D5
-#define FLAG_0x4D6               0x4D6
-#define FLAG_0x4D7               0x4D7
-#define FLAG_0x4D8               0x4D8
-#define FLAG_0x4D9               0x4D9
-#define FLAG_0x4DA               0x4DA
-#define FLAG_0x4DB               0x4DB
-#define FLAG_0x4DC               0x4DC
-#define FLAG_0x4DD               0x4DD
-#define FLAG_0x4DE               0x4DE
-#define FLAG_0x4DF               0x4DF
-#define FLAG_0x4E0               0x4E0
-#define FLAG_0x4E1               0x4E1
-#define FLAG_0x4E2               0x4E2
-#define FLAG_0x4E3               0x4E3
-#define FLAG_0x4E4               0x4E4
-#define FLAG_0x4E5               0x4E5
-#define FLAG_0x4E6               0x4E6
-#define FLAG_0x4E7               0x4E7
-#define FLAG_0x4E8               0x4E8
-#define FLAG_0x4E9               0x4E9
-#define FLAG_0x4EA               0x4EA
-#define FLAG_0x4EB               0x4EB
-#define FLAG_0x4EC               0x4EC
-#define FLAG_0x4ED               0x4ED
-#define FLAG_0x4EE               0x4EE
-#define FLAG_0x4EF               0x4EF
-#define FLAG_0x4F0               0x4F0
-#define FLAG_0x4F1               0x4F1
-#define FLAG_0x4F2               0x4F2
-#define FLAG_0x4F3               0x4F3
-#define FLAG_0x4F4               0x4F4
-#define FLAG_0x4F5               0x4F5
-#define FLAG_0x4F6               0x4F6
-#define FLAG_0x4F7               0x4F7
-#define FLAG_0x4F8               0x4F8
-#define FLAG_0x4F9               0x4F9
-#define FLAG_0x4FA               0x4FA
-#define FLAG_0x4FB               0x4FB
-#define FLAG_0x4FC               0x4FC
-#define FLAG_0x4FD               0x4FD
-#define FLAG_0x4FE               0x4FE
-#define FLAG_0x4FF               0x4FF
+
+// Cut Trees One Time
+#define FLAG_TREE_VIRIDIAN_01       1231 //0x4CF
+#define FLAG_TREE_VIRIDIAN_02       (FLAG_TREE_VIRIDIAN_01 + 1)
+#define FLAG_TREE_ROUTE2_01         (FLAG_TREE_VIRIDIAN_01 + 2)
+#define FLAG_TREE_ROUTE2_02         (FLAG_TREE_VIRIDIAN_01 + 3)
+#define FLAG_TREE_ROUTE2_03         (FLAG_TREE_VIRIDIAN_01 + 4)
+#define FLAG_TREE_ROUTE2_04         (FLAG_TREE_VIRIDIAN_01 + 5)
+#define FLAG_TREE_PEWTER_01         (FLAG_TREE_VIRIDIAN_01 + 6)
+#define FLAG_TREE_CERULEAN_01       (FLAG_TREE_VIRIDIAN_01 + 7)
+#define FLAG_TREE_ROUTE25_01        (FLAG_TREE_VIRIDIAN_01 + 8)
+#define FLAG_TREE_VERMILION_01      (FLAG_TREE_VIRIDIAN_01 + 9)
+#define FLAG_TREE_ROUTE9_01         (FLAG_TREE_VIRIDIAN_01 + 10)
+#define FLAG_TREE_ROUTE10_01        (FLAG_TREE_VIRIDIAN_01 + 11)
+#define FLAG_TREE_ROUTE10_02        (FLAG_TREE_VIRIDIAN_01 + 12)
+#define FLAG_TREE_ROUTE10_03        (FLAG_TREE_VIRIDIAN_01 + 13)
+#define FLAG_TREE_ROUTE10_04        (FLAG_TREE_VIRIDIAN_01 + 14)
+#define FLAG_TREE_ROUTE8_01         (FLAG_TREE_VIRIDIAN_01 + 15)
+#define FLAG_TREE_ROUTE8_02         (FLAG_TREE_VIRIDIAN_01 + 16)
+#define FLAG_TREE_CELADON_01        (FLAG_TREE_VIRIDIAN_01 + 17)
+#define FLAG_TREE_CELADON_02        (FLAG_TREE_VIRIDIAN_01 + 18)
+#define FLAG_TREE_CELADON_GYM_01    (FLAG_TREE_VIRIDIAN_01 + 19)
+#define FLAG_TREE_CELADON_GYM_02    (FLAG_TREE_VIRIDIAN_01 + 20)
+#define FLAG_TREE_CELADON_GYM_03    (FLAG_TREE_VIRIDIAN_01 + 21)
+#define FLAG_TREE_ROUTE16_01        (FLAG_TREE_VIRIDIAN_01 + 22)
+#define FLAG_TREE_FUCHSIA_01        (FLAG_TREE_VIRIDIAN_01 + 23)
+#define FLAG_TREE_FUCHSIA_02        (FLAG_TREE_VIRIDIAN_01 + 24)
+#define FLAG_TREE_FUCHSIA_03        (FLAG_TREE_VIRIDIAN_01 + 25)
+#define FLAG_TREE_FUCHSIA_04        (FLAG_TREE_VIRIDIAN_01 + 26)
+#define FLAG_TREE_ROUTE14_01        (FLAG_TREE_VIRIDIAN_01 + 27)
+#define FLAG_TREE_ROUTE14_02        (FLAG_TREE_VIRIDIAN_01 + 28)
+#define FLAG_TREE_ROUTE14_03        (FLAG_TREE_VIRIDIAN_01 + 29)
+#define FLAG_TREE_ROUTE13_01        (FLAG_TREE_VIRIDIAN_01 + 30)
+#define FLAG_TREE_ROUTE12_01        (FLAG_TREE_VIRIDIAN_01 + 31)
+#define FLAG_TREE_ROUTE12_02        (FLAG_TREE_VIRIDIAN_01 + 32)
+#define FLAG_TREE_TWOISLAND_01      (FLAG_TREE_VIRIDIAN_01 + 33)
+#define FLAG_TREE_THREEISLAND_01    (FLAG_TREE_VIRIDIAN_01 + 34)
+#define FLAG_TREE_BONDBRIDGE_01     (FLAG_TREE_VIRIDIAN_01 + 35)
+#define FLAG_TREE_BONDBRIDGE_02     (FLAG_TREE_VIRIDIAN_01 + 36)
+#define FLAG_TREE_BERRYFOREST_01    (FLAG_TREE_VIRIDIAN_01 + 37)
+#define FLAG_TREE_BERRYFOREST_02    (FLAG_TREE_VIRIDIAN_01 + 38)
+#define FLAG_TREE_BERRYFOREST_03    (FLAG_TREE_VIRIDIAN_01 + 49)
+#define FLAG_TREE_BERRYFOREST_04    (FLAG_TREE_VIRIDIAN_01 + 40)
+#define FLAG_TREE_BERRYFOREST_05    (FLAG_TREE_VIRIDIAN_01 + 41)
+#define FLAG_TREE_BERRYFOREST_06    (FLAG_TREE_VIRIDIAN_01 + 42)
+#define FLAG_TREE_BERRYFOREST_07    (FLAG_TREE_VIRIDIAN_01 + 43)
+#define FLAG_TREE_BERRYFOREST_08    (FLAG_TREE_VIRIDIAN_01 + 44)
+#define FLAG_TREE_BERRYFOREST_09    (FLAG_TREE_VIRIDIAN_01 + 45)
+#define FLAG_TREE_BERRYFOREST_10    (FLAG_TREE_VIRIDIAN_01 + 46)
+#define FLAG_TREE_MEADOW_01         (FLAG_TREE_VIRIDIAN_01 + 47)
+#define FLAG_TREE_MEADOW_02         (FLAG_TREE_VIRIDIAN_01 + 48) //0x4FF
+#define FLAG_0x4FF                  0x4FF // Used in code as reference
 
 #define TRAINER_FLAGS_START      (FLAG_0x4FF + 1)
 #define TRAINER_FLAGS_END        (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x7FF
