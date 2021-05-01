@@ -32,17 +32,16 @@ static void Debug_DestroyMainMenu(u8);
 static void DebugAction_Cancel(u8);
 static void DebugTask_HandleMainMenuInput(u8);
 static void DebugAction_GetFlags(u8);
-static void DebugAction_GetKeyItems(u8);
 static void DebugAction_GetItems(u8);
 static void DebugAction_GetMons(u8);
 static void DebugAction_CompletePokedex(u8);
+static void DebugAction_GetAll(u8);
 static void DebugAction_AccessPC(u8);
 static void DebugAction_WarpToPallet(u8);
 
 enum {
-    DEBUG_MENU_ITEM_CANCEL,
+    DEBUG_MENU_ITEM_GETALL,
     DEBUG_MENU_ITEM_GETFLAGS,
-    DEBUG_MENU_ITEM_GETKEYITEMS,
     DEBUG_MENU_ITEM_GETITEMS,
     DEBUG_MENU_ITEM_GETMONS,
     DEBUG_MENU_ITEM_COMPLETEPOKEDEX,
@@ -50,9 +49,8 @@ enum {
     DEBUG_MENU_ITEM_WARPTOPALLET,
 };
 
-static const u8 gDebugText_Cancel[] = _("Cancel");
+static const u8 gDebugText_GetAll[] = _("Get All Above");
 static const u8 gDebugText_GetFlags[] = _("Get Important Flags");
-static const u8 gDebugText_GetKeyItems[] = _("Get Debug Key Items");
 static const u8 gDebugText_GetItems[] = _("Get Debug Items");
 static const u8 gDebugText_GetMons[] = _("Get Pokémon");
 static const u8 gDebugText_CompletePokedex[] = _("Complete Pokédex");
@@ -61,9 +59,8 @@ static const u8 gDebugText_WarpToPallet[] = _("Warp to Pallet");
 
 static const struct ListMenuItem sDebugMenuItems[] =
 {
-    [DEBUG_MENU_ITEM_CANCEL] = {gDebugText_Cancel, DEBUG_MENU_ITEM_CANCEL},
+    [DEBUG_MENU_ITEM_GETALL] = {gDebugText_GetAll, DEBUG_MENU_ITEM_GETALL},
     [DEBUG_MENU_ITEM_GETFLAGS] = {gDebugText_GetFlags, DEBUG_MENU_ITEM_GETFLAGS},
-    [DEBUG_MENU_ITEM_GETKEYITEMS] = {gDebugText_GetKeyItems, DEBUG_MENU_ITEM_GETKEYITEMS},
     [DEBUG_MENU_ITEM_GETITEMS] = {gDebugText_GetItems, DEBUG_MENU_ITEM_GETITEMS},
     [DEBUG_MENU_ITEM_GETMONS] = {gDebugText_GetMons, DEBUG_MENU_ITEM_GETMONS},
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = {gDebugText_CompletePokedex, DEBUG_MENU_ITEM_COMPLETEPOKEDEX},
@@ -73,9 +70,8 @@ static const struct ListMenuItem sDebugMenuItems[] =
 
 static void (*const sDebugMenuActions[])(u8) =
 {
-    [DEBUG_MENU_ITEM_CANCEL] = DebugAction_Cancel,
+    [DEBUG_MENU_ITEM_GETALL] = DebugAction_GetAll,
     [DEBUG_MENU_ITEM_GETFLAGS] = DebugAction_GetFlags,
-    [DEBUG_MENU_ITEM_GETKEYITEMS] = DebugAction_GetKeyItems,
     [DEBUG_MENU_ITEM_GETITEMS] = DebugAction_GetItems,
     [DEBUG_MENU_ITEM_GETMONS] = DebugAction_GetMons,
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = DebugAction_CompletePokedex,
@@ -159,6 +155,7 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
     {
         PlaySE(SE_SELECT);
         if ((func = sDebugMenuActions[input]) != NULL)
+            Debug_DestroyMainMenu(taskId);
             func(taskId);
     }
     else if (gMain.newKeys & B_BUTTON)
@@ -168,39 +165,29 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
     }
 }
 
-static void DebugAction_Cancel(u8 taskId)
+static void DebugAction_GetAll(u8 taskId)
 {
-    Debug_DestroyMainMenu(taskId);
+    ScriptContext1_SetupScript(EventScript_Debug_GetAll);
 }
 
 static void DebugAction_GetFlags(u8 taskId)
 {
-    Debug_DestroyMainMenu(taskId);
     ScriptContext1_SetupScript(EventScript_Debug_GetFlags);
-}
-
-static void DebugAction_GetKeyItems(u8 taskId)
-{
-    Debug_DestroyMainMenu(taskId);
-    ScriptContext1_SetupScript(EventScript_Debug_GetKeyItems);
 }
 
 static void DebugAction_GetItems(u8 taskId)
 {
-    Debug_DestroyMainMenu(taskId);
     ScriptContext1_SetupScript(EventScript_Debug_GetItems);
 }
 
 static void DebugAction_GetMons(u8 taskId)
 {
-    Debug_DestroyMainMenu(taskId);
     ScriptContext1_SetupScript(EventScript_Debug_GetMons);
 }
 
 static void DebugAction_CompletePokedex(u8 taskId)
 {
     u16 i;
-    Debug_DestroyMainMenu(taskId);
     for (i = 0; i < NATIONAL_DEX_COUNT + 1; i++)
     {
         GetSetPokedexFlag(i, FLAG_SET_SEEN);
@@ -214,13 +201,11 @@ static void DebugAction_CompletePokedex(u8 taskId)
 //BUGGED
 static void DebugAction_AccessPC(u8 taskId)
 {
-    Debug_DestroyMainMenu(taskId);
     ScriptContext1_SetupScript(EventScript_Debug_PC);
 }
 
 static void DebugAction_WarpToPallet(u8 taskId)
 {
-    Debug_DestroyMainMenu(taskId);
     SetWarpDestination(MAP_GROUP(PALLET_TOWN), MAP_NUM(PALLET_TOWN), -1, 3, 6);
     DoTeleportWarp();
 }
