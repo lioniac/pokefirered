@@ -321,6 +321,7 @@ SECTIONS {
 
         src/mgba.o(.text);
 		    src/printf.o(.text);
+        src/debug.o(.text);
     } =0
 
     script_data :
@@ -634,7 +635,10 @@ SECTIONS {
         data/mystery_event_msg.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
+
+        src/field_control_avatar.o(.rodata);
         src/printf.o(.rodata);
+        src/debug.o(.rodata);
     } =0
 
     song_data :

@@ -1245,4 +1245,11 @@ extern const u8 TradeCenter_EventScript_Chair1[];
 extern const u8 TradeCenter_ConfirmLeaveRoom[];
 extern const u8 TradeCenter_TerminateLink[];
 
+// Debug
+extern const u8 EventScript_Debug_GetFlags[];
+extern const u8 EventScript_Debug_GetKeyItems[];
+extern const u8 EventScript_Debug_GetItems[];
+extern const u8 EventScript_Debug_GetMons[];
+extern const u8 EventScript_Debug_PC[];
+
 #endif //GUARD_EVENT_SCRIPTS_H
