@@ -138,11 +138,11 @@ EventScript_Debug_GetFlags::
 
 EventScript_Debug_GetMons::
     lock
-@	givecustommon SPECIES_BULBASAUR, 10, 0, NATURE_DOCILE, 0, 31
-@	givecustommon SPECIES_CHARMANDER, 10, 0, NATURE_DOCILE, 0, 31
-@	givecustommon SPECIES_SQUIRTLE, 10, 0, NATURE_DOCILE, 0, 31
-@	givecustommon SPECIES_PIKACHU, 10, 0, NATURE_DOCILE, 0, 31
-@	givecustommon SPECIES_SNORLAX, 10, 0, NATURE_DOCILE, 0, 31
-@	givecustommon SPECIES_LAPRAS, 10, 0, NATURE_DOCILE, 0, 31
+	givecustommon SPECIES_BULBASAUR, 10, 0, NATURE_DOCILE, 0, 31
+	givecustommon SPECIES_CHARMANDER, 10, 0, NATURE_DOCILE, 0, 31
+	givecustommon SPECIES_SQUIRTLE, 10, 0, NATURE_DOCILE, 0, 31
+	givecustommon SPECIES_PIKACHU, 10, 0, NATURE_DOCILE, 0, 31
+	givecustommon SPECIES_SNORLAX, 10, 0, NATURE_DOCILE, 0, 31
+	givecustommon SPECIES_LAPRAS, 10, 0, NATURE_DOCILE, 0, 31
     release
     end
