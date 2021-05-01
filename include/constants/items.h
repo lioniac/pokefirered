@@ -513,6 +513,7 @@
 #define ITEM_LAST_TM            ITEM_TM92
 #define ITEM_TMHM_END           ITEM_HM08
 #define NUM_TMHMS               NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES
+#define POKEBALLS_COUNT         11
 
 // Check if the item is one that can be used on a Pokemon.
 #define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_0B2)
