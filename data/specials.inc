@@ -465,4 +465,5 @@ gSpecials:: @ 815FD60
 	def_special SetSpDefEvs
 	def_special SetMonMoves
 	def_special RestoreMovesPP
+	def_special GetCurrentDayString
 gSpecialsEnd::

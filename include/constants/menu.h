@@ -108,5 +108,12 @@
 #define STDSTRING_POKEBALLS_POCKET  26
 #define STDSTRING_TM_CASE           27
 #define STDSTRING_BERRY_POUCH       28
+#define STDSTRING_SUNDAY            29
+#define STDSTRING_MONDAY            30
+#define STDSTRING_TUESDAY           31
+#define STDSTRING_WEDNESDAY         32
+#define STDSTRING_THURSDAY          33
+#define STDSTRING_FRIDAY            34
+#define STDSTRING_SATURDAY          35
 
 #endif //GUARD_CONSTANTS_MENU_H

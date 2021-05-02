@@ -583,7 +583,14 @@ const u8 *const gStdStringPtrs[] = {
     [STDSTRING_KEY_ITEMS_POCKET] = gText_KeyItemsPocket,
     [STDSTRING_POKEBALLS_POCKET] = gText_PokeBallsPocket,
     [STDSTRING_TM_CASE]          = gText_TmCase,
-    [STDSTRING_BERRY_POUCH]      = gText_BerryPouch_2
+    [STDSTRING_BERRY_POUCH]      = gText_BerryPouch_2,
+    [STDSTRING_SUNDAY]           = gText_Sunday,
+    [STDSTRING_MONDAY]           = gText_Monday,
+    [STDSTRING_TUESDAY]          = gText_Tuesday,
+    [STDSTRING_WEDNESDAY]        = gText_Wednesday,
+    [STDSTRING_THURSDAY]         = gText_Thursday,
+    [STDSTRING_FRIDAY]           = gText_Friday,
+    [STDSTRING_SATURDAY]         = gText_Saturday
 };
 
 static const u8 *const sDescriptionPtrs_CableClub_TradeBattleCancel[] = {

@@ -43,6 +43,8 @@
 #include "constants/menu.h"
 #include "constants/event_objects.h"
 #include "constants/metatile_labels.h"
+#include "rtc.h"
+#include "clock.h"
 
 static EWRAM_DATA u8 sElevatorCurrentFloorWindowId = 0;
 static EWRAM_DATA u16 sElevatorScroll = 0;
@@ -2723,4 +2725,33 @@ void RestoreMovesPP(void)
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PP2, &move2pp);
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PP3, &move3pp);
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PP4, &move4pp);
+}
+
+void GetCurrentDayString(void)
+{
+    RtcCalcLocalTime();
+    switch (gLocalTime.dayOfWeek)
+    {
+    case 0:
+        StringCopy(gStringVar1, gText_Sunday);
+        break;
+    case 1:
+        StringCopy(gStringVar1, gText_Monday);
+        break;
+    case 2:
+        StringCopy(gStringVar1, gText_Tuesday);
+        break;
+    case 3:
+        StringCopy(gStringVar1, gText_Wednesday);
+        break;
+    case 4:
+        StringCopy(gStringVar1, gText_Thursday);
+        break;
+    case 5:
+        StringCopy(gStringVar1, gText_Friday);
+        break;
+    case 6:
+        StringCopy(gStringVar1, gText_Saturday);
+        break;
+    }
 }

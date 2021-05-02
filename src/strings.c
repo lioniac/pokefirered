@@ -1485,3 +1485,11 @@ const u8 gText_SideQuestMap_27[] = _("Map 27");
 const u8 gText_SideQuestMap_28[] = _("Map 28");
 const u8 gText_SideQuestMap_29[] = _("Map 29");
 const u8 gText_SideQuestMap_30[] = _("Map 30");
+
+const u8 gText_Sunday[]    = _("Sunday");
+const u8 gText_Monday[]    = _("Monday");
+const u8 gText_Tuesday[]   = _("Tuesday");
+const u8 gText_Wednesday[] = _("Wednesday");
+const u8 gText_Thursday[]  = _("Thursday");
+const u8 gText_Friday[]    = _("Friday");
+const u8 gText_Saturday[]  = _("Saturday");
