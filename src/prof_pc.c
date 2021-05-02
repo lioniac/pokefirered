@@ -18,6 +18,11 @@ extern const u8 PokedexRating_Text_LessThan120[];
 extern const u8 PokedexRating_Text_LessThan130[];
 extern const u8 PokedexRating_Text_LessThan140[];
 extern const u8 PokedexRating_Text_LessThan150[];
+extern const u8 PokedexRating_Text_LessThan200[];
+extern const u8 PokedexRating_Text_LessThan250[];
+extern const u8 PokedexRating_Text_LessThan300[];
+extern const u8 PokedexRating_Text_LessThan350[];
+extern const u8 PokedexRating_Text_LessThan386[];
 extern const u8 PokedexRating_Text_Complete[];
 
 u16 GetPokedexCount(void)
@@ -84,17 +89,22 @@ static const u8 *GetProfOaksRatingMessageByCount(u16 count)
     if (count < 150)
         return PokedexRating_Text_LessThan150;
 
-    if (count == 150)
-    {
-        // Mew doesn't count for completing the pokedex
-        if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MEW), 1))
-            return PokedexRating_Text_LessThan150;
+    if (count < 200)
+        return PokedexRating_Text_LessThan200;
 
-        gSpecialVar_Result = TRUE;
-        return PokedexRating_Text_Complete;
-    }
+    if (count < 250)
+        return PokedexRating_Text_LessThan250;
 
-    if (count == 151)
+    if (count < 300)
+        return PokedexRating_Text_LessThan300;
+
+    if (count < 350)
+        return PokedexRating_Text_LessThan350;
+
+    if (count < 386)
+        return PokedexRating_Text_LessThan386;
+
+    if (count == 386)
     {
         gSpecialVar_Result = TRUE;
         return PokedexRating_Text_Complete;

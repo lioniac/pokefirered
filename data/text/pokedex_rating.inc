@@ -82,9 +82,30 @@ PokedexRating_Text_LessThan150:: @ 81A7137
 	.string "I have nothing left to say!\n"
 	.string "You're the POKéMON PROFESSOR now!$"
 
+PokedexRating_Text_LessThan200::
+	.string "I'm getting emotional.\n"
+	.string "I'm SUPER proud of you!$"
+
+PokedexRating_Text_LessThan250::
+	.string "Excellent!\n"
+	.string "Keep exploring all Seasons!$"
+
+PokedexRating_Text_LessThan300::
+	.string "I'm speechless!\n"
+	.string "You're the real deal!$"
+
+PokedexRating_Text_LessThan350::
+	.string "Awesome!\n"
+	.string "Please teach me!$"
+
+PokedexRating_Text_LessThan386::
+	.string "You're close to become\n"
+	.string "a legendary POKéMON MASTER!$"
+
 PokedexRating_Text_Complete:: @ 81A7175
-	.string "Your POKéDEX is entirely complete!\n"
-	.string "Congratulations!!$"
+	.string "Your POKéDEX is entirely complete!\p"
+	.string "Congratulations!! Now you're the\n"
+	.string "LEGENDARY POKéMON MASTER!$"
 
 PokedexRating_Text_NationalDexSeenXOwnedY:: @ 81A71AA
 	.string "And your NATIONAL POKéDEX is:\p"
