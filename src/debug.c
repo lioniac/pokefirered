@@ -21,6 +21,8 @@
 #include "event_data.h"
 #include "script.h"
 #include "event_scripts.h"
+#include "constants/quests.h"
+#include "quest_menu.h"
 
 #define DEBUG_MAIN_MENU_HEIGHT 8
 #define DEBUG_MAIN_MENU_WIDTH 17
@@ -29,13 +31,13 @@
 
 void Debug_ShowMainMenu(void);
 static void Debug_DestroyMainMenu(u8);
-static void DebugAction_Cancel(u8);
 static void DebugTask_HandleMainMenuInput(u8);
+static void DebugAction_GetAll(u8);
 static void DebugAction_GetFlags(u8);
 static void DebugAction_GetItems(u8);
 static void DebugAction_GetMons(u8);
 static void DebugAction_CompletePokedex(u8);
-static void DebugAction_GetAll(u8);
+static void DebugAction_UnlockAllQuests(u8);
 static void DebugAction_AccessPC(u8);
 static void DebugAction_WarpToPallet(u8);
 
@@ -45,6 +47,7 @@ enum {
     DEBUG_MENU_ITEM_GETITEMS,
     DEBUG_MENU_ITEM_GETMONS,
     DEBUG_MENU_ITEM_COMPLETEPOKEDEX,
+    DEBUG_MENU_ITEM_UNLOCKALLQUESTS,
     DEBUG_MENU_ITEM_ACCESSPC,
     DEBUG_MENU_ITEM_WARPTOPALLET,
 };
@@ -54,6 +57,7 @@ static const u8 gDebugText_GetFlags[] = _("Get Important Flags");
 static const u8 gDebugText_GetItems[] = _("Get Debug Items");
 static const u8 gDebugText_GetMons[] = _("Get Pokémon");
 static const u8 gDebugText_CompletePokedex[] = _("Complete Pokédex");
+static const u8 gDebugText_UnlockAllQuests[] = _("Unlock All Quests");
 static const u8 gDebugText_AccessPC[] = _("Access PC");
 static const u8 gDebugText_WarpToPallet[] = _("Warp to Pallet");
 
@@ -64,6 +68,7 @@ static const struct ListMenuItem sDebugMenuItems[] =
     [DEBUG_MENU_ITEM_GETITEMS] = {gDebugText_GetItems, DEBUG_MENU_ITEM_GETITEMS},
     [DEBUG_MENU_ITEM_GETMONS] = {gDebugText_GetMons, DEBUG_MENU_ITEM_GETMONS},
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = {gDebugText_CompletePokedex, DEBUG_MENU_ITEM_COMPLETEPOKEDEX},
+    [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = {gDebugText_UnlockAllQuests, DEBUG_MENU_ITEM_UNLOCKALLQUESTS},
     [DEBUG_MENU_ITEM_ACCESSPC] = {gDebugText_AccessPC, DEBUG_MENU_ITEM_ACCESSPC},
     [DEBUG_MENU_ITEM_WARPTOPALLET] = {gDebugText_WarpToPallet, DEBUG_MENU_ITEM_WARPTOPALLET},
 };
@@ -75,6 +80,7 @@ static void (*const sDebugMenuActions[])(u8) =
     [DEBUG_MENU_ITEM_GETITEMS] = DebugAction_GetItems,
     [DEBUG_MENU_ITEM_GETMONS] = DebugAction_GetMons,
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = DebugAction_CompletePokedex,
+    [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = DebugAction_UnlockAllQuests,
     [DEBUG_MENU_ITEM_ACCESSPC] = DebugAction_AccessPC,
     [DEBUG_MENU_ITEM_WARPTOPALLET] = DebugAction_WarpToPallet,
 };
@@ -196,6 +202,16 @@ static void DebugAction_CompletePokedex(u8 taskId)
     gSaveBlock2Ptr->pokedex.unownPersonality = 0xDEADBEEF;
     gSaveBlock2Ptr->pokedex.spindaPersonality = 0xDEADBEEF;
     PlaySE(SE_SAVE);
+}
+
+static void DebugAction_UnlockAllQuests(u8 taskId)
+{
+    u16 i;
+
+    for (i = 0; i < SIDE_QUEST_COUNT; i++)
+    {
+        GetSetQuestFlag(i, FLAG_SET_UNLOCKED);
+    }
 }
 
 //BUGGED

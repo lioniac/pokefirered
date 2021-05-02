@@ -1,6 +1,7 @@
 EventScript_Debug_GetFlags_Func:
     setflag FLAG_SYS_POKEMON_GET
     setflag FLAG_SYS_POKEDEX_GET
+    setflag FLAG_SYS_QUEST_MENU_GET
     clearflag FLAG_HIDE_OAK_IN_HIS_LAB
     setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
     setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
