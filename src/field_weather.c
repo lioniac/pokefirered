@@ -1109,20 +1109,26 @@ u8 SetRandomWeather(void)
         else
             gSaveBlock1Ptr->season++;
 
+        VarSet(VAR_SEASON, gSaveBlock1Ptr->season);
+
         //Enforce Season Weather at beginning of each Season
         switch(gSaveBlock1Ptr->season)
         {
         case SEASON_SPRING:
             weather = WEATHER_SUNNY;
+            gSaveBlock2Ptr->optionsWindowFrameType = 3;
             break;
         case SEASON_SUMMER:
             weather = WEATHER_HARSH_SUN;
+            gSaveBlock2Ptr->optionsWindowFrameType = 2;
             break;
         case SEASON_AUTUMN:
             weather = WEATHER_SANDSTORM;
+            gSaveBlock2Ptr->optionsWindowFrameType = 5;
             break;
         case SEASON_WINTER:
             weather = WEATHER_FLAKES;
+            gSaveBlock2Ptr->optionsWindowFrameType = 4;
             break;
         }
 

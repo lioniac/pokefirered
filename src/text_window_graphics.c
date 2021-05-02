@@ -38,13 +38,20 @@ const u16 gUnknown_8471DEC[][16] = {
     INCBIN_U16("graphics/text_window/stdpal_4.gbapal")
 };
 
+const u16 gSeasonPals[][16] = {
+    INCBIN_U16("graphics/text_window/startmenu_spring.gbapal"),
+    INCBIN_U16("graphics/text_window/startmenu_summer.gbapal"),
+    INCBIN_U16("graphics/text_window/startmenu_autumn.gbapal"),
+    INCBIN_U16("graphics/text_window/startmenu_winter.gbapal")
+};
+
 const struct TextWindowGraphics gUserFrames[] = {
     {gUnknown_8470D6C, gUnknown_847190C},
     {gUnknown_8470E8C, gUnknown_847192C},
-    {gUnknown_8470FCC, gUnknown_847194C},
-    {gUnknown_84710EC, gUnknown_847196C},
-    {gUnknown_847120C, gUnknown_847198C},
-    {gUnknown_847132C, gUnknown_84719AC},
+    {gUnknown_8470FCC, gUnknown_847194C}, // Red
+    {gUnknown_84710EC, gUnknown_847196C}, // Green
+    {gUnknown_847120C, gUnknown_847198C}, // Blue
+    {gUnknown_847132C, gUnknown_84719AC}, // Yellow
     {gUnknown_847144C, gUnknown_84719CC},
     {gUnknown_847156C, gUnknown_84719EC},
     {gUnknown_84716AC, gUnknown_8471A0C},

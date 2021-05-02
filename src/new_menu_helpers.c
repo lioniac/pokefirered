@@ -706,6 +706,12 @@ void DrawHelpMessageWindowWithText(const u8 * text)
     PrintTextOnHelpMessageWindow(text, 2);
 }
 
+void DrawHelpMessageWindowWithText_season(const u8 * text)
+{
+    sub_814FE6C_season(CreateHelpMessageWindow(), DLG_WINDOW_BASE_TILE_NUM, 0x10 * DLG_WINDOW_PALETTE_NUM);
+    PrintTextOnHelpMessageWindow(text, 2);
+}
+
 void DestroyHelpMessageWindow_(void)
 {
     DestroyHelpMessageWindow(2);

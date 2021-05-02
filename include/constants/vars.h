@@ -191,7 +191,7 @@
 
 #define VAR_GENERATE_SHINY         0x408C
 #define VAR_STEPS_FOR_NEXT_SEASON  0x408D
-#define VAR_0x408E                 0x408E
+#define VAR_SEASON                 0x408E
 #define VAR_0x408F                 0x408F
 #define VAR_0x4090                 0x4090
 #define VAR_0x4091                 0x4091

@@ -33,6 +33,7 @@ void Debug_ShowMainMenu(void);
 static void Debug_DestroyMainMenu(u8);
 static void DebugTask_HandleMainMenuInput(u8);
 static void DebugAction_GetAll(u8);
+static void DebugAction_ChangeSeason(u8);
 static void DebugAction_GetFlags(u8);
 static void DebugAction_GetItems(u8);
 static void DebugAction_GetMons(u8);
@@ -42,6 +43,7 @@ static void DebugAction_AccessPC(u8);
 static void DebugAction_WarpToPallet(u8);
 
 enum {
+    DEBUG_MENU_ITEM_CHANGESEASON,
     DEBUG_MENU_ITEM_GETALL,
     DEBUG_MENU_ITEM_GETFLAGS,
     DEBUG_MENU_ITEM_GETITEMS,
@@ -52,7 +54,8 @@ enum {
     DEBUG_MENU_ITEM_WARPTOPALLET,
 };
 
-static const u8 gDebugText_GetAll[] = _("Get All Above");
+static const u8 gDebugText_GetChangeSeason[] = _("Change Season");
+static const u8 gDebugText_GetAll[] = _("Get All");
 static const u8 gDebugText_GetFlags[] = _("Get Important Flags");
 static const u8 gDebugText_GetItems[] = _("Get Debug Items");
 static const u8 gDebugText_GetMons[] = _("Get Pokémon");
@@ -63,26 +66,28 @@ static const u8 gDebugText_WarpToPallet[] = _("Warp to Pallet");
 
 static const struct ListMenuItem sDebugMenuItems[] =
 {
-    [DEBUG_MENU_ITEM_GETALL] = {gDebugText_GetAll, DEBUG_MENU_ITEM_GETALL},
-    [DEBUG_MENU_ITEM_GETFLAGS] = {gDebugText_GetFlags, DEBUG_MENU_ITEM_GETFLAGS},
-    [DEBUG_MENU_ITEM_GETITEMS] = {gDebugText_GetItems, DEBUG_MENU_ITEM_GETITEMS},
-    [DEBUG_MENU_ITEM_GETMONS] = {gDebugText_GetMons, DEBUG_MENU_ITEM_GETMONS},
+    [DEBUG_MENU_ITEM_CHANGESEASON]    = {gDebugText_GetChangeSeason, DEBUG_MENU_ITEM_CHANGESEASON},
+    [DEBUG_MENU_ITEM_GETALL]          = {gDebugText_GetAll, DEBUG_MENU_ITEM_GETALL},
+    [DEBUG_MENU_ITEM_GETFLAGS]        = {gDebugText_GetFlags, DEBUG_MENU_ITEM_GETFLAGS},
+    [DEBUG_MENU_ITEM_GETITEMS]        = {gDebugText_GetItems, DEBUG_MENU_ITEM_GETITEMS},
+    [DEBUG_MENU_ITEM_GETMONS]         = {gDebugText_GetMons, DEBUG_MENU_ITEM_GETMONS},
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = {gDebugText_CompletePokedex, DEBUG_MENU_ITEM_COMPLETEPOKEDEX},
     [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = {gDebugText_UnlockAllQuests, DEBUG_MENU_ITEM_UNLOCKALLQUESTS},
-    [DEBUG_MENU_ITEM_ACCESSPC] = {gDebugText_AccessPC, DEBUG_MENU_ITEM_ACCESSPC},
-    [DEBUG_MENU_ITEM_WARPTOPALLET] = {gDebugText_WarpToPallet, DEBUG_MENU_ITEM_WARPTOPALLET},
+    [DEBUG_MENU_ITEM_ACCESSPC]        = {gDebugText_AccessPC, DEBUG_MENU_ITEM_ACCESSPC},
+    [DEBUG_MENU_ITEM_WARPTOPALLET]    = {gDebugText_WarpToPallet, DEBUG_MENU_ITEM_WARPTOPALLET},
 };
 
 static void (*const sDebugMenuActions[])(u8) =
 {
-    [DEBUG_MENU_ITEM_GETALL] = DebugAction_GetAll,
-    [DEBUG_MENU_ITEM_GETFLAGS] = DebugAction_GetFlags,
-    [DEBUG_MENU_ITEM_GETITEMS] = DebugAction_GetItems,
-    [DEBUG_MENU_ITEM_GETMONS] = DebugAction_GetMons,
+    [DEBUG_MENU_ITEM_CHANGESEASON]    = DebugAction_ChangeSeason,
+    [DEBUG_MENU_ITEM_GETALL]          = DebugAction_GetAll,
+    [DEBUG_MENU_ITEM_GETFLAGS]        = DebugAction_GetFlags,
+    [DEBUG_MENU_ITEM_GETITEMS]        = DebugAction_GetItems,
+    [DEBUG_MENU_ITEM_GETMONS]         = DebugAction_GetMons,
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = DebugAction_CompletePokedex,
     [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = DebugAction_UnlockAllQuests,
-    [DEBUG_MENU_ITEM_ACCESSPC] = DebugAction_AccessPC,
-    [DEBUG_MENU_ITEM_WARPTOPALLET] = DebugAction_WarpToPallet,
+    [DEBUG_MENU_ITEM_ACCESSPC]        = DebugAction_AccessPC,
+    [DEBUG_MENU_ITEM_WARPTOPALLET]    = DebugAction_WarpToPallet,
 };
 
 static const struct WindowTemplate sDebugMenuWindowTemplate =
@@ -112,7 +117,7 @@ static const struct ListMenuTemplate sDebugMenuListTemplate =
     .cursorShadowPal = 3,
     .lettersSpacing = 1,
     .itemVerticalPadding = 0,
-    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
+    .scrollMultiple = LIST_MULTIPLE_SCROLL_DPAD,
     .fontId = 1,
     .cursorKind = 0
 };
@@ -157,12 +162,22 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
     void (*func)(u8);
     u32 input = ListMenu_ProcessInput(gTasks[taskId].data[0]);
 
-    if (gMain.newKeys & A_BUTTON)
+    // if (gMain.newKeys & DPAD_UP)
+    // {
+    //     PlaySE(SE_SELECT);
+    //     Menu_MoveCursor(-1);
+    // } else if (gMain.newKeys & DPAD_DOWN)
+    // {
+    //     PlaySE(SE_SELECT);
+    //     Menu_MoveCursor(+1);
+    /*} else */if (gMain.newKeys & A_BUTTON)
     {
         PlaySE(SE_SELECT);
         if ((func = sDebugMenuActions[input]) != NULL)
+        {
             Debug_DestroyMainMenu(taskId);
             func(taskId);
+        }
     }
     else if (gMain.newKeys & B_BUTTON)
     {
@@ -174,6 +189,8 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
 static void DebugAction_GetAll(u8 taskId)
 {
     ScriptContext1_SetupScript(EventScript_Debug_GetAll);
+    DebugAction_CompletePokedex(taskId);
+    DebugAction_UnlockAllQuests(taskId);
 }
 
 static void DebugAction_GetFlags(u8 taskId)
@@ -212,6 +229,12 @@ static void DebugAction_UnlockAllQuests(u8 taskId)
     {
         GetSetQuestFlag(i, FLAG_SET_UNLOCKED);
     }
+}
+
+static void DebugAction_ChangeSeason(u8 taskId)
+{
+    FlagSet(FLAG_SEASON_CHANGE);
+    gSaveBlock1Ptr->seasonPedometer = 0;
 }
 
 //BUGGED

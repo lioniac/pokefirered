@@ -3,6 +3,7 @@
 #include "text_window.h"
 #include "text_window_graphics.h"
 #include "quest_log.h"
+#include "event_data.h"
 
 extern const u16 gUnknown_841F1C8[];
 
@@ -52,6 +53,12 @@ void sub_814FE6C(u8 windowId, u16 destOffset, u8 palIdx)
 {
     LoadBgTiles(GetWindowAttribute(windowId, WINDOW_BG), gUnknown_84566A8, 0x280, destOffset);
     LoadPalette(stdpal_get(2), palIdx, 32);
+}
+
+void sub_814FE6C_season(u8 windowId, u16 destOffset, u8 palIdx)
+{
+    LoadBgTiles(GetWindowAttribute(windowId, WINDOW_BG), gUnknown_84566A8, 0x280, destOffset);
+    LoadPalette(seasonPal_get(VarGet(VAR_SEASON)), palIdx, 32);
 }
 
 void TextWindow_LoadResourcesStdFrame0(u8 windowId, u16 destOffset, u8 palIdx)
@@ -163,4 +170,26 @@ const u16 *stdpal_get(u8 id)
     }
 
     return (const u16 *)(gUnknown_8471DEC) + id;
+}
+
+const u16 *seasonPal_get(u8 id)
+{
+    switch (id)
+    {
+    case 0:
+        id = 0;
+        break;
+    case 1:
+        id = 0x10;
+        break;
+    case 2:
+        id = 0x20;
+        break;
+    case 3:
+    default:
+        id = 0x30;
+        break;
+    }
+
+    return (const u16 *)(gSeasonPals) + id;
 }

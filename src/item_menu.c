@@ -63,6 +63,7 @@ struct BagSlots
     struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
     u16 itemsAbove[3];
     u16 cursorPos[3];
+    u16 registeredItemSelect;
     u16 registeredItemL;
     u16 registeredItemR;
     u16 pocket;
@@ -183,6 +184,7 @@ static s8 CompareItemsById(struct ItemSlot* itemSlot1, struct ItemSlot* itemSlot
 
 //register LR
 static void Task_ItemMenuAction_Register(u8 taskId);
+static void Task_ItemMenuAction_ButtonSelect(u8 taskId);
 static void Task_ItemMenuAction_ButtonL(u8 taskId);
 static void Task_ItemMenuAction_ButtonR(u8 taskId);
 static void Task_ItemMenuAction_Deselect(u8 taskId);
@@ -234,8 +236,9 @@ static const u8 sMenuText_ByType[] = _("Type");
 static const u8 sMenuText_ByAmount[] = _("Amount");
 static const u8 sMenuText_ByNumber[] = _("Number");
 static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
-static const u8 sMenuText_L[] = _("L Button");
-static const u8 sMenuText_R[] = _("R Button");
+static const u8 sMenuText_Sel[] = _("Select");
+static const u8 sMenuText_L[]   = _("L Button");
+static const u8 sMenuText_R[]   = _("R Button");
 static const struct MenuAction sItemMenuContextActions[] = {
     [ITEMMENUACTION_USE] =          {gOtherText_Use, {.void_u8 = Task_ItemMenuAction_Use}},
     [ITEMMENUACTION_TOSS] =         {gOtherText_Toss, {.void_u8 = Task_ItemMenuAction_Toss}},
@@ -252,6 +255,7 @@ static const struct MenuAction sItemMenuContextActions[] = {
     [ITEMMENUACTION_BY_TYPE] =      {sMenuText_ByType, ItemMenu_SortByType},
     [ITEMMENUACTION_BY_AMOUNT] =    {sMenuText_ByAmount, ItemMenu_SortByAmount},
     [ITEMMENUACTION_BY_NUMBER] =    {sMenuText_ByNumber, ItemMenu_SortByNumber},
+    [ITEMMENUACTION_SEL_BUTTON] =   {sMenuText_Sel, Task_ItemMenuAction_ButtonSelect},
     [ITEMMENUACTION_L_BUTTON] =     {sMenuText_L, Task_ItemMenuAction_ButtonL},
     [ITEMMENUACTION_R_BUTTON] =     {sMenuText_R, Task_ItemMenuAction_ButtonR},
     [ITEMMENUACTION_DUMMY] =        {gString_Dummy, {.void_u8 = NULL}}
@@ -277,6 +281,7 @@ static const u8 sContextMenuItems_Field[][4] = {
 };
 
 static const u8 sContextMenu_RegisterKeyItem[] = {
+    ITEMMENUACTION_SEL_BUTTON,
     ITEMMENUACTION_L_BUTTON,
     ITEMMENUACTION_R_BUTTON,
     ITEMMENUACTION_DUMMY
@@ -355,6 +360,7 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
     .palNum = 0,
 };
 
+static const u8 sBlit_SelectButton[] = INCBIN_U8("graphics/interface/select_button.4bpp");
 static const u8 sLButtonGfx[]        = INCBIN_U8("graphics/interface/L_button.4bpp");
 static const u8 sRButtonGfx[]        = INCBIN_U8("graphics/interface/R_button.4bpp");
 
@@ -771,6 +777,9 @@ static void BagListMenuItemPrintFunc(u8 windowId, u32 itemId, u8 y)
         }
         else
         {
+            if (gSaveBlock1Ptr->registeredItemSelect != ITEM_NONE && gSaveBlock1Ptr->registeredItemSelect == bagItemId)
+                BlitBitmapToWindow(windowId, sBlit_SelectButton, 0x70, y, 0x18, 0x10);
+
             if (gSaveBlock1Ptr->registeredItemL != ITEM_NONE && gSaveBlock1Ptr->registeredItemL == bagItemId)
                 BlitBitmapToWindow(windowId, sLButtonGfx, 0x70, y, 0x18, 0x10);
 
@@ -1506,7 +1515,9 @@ static void OpenContextMenu(u8 taskId)
                 {
                     sContextMenuItemsBuffer[2] = ITEMMENUACTION_CANCEL;
 
-                    if (gSaveBlock1Ptr->registeredItemL == gSpecialVar_ItemId)
+                    if (gSaveBlock1Ptr->registeredItemSelect == gSpecialVar_ItemId)
+                        sContextMenuItemsBuffer[1] = ITEMMENUACTION_DESELECT;
+                    else if (gSaveBlock1Ptr->registeredItemL == gSpecialVar_ItemId)
                         sContextMenuItemsBuffer[1] = ITEMMENUACTION_DESELECT;
                     else if (gSaveBlock1Ptr->registeredItemR == gSpecialVar_ItemId)
                         sContextMenuItemsBuffer[1] = ITEMMENUACTION_DESELECT;
@@ -1522,9 +1533,11 @@ static void OpenContextMenu(u8 taskId)
                 }
                 else
                 {
-                    sContextMenuItemsBuffer[0] = ITEMMENUACTION_L_BUTTON;
-                    sContextMenuItemsBuffer[1] = ITEMMENUACTION_R_BUTTON;
-                    sContextMenuItemsBuffer[2] = ITEMMENUACTION_CANCEL;
+                    sContextMenuNumItems = 4;
+                    sContextMenuItemsBuffer[0] = ITEMMENUACTION_SEL_BUTTON;
+                    sContextMenuItemsBuffer[1] = ITEMMENUACTION_L_BUTTON;
+                    sContextMenuItemsBuffer[2] = ITEMMENUACTION_R_BUTTON;
+                    sContextMenuItemsBuffer[3] = ITEMMENUACTION_CANCEL;
                     sRegisterSubMenu == TRUE;
                 }
                 break;
@@ -2135,9 +2148,12 @@ bool8 UseRegisteredKeyItemOnField(u8 button)
     switch(button)
     {
         case 0:
-            registeredItem = gSaveBlock1Ptr->registeredItemL;
+            registeredItem = gSaveBlock1Ptr->registeredItemSelect;
             break;
         case 1:
+            registeredItem = gSaveBlock1Ptr->registeredItemL;
+            break;
+        case 2:
             registeredItem = gSaveBlock1Ptr->registeredItemR;
             break;
         default:
@@ -2162,9 +2178,12 @@ bool8 UseRegisteredKeyItemOnField(u8 button)
             switch (button)
             {
             case 0:
-                gSaveBlock1Ptr->registeredItemL = ITEM_NONE;
+                gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
                 break;
             case 1:
+                gSaveBlock1Ptr->registeredItemL = ITEM_NONE;
+                break;
+            case 2:
                 gSaveBlock1Ptr->registeredItemR = ITEM_NONE;
                 break;
             }
@@ -2195,6 +2214,7 @@ static void BackUpPlayerBag(void)
     memcpy(sBackupPlayerBag->bagPocket_Items, gSaveBlock1Ptr->bagPocket_Items, BAG_ITEMS_COUNT * sizeof(struct ItemSlot));
     memcpy(sBackupPlayerBag->bagPocket_KeyItems, gSaveBlock1Ptr->bagPocket_KeyItems, BAG_KEYITEMS_COUNT * sizeof(struct ItemSlot));
     memcpy(sBackupPlayerBag->bagPocket_PokeBalls, gSaveBlock1Ptr->bagPocket_PokeBalls, BAG_POKEBALLS_COUNT * sizeof(struct ItemSlot));
+    sBackupPlayerBag->registeredItemSelect = gSaveBlock1Ptr->registeredItemSelect;
     sBackupPlayerBag->registeredItemL = gSaveBlock1Ptr->registeredItemL;
     sBackupPlayerBag->registeredItemR = gSaveBlock1Ptr->registeredItemR;
     sBackupPlayerBag->pocket = gBagMenuState.pocket;
@@ -2206,6 +2226,7 @@ static void BackUpPlayerBag(void)
     ClearItemSlots(gSaveBlock1Ptr->bagPocket_Items, BAG_ITEMS_COUNT);
     ClearItemSlots(gSaveBlock1Ptr->bagPocket_KeyItems, BAG_KEYITEMS_COUNT);
     ClearItemSlots(gSaveBlock1Ptr->bagPocket_PokeBalls, BAG_POKEBALLS_COUNT);
+    gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
     gSaveBlock1Ptr->registeredItemL = ITEM_NONE;
     gSaveBlock1Ptr->registeredItemR = ITEM_NONE;
     ResetBagCursorPositions();
@@ -2217,6 +2238,7 @@ static void RestorePlayerBag(void)
     memcpy(gSaveBlock1Ptr->bagPocket_Items, sBackupPlayerBag->bagPocket_Items, BAG_ITEMS_COUNT * sizeof(struct ItemSlot));
     memcpy(gSaveBlock1Ptr->bagPocket_KeyItems, sBackupPlayerBag->bagPocket_KeyItems, BAG_KEYITEMS_COUNT * sizeof(struct ItemSlot));
     memcpy(gSaveBlock1Ptr->bagPocket_PokeBalls, sBackupPlayerBag->bagPocket_PokeBalls, BAG_POKEBALLS_COUNT * sizeof(struct ItemSlot));
+    gSaveBlock1Ptr->registeredItemSelect = sBackupPlayerBag->registeredItemSelect;
     gSaveBlock1Ptr->registeredItemL = sBackupPlayerBag->registeredItemL;
     gSaveBlock1Ptr->registeredItemR = sBackupPlayerBag->registeredItemR;
     gBagMenuState.pocket = sBackupPlayerBag->pocket;
@@ -2362,7 +2384,7 @@ static void Task_Bag_TeachyTvRegister(u8 taskId)
             break;
         case 408:
             PlaySE(SE_SELECT);
-            gSaveBlock1Ptr->registeredItemL = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItemSelect = gSpecialVar_ItemId;
             HideBagWindow(10);
             HideBagWindow(6);
             PutWindowTilemap(0);
@@ -3329,6 +3351,15 @@ static void Task_ItemMenuAction_Register(u8 taskId)
     OpenContextMenu(taskId);
 }
 
+static void Task_ItemMenuAction_ButtonSelect(u8 taskId)
+{
+    u16 itemId;
+    s16 *data = gTasks[taskId].data;
+    itemId = BagGetItemIdByPocketPosition(gBagMenuState.pocket + 1, data[1]);
+    gSaveBlock1Ptr->registeredItemSelect = itemId;
+    gTasks[taskId].func = ItemMenu_FinishRegister;
+}
+
 static void Task_ItemMenuAction_ButtonL(u8 taskId)
 {
     u16 itemId;
@@ -3353,7 +3384,9 @@ static void Task_ItemMenuAction_Deselect(u8 taskId)
     s16 *data = gTasks[taskId].data;
     itemId = BagGetItemIdByPocketPosition(gBagMenuState.pocket + 1, data[1]);
 
-    if (gSaveBlock1Ptr->registeredItemL == itemId)
+    if (gSaveBlock1Ptr->registeredItemSelect == itemId)
+        gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
+    else if (gSaveBlock1Ptr->registeredItemL == itemId)
         gSaveBlock1Ptr->registeredItemL = ITEM_NONE;
     else if (gSaveBlock1Ptr->registeredItemR == itemId)
         gSaveBlock1Ptr->registeredItemR = ITEM_NONE;

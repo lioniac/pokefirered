@@ -62,7 +62,7 @@ static void InitPlayerTrainerId(void)
 static void SetDefaultOptions(void)
 {
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
-    gSaveBlock2Ptr->optionsWindowFrameType = 0;
+    gSaveBlock2Ptr->optionsWindowFrameType = 3;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_STEREO;
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
     gSaveBlock2Ptr->optionsBattleSceneOff = TRUE;
@@ -158,6 +158,7 @@ void NewGameInitData(void)
     gSaveBlock2Ptr->autoRun = TRUE;
     
     //Register LR
+    gSaveBlock1Ptr->registeredItemSelect = 0;
     gSaveBlock1Ptr->registeredItemL = 0;
     gSaveBlock1Ptr->registeredItemR = 0;
 
@@ -166,8 +167,9 @@ void NewGameInitData(void)
     
     //Seasons Random Weather
     gSaveBlock1Ptr->seasonPedometer = 0;
-    gSaveBlock1Ptr->season = 3;
-    FlagSet(FLAG_SEASON_CHANGE);
+    gSaveBlock1Ptr->season = 0;
+    VarSet(VAR_SEASON, 0);
+    VarSet(VAR_STEPS_FOR_NEXT_SEASON, STEPS_FOR_SEASON_CHANGE);
 
     //Gen6 Exp. Share
     gSaveBlock2Ptr->expShare = 0;

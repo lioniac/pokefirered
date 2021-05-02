@@ -37,6 +37,9 @@
 #include "constants/songs.h"
 #include "constants/field_weather.h"
 #include "quest_menu.h"
+#include "clock.h"
+#include "rtc.h"
+#include "string_util.h"
 
 enum StartMenuOption
 {
@@ -67,6 +70,7 @@ static EWRAM_DATA u8 sNumStartMenuItems = 0;
 static EWRAM_DATA u8 sStartMenuOrder[MAX_STARTMENU_ITEMS] = {};
 static EWRAM_DATA s8 sDrawStartMenuState[2] = {};
 static EWRAM_DATA u8 sSafariZoneStatsWindowId = 0;
+static EWRAM_DATA u8 gStartMenu_Clock[] = _("");
 static ALIGNED(4) EWRAM_DATA u8 sSaveStatsWindowId = 0;
 
 static u8 (*sSaveDialogCB)(void);
@@ -114,6 +118,8 @@ static void task50_after_link_battle_save(u8 taskId);
 static void PrintSaveStats(void);
 static void CloseSaveStatsWindow(void);
 static void CloseStartMenu(void);
+static void GetStartMenuClock(void);
+static void StartMenu_PrintClock(void);
 
 static const struct MenuAction sStartMenuActionTable[] = {
     { gStartMenuText_Pokedex, {.u8_void = StartMenuPokedexCallback} },
@@ -322,9 +328,15 @@ static s8 DoDrawStartMenu(void)
         break;
     case 5:
         sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), 2, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
-        if (!MenuHelpers_LinkSomething() && InUnionRoom() != TRUE && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
+        if (!MenuHelpers_LinkSomething() && InUnionRoom() != TRUE)
         {
-            DrawHelpMessageWindowWithText(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]]);
+            if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)
+            {
+                GetStartMenuClock();
+                DrawHelpMessageWindowWithText_season(gStartMenu_Clock);
+            }
+            else if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
+                DrawHelpMessageWindowWithText(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]]);
         }
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
         return TRUE;
@@ -1019,4 +1031,87 @@ void AppendToList(u8 *list, u8 *cursor, u8 newEntry)
 {
     list[*cursor] = newEntry;
     (*cursor)++;
+}
+
+static void GetStartMenuClock(void)
+{
+    u8 StartMenu_Spring[] = _("Spring - ");
+    u8 StartMenu_NextSummer[] = _(" outdoor steps for Summer.");
+    u8 StartMenu_Summer[] = _("Summer - ");
+    u8 StartMenu_NextAutumn[] = _(" outdoor steps for Autumn.");
+    u8 StartMenu_Autumn[] = _("Autumn - ");
+    u8 StartMenu_NextWinter[] = _(" outdoor steps for Winter.");
+    u8 StartMenu_Winter[] = _("Winter - ");
+    u8 StartMenu_NextSpring[] = _(" outdoor steps for Spring.");
+    u8 StartMenu_Sunday[]    = _("Sunday, ");
+    u8 StartMenu_Monday[]    = _("Monday, ");
+    u8 StartMenu_Tuesday[]   = _("Tuesday, ");
+    u8 StartMenu_Wednesday[] = _("Wednesday, ");
+    u8 StartMenu_Thursday[]  = _("Thursday, ");
+    u8 StartMenu_Friday[]    = _("Friday, ");
+    u8 StartMenu_Saturday[]  = _("Saturday, ");
+    u8 StartMenu_Separator[] = _(":");
+    u8 StartMenu_Zero[] = _("0");
+    u8 StartMenu_NewLine[] = _("\n");
+
+    RtcCalcLocalTime();
+    switch(gLocalTime.dayOfWeek)
+    {
+    case 0:
+        StringCopyN(gStringVar1, StartMenu_Sunday, 12);
+        break;
+    case 1:
+        StringCopyN(gStringVar1, StartMenu_Monday, 12);
+        break;
+    case 2:
+        StringCopyN(gStringVar1, StartMenu_Tuesday, 12);
+        break;
+    case 3:
+        StringCopyN(gStringVar1, StartMenu_Wednesday, 12);
+        break;
+    case 4:
+        StringCopyN(gStringVar1, StartMenu_Thursday, 12);
+        break;
+    case 5:
+        StringCopyN(gStringVar1, StartMenu_Friday, 12);
+        break;
+    case 6:
+        StringCopyN(gStringVar1, StartMenu_Saturday, 12);
+        break;
+    }
+
+    ConvertIntToDecimalStringN(gStringVar2, gLocalTime.hours,   STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3, gLocalTime.minutes, STR_CONV_MODE_LEFT_ALIGN, 2);
+    StringAppendN(gStringVar1, gStringVar2, 3);
+    StringAppendN(gStringVar1, StartMenu_Separator, 2);
+    if (NumDigits(gLocalTime.minutes) == 1)
+        StringAppendN(gStringVar1, StartMenu_Zero, 2);
+    StringAppendN(gStringVar1, gStringVar3, 3);
+    StringAppendN(gStringVar1, StartMenu_NewLine, 2);
+
+    ConvertIntToDecimalStringN(gStringVar3, VarGet(VAR_STEPS_FOR_NEXT_SEASON), STR_CONV_MODE_LEFT_ALIGN, 5);
+    switch (VarGet(VAR_SEASON))
+    {
+    case 0:
+        StringCopyN(gStringVar2, StartMenu_Spring, 18);
+        StringCopyN(gStringVar4, StartMenu_NextSummer, 27);
+        break;
+    case 1:
+        StringCopyN(gStringVar2, StartMenu_Summer, 18);
+        StringCopyN(gStringVar4, StartMenu_NextAutumn, 27);
+        break;
+    case 2:
+        StringCopyN(gStringVar2, StartMenu_Autumn, 18);
+        StringCopyN(gStringVar4, StartMenu_NextWinter, 27);
+        break;
+    case 3:
+        StringCopyN(gStringVar2, StartMenu_Winter, 18);
+        StringCopyN(gStringVar4, StartMenu_NextSpring, 27);
+        break;
+    }
+
+    StringCopyN(  gStartMenu_Clock, gStringVar2, 10);
+    StringAppendN(gStartMenu_Clock, gStringVar1, 18);
+    StringAppendN(gStartMenu_Clock, gStringVar3, 5);
+    StringAppendN(gStartMenu_Clock, gStringVar4, 27);
 }

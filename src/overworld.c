@@ -378,19 +378,23 @@ void IncrementGameStat(u8 statId)
 
 void IncrementSeasonPedometer()
 {
-    u16 stepsNeeded = 10000;
-    u16 stepsRemaining;
+    u8 currMapType = GetCurrentMapType();
 
-    if (gSaveBlock1Ptr->seasonPedometer < 0xFFFFFF)
-        gSaveBlock1Ptr->seasonPedometer++;
-    else
-        gSaveBlock1Ptr->seasonPedometer = 1;
+    if (currMapType >= 1 && currMapType <= 3)
+    {
+        u16 stepsRemaining;
 
-    stepsRemaining = gSaveBlock1Ptr->seasonPedometer % stepsNeeded;
-    VarSet(VAR_STEPS_FOR_NEXT_SEASON, stepsRemaining);
+        if (gSaveBlock1Ptr->seasonPedometer < 0xFFFFFF)
+            gSaveBlock1Ptr->seasonPedometer++;
+        else
+            gSaveBlock1Ptr->seasonPedometer = 1;
 
-    if (stepsRemaining == 0)
-        FlagSet(FLAG_SEASON_CHANGE);
+        stepsRemaining = STEPS_FOR_SEASON_CHANGE - (gSaveBlock1Ptr->seasonPedometer % STEPS_FOR_SEASON_CHANGE);
+        VarSet(VAR_STEPS_FOR_NEXT_SEASON, stepsRemaining);
+
+        if (stepsRemaining == 0)
+            FlagSet(FLAG_SEASON_CHANGE);
+    }
 }
 
 u32 GetGameStat(u8 statId)

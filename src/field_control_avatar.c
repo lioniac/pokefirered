@@ -166,12 +166,6 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         input->pressedSelectButton = TRUE;
     }
 
-    if ((heldKeys & B_BUTTON) && input->pressedSelectButton)
-    {
-        input->input_field_1_3 = TRUE;
-        input->pressedSelectButton = FALSE;
-    }
-
 #if DEBUG
     if ((heldKeys & B_BUTTON) && input->pressedStartButton)
     {
@@ -324,28 +318,21 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         return TRUE;
     }
 
-    // if (input->pressedSelectButton && UseRegisteredKeyItemOnField(0) == TRUE)
-    // {
-    //     gInputToStoreInQuestLogMaybe.pressedSelectButton = TRUE;
-    //     return TRUE;
-    // }
+    if (input->pressedSelectButton && UseRegisteredKeyItemOnField(0) == TRUE)
+    {
+        gInputToStoreInQuestLogMaybe.pressedSelectButton = TRUE;
+        return TRUE;
+    }
 
-    if (input->pressedLButton && UseRegisteredKeyItemOnField(0) == TRUE)
+    if (input->pressedLButton && UseRegisteredKeyItemOnField(1) == TRUE)
     {
         gInputToStoreInQuestLogMaybe.pressedLButton = TRUE;
         return TRUE;
     }
 
-    if (input->pressedRButton && UseRegisteredKeyItemOnField(1) == TRUE)
+    if (input->pressedRButton && UseRegisteredKeyItemOnField(2) == TRUE)
     {
         gInputToStoreInQuestLogMaybe.pressedRButton = TRUE;
-        return TRUE;
-    }
-
-    if (input->input_field_1_3)
-    {
-        gInputToStoreInQuestLogMaybe.pressedSelectButton = TRUE;
-        ScriptContext1_SetupScript(EventScript_Debug_Clock);
         return TRUE;
     }
 

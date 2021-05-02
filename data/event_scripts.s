@@ -1128,7 +1128,7 @@ EventScript_HandOverItem:: @ 81A74F2
 	.include "data/scripts/questionnaire.inc"
 
 EventScript_BagItemCanBeRegistered:: @ 81A77A0
-	msgbox Text_BagItemCanBeRegistered, MSGBOX_SIGN
+	@msgbox Text_BagItemCanBeRegistered, MSGBOX_SIGN
 	end
 
 EventScript_Return:: @ 81A77A9
