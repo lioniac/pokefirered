@@ -139,7 +139,6 @@ static void CB2_LoadMap2(void);
 static void c2_80567AC(void);
 static void CB2_ReturnToFieldLocal(void);
 static void CB2_ReturnToFieldLink(void);
-static void FieldClearVBlankHBlankCallbacks(void);
 static void SetFieldVBlankCallback(void);
 static void VBlankCB_Field(void);
 
@@ -1743,7 +1742,7 @@ void CB2_ContinueSavedGame(void)
     }
 }
 
-static void FieldClearVBlankHBlankCallbacks(void)
+void FieldClearVBlankHBlankCallbacks(void)
 {
     if (UsedPokemonCenterWarp() == TRUE)
         CloseLink();

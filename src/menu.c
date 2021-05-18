@@ -318,6 +318,21 @@ u8 Menu_MoveCursor(s8 cursorDelta)
     return sMenu.cursorPos;
 }
 
+u8 Menu_MoveCursor_SkipFirstEntry(s8 cursorDelta)
+{
+    u8 oldPos = sMenu.cursorPos;
+    s32 newPos = sMenu.cursorPos + cursorDelta;
+
+    if (newPos <= sMenu.minCursorPos)
+        sMenu.cursorPos = sMenu.maxCursorPos;
+    else if (newPos > sMenu.maxCursorPos)
+        sMenu.cursorPos = sMenu.minCursorPos+1;
+    else
+        sMenu.cursorPos += cursorDelta;
+    Menu_RedrawCursor(oldPos, sMenu.cursorPos);
+    return sMenu.cursorPos;
+}
+
 u8 Menu_MoveCursorNoWrapAround(s8 cursorDelta)
 {
     u8 oldPos = sMenu.cursorPos;
