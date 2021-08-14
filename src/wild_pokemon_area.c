@@ -1,4 +1,5 @@
 #include "global.h"
+#include "day_night.h"
 #include "field_specials.h"
 #include "event_data.h"
 #include "wild_encounter.h"
@@ -6,6 +7,7 @@
 #include "overworld.h"
 #include "pokedex_area_markers.h"
 #include "constants/region_map_sections.h"
+#include "constants/day_night.h"
 
 struct SeviiDexArea
 {

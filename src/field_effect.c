@@ -1,5 +1,6 @@
 #include "global.h"
 #include "gflib.h"
+#include "day_night.h"
 #include "decompress.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -56,6 +57,7 @@ static void FieldEffectScript_LoadFadedPal(const u8 **script);
 static void FieldEffectScript_LoadPal(const u8 **script);
 static void FieldEffectScript_CallNative(const u8 **script, u32 *result);
 static void FieldEffectFreeTilesIfUnused(u16 tilesTag);
+void FieldEffectFreePaletteIfUnused(u8 paletteNum);
 static void Task_PokecenterHeal(u8 taskId);
 static void SpriteCB_PokeballGlow(struct Sprite * sprite);
 static void SpriteCB_PokecenterMonitor(struct Sprite * sprite);
@@ -84,7 +86,10 @@ static bool8 (*const sFldEffScrcmdTable[])(const u8 **script, u32 *result) = {
     FieldEffectCmd_end,
     FieldEffectCmd_loadgfx_callnative,
     FieldEffectCmd_loadtiles_callnative,
-    FieldEffectCmd_loadfadedpal_callnative
+    FieldEffectCmd_loadfadedpal_callnative,
+    FieldEffectCmd_loadfadedpalnotint,
+    FieldEffectCmd_loadpalnotint,
+    FieldEffectCmd_loadfadedpalnotint_callnative,
 };
 
 static const struct OamData sNewGameOakOamAttributes = {
@@ -450,7 +455,7 @@ static void FieldEffectScript_LoadFadedPal(const u8 **script)
 {
     const struct SpritePalette * spritePalette = (const struct SpritePalette * )FieldEffectScript_ReadWord(script);
     u8 idx = IndexOfSpritePaletteTag(spritePalette->tag);
-    LoadSpritePalette(spritePalette);
+    LoadSpritePaletteDayNight(spritePalette);
     UpdatePaletteGammaType(IndexOfSpritePaletteTag(spritePalette->tag), GAMMA_NORMAL);
     if (idx == 0xFF)
         ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(spritePalette->tag));
@@ -459,6 +464,27 @@ static void FieldEffectScript_LoadFadedPal(const u8 **script)
 }
 
 static void FieldEffectScript_LoadPal(const u8 **script)
+{
+    struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
+    u8 idx = IndexOfSpritePaletteTag(palette->tag);
+    LoadSpritePaletteDayNight(palette);
+    if (idx != 0xFF)
+        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(palette->tag));
+    (*script) += sizeof(u32);
+}
+
+void FieldEffectScript_LoadFadedPaletteNoTint(const u8 **script)
+{
+    struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
+    u8 idx = IndexOfSpritePaletteTag(palette->tag);
+    LoadSpritePalette(palette);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag));
+    if (idx != 0xFF)
+        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(palette->tag));
+    (*script) += sizeof(u32);
+}
+
+void FieldEffectScript_LoadPaletteNoTint(const u8 **script)
 {
     const struct SpritePalette * spritePalette = (const struct SpritePalette * )FieldEffectScript_ReadWord(script);
     u8 idx = IndexOfSpritePaletteTag(spritePalette->tag);
@@ -473,6 +499,28 @@ static void FieldEffectScript_CallNative(const u8 **script, u32 *result)
     u32 (*func)(void) = (u32 (*)(void))FieldEffectScript_ReadWord(script);
     *result = func();
     *script += sizeof(u32);
+}
+
+bool8 FieldEffectCmd_loadfadedpalnotint(const u8 **script, u32 *val)
+{
+    (*script)++;
+    FieldEffectScript_LoadFadedPaletteNoTint(script);
+    return TRUE;
+}
+
+bool8 FieldEffectCmd_loadpalnotint(const u8 **script, u32 *val)
+{
+    (*script)++;
+    FieldEffectScript_LoadPaletteNoTint(script);
+    return TRUE;
+}
+
+bool8 FieldEffectCmd_loadfadedpalnotint_callnative(const u8 **script, u32 *val)
+{
+    (*script)++;
+    FieldEffectScript_LoadFadedPaletteNoTint(script);
+    FieldEffectScript_CallNative(script, val);
+    return TRUE;
 }
 
 static void FieldEffectFreeGraphicsResources(struct Sprite * sprite)
@@ -3921,7 +3969,7 @@ static void Task_FldEffUnk45(u8 taskId)
 }
 
 // Bug: Return value should be u32, not void
-void FldEff_Unk45(void)
+u32 FldEff_Unk45(void)
 {
     BlendPalettes(0xFFFFFFFF, 0x10, RGB_WHITE);
     BeginNormalPaletteFade(0xFFFFFFFF, -1, 0x0F, 0x00, RGB_WHITE);

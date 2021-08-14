@@ -302,7 +302,7 @@
 	.byte 0x2d
 	.endm
 
-	@ Sets the values of variables 0x8000, 0x8001, 0x8002 and 0x8003 to the current hour, minute, second and day of the week.
+	@ Hours to 0x8000, Minutes to 0x8001, Seconds to 0x8002, and Time of Day to 0x8003.
 	.macro gettime
 	.byte 0x2e
 	.endm
