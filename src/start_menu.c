@@ -53,13 +53,6 @@ enum StartMenuOption
     STARTMENU_RETIRE,
     STARTMENU_PLAYER2,
     STARTMENU_QUESTS,
-    STARTMENU_L,
-    STARTMENU_R,
-    STARTMENU_POKENAV,
-    STARTMENU_MAP,
-    STARTMENU_NEWS,
-    STARTMENU_OUTFIT,
-    STARTMENU_FCHECKER,
     MAX_STARTMENU_ITEMS
 };
 
@@ -88,7 +81,6 @@ static void SetUpStartMenu_Link(void);
 static void SetUpStartMenu_UnionRoom(void);
 static void SetUpStartMenu_SafariZone(void);
 static void SetUpStartMenu_NormalField(void);
-static void SetUpStartMenu_NormalField_R(void);
 static bool8 StartCB_HandleInput(void);
 static void StartMenu_FadeScreenIfLeavingOverworld(void);
 static bool8 StartMenuPokedexSanityCheck(void);
@@ -129,13 +121,6 @@ static void CloseStartMenu(void);
 static void GetStartMenuClock(void);
 static void StartMenu_PrintClock(void);
 
-static const u8 gStartMenuText_Label_L[] = _(">L  R ");
-static const u8 gStartMenuText_Label_R[] = _(" L >R ");
-static const u8 gStartMenuText_Pokenav[] = _("POKéNAV");
-static const u8 gStartMenuText_Map[] = _("MAP");
-static const u8 gStartMenuText_News[] = _("NEWS");
-static const u8 gStartMenuText_Outfit[] = _("OUTFIT");
-static const u8 gStartMenuText_FChecker[] = _("F.CHECK");
 static const struct MenuAction sStartMenuActionTable[] = {
     { gStartMenuText_Pokedex, {.u8_void = StartMenuPokedexCallback} },
     { gStartMenuText_Pokemon, {.u8_void = StartMenuPokemonCallback} },
@@ -146,14 +131,7 @@ static const struct MenuAction sStartMenuActionTable[] = {
     { gStartMenuText_Exit, {.u8_void = StartMenuExitCallback} },
     { gStartMenuText_Retire, {.u8_void = StartMenuSafariZoneRetireCallback} },
     { gStartMenuText_Player, {.u8_void = StartMenuLinkPlayerCallback} },
-    { gStartMenuText_Quests, {.u8_void = StartMenuQuestsCallback} },
-    { gStartMenuText_Label_L, {.u8_void = StartMenuExitCallback} },
-    { gStartMenuText_Label_R, {.u8_void = StartMenuExitCallback} },
-    { gStartMenuText_Pokenav, {.u8_void = StartMenuExitCallback} },
-    { gStartMenuText_Map, {.u8_void = StartMenuExitCallback} },
-    { gStartMenuText_News, {.u8_void = StartMenuExitCallback} },
-    { gStartMenuText_Outfit, {.u8_void = StartMenuExitCallback} },
-    { gStartMenuText_FChecker, {.u8_void = StartMenuExitCallback} },
+    { gStartMenuText_Quests, {.u8_void = StartMenuQuestsCallback} }
 };
 
 static const struct WindowTemplate sSafariZoneStatsWindowTemplate = {
@@ -225,19 +203,9 @@ static void SetUpStartMenu(void)
     else if (InUnionRoom() == TRUE)
         SetUpStartMenu_UnionRoom();
     else if (GetSafariZoneFlag() == TRUE)
-    {
-        if (gSaveBlock1Ptr->rMenu == TRUE)
-            SetUpStartMenu_NormalField_R();
-        else
-            SetUpStartMenu_SafariZone();
-    }
+        SetUpStartMenu_SafariZone();
     else
-    {
-        if (gSaveBlock1Ptr->rMenu == TRUE)
-            SetUpStartMenu_NormalField_R();
-        else
-            SetUpStartMenu_NormalField();
-    }
+        SetUpStartMenu_NormalField();
 }
 
 static void AppendToStartMenuItems(u8 newEntry)
@@ -247,26 +215,13 @@ static void AppendToStartMenuItems(u8 newEntry)
 
 static void SetUpStartMenu_NormalField(void)
 {
-    AppendToStartMenuItems(STARTMENU_L);
-    AppendToStartMenuItems(STARTMENU_BAG);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET) == TRUE)
-        AppendToStartMenuItems(STARTMENU_QUESTS);
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+        AppendToStartMenuItems(STARTMENU_POKEDEX);
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEMON);
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
-        AppendToStartMenuItems(STARTMENU_POKEDEX);
-        AppendToStartMenuItems(STARTMENU_POKENAV);
-    }
-    AppendToStartMenuItems(STARTMENU_MAP);
-}
-
-static void SetUpStartMenu_NormalField_R(void)
-{
-    AppendToStartMenuItems(STARTMENU_R);
-    AppendToStartMenuItems(STARTMENU_NEWS);
-    AppendToStartMenuItems(STARTMENU_OUTFIT);
-    AppendToStartMenuItems(STARTMENU_FCHECKER);
+    if (FlagGet(FLAG_SYS_QUEST_MENU_GET) == TRUE)
+        AppendToStartMenuItems(STARTMENU_QUESTS);
+    AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
     AppendToStartMenuItems(STARTMENU_OPTION);
@@ -274,14 +229,12 @@ static void SetUpStartMenu_NormalField_R(void)
 
 static void SetUpStartMenu_SafariZone(void)
 {
-    AppendToStartMenuItems(STARTMENU_L);
     AppendToStartMenuItems(STARTMENU_RETIRE);
-    AppendToStartMenuItems(STARTMENU_BAG);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET) == TRUE)
-        AppendToStartMenuItems(STARTMENU_QUESTS);
-    AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_POKEDEX);
-    AppendToStartMenuItems(STARTMENU_POKENAV);
+    AppendToStartMenuItems(STARTMENU_POKEMON);
+    AppendToStartMenuItems(STARTMENU_BAG);
+    AppendToStartMenuItems(STARTMENU_PLAYER);
+    AppendToStartMenuItems(STARTMENU_OPTION);
 }
 
 static void SetUpStartMenu_Link(void)
@@ -374,8 +327,6 @@ static s8 DoDrawStartMenu(void)
             sDrawStartMenuState[0]++;
         break;
     case 5:
-        if (sStartMenuCursorPos == 0)
-            sStartMenuCursorPos++;
         sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), 2, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
         if (!MenuHelpers_LinkSomething() && InUnionRoom() != TRUE)
         {
@@ -466,7 +417,7 @@ static bool8 StartCB_HandleInput(void)
     if (JOY_NEW(DPAD_UP))
     {
         PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor_SkipFirstEntry(-1);
+        sStartMenuCursorPos = Menu_MoveCursor(-1);
         if (!MenuHelpers_LinkSomething() && InUnionRoom() != TRUE && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
         {
             PrintTextOnHelpMessageWindow(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]], 2);
@@ -475,7 +426,7 @@ static bool8 StartCB_HandleInput(void)
     if (JOY_NEW(DPAD_DOWN))
     {
         PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor_SkipFirstEntry(+1);
+        sStartMenuCursorPos = Menu_MoveCursor(+1);
         if (!MenuHelpers_LinkSomething() && InUnionRoom() != TRUE && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_HELP)
         {
             PrintTextOnHelpMessageWindow(sStartMenuDescPointers[sStartMenuOrder[sStartMenuCursorPos]], 2);
@@ -497,32 +448,7 @@ static bool8 StartCB_HandleInput(void)
         CloseStartMenu();
         return TRUE;
     }
-    if (JOY_NEW(R_BUTTON) && gSaveBlock1Ptr->rMenu == FALSE)
-    {
-        DestroySafariZoneStatsWindow();
-        //DestroyHelpMessageWindow_();
-        CloseStartMenu();
-
-        gSaveBlock1Ptr->rMenu = TRUE;
-        PlaySE(SE_WIN_OPEN);
-        FieldClearVBlankHBlankCallbacks();
-        ShowStartMenu();
-
-        return TRUE;
-    }
-    if (JOY_NEW(L_BUTTON) && gSaveBlock1Ptr->rMenu == TRUE)
-    {
-        DestroySafariZoneStatsWindow();
-        //DestroyHelpMessageWindow_();
-        CloseStartMenu();
-
-        gSaveBlock1Ptr->rMenu = FALSE;
-        PlaySE(SE_WIN_OPEN);
-        FieldClearVBlankHBlankCallbacks();
-        ShowStartMenu();
-
-        return TRUE;
-    }
+    return FALSE;
 }
 
 static void StartMenu_FadeScreenIfLeavingOverworld(void)

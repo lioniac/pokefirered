@@ -890,7 +890,6 @@ struct SaveBlock1
     /*0x????*/ u8 completedQuests[SIDE_QUEST_FLAGS_COUNT];
     /*0x????*/ u16 seasonPedometer;
     /*0x????*/ u8 season;
-    /*0x????*/ bool8 rMenu;
 }; // size: 0x????
 
 struct MapPosition

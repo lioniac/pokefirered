@@ -173,9 +173,6 @@ void NewGameInitData(void)
 
     //Gen6 Exp. Share
     gSaveBlock2Ptr->expShare = 0;
-
-    // Extended StartMenu
-    gSaveBlock1Ptr->rMenu = FALSE;
 }
 
 static void ResetMiniGamesResults(void)

@@ -51,7 +51,6 @@ s8 Menu_ProcessInput(void);
 u8 Menu_GetCursorPos(void);
 u8 Menu_MoveCursorNoWrapAround(s8 cursorDelta);
 u8 Menu_MoveCursor(s8 cursorDelta);
-u8 Menu_MoveCursor_SkipFirstEntry(s8 cursorDelta);
 u8 Menu_InitCursor(u8 windowId, u8 fontId, u8 left, u8 top, u8 cursorHeight, u8 numChoices, u8 initialCursorPos);
 u8 Menu_InitCursorInternal(u8 windowId, u8 fontId, u8 left, u8 top, u8 cursorHeight, u8 numChoices, u8 initialCursorPos, bool8 APressMuted);
 void TopBarWindowPrintTwoStrings(const u8 *string, const u8 *string2, bool8 fgColorChooser, u8 notUsed, bool8 copyToVram);
