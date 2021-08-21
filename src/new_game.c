@@ -170,6 +170,7 @@ void NewGameInitData(void)
     gSaveBlock1Ptr->season = 0;
     VarSet(VAR_SEASON, 0);
     VarSet(VAR_STEPS_FOR_NEXT_SEASON, STEPS_FOR_SEASON_CHANGE);
+    RtcCalcLocalTime();
 
     //Gen6 Exp. Share
     gSaveBlock2Ptr->expShare = 0;
