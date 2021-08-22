@@ -24,8 +24,26 @@ VermilionCity_Movement_ExitSSAnne:: @ 8166903
 
 VermilionCity_OnTransition:: @ 8166906
 	setworldmapflag FLAG_WORLD_MAP_VERMILION_CITY
+    compare VAR_SEASON, 1
+    call_if_eq VermilionCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq VermilionCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq VermilionCity_EventScript_SetLayoutWinter
 	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
 	end
+
+VermilionCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_VERMILION_CITY_SUMMER
+    return
+
+VermilionCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_VERMILION_CITY_AUTUMN
+    return
+
+VermilionCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_VERMILION_CITY_WINTER
+    return
 
 VermilionCity_EventScript_HideOaksAide:: @ 8166913
 	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE

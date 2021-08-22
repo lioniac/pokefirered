@@ -4,9 +4,27 @@ Route18_MapScripts:: @ 81681F6
 	.byte 0
 
 Route18_OnTransition:: @ 8168201
+    compare VAR_SEASON, 1
+    call_if_eq Route18_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route18_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route18_EventScript_SetLayoutWinter
 	compare VAR_MAP_SCENE_ROUTE16, 1
 	call_if_eq Route18_OnTransitionCyclingRoad
 	end
+
+Route18_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE18_SUMMER
+    return
+
+Route18_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE18_AUTUMN
+    return
+
+Route18_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE18_WINTER
+    return
 
 Route18_OnTransitionCyclingRoad:: @ 816820D
 	setflag FLAG_SYS_ON_CYCLING_ROAD

@@ -541,3 +541,361 @@ gMetatiles_HallOfFame:: @ 82D415C
 	.align 1
 gMetatileAttributes_HallOfFame:: @ 82D48BC
 	.incbin "data/tilesets/secondary/hall_of_fame/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_General_Summer::
+	.incbin "data/tilesets/primary/general_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_General_Summer::
+	.incbin "data/tilesets/primary/general_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_General_Autumn::
+	.incbin "data/tilesets/primary/general_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_General_Autumn::
+	.incbin "data/tilesets/primary/general_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_General_Winter::
+	.incbin "data/tilesets/primary/general_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_General_Winter::
+	.incbin "data/tilesets/primary/general_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_ViridianForest_Summer::
+	.incbin "data/tilesets/secondary/viridianforest_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ViridianForest_Summer::
+	.incbin "data/tilesets/secondary/viridianforest_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_ViridianForest_Autumn::
+	.incbin "data/tilesets/secondary/viridianforest_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ViridianForest_Autumn::
+	.incbin "data/tilesets/secondary/viridianforest_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_ViridianForest_Winter::
+	.incbin "data/tilesets/secondary/viridianforest_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ViridianForest_Winter::
+	.incbin "data/tilesets/secondary/viridianforest_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_FuchsiaCity_Summer::
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_FuchsiaCity_Summer::
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_FuchsiaCity_Autumn::
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_FuchsiaCity_Autumn::
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_FuchsiaCity_Winter::
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_FuchsiaCity_Winter::
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands123_Summer::
+	.incbin "data/tilesets/secondary/seviiislands123_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands123_Summer::
+	.incbin "data/tilesets/secondary/seviiislands123_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands123_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands123_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands123_Winter::
+	.incbin "data/tilesets/secondary/seviiislands123_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands123_Winter::
+	.incbin "data/tilesets/secondary/seviiislands123_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_BerryForest_Summer::
+	.incbin "data/tilesets/secondary/berryforest_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BerryForest_Summer::
+	.incbin "data/tilesets/secondary/berryforest_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_BerryForest_Autumn::
+	.incbin "data/tilesets/secondary/berryforest_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BerryForest_Autumn::
+	.incbin "data/tilesets/secondary/berryforest_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_BerryForest_Winter::
+	.incbin "data/tilesets/secondary/berryforest_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BerryForest_Winter::
+	.incbin "data/tilesets/secondary/berryforest_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands67_Summer::
+	.incbin "data/tilesets/secondary/seviiislands67_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands67_Summer::
+	.incbin "data/tilesets/secondary/seviiislands67_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands67_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands67_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands67_Winter::
+	.incbin "data/tilesets/secondary/seviiislands67_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands67_Winter::
+	.incbin "data/tilesets/secondary/seviiislands67_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_PalletTown_Summer::
+	.incbin "data/tilesets/secondary/pallettown_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PalletTown_Summer::
+	.incbin "data/tilesets/secondary/pallettown_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_PalletTown_Autumn::
+	.incbin "data/tilesets/secondary/pallettown_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PalletTown_Autumn::
+	.incbin "data/tilesets/secondary/pallettown_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_PalletTown_Winter::
+	.incbin "data/tilesets/secondary/pallettown_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PalletTown_Winter::
+	.incbin "data/tilesets/secondary/pallettown_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_ViridianCity_Summer::
+	.incbin "data/tilesets/secondary/viridiancity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ViridianCity_Summer::
+	.incbin "data/tilesets/secondary/viridiancity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_ViridianCity_Autumn::
+	.incbin "data/tilesets/secondary/viridiancity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ViridianCity_Autumn::
+	.incbin "data/tilesets/secondary/viridiancity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_ViridianCity_Winter::
+	.incbin "data/tilesets/secondary/viridiancity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ViridianCity_Winter::
+	.incbin "data/tilesets/secondary/viridiancity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_PewterCity_Summer::
+	.incbin "data/tilesets/secondary/pewtercity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PewterCity_Summer::
+	.incbin "data/tilesets/secondary/pewtercity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_PewterCity_Autumn::
+	.incbin "data/tilesets/secondary/pewtercity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PewterCity_Autumn::
+	.incbin "data/tilesets/secondary/pewtercity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_PewterCity_Winter::
+	.incbin "data/tilesets/secondary/pewtercity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PewterCity_Winter::
+	.incbin "data/tilesets/secondary/pewtercity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_CeruleanCity_Summer::
+	.incbin "data/tilesets/secondary/ceruleancity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CeruleanCity_Summer::
+	.incbin "data/tilesets/secondary/ceruleancity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_CeruleanCity_Autumn::
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CeruleanCity_Autumn::
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_CeruleanCity_Winter::
+	.incbin "data/tilesets/secondary/ceruleancity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CeruleanCity_Winter::
+	.incbin "data/tilesets/secondary/ceruleancity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_LavenderTown_Summer::
+	.incbin "data/tilesets/secondary/lavendertown_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_LavenderTown_Summer::
+	.incbin "data/tilesets/secondary/lavendertown_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_LavenderTown_Autumn::
+	.incbin "data/tilesets/secondary/lavendertown_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_LavenderTown_Autumn::
+	.incbin "data/tilesets/secondary/lavendertown_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_LavenderTown_Winter::
+	.incbin "data/tilesets/secondary/lavendertown_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_LavenderTown_Winter::
+	.incbin "data/tilesets/secondary/lavendertown_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_VermilionCity_Summer::
+	.incbin "data/tilesets/secondary/vermilioncity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_VermilionCity_Summer::
+	.incbin "data/tilesets/secondary/vermilioncity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_VermilionCity_Autumn::
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_VermilionCity_Autumn::
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_VermilionCity_Winter::
+	.incbin "data/tilesets/secondary/vermilioncity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_VermilionCity_Winter::
+	.incbin "data/tilesets/secondary/vermilioncity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_CeladonCity_Summer::
+	.incbin "data/tilesets/secondary/celadoncity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CeladonCity_Summer::
+	.incbin "data/tilesets/secondary/celadoncity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_CeladonCity_Autumn::
+	.incbin "data/tilesets/secondary/celadoncity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CeladonCity_Autumn::
+	.incbin "data/tilesets/secondary/celadoncity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_CeladonCity_Winter::
+	.incbin "data/tilesets/secondary/celadoncity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CeladonCity_Winter::
+	.incbin "data/tilesets/secondary/celadoncity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_CinnabarIsland_Summer::
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CinnabarIsland_Summer::
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_CinnabarIsland_Autumn::
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CinnabarIsland_Autumn::
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_CinnabarIsland_Winter::
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CinnabarIsland_Winter::
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_IndigoPlateau_Summer::
+	.incbin "data/tilesets/secondary/indigoplateau_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_IndigoPlateau_Summer::
+	.incbin "data/tilesets/secondary/indigoplateau_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_IndigoPlateau_Autumn::
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_IndigoPlateau_Autumn::
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_IndigoPlateau_Winter::
+	.incbin "data/tilesets/secondary/indigoplateau_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_IndigoPlateau_Winter::
+	.incbin "data/tilesets/secondary/indigoplateau_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_SaffronCity_Summer::
+	.incbin "data/tilesets/secondary/saffroncity_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SaffronCity_Summer::
+	.incbin "data/tilesets/secondary/saffroncity_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_SaffronCity_Autumn::
+	.incbin "data/tilesets/secondary/saffroncity_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SaffronCity_Autumn::
+	.incbin "data/tilesets/secondary/saffroncity_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_SaffronCity_Winter::
+	.incbin "data/tilesets/secondary/saffroncity_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SaffronCity_Winter::
+	.incbin "data/tilesets/secondary/saffroncity_winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands45_Summer::
+	.incbin "data/tilesets/secondary/seviiislands45_summer/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands45_Summer::
+	.incbin "data/tilesets/secondary/seviiislands45_summer/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands45_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands45_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/metatile_attributes.bin"
+	.align 1
+gMetatiles_SeviiIslands45_Winter::
+	.incbin "data/tilesets/secondary/seviiislands45_winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SeviiIslands45_Winter::
+	.incbin "data/tilesets/secondary/seviiislands45_winter/metatile_attributes.bin"

@@ -8,9 +8,27 @@ IndigoPlateau_Exterior_MapScripts:: @ 816723B
 
 IndigoPlateau_Exterior_OnTransition:: @ 8167246
 	setworldmapflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
+    compare VAR_SEASON, 1
+    call_if_eq IndigoPlateau_Exterior_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq IndigoPlateau_Exterior_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq IndigoPlateau_Exterior_EventScript_SetLayoutWinter
 	compare VAR_MAP_SCENE_INDIGO_PLATEAU_EXTERIOR, 1
 	call_if_eq IndigoPlateau_Exterior_EventScript_PlayCreditsMusic
 	end
+
+IndigoPlateau_Exterior_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_INDIGO_PLATEAU_EXTERIOR_SUMMER
+    return
+
+IndigoPlateau_Exterior_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_INDIGO_PLATEAU_EXTERIOR_AUTUMN
+    return
+
+IndigoPlateau_Exterior_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_INDIGO_PLATEAU_EXTERIOR_WINTER
+    return
 
 IndigoPlateau_Exterior_EventScript_PlayCreditsMusic:: @ 8167255
 	playbgm MUS_CREDITS, 0

@@ -1,8 +1,30 @@
 .set LOCALID_SCIENTIST, 1
 
 SixIsland_RuinValley_MapScripts:: @ 8168B53
+	map_script MAP_SCRIPT_ON_TRANSITION, SixIsland_RuinValley_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, SixIsland_RuinValley_OnLoad
 	.byte 0
+
+SixIsland_RuinValley_OnTransition::
+    compare VAR_SEASON, 1
+    call_if_eq SixIsland_RuinValley_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq SixIsland_RuinValley_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq SixIsland_RuinValley_EventScript_SetLayoutWinter
+	end
+
+SixIsland_RuinValley_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_SIX_ISLAND_RUIN_VALLEY_SUMMER
+    return
+
+SixIsland_RuinValley_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_SIX_ISLAND_RUIN_VALLEY_AUTUMN
+    return
+
+SixIsland_RuinValley_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_SIX_ISLAND_RUIN_VALLEY_WINTER
+    return
 
 SixIsland_RuinValley_OnLoad:: @ 8168B59
 	call_if_set FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE, SixIsland_RuinValley_EventScript_OpenDottedHoleDoor

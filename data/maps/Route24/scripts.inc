@@ -1,7 +1,29 @@
 .equ LOCALID_ROCKET, 1
 
 Route24_MapScripts:: @ 816861F
+	map_script MAP_SCRIPT_ON_TRANSITION, Route24_OnTransition
 	.byte 0
+
+Route24_OnTransition:: @ 81684F1
+    compare VAR_SEASON, 1
+    call_if_eq Route24_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route24_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route24_EventScript_SetLayoutWinter
+	end
+
+Route24_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE24_SUMMER
+    return
+
+Route24_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE24_AUTUMN
+    return
+
+Route24_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE24_WINTER
+    return
 
 Route24_EventScript_Rocket:: @ 8168620
 	lock

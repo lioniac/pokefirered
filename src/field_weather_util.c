@@ -23,13 +23,12 @@ void SetSav1WeatherFromCurrMapHeader(void)
 {
     u8 oldWeather = gSaveBlock1Ptr->weather;
 
-// Choose between manually set the weather to WEATHER_RANDOM
-// Or if mapType is Town|City|Route (Default)
     //if (gMapHeader.weather == WEATHER_RANDOM)
     if (gMapHeader.mapType >= 1 && gMapHeader.mapType <= 3)
         gSaveBlock1Ptr->weather = SetRandomWeather();
     else
         gSaveBlock1Ptr->weather = TranslateWeatherNum(gMapHeader.weather);
+
     UpdateRainCounter(gSaveBlock1Ptr->weather, oldWeather);
 }
 

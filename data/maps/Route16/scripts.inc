@@ -13,9 +13,27 @@ Route16_EventScript_RemoveSnorlax:: @ 81680FF
 	return
 
 Route16_OnTransition:: @ 8168103
+    compare VAR_SEASON, 1
+    call_if_eq Route16_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route16_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route16_EventScript_SetLayoutWinter
 	compare VAR_MAP_SCENE_ROUTE16, 1
 	call_if_eq Route16_OnTransitionCyclingRoad
 	end
+
+Route16_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE16_SUMMER
+    return
+
+Route16_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE16_AUTUMN
+    return
+
+Route16_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE16_WINTER
+    return
 
 Route16_OnTransitionCyclingRoad:: @ 816810F
 	setflag FLAG_SYS_ON_CYCLING_ROAD

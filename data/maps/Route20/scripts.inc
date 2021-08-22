@@ -3,9 +3,27 @@ Route20_MapScripts:: @ 816823B
 	.byte 0
 
 Route20_OnTransition:: @ 8168241
+    compare VAR_SEASON, 1
+    call_if_eq Route20_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route20_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route20_EventScript_SetLayoutWinter
 	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F
 	end
+
+Route20_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE20_SUMMER
+    return
+
+Route20_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE20_AUTUMN
+    return
+
+Route20_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE20_WINTER
+    return
 
 Route20_EventScript_ResetSeafoamBouldersForB3F:: @ 8168254
 	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_1

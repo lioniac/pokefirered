@@ -8,8 +8,26 @@ PewterCity_MapScripts:: @ 8165B8E
 
 PewterCity_OnTransition:: @ 8165B94
 	setworldmapflag FLAG_WORLD_MAP_PEWTER_CITY
+    compare VAR_SEASON, 1
+    call_if_eq PewterCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq PewterCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq PewterCity_EventScript_SetLayoutWinter
 	setvar VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 0
 	end
+
+PewterCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_PEWTER_CITY_SUMMER
+    return
+
+PewterCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_PEWTER_CITY_AUTUMN
+    return
+
+PewterCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_PEWTER_CITY_WINTER
+    return
 
 @ Impossible to speak to this NPC from a facing dir != DIR_EAST normally, so they arent checked
 @ Additionally, no movement script exists for facing DIR_SOUTH, which would necessitate walking out of bounds

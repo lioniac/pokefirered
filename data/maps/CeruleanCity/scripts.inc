@@ -11,8 +11,26 @@ CeruleanCity_MapScripts:: @ 8166471
 
 CeruleanCity_OnTransition:: @ 8166477
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
+    compare VAR_SEASON, 1
+    call_if_eq CeruleanCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq CeruleanCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq CeruleanCity_EventScript_SetLayoutWinter
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	end
+
+CeruleanCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_CERULEAN_CITY_SUMMER
+    return
+
+CeruleanCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_CERULEAN_CITY_AUTUMN
+    return
+
+CeruleanCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_CERULEAN_CITY_WINTER
+    return
 
 CeruleanCity_EventScript_BlockExits:: @ 8166484
 	setobjectxyperm LOCALID_POLICEMAN, 30, 12

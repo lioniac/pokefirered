@@ -1,5 +1,27 @@
 Route1_MapScripts:: @ 8167EFD
+	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition
 	.byte 0
+
+Route1_OnTransition::
+    compare VAR_SEASON, 1
+    call_if_eq Route1_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route1_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route1_EventScript_SetLayoutWinter
+	end
+
+Route1_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE1_SUMMER
+    return
+
+Route1_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE1_AUTUMN
+    return
+
+Route1_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE1_WINTER
+    return
 
 Route1_EventScript_MartClerk:: @ 8167EFE
 	lock

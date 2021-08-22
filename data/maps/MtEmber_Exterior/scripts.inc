@@ -8,9 +8,27 @@ MtEmber_Exterior_MapScripts:: @ 8163946
 
 MtEmber_Exterior_OnTransition:: @ 8163951
 	setworldmapflag FLAG_WORLD_MAP_MT_EMBER_EXTERIOR
+    compare VAR_SEASON, 1
+    call_if_eq MtEmber_Exterior_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq MtEmber_Exterior_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq MtEmber_Exterior_EventScript_SetLayoutWinter
 	compare VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 2
 	call_if_eq MtEmber_Exterior_EventScript_RocketsFaceDown
 	end
+
+MtEmber_Exterior_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_MT_EMBER_EXTERIOR_SUMMER
+    return
+
+MtEmber_Exterior_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_MT_EMBER_EXTERIOR_AUTUMN
+    return
+
+MtEmber_Exterior_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_MT_EMBER_EXTERIOR_WINTER
+    return
 
 MtEmber_Exterior_EventScript_RocketsFaceDown:: @ 8163960
 	setobjectmovementtype LOCALID_GRUNT1, MOVEMENT_TYPE_FACE_DOWN

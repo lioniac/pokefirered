@@ -8,6 +8,12 @@ ViridianCity_MapScripts:: @ 81658D3
 
 ViridianCity_OnTransition:: @ 81658D9
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_CITY
+    compare VAR_SEASON, 1
+    call_if_eq ViridianCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq ViridianCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq ViridianCity_EventScript_SetLayoutWinter
 	compare VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0
 	call_if_eq ViridianCity_EventScript_SetOldManBlockingRoad
 	compare VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
@@ -17,6 +23,18 @@ ViridianCity_OnTransition:: @ 81658D9
 	compare VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 0
 	call_if_eq ViridianCity_EventScript_TryUnlockGym
 	end
+
+ViridianCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_VIRIDIAN_CITY_SUMMER
+    return
+
+ViridianCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_VIRIDIAN_CITY_AUTUMN
+    return
+
+ViridianCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_VIRIDIAN_CITY_WINTER
+    return
 
 ViridianCity_EventScript_SetOldManNormal:: @ 8165909
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1

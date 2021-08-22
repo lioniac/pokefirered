@@ -4,7 +4,25 @@ ViridianForest_MapScripts:: @ 816051F
 
 ViridianForest_OnTransition:: @ 8160525
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
+    compare VAR_SEASON, 1
+    call_if_eq ViridianForest_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq ViridianForest_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq ViridianForest_EventScript_SetLayoutWinter
 	end
+
+ViridianForest_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_VIRIDIAN_FOREST_SUMMER
+    return
+
+ViridianForest_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_VIRIDIAN_FOREST_AUTUMN
+    return
+
+ViridianForest_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_VIRIDIAN_FOREST_WINTER
+    return
 
 ViridianForest_EventScript_Youngster:: @ 8160529
 	msgbox ViridianForest_Text_FriendsItchingToBattle, MSGBOX_NPC

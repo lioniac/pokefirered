@@ -13,12 +13,30 @@ BirthIsland_Exterior_OnReturnToField:: @ 8165213
 
 BirthIsland_Exterior_OnTransition:: @ 8165217
 	setworldmapflag FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR
+    compare VAR_SEASON, 1
+    call_if_eq BirthIsland_Exterior_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq BirthIsland_Exterior_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq BirthIsland_Exterior_EventScript_SetLayoutWinter
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_DEOXYS_N
 	setvar VAR_DEOXYS_INTERACTION_STEP_COUNTER, 0
 	setvar VAR_DEOXYS_INTERACTION_NUM, 0
 	call_if_set FLAG_FOUGHT_DEOXYS, BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle
 	call_if_unset FLAG_FOUGHT_DEOXYS, BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle
 	end
+
+BirthIsland_Exterior_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_BIRTH_ISLAND_EXTERIOR_SUMMER
+    return
+
+BirthIsland_Exterior_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_BIRTH_ISLAND_EXTERIOR_AUTUMN
+    return
+
+BirthIsland_Exterior_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_BIRTH_ISLAND_EXTERIOR_WINTER
+    return
 
 BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle:: @ 816523C
 	setflag FLAG_HIDE_DEOXYS

@@ -4,9 +4,27 @@ TwoIsland_MapScripts:: @ 8167564
 
 TwoIsland_OnTransition:: @ 816756A
 	setworldmapflag FLAG_WORLD_MAP_TWO_ISLAND
+    compare VAR_SEASON, 1
+    call_if_eq TwoIsland_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq TwoIsland_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq TwoIsland_EventScript_SetLayoutWinter
 	setflag FLAG_VISITED_TWO_ISLAND
 	call TwoIsland_EventScript_SetShopState
 	end
+
+TwoIsland_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_TWO_ISLAND_SUMMER
+    return
+
+TwoIsland_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_TWO_ISLAND_AUTUMN
+    return
+
+TwoIsland_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_TWO_ISLAND_WINTER
+    return
 
 TwoIsland_EventScript_SetShopState:: @ 8167576
 	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, TwoIsland_EventScript_SetShopStateAfterHoennLink

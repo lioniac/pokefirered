@@ -4,7 +4,25 @@ FiveIsland_MapScripts:: @ 8167E8E
 
 FiveIsland_OnTransition:: @ 8167E94
 	setworldmapflag FLAG_WORLD_MAP_FIVE_ISLAND
+    compare VAR_SEASON, 1
+    call_if_eq FiveIsland_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FiveIsland_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FiveIsland_EventScript_SetLayoutWinter
 	end
+
+FiveIsland_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_SUMMER
+    return
+
+FiveIsland_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_AUTUMN
+    return
+
+FiveIsland_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_WINTER
+    return
 
 FiveIsland_EventScript_IslandSign:: @ 8167E98
 	msgbox FiveIsland_Text_IslandSign, MSGBOX_SIGN

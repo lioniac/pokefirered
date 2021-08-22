@@ -1501,3 +1501,1023 @@ gTilesetPalOverride_Cave10_Day::
 	.align 2
 gTilesetPalOverride_Cave10_Night::
 	.incbin "data/tilesets/secondary/cave/palettes/10_over_night.gbapal"
+
+	.align 2
+gTilesetPalettes_General_Summer::
+	.incbin "data/tilesets/primary/general_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/general_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_General_Summer::
+	.incbin "data/tilesets/primary/general_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_General_Autumn::
+	.incbin "data/tilesets/primary/general_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/general_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_General_Autumn::
+	.incbin "data/tilesets/primary/general_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_General_Winter::
+	.incbin "data/tilesets/primary/general_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/general_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_General_Winter::
+	.incbin "data/tilesets/primary/general_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ViridianForest_Summer::
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ViridianForest_Summer::
+	.incbin "data/tilesets/secondary/viridianforest_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ViridianForest_Autumn::
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ViridianForest_Autumn::
+	.incbin "data/tilesets/secondary/viridianforest_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ViridianForest_Winter::
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/viridianforest_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ViridianForest_Winter::
+	.incbin "data/tilesets/secondary/viridianforest_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_FuchsiaCity_Summer::
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_FuchsiaCity_Summer::
+	.incbin "data/tilesets/secondary/fuchsiacity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_FuchsiaCity_Autumn::
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_FuchsiaCity_Autumn::
+	.incbin "data/tilesets/secondary/fuchsiacity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_FuchsiaCity_Winter::
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_FuchsiaCity_Winter::
+	.incbin "data/tilesets/secondary/fuchsiacity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands123_Summer::
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands123_Summer::
+	.incbin "data/tilesets/secondary/seviiislands123_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands123_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands123_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands123_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands123_Winter::
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands123_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands123_Winter::
+	.incbin "data/tilesets/secondary/seviiislands123_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_BerryForest_Summer::
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_BerryForest_Summer::
+	.incbin "data/tilesets/secondary/berryforest_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_BerryForest_Autumn::
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_BerryForest_Autumn::
+	.incbin "data/tilesets/secondary/berryforest_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_BerryForest_Winter::
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/berryforest_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_BerryForest_Winter::
+	.incbin "data/tilesets/secondary/berryforest_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands67_Summer::
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands67_Summer::
+	.incbin "data/tilesets/secondary/seviiislands67_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands67_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands67_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands67_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands67_Winter::
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands67_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands67_Winter::
+	.incbin "data/tilesets/secondary/seviiislands67_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PalletTown_Summer::
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PalletTown_Summer::
+	.incbin "data/tilesets/secondary/pallettown_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PalletTown_Autumn::
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PalletTown_Autumn::
+	.incbin "data/tilesets/secondary/pallettown_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PalletTown_Winter::
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/pallettown_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PalletTown_Winter::
+	.incbin "data/tilesets/secondary/pallettown_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ViridianCity_Summer::
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ViridianCity_Summer::
+	.incbin "data/tilesets/secondary/viridiancity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ViridianCity_Autumn::
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ViridianCity_Autumn::
+	.incbin "data/tilesets/secondary/viridiancity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ViridianCity_Winter::
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/viridiancity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ViridianCity_Winter::
+	.incbin "data/tilesets/secondary/viridiancity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PewterCity_Summer::
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PewterCity_Summer::
+	.incbin "data/tilesets/secondary/pewtercity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PewterCity_Autumn::
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PewterCity_Autumn::
+	.incbin "data/tilesets/secondary/pewtercity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PewterCity_Winter::
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/pewtercity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PewterCity_Winter::
+	.incbin "data/tilesets/secondary/pewtercity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CeruleanCity_Summer::
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CeruleanCity_Summer::
+	.incbin "data/tilesets/secondary/ceruleancity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CeruleanCity_Autumn::
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CeruleanCity_Autumn::
+	.incbin "data/tilesets/secondary/ceruleancity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CeruleanCity_Winter::
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/ceruleancity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CeruleanCity_Winter::
+	.incbin "data/tilesets/secondary/ceruleancity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_LavenderTown_Summer::
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_LavenderTown_Summer::
+	.incbin "data/tilesets/secondary/lavendertown_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_LavenderTown_Autumn::
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_LavenderTown_Autumn::
+	.incbin "data/tilesets/secondary/lavendertown_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_LavenderTown_Winter::
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/lavendertown_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_LavenderTown_Winter::
+	.incbin "data/tilesets/secondary/lavendertown_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_VermilionCity_Summer::
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_VermilionCity_Summer::
+	.incbin "data/tilesets/secondary/vermilioncity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_VermilionCity_Autumn::
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_VermilionCity_Autumn::
+	.incbin "data/tilesets/secondary/vermilioncity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_VermilionCity_Winter::
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/vermilioncity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_VermilionCity_Winter::
+	.incbin "data/tilesets/secondary/vermilioncity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CeladonCity_Summer::
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CeladonCity_Summer::
+	.incbin "data/tilesets/secondary/celadoncity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CeladonCity_Autumn::
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CeladonCity_Autumn::
+	.incbin "data/tilesets/secondary/celadoncity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CeladonCity_Winter::
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/celadoncity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CeladonCity_Winter::
+	.incbin "data/tilesets/secondary/celadoncity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CinnabarIsland_Summer::
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CinnabarIsland_Summer::
+	.incbin "data/tilesets/secondary/cinnabarisland_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CinnabarIsland_Autumn::
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CinnabarIsland_Autumn::
+	.incbin "data/tilesets/secondary/cinnabarisland_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CinnabarIsland_Winter::
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CinnabarIsland_Winter::
+	.incbin "data/tilesets/secondary/cinnabarisland_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_IndigoPlateau_Summer::
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_IndigoPlateau_Summer::
+	.incbin "data/tilesets/secondary/indigoplateau_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_IndigoPlateau_Autumn::
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_IndigoPlateau_Autumn::
+	.incbin "data/tilesets/secondary/indigoplateau_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_IndigoPlateau_Winter::
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/indigoplateau_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_IndigoPlateau_Winter::
+	.incbin "data/tilesets/secondary/indigoplateau_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SaffronCity_Summer::
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SaffronCity_Summer::
+	.incbin "data/tilesets/secondary/saffroncity_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SaffronCity_Autumn::
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SaffronCity_Autumn::
+	.incbin "data/tilesets/secondary/saffroncity_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SaffronCity_Winter::
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/saffroncity_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SaffronCity_Winter::
+	.incbin "data/tilesets/secondary/saffroncity_winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands45_Summer::
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_summer/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands45_Summer::
+	.incbin "data/tilesets/secondary/seviiislands45_summer/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands45_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands45_Autumn::
+	.incbin "data/tilesets/secondary/seviiislands45_autumn/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SeviiIslands45_Winter::
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/seviiislands45_winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SeviiIslands45_Winter::
+	.incbin "data/tilesets/secondary/seviiislands45_winter/tiles.4bpp.lz"

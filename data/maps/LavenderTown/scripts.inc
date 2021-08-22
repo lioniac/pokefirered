@@ -4,9 +4,27 @@ LavenderTown_MapScripts:: @ 816686B
 
 LavenderTown_OnTransition:: @ 8166871
 	setworldmapflag FLAG_WORLD_MAP_LAVENDER_TOWN
+    compare VAR_SEASON, 1
+    call_if_eq LavenderTown_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq LavenderTown_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq LavenderTown_EventScript_SetLayoutWinter
 	setvar VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR, 1
 	setflag FLAG_HIDE_SS_ANNE_RIVAL
 	end
+
+LavenderTown_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_LAVENDER_TOWN_SUMMER
+    return
+
+LavenderTown_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_LAVENDER_TOWN_AUTUMN
+    return
+
+LavenderTown_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_LAVENDER_TOWN_WINTER
+    return
 
 LavenderTown_EventScript_LittleGirl:: @ 816687D
 	lock

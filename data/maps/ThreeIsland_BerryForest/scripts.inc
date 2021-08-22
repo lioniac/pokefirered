@@ -6,8 +6,26 @@ ThreeIsland_BerryForest_MapScripts:: @ 8163C71
 
 ThreeIsland_BerryForest_OnTransition:: @ 8163C77
 	setworldmapflag FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST
+    compare VAR_SEASON, 1
+    call_if_eq ThreeIsland_BerryForest_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq ThreeIsland_BerryForest_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq ThreeIsland_BerryForest_EventScript_SetLayoutWinter
 	setescapewarp MAP_THREE_ISLAND_BOND_BRIDGE, 255, 12, 6
 	end
+
+ThreeIsland_BerryForest_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_BERRY_FOREST_SUMMER
+    return
+
+ThreeIsland_BerryForest_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_BERRY_FOREST_AUTUMN
+    return
+
+ThreeIsland_BerryForest_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_BERRY_FOREST_WINTER
+    return
 
 ThreeIsland_BerryForest_EventScript_Lostelle:: @ 8163C83
 	lock

@@ -1,6 +1,28 @@
 Route12_MapScripts:: @ 8168000
+	map_script MAP_SCRIPT_ON_TRANSITION, Route12_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route12_OnResume
 	.byte 0
+
+Route12_OnTransition::
+    compare VAR_SEASON, 1
+    call_if_eq Route12_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route12_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route12_EventScript_SetLayoutWinter
+	end
+
+Route12_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE12_SUMMER
+    return
+
+Route12_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE12_AUTUMN
+    return
+
+Route12_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE12_WINTER
+    return
 
 Route12_OnResume:: @ 8168006
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, Route12_EventScript_TryRemoveSnorlax

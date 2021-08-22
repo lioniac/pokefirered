@@ -1,6 +1,28 @@
 FiveIsland_Meadow_MapScripts:: @ 8168932
 	map_script MAP_SCRIPT_ON_LOAD, FiveIsland_Meadow_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_Meadow_OnTransition
 	.byte 0
+
+FiveIsland_Meadow_OnTransition:: @ 8167E94
+    compare VAR_SEASON, 1
+    call_if_eq FiveIsland_Meadow_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FiveIsland_Meadow_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FiveIsland_Meadow_EventScript_SetLayoutWinter
+	end
+
+FiveIsland_Meadow_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_MEADOW_SUMMER
+    return
+
+FiveIsland_Meadow_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_MEADOW_AUTUMN
+    return
+
+FiveIsland_Meadow_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_MEADOW_WINTER
+    return
 
 FiveIsland_Meadow_OnLoad:: @ 8168938
 	call_if_set FLAG_UNLOCKED_ROCKET_WAREHOUSE, FiveIsland_Meadow_EventScript_SetWarehouseDoorUnlocked

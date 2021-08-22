@@ -14,10 +14,28 @@ ThreeIsland_MapScripts:: @ 81677AD
 
 ThreeIsland_OnTransition:: @ 81677B3
 	setworldmapflag FLAG_WORLD_MAP_THREE_ISLAND
+    compare VAR_SEASON, 1
+    call_if_eq ThreeIsland_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq ThreeIsland_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq ThreeIsland_EventScript_SetLayoutWinter
 	call_if_set FLAG_RESCUED_LOSTELLE, ThreeIsland_EventScript_HideAntiBikers
 	compare VAR_MAP_SCENE_THREE_ISLAND, 4
 	call_if_eq ThreeIsland_EventScript_SetAntiBikersMovementAfterBikers
 	end
+
+ThreeIsland_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_SUMMER
+    return
+
+ThreeIsland_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_AUTUMN
+    return
+
+ThreeIsland_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_WINTER
+    return
 
 ThreeIsland_EventScript_HideAntiBikers:: @ 81677CB
 	setflag FLAG_HIDE_THREE_ISLAND_ANTIBIKERS

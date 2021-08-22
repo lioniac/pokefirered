@@ -1,5 +1,27 @@
 Route4_MapScripts:: @ 8167F8A
+	map_script MAP_SCRIPT_ON_TRANSITION, Route4_OnTransition
 	.byte 0
+
+Route4_OnTransition::
+    compare VAR_SEASON, 1
+    call_if_eq Route4_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route4_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route4_EventScript_SetLayoutWinter
+	end
+
+Route4_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE4_SUMMER
+    return
+
+Route4_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE4_AUTUMN
+    return
+
+Route4_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE4_WINTER
+    return
 
 Route4_EventScript_Unused:: @ 8167F8B
 	end

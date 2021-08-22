@@ -4,9 +4,27 @@ FuchsiaCity_MapScripts:: @ 8166D75
 
 FuchsiaCity_OnTransition:: @ 8166D7B
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
+    compare VAR_SEASON, 1
+    call_if_eq FuchsiaCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FuchsiaCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FuchsiaCity_EventScript_SetLayoutWinter
 	call_if_set FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetOmanyteGfx
 	call_if_unset FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetKabutoGfx
 	end
+
+FuchsiaCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FUCHSIA_CITY_SUMMER
+    return
+
+FuchsiaCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FUCHSIA_CITY_AUTUMN
+    return
+
+FuchsiaCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FUCHSIA_CITY_WINTER
+    return
 
 FuchsiaCity_EventScript_SetOmanyteGfx:: @ 8166D91
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OMANYTE

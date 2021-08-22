@@ -1,7 +1,29 @@
 .set LOCALID_RIVAL, 1
 
 Route22_MapScripts:: @ 816828B
+	map_script MAP_SCRIPT_ON_TRANSITION, Route22_OnTransition
 	.byte 0
+
+Route22_OnTransition::
+    compare VAR_SEASON, 1
+    call_if_eq Route22_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route22_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route22_EventScript_SetLayoutWinter
+	end
+
+Route22_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE22_SUMMER
+    return
+
+Route22_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE22_AUTUMN
+    return
+
+Route22_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE22_WINTER
+    return
 
 Route22_EventScript_EarlyRivalTriggerTop:: @ 816828C
 	lockall

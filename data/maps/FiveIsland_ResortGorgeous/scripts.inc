@@ -3,7 +3,29 @@
 FiveIsland_ResortGorgeous_MapScripts:: @ 81687E4
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, FiveIsland_ResortGorgeous_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FiveIsland_ResortGorgeous_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_ResortGorgeous_OnTransition
 	.byte 0
+
+FiveIsland_ResortGorgeous_OnTransition:: @ 8167E94
+    compare VAR_SEASON, 1
+    call_if_eq FiveIsland_ResortGorgeous_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FiveIsland_ResortGorgeous_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FiveIsland_ResortGorgeous_EventScript_SetLayoutWinter
+	end
+
+FiveIsland_ResortGorgeous_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_RESORT_GORGEOUS_SUMMER
+    return
+
+FiveIsland_ResortGorgeous_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_RESORT_GORGEOUS_AUTUMN
+    return
+
+FiveIsland_ResortGorgeous_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_RESORT_GORGEOUS_WINTER
+    return
 
 FiveIsland_ResortGorgeous_OnWarp:: @ 81687EF
 	map_script_2 VAR_MAP_SCENE_FIVE_ISLAND_RESORT_GORGEOUS, 1, FiveIsland_ResortGorgeous_EventScript_TurnPlayerNorth

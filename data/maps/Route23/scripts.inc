@@ -11,6 +11,12 @@ Route23_MapScripts:: @ 81684EB
 	.byte 0
 
 Route23_OnTransition:: @ 81684F1
+    compare VAR_SEASON, 1
+    call_if_eq Route23_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq Route23_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq Route23_EventScript_SetLayoutWinter
 	clearflag FLAG_HIDE_VICTORY_ROAD_3F_BOULDER
 	setflag FLAG_HIDE_VICTORY_ROAD_2F_BOULDER
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_1F, 0
@@ -18,6 +24,18 @@ Route23_OnTransition:: @ 81684F1
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2, 0
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_3F, 0
 	end
+
+Route23_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ROUTE23_SUMMER
+    return
+
+Route23_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ROUTE23_AUTUMN
+    return
+
+Route23_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ROUTE23_WINTER
+    return
 
 Route23_EventScript_CascadeBadgeGuard:: @ 816850C
 	lock

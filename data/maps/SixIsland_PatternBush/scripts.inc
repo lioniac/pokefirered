@@ -4,12 +4,30 @@ SixIsland_PatternBush_MapScripts:: @ 8164559
 
 SixIsland_PatternBush_OnTransition:: @ 816455F
 	setworldmapflag FLAG_WORLD_MAP_SIX_ISLAND_PATTERN_BUSH
+    compare VAR_SEASON, 1
+    call_if_eq SixIsland_PatternBush_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq SixIsland_PatternBush_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq SixIsland_PatternBush_EventScript_SetLayoutWinter
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	compare VAR_TEMP_1, 50
 	call_if_ge SixIsland_PatternBush_EventScript_SetEscapeRightExit
 	compare VAR_TEMP_1, 49
 	call_if_le SixIsland_PatternBush_EventScript_SetEscapeLeftExit
 	end
+
+SixIsland_PatternBush_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_SIX_ISLAND_PATTERN_BUSH_SUMMER
+    return
+
+SixIsland_PatternBush_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_SIX_ISLAND_PATTERN_BUSH_AUTUMN
+    return
+
+SixIsland_PatternBush_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_SIX_ISLAND_PATTERN_BUSH_WINTER
+    return
 
 SixIsland_PatternBush_EventScript_SetEscapeRightExit:: @ 816457E
 	setescapewarp MAP_SIX_ISLAND_GREEN_PATH, 255, 64, 10

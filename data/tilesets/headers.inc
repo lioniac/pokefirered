@@ -814,3 +814,615 @@ gTileset_HallOfFame::
 	.4byte 0x0
 	.4byte gMetatileAttributes_HallOfFame
 	.4byte NULL @ palette overrides
+
+    .align 2
+gTileset_General_Summer::
+    .byte TRUE @ is compressed
+    .byte FALSE @ is secondary
+	.2byte 0 @ padding
+    .4byte gTilesetTiles_General_Summer
+    .4byte gTilesetPalettes_General_Summer
+    .4byte gMetatiles_General_Summer
+    .4byte InitTilesetAnim_General
+    .4byte gMetatileAttributes_General_Summer
+    .4byte gTilesetPalOverrides_General
+
+	.align 2
+gTileset_General_Autumn::
+    .byte TRUE @ is compressed
+    .byte FALSE @ is secondary
+    .2byte 0
+    .4byte gTilesetTiles_General_Autumn
+    .4byte gTilesetPalettes_General_Autumn
+    .4byte gMetatiles_General_Autumn
+    .4byte InitTilesetAnim_General
+    .4byte gMetatileAttributes_General_Autumn
+    .4byte gTilesetPalOverrides_General
+
+	.align 2
+gTileset_General_Winter::
+    .byte TRUE @ is compressed
+    .byte FALSE @ is secondary
+    .2byte 0
+    .4byte gTilesetTiles_General_Winter
+    .4byte gTilesetPalettes_General_Winter
+    .4byte gMetatiles_General_Winter
+    .4byte InitTilesetAnim_General
+    .4byte gMetatileAttributes_General_Winter
+    .4byte gTilesetPalOverrides_General
+
+	.align 2
+gTileset_ViridianForest_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_ViridianForest_Summer
+	.4byte gTilesetPalettes_ViridianForest_Summer
+	.4byte gMetatiles_ViridianForest_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_ViridianForest_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_ViridianForest_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_ViridianForest_Autumn
+	.4byte gTilesetPalettes_ViridianForest_Autumn
+	.4byte gMetatiles_ViridianForest_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_ViridianForest_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_ViridianForest_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_ViridianForest_Winter
+	.4byte gTilesetPalettes_ViridianForest_Winter
+	.4byte gMetatiles_ViridianForest_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_ViridianForest_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_FuchsiaCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_FuchsiaCity_Summer
+	.4byte gTilesetPalettes_FuchsiaCity_Summer
+	.4byte gMetatiles_FuchsiaCity_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_FuchsiaCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_FuchsiaCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_FuchsiaCity_Autumn
+	.4byte gTilesetPalettes_FuchsiaCity_Autumn
+	.4byte gMetatiles_FuchsiaCity_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_FuchsiaCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_FuchsiaCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_FuchsiaCity_Winter
+	.4byte gTilesetPalettes_FuchsiaCity_Winter
+	.4byte gMetatiles_FuchsiaCity_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_FuchsiaCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands123_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands123_Summer
+	.4byte gTilesetPalettes_SeviiIslands123_Summer
+	.4byte gMetatiles_SeviiIslands123_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands123_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands123_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands123_Autumn
+	.4byte gTilesetPalettes_SeviiIslands123_Autumn
+	.4byte gMetatiles_SeviiIslands123_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands123_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands123_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands123_Winter
+	.4byte gTilesetPalettes_SeviiIslands123_Winter
+	.4byte gMetatiles_SeviiIslands123_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands123_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_BerryForest_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_BerryForest_Summer
+	.4byte gTilesetPalettes_BerryForest_Summer
+	.4byte gMetatiles_BerryForest_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_BerryForest_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_BerryForest_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_BerryForest_Autumn
+	.4byte gTilesetPalettes_BerryForest_Autumn
+	.4byte gMetatiles_BerryForest_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_BerryForest_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_BerryForest_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_BerryForest_Winter
+	.4byte gTilesetPalettes_BerryForest_Winter
+	.4byte gMetatiles_BerryForest_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_BerryForest_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands67_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands67_Summer
+	.4byte gTilesetPalettes_SeviiIslands67_Summer
+	.4byte gMetatiles_SeviiIslands67_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands67_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands67_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands67_Autumn
+	.4byte gTilesetPalettes_SeviiIslands67_Autumn
+	.4byte gMetatiles_SeviiIslands67_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands67_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands67_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands67_Winter
+	.4byte gTilesetPalettes_SeviiIslands67_Winter
+	.4byte gMetatiles_SeviiIslands67_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands67_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_PalletTown_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PalletTown_Summer
+	.4byte gTilesetPalettes_PalletTown_Summer
+	.4byte gMetatiles_PalletTown_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_PalletTown_Summer
+	.4byte gTilesetPalOverrides_PalletTown
+
+	.align 2
+gTileset_PalletTown_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PalletTown_Autumn
+	.4byte gTilesetPalettes_PalletTown_Autumn
+	.4byte gMetatiles_PalletTown_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_PalletTown_Autumn
+	.4byte gTilesetPalOverrides_PalletTown
+
+	.align 2
+gTileset_PalletTown_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PalletTown_Winter
+	.4byte gTilesetPalettes_PalletTown_Winter
+	.4byte gMetatiles_PalletTown_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_PalletTown_Winter
+	.4byte gTilesetPalOverrides_PalletTown
+
+	.align 2
+gTileset_ViridianCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_ViridianCity_Summer
+	.4byte gTilesetPalettes_ViridianCity_Summer
+	.4byte gMetatiles_ViridianCity_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_ViridianCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_ViridianCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_ViridianCity_Autumn
+	.4byte gTilesetPalettes_ViridianCity_Autumn
+	.4byte gMetatiles_ViridianCity_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_ViridianCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_ViridianCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_ViridianCity_Winter
+	.4byte gTilesetPalettes_ViridianCity_Winter
+	.4byte gMetatiles_ViridianCity_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_ViridianCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_PewterCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PewterCity_Summer
+	.4byte gTilesetPalettes_PewterCity_Summer
+	.4byte gMetatiles_PewterCity_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_PewterCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_PewterCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PewterCity_Autumn
+	.4byte gTilesetPalettes_PewterCity_Autumn
+	.4byte gMetatiles_PewterCity_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_PewterCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_PewterCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PewterCity_Winter
+	.4byte gTilesetPalettes_PewterCity_Winter
+	.4byte gMetatiles_PewterCity_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_PewterCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CeruleanCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CeruleanCity_Summer
+	.4byte gTilesetPalettes_CeruleanCity_Summer
+	.4byte gMetatiles_CeruleanCity_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_CeruleanCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CeruleanCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CeruleanCity_Autumn
+	.4byte gTilesetPalettes_CeruleanCity_Autumn
+	.4byte gMetatiles_CeruleanCity_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_CeruleanCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CeruleanCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CeruleanCity_Winter
+	.4byte gTilesetPalettes_CeruleanCity_Winter
+	.4byte gMetatiles_CeruleanCity_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_CeruleanCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_LavenderTown_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_LavenderTown_Summer
+	.4byte gTilesetPalettes_LavenderTown_Summer
+	.4byte gMetatiles_LavenderTown_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_LavenderTown_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_LavenderTown_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_LavenderTown_Autumn
+	.4byte gTilesetPalettes_LavenderTown_Autumn
+	.4byte gMetatiles_LavenderTown_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_LavenderTown_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_LavenderTown_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_LavenderTown_Winter
+	.4byte gTilesetPalettes_LavenderTown_Winter
+	.4byte gMetatiles_LavenderTown_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_LavenderTown_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_VermilionCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_VermilionCity_Summer
+	.4byte gTilesetPalettes_VermilionCity_Summer
+	.4byte gMetatiles_VermilionCity_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_VermilionCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_VermilionCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_VermilionCity_Autumn
+	.4byte gTilesetPalettes_VermilionCity_Autumn
+	.4byte gMetatiles_VermilionCity_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_VermilionCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_VermilionCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_VermilionCity_Winter
+	.4byte gTilesetPalettes_VermilionCity_Winter
+	.4byte gMetatiles_VermilionCity_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_VermilionCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CeladonCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CeladonCity_Summer
+	.4byte gTilesetPalettes_CeladonCity_Summer
+	.4byte gMetatiles_CeladonCity_Summer
+	.4byte InitTilesetAnim_CeladonCity
+	.4byte gMetatileAttributes_CeladonCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CeladonCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CeladonCity_Autumn
+	.4byte gTilesetPalettes_CeladonCity_Autumn
+	.4byte gMetatiles_CeladonCity_Autumn
+	.4byte InitTilesetAnim_CeladonCity
+	.4byte gMetatileAttributes_CeladonCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CeladonCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CeladonCity_Winter
+	.4byte gTilesetPalettes_CeladonCity_Winter
+	.4byte gMetatiles_CeladonCity_Winter
+	.4byte InitTilesetAnim_CeladonCity
+	.4byte gMetatileAttributes_CeladonCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CinnabarIsland_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CinnabarIsland_Summer
+	.4byte gTilesetPalettes_CinnabarIsland_Summer
+	.4byte gMetatiles_CinnabarIsland_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_CinnabarIsland_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CinnabarIsland_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CinnabarIsland_Autumn
+	.4byte gTilesetPalettes_CinnabarIsland_Autumn
+	.4byte gMetatiles_CinnabarIsland_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_CinnabarIsland_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_CinnabarIsland_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CinnabarIsland_Winter
+	.4byte gTilesetPalettes_CinnabarIsland_Winter
+	.4byte gMetatiles_CinnabarIsland_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_CinnabarIsland_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_IndigoPlateau_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_IndigoPlateau_Summer
+	.4byte gTilesetPalettes_IndigoPlateau_Summer
+	.4byte gMetatiles_IndigoPlateau_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_IndigoPlateau_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_IndigoPlateau_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_IndigoPlateau_Autumn
+	.4byte gTilesetPalettes_IndigoPlateau_Autumn
+	.4byte gMetatiles_IndigoPlateau_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_IndigoPlateau_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_IndigoPlateau_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_IndigoPlateau_Winter
+	.4byte gTilesetPalettes_IndigoPlateau_Winter
+	.4byte gMetatiles_IndigoPlateau_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_IndigoPlateau_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SaffronCity_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SaffronCity_Summer
+	.4byte gTilesetPalettes_SaffronCity_Summer
+	.4byte gMetatiles_SaffronCity_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_SaffronCity_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SaffronCity_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SaffronCity_Autumn
+	.4byte gTilesetPalettes_SaffronCity_Autumn
+	.4byte gMetatiles_SaffronCity_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_SaffronCity_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SaffronCity_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SaffronCity_Winter
+	.4byte gTilesetPalettes_SaffronCity_Winter
+	.4byte gMetatiles_SaffronCity_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_SaffronCity_Winter
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands45_Summer::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands45_Summer
+	.4byte gTilesetPalettes_SeviiIslands45_Summer
+	.4byte gMetatiles_SeviiIslands45_Summer
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands45_Summer
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands45_Autumn::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands45_Autumn
+	.4byte gTilesetPalettes_SeviiIslands45_Autumn
+	.4byte gMetatiles_SeviiIslands45_Autumn
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands45_Autumn
+	.4byte NULL @ palette overrides
+
+	.align 2
+gTileset_SeviiIslands45_Winter::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_SeviiIslands45_Winter
+	.4byte gTilesetPalettes_SeviiIslands45_Winter
+	.4byte gMetatiles_SeviiIslands45_Winter
+	.4byte 0x0
+	.4byte gMetatileAttributes_SeviiIslands45_Winter
+	.4byte NULL @ palette overrides

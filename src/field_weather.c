@@ -11,6 +11,9 @@
 #include "random.h"
 #include "event_data.h"
 #include "quest_log.h"
+#include "day_night.h"
+#include "rtc.h"
+#include "constants/day_night.h"
 #include "constants/field_weather.h"
 #include "constants/weather.h"
 #include "constants/songs.h"
@@ -1116,19 +1119,15 @@ u8 SetRandomWeather(void)
         {
         case SEASON_SPRING:
             weather = WEATHER_SUNNY;
-            gSaveBlock2Ptr->optionsWindowFrameType = 3;
             break;
         case SEASON_SUMMER:
-            weather = WEATHER_HARSH_SUN;
-            gSaveBlock2Ptr->optionsWindowFrameType = 2;
+            weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
             break;
         case SEASON_AUTUMN:
             weather = WEATHER_SANDSTORM;
-            gSaveBlock2Ptr->optionsWindowFrameType = 5;
             break;
         case SEASON_WINTER:
             weather = WEATHER_FLAKES;
-            gSaveBlock2Ptr->optionsWindowFrameType = 4;
             break;
         }
 
@@ -1138,8 +1137,11 @@ u8 SetRandomWeather(void)
     {
         // 50% Chance of keep current weather
         random = Random() % 2;
-        if (random)
+        if (random) {
             weather = gSaveBlock1Ptr->weather;
+            if (weather == WEATHER_HARSH_SUN)
+                weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
+        }
         else
         {
             // 20 possibilities from 0 to 19; 5% each number
@@ -1147,44 +1149,44 @@ u8 SetRandomWeather(void)
             switch (gSaveBlock1Ptr->season)
             {
             case SEASON_SPRING:
-                if (random <= 7)
-                    weather = WEATHER_SUNNY;     // 40%
-                else if (random <= 13)
-                    weather = WEATHER_RAIN;      // 30%
-                else if (random <= 17)
-                    weather = WEATHER_THUNDER;   // 20%
-                else if (random <= 19)
-                    weather = WEATHER_HARSH_SUN; // 10%
+                if (random <= 11)                // 60%
+                    weather = WEATHER_SUNNY;
+                else if (random <= 16)           // 25%
+                    weather = WEATHER_RAIN;
+                else if (random <= 18)           // 10%
+                    weather = WEATHER_THUNDER;
+                else if (random <= 19)           //  5%
+                    weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
                 break;
             case SEASON_SUMMER:
-                if (random <= 7)
-                    weather = WEATHER_HARSH_SUN; // 40%
-                else if (random <= 13)
-                    weather = WEATHER_SUNNY;     // 30%
-                else if (random <= 17)
-                    weather = WEATHER_THUNDER;   // 20%
-                else if (random <= 19)
-                    weather = WEATHER_RAIN;      // 10%
+                if (random <= 8)                 // 45%
+                    weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
+                else if (random <= 16)           // 40%
+                    weather = WEATHER_SUNNY;
+                else if (random <= 18)           // 10%
+                    weather = WEATHER_THUNDER;
+                else if (random <= 19)           //  5%
+                    weather = WEATHER_RAIN;
                 break;
             case SEASON_AUTUMN:
-                if (random <= 7)
-                    weather = WEATHER_SANDSTORM; // 40% 
-                else if (random <= 13)
-                    weather = WEATHER_SUNNY;     // 30% 
-                else if (random <= 17)
-                    weather = WEATHER_SUNNY;     // 20%
-                else if (random <= 19)
-                    weather = WEATHER_SANDSTORM; // 10%
+                if (random <= 9)                 // 50%
+                    weather = WEATHER_SANDSTORM;
+                else if (random <= 16)           // 35%
+                    weather = WEATHER_SUNNY; 
+                else if (random <= 18)           // 10%
+                    weather = WEATHER_SUNNY;
+                else if (random <= 19)           //  5%
+                    weather = WEATHER_SANDSTORM;
                 break;
             case SEASON_WINTER:
-                if (random <= 7)
-                    weather = WEATHER_FLAKES;    // 40%
-                else if (random <= 13)
-                    weather = WEATHER_FLAKES;    // 30%
-                else if (random <= 17)
-                    weather = WEATHER_FLAKES;    // 20%
-                else if (random <= 19)
-                    weather = WEATHER_FLAKES;    // 10%
+                if (random <= 11)                // 60%
+                    weather = WEATHER_FLAKES;
+                else if (random <= 16)           // 25%
+                    weather = WEATHER_FLAKES;
+                else if (random <= 18)           // 10%
+                    weather = WEATHER_FLAKES;
+                else if (random <= 19)           //  5%
+                    weather = WEATHER_FLAKES;
                 break;
             }
         }

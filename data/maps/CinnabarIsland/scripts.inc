@@ -8,6 +8,12 @@ CinnabarIsland_MapScripts:: @ 8166ED6
 
 CinnabarIsland_OnTransition:: @ 8166EE1
 	setworldmapflag FLAG_WORLD_MAP_CINNABAR_ISLAND
+    compare VAR_SEASON, 1
+    call_if_eq CinnabarIsland_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq CinnabarIsland_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq CinnabarIsland_EventScript_SetLayoutWinter
 	call CinnabarIsland_EventScript_CheckUnlockGym
 	compare VAR_MAP_SCENE_CINNABAR_ISLAND, 1
 	call_if_eq CinnabarIsland_EventScript_ReadyObjectsSailToOneIsland
@@ -16,6 +22,18 @@ CinnabarIsland_OnTransition:: @ 8166EE1
 	compare VAR_MAP_SCENE_CINNABAR_ISLAND_2, 1
 	call_if_eq CinnabarIsland_EventScript_ReadyObjectsSailToOneIslandFromPokeCenter
 	end
+
+CinnabarIsland_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_CINNABAR_ISLAND_SUMMER
+    return
+
+CinnabarIsland_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_CINNABAR_ISLAND_AUTUMN
+    return
+
+CinnabarIsland_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_CINNABAR_ISLAND_WINTER
+    return
 
 CinnabarIsland_EventScript_ReadyObjectsSailToOneIslandFromPokeCenter:: @ 8166F0B
 	savebgm MUS_FOLLOW_ME

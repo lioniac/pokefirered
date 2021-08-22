@@ -6,8 +6,26 @@ SaffronCity_MapScripts:: @ 816735F
 
 SaffronCity_OnTransition:: @ 8167365
 	setworldmapflag FLAG_WORLD_MAP_SAFFRON_CITY
+    compare VAR_SEASON, 1
+    call_if_eq SaffronCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq SaffronCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq SaffronCity_EventScript_SetLayoutWinter
 	call_if_unset FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_MoveDoorGuardGrunt
 	end
+
+SaffronCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_SAFFRON_CITY_SUMMER
+    return
+
+SaffronCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_SAFFRON_CITY_AUTUMN
+    return
+
+SaffronCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_SAFFRON_CITY_WINTER
+    return
 
 SaffronCity_EventScript_MoveDoorGuardGrunt:: @ 8167372
 	setobjectxyperm LOCALID_DOOR_GUARD_GRUNT, 33, 31

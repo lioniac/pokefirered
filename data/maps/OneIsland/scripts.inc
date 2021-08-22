@@ -7,7 +7,25 @@ OneIsland_MapScripts:: @ 8167484
 
 OneIsland_OnTransition:: @ 816748F
 	setworldmapflag FLAG_WORLD_MAP_ONE_ISLAND
+    compare VAR_SEASON, 1
+    call_if_eq OneIsland_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq OneIsland_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq OneIsland_EventScript_SetLayoutWinter
 	end
+
+OneIsland_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_ONE_ISLAND_SUMMER
+    return
+
+OneIsland_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_ONE_ISLAND_AUTUMN
+    return
+
+OneIsland_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_ONE_ISLAND_WINTER
+    return
 
 OneIsland_OnFrame:: @ 8167493
 	map_script_2 VAR_MAP_SCENE_ONE_ISLAND_HARBOR, 2, OneIsland_EventScript_EnterOneIslandFirstTime

@@ -3,9 +3,27 @@ ThreeIsland_Port_MapScripts:: @ 8168789
 	.byte 0
 
 ThreeIsland_Port_OnTransition:: @ 816878F
+    compare VAR_SEASON, 1
+    call_if_eq ThreeIsland_Port_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq ThreeIsland_Port_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq ThreeIsland_Port_EventScript_SetLayoutWinter
 	clearflag FLAG_SYS_PC_STORAGE_DISABLED
 	setflag FLAG_SEVII_DETOUR_FINISHED
 	end
+
+ThreeIsland_Port_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_PORT_SUMMER
+    return
+
+ThreeIsland_Port_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_PORT_AUTUMN
+    return
+
+ThreeIsland_Port_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_THREE_ISLAND_PORT_WINTER
+    return
 
 ThreeIsland_Port_EventScript_Woman:: @ 8168796
 	lock

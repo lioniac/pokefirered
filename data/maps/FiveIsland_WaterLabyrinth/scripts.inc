@@ -1,5 +1,27 @@
 FiveIsland_WaterLabyrinth_MapScripts:: @ 816884D
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_WaterLabyrinth_OnTransition
 	.byte 0
+
+FiveIsland_WaterLabyrinth_OnTransition:: @ 8167E94
+    compare VAR_SEASON, 1
+    call_if_eq FiveIsland_WaterLabyrinth_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FiveIsland_WaterLabyrinth_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FiveIsland_WaterLabyrinth_EventScript_SetLayoutWinter
+	end
+
+FiveIsland_WaterLabyrinth_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_WATER_LABYRINTH_SUMMER
+    return
+
+FiveIsland_WaterLabyrinth_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_WATER_LABYRINTH_AUTUMN
+    return
+
+FiveIsland_WaterLabyrinth_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_WATER_LABYRINTH_WINTER
+    return
 
 FiveIsland_WaterLabyrinth_EventScript_EggGentleman:: @ 816884E
 	goto_if_questlog EventScript_ReleaseEnd

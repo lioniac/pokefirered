@@ -1,7 +1,29 @@
 .set LOCALID_MEMORIAL_MAN, 1
 
 FiveIsland_MemorialPillar_MapScripts:: @ 81689D2
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_MemorialPillar_OnTransition
 	.byte 0
+
+FiveIsland_MemorialPillar_OnTransition:: @ 8167E94
+    compare VAR_SEASON, 1
+    call_if_eq FiveIsland_MemorialPillar_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FiveIsland_MemorialPillar_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FiveIsland_MemorialPillar_EventScript_SetLayoutWinter
+	end
+
+FiveIsland_MemorialPillar_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR_SUMMER
+    return
+
+FiveIsland_MemorialPillar_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR_AUTUMN
+    return
+
+FiveIsland_MemorialPillar_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR_WINTER
+    return
 
 FiveIsland_MemorialPillar_EventScript_MemorialMan:: @ 81689D3
 	lock

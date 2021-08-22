@@ -7,7 +7,25 @@ CeladonCity_MapScripts:: @ 8166C8F
 
 CeladonCity_OnTransition:: @ 8166C95
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
+    compare VAR_SEASON, 1
+    call_if_eq CeladonCity_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq CeladonCity_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq CeladonCity_EventScript_SetLayoutWinter
 	end
+
+CeladonCity_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_CELADON_CITY_SUMMER
+    return
+
+CeladonCity_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_CELADON_CITY_AUTUMN
+    return
+
+CeladonCity_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_CELADON_CITY_WINTER
+    return
 
 CeladonCity_EventScript_LittleGirl:: @ 8166C99
 	msgbox CeladonCity_Text_GotMyKoffingInCinnabar, MSGBOX_NPC

@@ -837,11 +837,8 @@ static void mli0_load_map(bool32 a1)
 
 static void sub_80559A8(void)
 {
-    bool8 isOutdoors;
-
     LoadCurrentMapData();
     LoadObjEventTemplatesFromHeader();
-    isOutdoors = IsMapTypeOutdoors(gMapHeader.mapType);
     TrySetMapSaveWarpStatus();
     DoTimeBasedEvents();
     SetSav1WeatherFromCurrMapHeader();

@@ -8,10 +8,28 @@ FourIsland_MapScripts:: @ 8167CAE
 
 FourIsland_OnTransition:: @ 8167CB9
 	setworldmapflag FLAG_WORLD_MAP_FOUR_ISLAND
+    compare VAR_SEASON, 1
+    call_if_eq FourIsland_EventScript_SetLayoutSummer
+    compare VAR_SEASON, 2
+    call_if_eq FourIsland_EventScript_SetLayoutAutumn
+    compare VAR_SEASON, 3
+    call_if_eq FourIsland_EventScript_SetLayoutWinter
 	compare VAR_MAP_SCENE_FOUR_ISLAND, 0
 	call_if_eq FourIsland_EventScript_ShowRival
 	call FourIsland_EventScript_TrySetDayCareManPos
 	end
+
+FourIsland_EventScript_SetLayoutSummer::
+    setmaplayoutindex LAYOUT_FOUR_ISLAND_SUMMER
+    return
+
+FourIsland_EventScript_SetLayoutAutumn::
+    setmaplayoutindex LAYOUT_FOUR_ISLAND_AUTUMN
+    return
+
+FourIsland_EventScript_SetLayoutWinter::
+    setmaplayoutindex LAYOUT_FOUR_ISLAND_WINTER
+    return
 
 FourIsland_EventScript_ShowRival:: @ 8167CCD
 	clearflag FLAG_HIDE_FOUR_ISLAND_RIVAL
