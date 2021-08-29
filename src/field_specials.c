@@ -2232,10 +2232,16 @@ void StopPokemonLeagueLightingEffectTask(void)
     }
 }
 
-static const u8 sCapeBrinkCompatibleSpecies[] = {
+static const u16 sCapeBrinkCompatibleSpecies[] = {
     SPECIES_VENUSAUR,
     SPECIES_CHARIZARD,
-    SPECIES_BLASTOISE
+    SPECIES_BLASTOISE,
+    SPECIES_MEGANIUM,
+    SPECIES_TYPHLOSION,
+    SPECIES_FERALIGATR,
+    SPECIES_SCEPTILE,
+    SPECIES_BLAZIKEN,
+    SPECIES_SWAMPERT
 };
 
 bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
@@ -2260,14 +2266,14 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     }
     if (i == NELEMS(sCapeBrinkCompatibleSpecies) || GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_FRIENDSHIP) != 255)
         return FALSE;
-    if (tutorMonId == 0)
+    if (tutorMonId == 0 || tutorMonId == 3 || tutorMonId == 6)
     {
         StringCopy(gStringVar2, gMoveNames[MOVE_FRENZY_PLANT]);
         gSpecialVar_0x8005 = MOVETUTOR_FRENZY_PLANT;
         if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
             return FALSE;
     }
-    else if (tutorMonId == 1)
+    else if (tutorMonId == 1 || tutorMonId == 4 || tutorMonId == 7)
     {
         StringCopy(gStringVar2, gMoveNames[MOVE_BLAST_BURN]);
         gSpecialVar_0x8005 = MOVETUTOR_BLAST_BURN;

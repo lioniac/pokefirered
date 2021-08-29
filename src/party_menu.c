@@ -1937,17 +1937,17 @@ static bool8 CanLearnTutorMove(u16 species, u8 tutor)
     switch (tutor)
     {
     case TUTOR_MOVE_FRENZY_PLANT:
-        if (species == SPECIES_VENUSAUR)
+        if (species == SPECIES_VENUSAUR  || species == SPECIES_MEGANIUM   || species == SPECIES_SCEPTILE)
             return TRUE;
         else
             return FALSE;
     case TUTOR_MOVE_BLAST_BURN:
-        if (species == SPECIES_CHARIZARD)
+        if (species == SPECIES_CHARIZARD || species == SPECIES_TYPHLOSION || species == SPECIES_BLAZIKEN)
             return TRUE;
         else
             return FALSE;
     case TUTOR_MOVE_HYDRO_CANNON:
-        if (species == SPECIES_BLASTOISE)
+        if (species == SPECIES_BLASTOISE || species == SPECIES_FERALIGATR || species == SPECIES_SWAMPERT)
             return TRUE;
         else
             return FALSE;

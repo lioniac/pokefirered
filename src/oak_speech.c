@@ -1539,9 +1539,9 @@ static void CreateNidoranFSprite(u8 taskId)
 {
     u8 spriteId;
 
-    DecompressPicFromTable(&gMonFrontPicTable[SPECIES_NIDORAN_F], OakSpeechNidoranFGetBuffer(0), SPECIES_NIDORAN_F);
-    LoadCompressedSpritePaletteUsingHeap(&gMonPaletteTable[SPECIES_NIDORAN_F]);
-    SetMultiuseSpriteTemplateToPokemon(SPECIES_NIDORAN_F, 0);
+    DecompressPicFromTable(&gMonFrontPicTable[SPECIES_EEVEE], OakSpeechNidoranFGetBuffer(0), SPECIES_EEVEE);
+    LoadCompressedSpritePaletteUsingHeap(&gMonPaletteTable[SPECIES_EEVEE]);
+    SetMultiuseSpriteTemplateToPokemon(SPECIES_EEVEE, 0);
     spriteId = CreateSprite(&gMultiuseSpriteTemplate, 0x60, 0x60, 1);
     gSprites[spriteId].callback = SpriteCallbackDummy;
     gSprites[spriteId].oam.priority = 1;
