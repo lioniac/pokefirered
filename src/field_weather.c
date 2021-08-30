@@ -1121,7 +1121,7 @@ u8 SetRandomWeather(void)
             weather = WEATHER_SUNNY;
             break;
         case SEASON_SUMMER:
-            weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
+            weather = (gLocalTime.hours >= 18 || gLocalTime.hours <= 6) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
             break;
         case SEASON_AUTUMN:
             weather = WEATHER_SANDSTORM;
@@ -1140,7 +1140,7 @@ u8 SetRandomWeather(void)
         if (random) {
             weather = gSaveBlock1Ptr->weather;
             if (weather == WEATHER_HARSH_SUN)
-                weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
+                weather = (gLocalTime.hours >= 18 || gLocalTime.hours <= 6) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
         }
         else
         {
@@ -1156,11 +1156,11 @@ u8 SetRandomWeather(void)
                 else if (random <= 18)           // 10%
                     weather = WEATHER_THUNDER;
                 else if (random <= 19)           //  5%
-                    weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
+                    weather = (gLocalTime.hours >= 18 || gLocalTime.hours <= 6) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
                 break;
             case SEASON_SUMMER:
                 if (random <= 8)                 // 45%
-                    weather = (gLocalTime.hours >= 18) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
+                    weather = (gLocalTime.hours >= 18 || gLocalTime.hours <= 6) ? WEATHER_SUNNY : WEATHER_HARSH_SUN;
                 else if (random <= 16)           // 40%
                     weather = WEATHER_SUNNY;
                 else if (random <= 18)           // 10%

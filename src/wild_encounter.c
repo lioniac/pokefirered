@@ -205,7 +205,7 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                     gWildMonHeaders[i+(gSaveBlock1Ptr->season * 2)].mapNum == gSaveBlock1Ptr->location.mapNum)
                 {
                     RtcCalcLocalTime();
-                    if (gLocalTime.hours >= 18)
+                    if (gLocalTime.hours >= 18 || gLocalTime.hours < 6)
                         i += (gSaveBlock1Ptr->season * 2) + 1;
                     else
                         i += (gSaveBlock1Ptr->season * 2);
