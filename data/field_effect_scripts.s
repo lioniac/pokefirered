@@ -49,8 +49,8 @@ gFieldEffectScriptPointers:: @ 81D96AC
 	.4byte gFldEffScript_UseDive
 	.4byte gFldEffScript_Pokeball
 	.4byte gFldEffScript_HeartIcon
-	.4byte gFldEffScript_Nop47
-	.4byte gFldEffScript_Nop48
+	.4byte gFldEffScript_TallGrass_Autumn
+	.4byte gFldEffScript_TallGrass_Winter
 	.4byte gFldEffScript_PopOutOfAsh
 	.4byte gFldEffScript_LavaridgeGymWarp
 	.4byte gFldEffScript_SweetScent
@@ -90,7 +90,15 @@ gFldEffScript_Shadow:: @ 81D97D6
 	end 
 
 gFldEffScript_TallGrass:: @ 81D97DC
-	loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_TallGrass
+	loadfadedpal_callnative_seasons FldEff_TallGrass
+	end 
+
+gFldEffScript_TallGrass_Autumn::
+	loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1Autumn, FldEff_TallGrass
+	end 
+
+gFldEffScript_TallGrass_Winter::
+	loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1Winter, FldEff_TallGrass
 	end 
 
 gFldEffScript_Ripple:: @ 81D97E6
@@ -121,7 +129,7 @@ gFldEffScript_UseSecretPowerCave:: @ 81D9816
 	end 
 
 gFldEffScript_JumpTallGrass:: @ 81D9817
-	loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_JumpTallGrass
+	loadfadedpal_callnative_seasons FldEff_JumpTallGrass
 	end 
 
 gFldEffScript_SandFootprints:: @ 81D9821
@@ -258,12 +266,6 @@ gFldEffScript_Pokeball:: @ 81D9920
 
 gFldEffScript_HeartIcon:: @ 81D992B
 	callnative FldEff_XIcon
-	end 
-
-gFldEffScript_Nop47:: @ 81D9931
-	end 
-
-gFldEffScript_Nop48:: @ 81D9932
 	end 
 
 gFldEffScript_PopOutOfAsh:: @ 81D9933

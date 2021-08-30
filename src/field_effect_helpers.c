@@ -280,7 +280,24 @@ u32 FldEff_TallGrass(void)
     x = gFieldEffectArguments[0];
     y = gFieldEffectArguments[1];
     sub_8063BC4(&x, &y, 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y, 0);
+
+    switch(gSaveBlock1Ptr->season)
+    {
+    case 3:
+        spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS_WINTER], x, y, 0);
+       break;
+    case 2:
+        spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS_AUTUMN], x, y, 0);
+       break;
+    case 1:
+        spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS_SUMMER], x, y, 0);
+        break;
+    case 0:
+    default:
+        spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y, 0);
+        break;
+    }
+
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];

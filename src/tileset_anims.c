@@ -32,6 +32,51 @@ static const u16 *const sTilesetAnims_General_Flower[] = {
     sTilesetAnims_General_Flower_Frame4
 };
 
+// palette: general 00 Summer
+static const u16 sTilesetAnims_General_Summer_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general_summer/anim/flower/0.4bpp");
+static const u16 sTilesetAnims_General_Summer_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general_summer/anim/flower/1.4bpp");
+static const u16 sTilesetAnims_General_Summer_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/general_summer/anim/flower/2.4bpp");
+static const u16 sTilesetAnims_General_Summer_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/general_summer/anim/flower/3.4bpp");
+static const u16 sTilesetAnims_General_Summer_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/general_summer/anim/flower/4.4bpp");
+
+static const u16 *const sTilesetAnims_General_Summer_Flower[] = {
+    sTilesetAnims_General_Summer_Flower_Frame0,
+    sTilesetAnims_General_Summer_Flower_Frame1,
+    sTilesetAnims_General_Summer_Flower_Frame2,
+    sTilesetAnims_General_Summer_Flower_Frame3,
+    sTilesetAnims_General_Summer_Flower_Frame4
+};
+
+// palette: general 00 Autumn
+static const u16 sTilesetAnims_General_Autumn_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general_autumn/anim/flower/0.4bpp");
+static const u16 sTilesetAnims_General_Autumn_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general_autumn/anim/flower/1.4bpp");
+static const u16 sTilesetAnims_General_Autumn_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/general_autumn/anim/flower/2.4bpp");
+static const u16 sTilesetAnims_General_Autumn_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/general_autumn/anim/flower/3.4bpp");
+static const u16 sTilesetAnims_General_Autumn_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/general_autumn/anim/flower/4.4bpp");
+
+static const u16 *const sTilesetAnims_General_Autumn_Flower[] = {
+    sTilesetAnims_General_Autumn_Flower_Frame0,
+    sTilesetAnims_General_Autumn_Flower_Frame1,
+    sTilesetAnims_General_Autumn_Flower_Frame2,
+    sTilesetAnims_General_Autumn_Flower_Frame3,
+    sTilesetAnims_General_Autumn_Flower_Frame4
+};
+
+// palette: general 00 Winter
+static const u16 sTilesetAnims_General_Winter_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general_winter/anim/flower/0.4bpp");
+static const u16 sTilesetAnims_General_Winter_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general_winter/anim/flower/1.4bpp");
+static const u16 sTilesetAnims_General_Winter_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/general_winter/anim/flower/2.4bpp");
+static const u16 sTilesetAnims_General_Winter_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/general_winter/anim/flower/3.4bpp");
+static const u16 sTilesetAnims_General_Winter_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/general_winter/anim/flower/4.4bpp");
+
+static const u16 *const sTilesetAnims_General_Winter_Flower[] = {
+    sTilesetAnims_General_Winter_Flower_Frame0,
+    sTilesetAnims_General_Winter_Flower_Frame1,
+    sTilesetAnims_General_Winter_Flower_Frame2,
+    sTilesetAnims_General_Winter_Flower_Frame3,
+    sTilesetAnims_General_Winter_Flower_Frame4
+};
+
 // palette: general 04
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/water_current_landwatersedge/0.4bpp");
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/water_current_landwatersedge/1.4bpp");
@@ -207,7 +252,23 @@ static void _InitSecondaryTilesetAnimation(void)
 
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
-    AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower[timer % NELEMS(sTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+    switch(gSaveBlock1Ptr->season)
+    {
+    case 3:
+        AppendTilesetAnimToBuffer(sTilesetAnims_General_Winter_Flower[timer % NELEMS(sTilesetAnims_General_Winter_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+       break;
+    case 2:
+        AppendTilesetAnimToBuffer(sTilesetAnims_General_Autumn_Flower[timer % NELEMS(sTilesetAnims_General_Autumn_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+       break;
+    case 1:
+        AppendTilesetAnimToBuffer(sTilesetAnims_General_Summer_Flower[timer % NELEMS(sTilesetAnims_General_Summer_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+        break;
+    case 0:
+    default:
+        //AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower[timer % NELEMS(sTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+        AppendTilesetAnimToBuffer(sTilesetAnims_General_Winter_Flower[timer % NELEMS(sTilesetAnims_General_Winter_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+        break;
+    }
 }
 
 static void QueueAnimTiles_General_Water_Current_LandWatersEdge(u16 timer)

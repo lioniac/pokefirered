@@ -56,3 +56,8 @@
 	.4byte \palette_address
 	.4byte \function_address
 	.endm
+
+	.macro loadfadedpal_callnative_seasons function_address
+	.byte 0xB
+	.4byte \function_address
+	.endm

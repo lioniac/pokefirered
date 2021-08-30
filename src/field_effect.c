@@ -52,8 +52,10 @@ static bool8 FieldEffectCmd_end(const u8 **script, u32 *result);
 static bool8 FieldEffectCmd_loadgfx_callnative(const u8 **script, u32 *result);
 static bool8 FieldEffectCmd_loadtiles_callnative(const u8 **script, u32 *result);
 static bool8 FieldEffectCmd_loadfadedpal_callnative(const u8 **script, u32 *result);
+static bool8 FieldEffectCmd_loadfadedpal_callnative_seasons(const u8 **script, u32 *result);
 static void FieldEffectScript_LoadTiles(const u8 **script);
 static void FieldEffectScript_LoadFadedPal(const u8 **script);
+static void FieldEffectScript_LoadFadedPal_Seasons(void);
 static void FieldEffectScript_LoadPal(const u8 **script);
 static void FieldEffectScript_CallNative(const u8 **script, u32 *result);
 static void FieldEffectFreeTilesIfUnused(u16 tilesTag);
@@ -90,6 +92,7 @@ static bool8 (*const sFldEffScrcmdTable[])(const u8 **script, u32 *result) = {
     FieldEffectCmd_loadfadedpalnotint,
     FieldEffectCmd_loadpalnotint,
     FieldEffectCmd_loadfadedpalnotint_callnative,
+    FieldEffectCmd_loadfadedpal_callnative_seasons,
 };
 
 static const struct OamData sNewGameOakOamAttributes = {
@@ -416,6 +419,14 @@ static bool8 FieldEffectCmd_loadfadedpal_callnative(const u8 **script, u32 *resu
     return TRUE;
 }
 
+static bool8 FieldEffectCmd_loadfadedpal_callnative_seasons(const u8 **script, u32 *result)
+{
+    (*script)++;
+    FieldEffectScript_LoadFadedPal_Seasons();
+    FieldEffectScript_CallNative(script, result);
+    return TRUE;
+}
+
 static u32 FieldEffectScript_ReadWord(const u8 **script)
 {
     return T2_READ_32(*script);
@@ -461,6 +472,37 @@ static void FieldEffectScript_LoadFadedPal(const u8 **script)
         ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(spritePalette->tag));
     UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(spritePalette->tag));
     *script += sizeof(u32);
+}
+
+static void FieldEffectScript_LoadFadedPal_Seasons(void)
+{
+    const struct SpritePalette * spritePalette;
+    u8 idx;
+
+    switch (gSaveBlock1Ptr->season)
+    {
+    case 3:
+        spritePalette = &gSpritePalette_GeneralFieldEffect1Winter;
+       break;
+    case 2:
+        spritePalette = &gSpritePalette_GeneralFieldEffect1Autumn;
+       break;
+    case 1:
+        spritePalette = &gSpritePalette_GeneralFieldEffect1Summer;
+        break;
+    case 0:
+        spritePalette = &gSpritePalette_GeneralFieldEffect1;
+        break;
+    default:
+        DoSoftReset();
+        break;
+    }
+
+    idx = IndexOfSpritePaletteTag(spritePalette->tag);
+    LoadSpritePaletteDayNight(spritePalette);
+    if (idx == 0xFF)
+        ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(spritePalette->tag));
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(spritePalette->tag));
 }
 
 static void FieldEffectScript_LoadPal(const u8 **script)

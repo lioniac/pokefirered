@@ -1,5 +1,8 @@
 const struct SpritePalette gSpritePalette_GeneralFieldEffect0 = { .data = gFieldEffectObjectPalette0, .tag = FLDEFF_PAL_TAG_GENERAL_0 };
 const struct SpritePalette gSpritePalette_GeneralFieldEffect1 = { .data = gFieldEffectObjectPalette1, .tag = FLDEFF_PAL_TAG_GENERAL_1 };
+const struct SpritePalette gSpritePalette_GeneralFieldEffect1Summer = { .data = gFieldEffectObjectPalette1Summer, .tag = FLDEFF_PAL_TAG_GENERAL_1_SUMMER };
+const struct SpritePalette gSpritePalette_GeneralFieldEffect1Autumn = { .data = gFieldEffectObjectPalette1Autumn, .tag = FLDEFF_PAL_TAG_GENERAL_1_AUTUMN };
+const struct SpritePalette gSpritePalette_GeneralFieldEffect1Winter = { .data = gFieldEffectObjectPalette1Winter, .tag = FLDEFF_PAL_TAG_GENERAL_1_WINTER };
 
 static const union AnimCmd sAnim_Shadow[] =
 {
@@ -70,6 +73,33 @@ static const struct SpriteFrameImage sPicTable_TallGrass[] =
     overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_TallGrass_Summer[] =
+{
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Summer, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Summer, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Summer, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Summer, 2, 2, 3),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Summer, 2, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TallGrass_Autumn[] =
+{
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Autumn, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Autumn, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Autumn, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Autumn, 2, 2, 3),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Autumn, 2, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TallGrass_Winter[] =
+{
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Winter, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Winter, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Winter, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Winter, 2, 2, 3),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Winter, 2, 2, 4),
+};
+
 static const union AnimCmd sAnim_TallGrass[] =
 {
     ANIMCMD_FRAME(1, 10),
@@ -92,6 +122,39 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_TallGrass =
     .oam = &gObjectEventBaseOam_16x16,
     .anims = sAnimTable_TallGrass,
     .images = sPicTable_TallGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateTallGrassFieldEffect,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_TallGrass_Summer =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1_SUMMER,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_TallGrass,
+    .images = sPicTable_TallGrass_Summer,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateTallGrassFieldEffect,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_TallGrass_Autumn =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1_AUTUMN,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_TallGrass,
+    .images = sPicTable_TallGrass_Autumn,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateTallGrassFieldEffect,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_TallGrass_Winter =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1_WINTER,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_TallGrass,
+    .images = sPicTable_TallGrass_Winter,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = UpdateTallGrassFieldEffect,
 };
