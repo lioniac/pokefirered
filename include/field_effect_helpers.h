@@ -41,5 +41,6 @@ void UpdateSandPileFieldEffect(struct Sprite * sprite);
 void UpdateDisguiseFieldEffect(struct Sprite * sprite);
 void UpdateHotSpringsWaterFieldEffect(struct Sprite * sprite);
 u8 CreateDiveBobbingSprite(u8 oldSpriteId); //u8 DoBobbingFieldEffect(u8 oldSpriteId);
+void LoadFieldEffectPalette(u8 fieldEffect);
 
 #endif //GUARD_FIELD_EFFECT_HELPERS_H
