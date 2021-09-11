@@ -29,6 +29,55 @@ EventScript_Debug_GetFlags_Func:
     setflag FLAG_BADGE06_GET
     setflag FLAG_BADGE07_GET
     setflag FLAG_BADGE08_GET
+    setflag FLAG_WORLD_MAP_PALLET_TOWN
+    setflag FLAG_WORLD_MAP_VIRIDIAN_CITY
+    setflag FLAG_WORLD_MAP_PEWTER_CITY
+    setflag FLAG_WORLD_MAP_CERULEAN_CITY
+    setflag FLAG_WORLD_MAP_LAVENDER_TOWN
+    setflag FLAG_WORLD_MAP_VERMILION_CITY
+    setflag FLAG_WORLD_MAP_CELADON_CITY
+    setflag FLAG_WORLD_MAP_FUCHSIA_CITY
+    setflag FLAG_WORLD_MAP_CINNABAR_ISLAND
+    setflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
+    setflag FLAG_WORLD_MAP_SAFFRON_CITY
+    setflag FLAG_WORLD_MAP_ONE_ISLAND
+    setflag FLAG_WORLD_MAP_TWO_ISLAND
+    setflag FLAG_WORLD_MAP_THREE_ISLAND
+    setflag FLAG_WORLD_MAP_FOUR_ISLAND
+    setflag FLAG_WORLD_MAP_FIVE_ISLAND
+    setflag FLAG_WORLD_MAP_SEVEN_ISLAND
+    setflag FLAG_WORLD_MAP_SIX_ISLAND
+    setflag FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F
+    setflag FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F
+    setflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
+    setflag FLAG_WORLD_MAP_MT_MOON_1F
+    setflag FLAG_WORLD_MAP_SSANNE_EXTERIOR
+    setflag FLAG_WORLD_MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL
+    setflag FLAG_WORLD_MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL
+    setflag FLAG_WORLD_MAP_DIGLETTS_CAVE_B1F
+    setflag FLAG_WORLD_MAP_VICTORY_ROAD_1F
+    setflag FLAG_WORLD_MAP_ROCKET_HIDEOUT_B1F
+    setflag FLAG_WORLD_MAP_SILPH_CO_1F
+    setflag FLAG_WORLD_MAP_POKEMON_MANSION_1F
+    setflag FLAG_WORLD_MAP_SAFARI_ZONE_CENTER
+    setflag FLAG_WORLD_MAP_POKEMON_LEAGUE_LORELEIS_ROOM
+    setflag FLAG_WORLD_MAP_ROCK_TUNNEL_1F
+    setflag FLAG_WORLD_MAP_SEAFOAM_ISLANDS_1F
+    setflag FLAG_WORLD_MAP_POKEMON_TOWER_1F
+    setflag FLAG_WORLD_MAP_CERULEAN_CAVE_1F
+    setflag FLAG_WORLD_MAP_POWER_PLANT
+    setflag FLAG_WORLD_MAP_MT_EMBER_EXTERIOR
+    setflag FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST
+    setflag FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE
+    setflag FLAG_WORLD_MAP_FIVE_ISLAND_ROCKET_WAREHOUSE
+    setflag FLAG_WORLD_MAP_TRAINER_TOWER_LOBBY
+    setflag FLAG_WORLD_MAP_SIX_ISLAND_DOTTED_HOLE_1F
+    setflag FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE
+    setflag FLAG_WORLD_MAP_SIX_ISLAND_PATTERN_BUSH
+    setflag FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE
+    setflag FLAG_WORLD_MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER
+    setflag FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL
+    setflag FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY
     return
 
 EventScript_Debug_GetFlags::
@@ -135,12 +184,36 @@ EventScript_Debug_GetItems::
     end
 
 EventScript_Debug_GetMons_Func:
-    givecustommon SPECIES_BULBASAUR, 10, 0, NATURE_DOCILE, 0, 31
-    givecustommon SPECIES_CHARMANDER, 10, 0, NATURE_DOCILE, 0, 31
-    givecustommon SPECIES_SQUIRTLE, 10, 0, NATURE_DOCILE, 0, 31
-    givecustommon SPECIES_PIKACHU, 10, 0, NATURE_DOCILE, 0, 31
-    givecustommon SPECIES_SNORLAX, 10, 0, NATURE_DOCILE, 0, 31
-    givecustommon SPECIES_LAPRAS, 10, 0, NATURE_DOCILE, 0, 31
+    givecustommon SPECIES_CHARIZARD, 50, 0, NATURE_SERIOUS, 0, 31
+    givecustommon SPECIES_BLASTOISE, 50, 0, NATURE_SERIOUS, 0, 31
+    givecustommon SPECIES_VENUSAUR,  50, 0, NATURE_SERIOUS, 0, 31
+    givecustommon SPECIES_PIKACHU,   50, 0, NATURE_SERIOUS, 0, 31
+    givecustommon SPECIES_SNORLAX,   50, 0, NATURE_SERIOUS, 0, 31
+    givecustommon SPECIES_LAPRAS,    50, 0, NATURE_SERIOUS, 0, 31
+    setmonmove 0, 0, 53
+    setmonmove 0, 1, 337
+    setmonmove 0, 2, 19
+    setmonmove 0, 3, 315
+    setmonmove 1, 0, 57
+    setmonmove 1, 1, 58
+    setmonmove 1, 2, 127
+    setmonmove 1, 3, 44
+    setmonmove 2, 0, 76
+    setmonmove 2, 1, 79
+    setmonmove 2, 2, 202
+    setmonmove 2, 3, 15
+    setmonmove 3, 0, 85
+    setmonmove 3, 1, 86
+    setmonmove 3, 2, 91
+    setmonmove 3, 3, 148
+    setmonmove 4, 0, 70
+    setmonmove 4, 1, 249
+    setmonmove 4, 2, 8
+    setmonmove 4, 3, 9
+    setmonmove 5, 0, 58
+    setmonmove 5, 1, 57
+    setmonmove 5, 2, 94
+    setmonmove 5, 3, 87
     return
 
 EventScript_Debug_GetMons::

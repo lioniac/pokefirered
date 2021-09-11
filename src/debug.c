@@ -24,8 +24,8 @@
 #include "constants/quests.h"
 #include "quest_menu.h"
 
-#define DEBUG_MAIN_MENU_HEIGHT 8
-#define DEBUG_MAIN_MENU_WIDTH 17
+#define DEBUG_MAIN_MENU_HEIGHT 5
+#define DEBUG_MAIN_MENU_WIDTH 16
 
 #define ARRAY_COUNT(array) (sizeof(array) / sizeof((array)[0]))
 
@@ -45,34 +45,34 @@ static void DebugAction_WarpToPallet(u8);
 enum {
     DEBUG_MENU_ITEM_CHANGESEASON,
     DEBUG_MENU_ITEM_GETALL,
-    DEBUG_MENU_ITEM_GETFLAGS,
-    DEBUG_MENU_ITEM_GETITEMS,
-    DEBUG_MENU_ITEM_GETMONS,
+    // DEBUG_MENU_ITEM_GETFLAGS,
+    // DEBUG_MENU_ITEM_GETITEMS,
+    // DEBUG_MENU_ITEM_GETMONS,
     DEBUG_MENU_ITEM_COMPLETEPOKEDEX,
-    DEBUG_MENU_ITEM_UNLOCKALLQUESTS,
+    // DEBUG_MENU_ITEM_UNLOCKALLQUESTS,
     DEBUG_MENU_ITEM_ACCESSPC,
     DEBUG_MENU_ITEM_WARPTOPALLET,
 };
 
 static const u8 gDebugText_GetChangeSeason[] = _("Change Season");
-static const u8 gDebugText_GetAll[] = _("Get All");
-static const u8 gDebugText_GetFlags[] = _("Get Important Flags");
-static const u8 gDebugText_GetItems[] = _("Get Debug Items");
-static const u8 gDebugText_GetMons[] = _("Get Pokémon");
+static const u8 gDebugText_GetAll[] =          _("Get Flags,Items,Mons");
+// static const u8 gDebugText_GetFlags[] =        _("Get Important Flags");
+// static const u8 gDebugText_GetItems[] =        _("Get Debug Items");
+// static const u8 gDebugText_GetMons[] =         _("Get Pokémon");
 static const u8 gDebugText_CompletePokedex[] = _("Complete Pokédex");
-static const u8 gDebugText_UnlockAllQuests[] = _("Unlock All Quests");
-static const u8 gDebugText_AccessPC[] = _("Access PC");
-static const u8 gDebugText_WarpToPallet[] = _("Warp to Pallet");
+// static const u8 gDebugText_UnlockAllQuests[] = _("Unlock All Quests");
+static const u8 gDebugText_AccessPC[] =        _("Access PC");
+static const u8 gDebugText_WarpToPallet[] =    _("Warp to Pallet");
 
 static const struct ListMenuItem sDebugMenuItems[] =
 {
     [DEBUG_MENU_ITEM_CHANGESEASON]    = {gDebugText_GetChangeSeason, DEBUG_MENU_ITEM_CHANGESEASON},
     [DEBUG_MENU_ITEM_GETALL]          = {gDebugText_GetAll, DEBUG_MENU_ITEM_GETALL},
-    [DEBUG_MENU_ITEM_GETFLAGS]        = {gDebugText_GetFlags, DEBUG_MENU_ITEM_GETFLAGS},
-    [DEBUG_MENU_ITEM_GETITEMS]        = {gDebugText_GetItems, DEBUG_MENU_ITEM_GETITEMS},
-    [DEBUG_MENU_ITEM_GETMONS]         = {gDebugText_GetMons, DEBUG_MENU_ITEM_GETMONS},
+    // [DEBUG_MENU_ITEM_GETFLAGS]        = {gDebugText_GetFlags, DEBUG_MENU_ITEM_GETFLAGS},
+    // [DEBUG_MENU_ITEM_GETITEMS]        = {gDebugText_GetItems, DEBUG_MENU_ITEM_GETITEMS},
+    // [DEBUG_MENU_ITEM_GETMONS]         = {gDebugText_GetMons, DEBUG_MENU_ITEM_GETMONS},
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = {gDebugText_CompletePokedex, DEBUG_MENU_ITEM_COMPLETEPOKEDEX},
-    [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = {gDebugText_UnlockAllQuests, DEBUG_MENU_ITEM_UNLOCKALLQUESTS},
+    // [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = {gDebugText_UnlockAllQuests, DEBUG_MENU_ITEM_UNLOCKALLQUESTS},
     [DEBUG_MENU_ITEM_ACCESSPC]        = {gDebugText_AccessPC, DEBUG_MENU_ITEM_ACCESSPC},
     [DEBUG_MENU_ITEM_WARPTOPALLET]    = {gDebugText_WarpToPallet, DEBUG_MENU_ITEM_WARPTOPALLET},
 };
@@ -81,11 +81,11 @@ static void (*const sDebugMenuActions[])(u8) =
 {
     [DEBUG_MENU_ITEM_CHANGESEASON]    = DebugAction_ChangeSeason,
     [DEBUG_MENU_ITEM_GETALL]          = DebugAction_GetAll,
-    [DEBUG_MENU_ITEM_GETFLAGS]        = DebugAction_GetFlags,
-    [DEBUG_MENU_ITEM_GETITEMS]        = DebugAction_GetItems,
-    [DEBUG_MENU_ITEM_GETMONS]         = DebugAction_GetMons,
+    // [DEBUG_MENU_ITEM_GETFLAGS]        = DebugAction_GetFlags,
+    // [DEBUG_MENU_ITEM_GETITEMS]        = DebugAction_GetItems,
+    // [DEBUG_MENU_ITEM_GETMONS]         = DebugAction_GetMons,
     [DEBUG_MENU_ITEM_COMPLETEPOKEDEX] = DebugAction_CompletePokedex,
-    [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = DebugAction_UnlockAllQuests,
+    // [DEBUG_MENU_ITEM_UNLOCKALLQUESTS] = DebugAction_UnlockAllQuests,
     [DEBUG_MENU_ITEM_ACCESSPC]        = DebugAction_AccessPC,
     [DEBUG_MENU_ITEM_WARPTOPALLET]    = DebugAction_WarpToPallet,
 };
@@ -160,17 +160,9 @@ static void Debug_DestroyMainMenu(u8 taskId)
 static void DebugTask_HandleMainMenuInput(u8 taskId)
 {
     void (*func)(u8);
-    u32 input = ListMenu_ProcessInput(gTasks[taskId].data[0]);
+    u32 input = ListMenu_ProcessInput2(gTasks[taskId].data[0]);
 
-    // if (gMain.newKeys & DPAD_UP)
-    // {
-    //     PlaySE(SE_SELECT);
-    //     Menu_MoveCursor(-1);
-    // } else if (gMain.newKeys & DPAD_DOWN)
-    // {
-    //     PlaySE(SE_SELECT);
-    //     Menu_MoveCursor(+1);
-    /*} else */if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
         if ((func = sDebugMenuActions[input]) != NULL)
@@ -179,7 +171,7 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
             func(taskId);
         }
     }
-    else if (gMain.newKeys & B_BUTTON)
+    else if (JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_SELECT);
         Debug_DestroyMainMenu(taskId);
@@ -189,8 +181,8 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
 static void DebugAction_GetAll(u8 taskId)
 {
     ScriptContext1_SetupScript(EventScript_Debug_GetAll);
-    DebugAction_CompletePokedex(taskId);
-    DebugAction_UnlockAllQuests(taskId);
+    // DebugAction_CompletePokedex(taskId);
+    // DebugAction_UnlockAllQuests(taskId);
 }
 
 static void DebugAction_GetFlags(u8 taskId)
@@ -221,15 +213,15 @@ static void DebugAction_CompletePokedex(u8 taskId)
     PlaySE(SE_SAVE);
 }
 
-static void DebugAction_UnlockAllQuests(u8 taskId)
-{
-    u16 i;
+// static void DebugAction_UnlockAllQuests(u8 taskId)
+// {
+//     u16 i;
 
-    for (i = 0; i < SIDE_QUEST_COUNT; i++)
-    {
-        GetSetQuestFlag(i, FLAG_SET_UNLOCKED);
-    }
-}
+//     for (i = 0; i < SIDE_QUEST_COUNT; i++)
+//     {
+//         GetSetQuestFlag(i, FLAG_SET_UNLOCKED);
+//     }
+// }
 
 static void DebugAction_ChangeSeason(u8 taskId)
 {
@@ -237,7 +229,6 @@ static void DebugAction_ChangeSeason(u8 taskId)
     gSaveBlock1Ptr->seasonPedometer = 0;
 }
 
-//BUGGED
 static void DebugAction_AccessPC(u8 taskId)
 {
     ScriptContext1_SetupScript(EventScript_Debug_PC);
