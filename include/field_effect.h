@@ -35,6 +35,7 @@ void SpriteCB_PopOutOfAsh(struct Sprite * sprite);
 void SpriteCB_AshLaunch(struct Sprite * sprite);
 void FieldEffectActiveListClear(void);
 void FieldEffectFreePaletteIfUnused(u8 paletteNum);
+void FieldEffectFreeGraphicsResources(struct Sprite * sprite);
 
 enum
 {

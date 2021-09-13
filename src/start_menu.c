@@ -327,7 +327,7 @@ static s8 DoDrawStartMenu(void)
         sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), 2, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
         if (!MenuHelpers_LinkSomething() && InUnionRoom() != TRUE)
         {
-            if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)
+            if ((gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR) && (gSaveBlock2Ptr->season != 4))
             {
                 GetStartMenuClock();
                 DrawHelpMessageWindowWithText_season(gStartMenu_Clock);

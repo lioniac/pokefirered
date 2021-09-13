@@ -348,7 +348,7 @@ gSpecials:: @ 815FD60
 	def_special NullFieldSpecial
 	def_special Dummy_TryEnableBravoTrainerBattleTower
 	def_special DoesPartyHaveEnigmaBerry
-	def_special NullFieldSpecial
+	def_special BufferAndSetSeason
 	def_special SetPostgameFlags
 	def_special StartMarowakBattle
 	def_special ForcePlayerOntoBike

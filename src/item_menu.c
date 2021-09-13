@@ -632,19 +632,55 @@ static bool8 DoLoadBagGraphics(void)
         break;
     case 2:
         LoadCompressedPalette(gBagBgPalette, 0x00, 0x60);
-        if (!BagIsTutorial() && gSaveBlock2Ptr->playerGender != MALE)
+        if (!BagIsTutorial() && gSaveBlock2Ptr->avatarGender != MALE)
             LoadCompressedPalette(gBagBgPalette_FemaleOverride, 0x00, 0x20);
         sBagMenuDisplay->data[0]++;
         break;
     case 3:
-        if (BagIsTutorial() == TRUE || gSaveBlock2Ptr->playerGender == MALE)
-            LoadCompressedSpriteSheet(&gSpriteSheet_Backpack);
+        if (BagIsTutorial() == TRUE)
+            LoadCompressedSpriteSheet(&gSpriteSheet_BagRed);
         else
-            LoadCompressedSpriteSheet(&gSpriteSheet_Satchel);
+        {
+            switch (gSaveBlock2Ptr->avatarChoice)
+            {
+            case RED:
+                LoadCompressedSpriteSheet(&gSpriteSheet_BagRed);
+                break;
+            case BLUE:
+                LoadCompressedSpriteSheet(&gSpriteSheet_BagBlue);
+                break;
+            case GREEN:
+                LoadCompressedSpriteSheet(&gSpriteSheet_BagGreen);
+                break;
+            case BRENDAN:
+                LoadCompressedSpriteSheet(&gSpriteSheet_BagBrendan);
+                break;
+            case MAY:
+                LoadCompressedSpriteSheet(&gSpriteSheet_BagMay);
+                break;
+            }
+        }
         sBagMenuDisplay->data[0]++;
         break;
     case 4:
-        LoadCompressedSpritePalette(&gSpritePalette_BagOrSatchel);
+        switch (gSaveBlock2Ptr->avatarChoice)
+        {
+        case RED:
+            LoadCompressedSpritePalette(&gSpritePalette_BagRedGreen);
+            break;
+        case BLUE:
+            LoadCompressedSpritePalette(&gSpritePalette_BagBlue);
+            break;
+        case GREEN:
+            LoadCompressedSpritePalette(&gSpritePalette_BagRedGreen);
+            break;
+        case BRENDAN:
+            LoadCompressedSpritePalette(&gSpritePalette_BagBrendanMay);
+            break;
+        case MAY:
+            LoadCompressedSpritePalette(&gSpritePalette_BagBrendanMay);
+            break;
+        }
         sBagMenuDisplay->data[0]++;
         break;
     case 5:

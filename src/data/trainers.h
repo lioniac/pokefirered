@@ -560,302 +560,302 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sTrainerMons_ParasolLady1),
         .party = {.TrainerMon = sTrainerMons_ParasolLady1}
     },
-    [TRAINER_SWIMMER_FEMALE_1] = {
-        .trainerClass = CLASS_SWIMMER_FEMALE,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_SWIMMER_F,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_SwimmerFemale1),
-        .party = {.TrainerMon = sTrainerMons_SwimmerFemale1}
-    },
-    [TRAINER_PICNICKER_1] = {
-        .trainerClass = CLASS_PICNICKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_RS_PICNICKER,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Picnicker1),
-        .party = {.TrainerMon = sTrainerMons_Picnicker1}
-    },
-    [TRAINER_TWINS_1] = {
-        .trainerClass = CLASS_TWINS,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
-        .trainerPic = TRAINER_PIC_RS_TWINS,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Twins1),
-        .party = {.TrainerMon = sTrainerMons_Twins1}
-    },
-    [TRAINER_SAILOR_1] = {
-        .trainerClass = CLASS_SAILOR,
+    [TRAINER_RIVAL_RED_OAKS_LAB_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_SAILOR,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Sailor1),
-        .party = {.TrainerMon = sTrainerMons_Sailor1}
-    },
-    [TRAINER_BOARDER_1] = {
-        .trainerClass = CLASS_BOARDER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_YOUNGSTER,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Boarder1),
-        .party = {.TrainerMon = sTrainerMons_Boarder1}
-    },
-    [TRAINER_BOARDER_2] = {
-        .trainerClass = CLASS_BOARDER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_YOUNGSTER,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Boarder2),
-        .party = {.TrainerMon = sTrainerMons_Boarder2}
-    },
-    [TRAINER_COLLECTOR_1] = {
-        .trainerClass = CLASS_COLLECTOR,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_COLLECTOR,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Collector1),
-        .party = {.TrainerMon = sTrainerMons_Collector1}
-    },
-    [TRAINER_PKMN_TRAINER_2] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_WALLY,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer2),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer2}
-    },
-    [TRAINER_PKMN_TRAINER_3] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_BRENDAN_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer3),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer3}
-    },
-    [TRAINER_PKMN_TRAINER_4] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_BRENDAN_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer4),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer4}
-    },
-    [TRAINER_PKMN_TRAINER_5] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_BRENDAN_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer5),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer5}
-    },
-    [TRAINER_PKMN_TRAINER_6] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_MAY_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer6),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer6}
-    },
-    [TRAINER_PKMN_TRAINER_7] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_MAY_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer7),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer7}
-    },
-    [TRAINER_PKMN_TRAINER_8] = {
-        .trainerClass = CLASS_PKMN_TRAINER_3,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_MAY_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnTrainer8),
-        .party = {.TrainerMon = sTrainerMons_PkmnTrainer8}
-    },
-    [TRAINER_PKMN_BREEDER_1] = {
-        .trainerClass = CLASS_PKMN_BREEDER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_POKEMON_BREEDER_M,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnBreeder1),
-        .party = {.TrainerMon = sTrainerMons_PkmnBreeder1}
-    },
-    [TRAINER_PKMN_BREEDER_2] = {
-        .trainerClass = CLASS_PKMN_BREEDER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_POKEMON_BREEDER_F,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_PkmnBreeder2),
-        .party = {.TrainerMon = sTrainerMons_PkmnBreeder2}
-    },
-    [TRAINER_PKMN_RANGER_1] = {
-        .trainerClass = CLASS_PKMN_RANGER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_RS_POKEMON_RANGER_M,
-        .trainerName = _(""),
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = NELEMS(sTrainerMons_PkmnRanger1),
-        .party = {.TrainerMon = sTrainerMons_PkmnRanger1}
+        .partySize = NELEMS(sTrainerMons_RivalOaksLabSquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalOaksLabSquirtle}
     },
-    [TRAINER_PKMN_RANGER_2] = {
-        .trainerClass = CLASS_PKMN_RANGER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_RS_POKEMON_RANGER_F,
-        .trainerName = _(""),
+    [TRAINER_RIVAL_RED_OAKS_LAB_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = NELEMS(sTrainerMons_PkmnRanger2),
-        .party = {.TrainerMon = sTrainerMons_PkmnRanger2}
+        .partySize = NELEMS(sTrainerMons_RivalOaksLabBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalOaksLabBulbasaur}
     },
-    [TRAINER_MAGMA_LEADER_1] = {
-        .trainerClass = CLASS_MAGMA_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_MagmaLeader1),
-        .party = {.TrainerMon = sTrainerMons_MagmaLeader1}
-    },
-    [TRAINER_TEAM_MAGMA_1] = {
-        .trainerClass = CLASS_TEAM_MAGMA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_TeamMagma1),
-        .party = {.TrainerMon = sTrainerMons_TeamMagma1}
-    },
-    [TRAINER_TEAM_MAGMA_2] = {
-        .trainerClass = CLASS_TEAM_MAGMA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_F,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_TeamMagma2),
-        .party = {.TrainerMon = sTrainerMons_TeamMagma2}
-    },
-    [TRAINER_LASS_1] = {
-        .trainerClass = CLASS_LASS,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_LASS,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Lass1),
-        .party = {.TrainerMon = sTrainerMons_Lass1}
-    },
-    [TRAINER_BUG_CATCHER_1] = {
-        .trainerClass = CLASS_BUG_CATCHER,
+    [TRAINER_RIVAL_RED_OAKS_LAB_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RS_BUG_CATCHER,
-        .trainerName = _(""),
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_BugCatcher1),
-        .party = {.TrainerMon = sTrainerMons_BugCatcher1}
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalOaksLabCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalOaksLabCharmander}
     },
-    [TRAINER_HIKER_1] = {
-        .trainerClass = CLASS_HIKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RS_HIKER,
-        .trainerName = _(""),
+    [TRAINER_RIVAL_RED_ROUTE22_EARLY_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_Hiker1),
-        .party = {.TrainerMon = sTrainerMons_Hiker1}
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalRoute22EarlySquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalRoute22EarlySquirtle}
     },
-    [TRAINER_YOUNG_COUPLE_1] = {
-        .trainerClass = CLASS_YOUNG_COUPLE,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_RS_YOUNG_COUPLE,
-        .trainerName = _(""),
+    [TRAINER_RIVAL_RED_ROUTE22_EARLY_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_YoungCouple1),
-        .party = {.TrainerMon = sTrainerMons_YoungCouple1}
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalRoute22EarlyBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalRoute22EarlyBulbasaur}
     },
-    [TRAINER_OLD_COUPLE_1] = {
-        .trainerClass = CLASS_OLD_COUPLE,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_OLD_COUPLE,
-        .trainerName = _(""),
+    [TRAINER_RIVAL_RED_ROUTE22_EARLY_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_OldCouple1),
-        .party = {.TrainerMon = sTrainerMons_OldCouple1}
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalRoute22EarlyCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalRoute22EarlyCharmander}
     },
-    [TRAINER_SIS_AND_BRO_1] = {
-        .trainerClass = CLASS_SIS_AND_BRO,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_RS_SIS_AND_BRO,
-        .trainerName = _(""),
+    [TRAINER_RIVAL_RED_CERULEAN_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
         .items = {},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sTrainerMons_SisAndBro1),
-        .party = {.TrainerMon = sTrainerMons_SisAndBro1}
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalCeruleanSquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalCeruleanSquirtle}
+    },
+    [TRAINER_RIVAL_RED_CERULEAN_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalCeruleanBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalCeruleanBulbasaur}
+    },
+    [TRAINER_RIVAL_RED_CERULEAN_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalCeruleanCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalCeruleanCharmander}
+    },
+    [TRAINER_RIVAL_RED_SS_ANNE_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalSsAnneSquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalSsAnneSquirtle}
+    },
+    [TRAINER_RIVAL_RED_SS_ANNE_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalSsAnneBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalSsAnneBulbasaur}
+    },
+    [TRAINER_RIVAL_RED_SS_ANNE_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalSsAnneCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalSsAnneCharmander}
+    },
+    [TRAINER_RIVAL_RED_POKEMON_TOWER_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalPokenonTowerSquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalPokenonTowerSquirtle}
+    },
+    [TRAINER_RIVAL_RED_POKEMON_TOWER_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalPokenonTowerBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalPokenonTowerBulbasaur}
+    },
+    [TRAINER_RIVAL_RED_POKEMON_TOWER_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalPokenonTowerCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalPokenonTowerCharmander}
+    },
+    [TRAINER_RIVAL_RED_SILPH_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalSilphSquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalSilphSquirtle}
+    },
+    [TRAINER_RIVAL_RED_SILPH_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalSilphBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalSilphBulbasaur}
+    },
+    [TRAINER_RIVAL_RED_SILPH_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalSilphCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalSilphCharmander}
+    },
+    [TRAINER_RIVAL_RED_ROUTE22_LATE_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalRoute22LateSquirtle),
+        .party = {.TrainerMon = sTrainerMons_RivalRoute22LateSquirtle}
+    },
+    [TRAINER_RIVAL_RED_ROUTE22_LATE_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalRoute22LateBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_RivalRoute22LateBulbasaur}
+    },
+    [TRAINER_RIVAL_RED_ROUTE22_LATE_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
+        .trainerName = _("RED"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_RivalRoute22LateCharmander),
+        .party = {.TrainerMon = sTrainerMons_RivalRoute22LateCharmander}
+    },
+    [TRAINER_CHAMPION_RED_FIRST_SQUIR] = {
+        .trainerClass = CLASS_CHAMPION_2,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_RED,
+        .trainerName = _("RED"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_ChampionFirstSquirtle),
+        .party = {.TrainerMon = sTrainerMons_ChampionFirstSquirtle}
+    },
+    [TRAINER_CHAMPION_RED_FIRST_BULBA] = {
+        .trainerClass = CLASS_CHAMPION_2,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_RED,
+        .trainerName = _("RED"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_ChampionFirstBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_ChampionFirstBulbasaur}
+    },
+    [TRAINER_CHAMPION_RED_FIRST_CHARM] = {
+        .trainerClass = CLASS_CHAMPION_2,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_RED,
+        .trainerName = _("RED"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_ChampionFirstCharmander),
+        .party = {.TrainerMon = sTrainerMons_ChampionFirstCharmander}
+    },
+    [TRAINER_CHAMPION_RED_REMATCH_SQUIR] = {
+        .trainerClass = CLASS_CHAMPION_2,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_RED,
+        .trainerName = _("TERRY"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_ChampionRematchSquirtle),
+        .party = {.TrainerMon = sTrainerMons_ChampionRematchSquirtle}
+    },
+    [TRAINER_CHAMPION_RED_REMATCH_BULBA] = {
+        .trainerClass = CLASS_CHAMPION_2,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_RED,
+        .trainerName = _("TERRY"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_ChampionRematchBulbasaur),
+        .party = {.TrainerMon = sTrainerMons_ChampionRematchBulbasaur}
+    },
+    [TRAINER_CHAMPION_RED_REMATCH_CHARM] = {
+        .trainerClass = CLASS_CHAMPION_2,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_RED,
+        .trainerName = _("TERRY"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = NELEMS(sTrainerMons_ChampionRematchCharmander),
+        .party = {.TrainerMon = sTrainerMons_ChampionRematchCharmander}
     },
     [TRAINER_AQUA_ADMIN_MATT] = {
         .trainerClass = CLASS_AQUA_ADMIN,
@@ -3585,99 +3585,99 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sTrainerMons_BlackBeltDaisuke),
         .party = {.TrainerMon = sTrainerMons_BlackBeltDaisuke}
     },
-    [TRAINER_RIVAL_OAKS_LAB_SQUIRTLE] = {
+    [TRAINER_RIVAL_BLUE_OAKS_LAB_SQUIR] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalOaksLabSquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalOaksLabSquirtle}
     },
-    [TRAINER_RIVAL_OAKS_LAB_BULBASAUR] = {
+    [TRAINER_RIVAL_BLUE_OAKS_LAB_BULBA] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalOaksLabBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalOaksLabBulbasaur}
     },
-    [TRAINER_RIVAL_OAKS_LAB_CHARMANDER] = {
+    [TRAINER_RIVAL_BLUE_OAKS_LAB_CHARM] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalOaksLabCharmander),
         .party = {.TrainerMon = sTrainerMons_RivalOaksLabCharmander}
     },
-    [TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE] = {
+    [TRAINER_RIVAL_BLUE_ROUTE22_EARLY_SQUIR] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalRoute22EarlySquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalRoute22EarlySquirtle}
     },
-    [TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR] = {
+    [TRAINER_RIVAL_BLUE_ROUTE22_EARLY_BULBA] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalRoute22EarlyBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalRoute22EarlyBulbasaur}
     },
-    [TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER] = {
+    [TRAINER_RIVAL_BLUE_ROUTE22_EARLY_CHARM] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalRoute22EarlyCharmander),
         .party = {.TrainerMon = sTrainerMons_RivalRoute22EarlyCharmander}
     },
-    [TRAINER_RIVAL_CERULEAN_SQUIRTLE] = {
+    [TRAINER_RIVAL_BLUE_CERULEAN_SQUIR] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalCeruleanSquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalCeruleanSquirtle}
     },
-    [TRAINER_RIVAL_CERULEAN_BULBASAUR] = {
+    [TRAINER_RIVAL_BLUE_CERULEAN_BULBA] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalCeruleanBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalCeruleanBulbasaur}
     },
-    [TRAINER_RIVAL_CERULEAN_CHARMANDER] = {
+    [TRAINER_RIVAL_BLUE_CERULEAN_CHARM] = {
         .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_1,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
@@ -4685,165 +4685,165 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sTrainerMons_GentlemanWalter),
         .party = {.TrainerMon = sTrainerMons_GentlemanWalter}
     },
-    [TRAINER_RIVAL_SS_ANNE_SQUIRTLE] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_SS_ANNE_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalSsAnneSquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalSsAnneSquirtle}
     },
-    [TRAINER_RIVAL_SS_ANNE_BULBASAUR] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_SS_ANNE_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalSsAnneBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalSsAnneBulbasaur}
     },
-    [TRAINER_RIVAL_SS_ANNE_CHARMANDER] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_SS_ANNE_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalSsAnneCharmander),
         .party = {.TrainerMon = sTrainerMons_RivalSsAnneCharmander}
     },
-    [TRAINER_RIVAL_POKENON_TOWER_SQUIRTLE] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_POKEMON_TOWER_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalPokenonTowerSquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalPokenonTowerSquirtle}
     },
-    [TRAINER_RIVAL_POKENON_TOWER_BULBASAUR] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_POKEMON_TOWER_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalPokenonTowerBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalPokenonTowerBulbasaur}
     },
-    [TRAINER_RIVAL_POKENON_TOWER_CHARMANDER] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_POKEMON_TOWER_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalPokenonTowerCharmander),
         .party = {.TrainerMon = sTrainerMons_RivalPokenonTowerCharmander}
     },
-    [TRAINER_RIVAL_SILPH_SQUIRTLE] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_SILPH_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalSilphSquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalSilphSquirtle}
     },
-    [TRAINER_RIVAL_SILPH_BULBASAUR] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_SILPH_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalSilphBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalSilphBulbasaur}
     },
-    [TRAINER_RIVAL_SILPH_CHARMANDER] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_SILPH_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalSilphCharmander),
         .party = {.TrainerMon = sTrainerMons_RivalSilphCharmander}
     },
-    [TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_ROUTE22_LATE_SQUIR] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalRoute22LateSquirtle),
         .party = {.TrainerMon = sTrainerMons_RivalRoute22LateSquirtle}
     },
-    [TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_ROUTE22_LATE_BULBA] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalRoute22LateBulbasaur),
         .party = {.TrainerMon = sTrainerMons_RivalRoute22LateBulbasaur}
     },
-    [TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER] = {
-        .trainerClass = CLASS_RIVAL_2,
+    [TRAINER_RIVAL_BLUE_ROUTE22_LATE_CHARM] = {
+        .trainerClass = CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_2,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_PLAYER_BLUE,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_RivalRoute22LateCharmander),
         .party = {.TrainerMon = sTrainerMons_RivalRoute22LateCharmander}
     },
-    [TRAINER_CHAMPION_FIRST_SQUIRTLE] = {
+    [TRAINER_CHAMPION_BLUE_FIRST_SQUIR] = {
         .trainerClass = CLASS_CHAMPION_2,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_BLUE,
+        .trainerName = _("BLUE"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_ChampionFirstSquirtle),
         .party = {.TrainerMon = sTrainerMons_ChampionFirstSquirtle}
     },
-    [TRAINER_CHAMPION_FIRST_BULBASAUR] = {
+    [TRAINER_CHAMPION_BLUE_FIRST_BULBA] = {
         .trainerClass = CLASS_CHAMPION_2,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_BLUE,
+        .trainerName = _("BLUE"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sTrainerMons_ChampionFirstBulbasaur),
         .party = {.TrainerMon = sTrainerMons_ChampionFirstBulbasaur}
     },
-    [TRAINER_CHAMPION_FIRST_CHARMANDER] = {
+    [TRAINER_CHAMPION_BLUE_FIRST_CHARM] = {
         .trainerClass = CLASS_CHAMPION_2,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL,
-        .trainerName = _("TERRY"),
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_BLUE,
+        .trainerName = _("BLUE"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
@@ -5656,7 +5656,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_PLAYER_RED] = {
         .trainerClass = CLASS_PLAYER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RED,
+        .trainerPic = TRAINER_PIC_PLAYER_RED,
         .trainerName = _("RED"),
         .items = {},
         .doubleBattle = FALSE,
@@ -5667,7 +5667,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_PLAYER_LEAF] = {
         .trainerClass = CLASS_PLAYER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LEAF,
+        .trainerPic = TRAINER_PIC_PLAYER_GREEN,
         .trainerName = _("LEAF"),
         .items = {},
         .doubleBattle = FALSE,
@@ -8128,10 +8128,10 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sTrainerMons_EliteFourLance2),
         .party = {.TrainerMon = sTrainerMons_EliteFourLance2}
     },
-    [TRAINER_CHAMPION_REMATCH_SQUIRTLE] = {
+    [TRAINER_CHAMPION_BLUE_REMATCH_SQUIR] = {
         .trainerClass = CLASS_CHAMPION_2,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_BLUE,
         .trainerName = _("TERRY"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
@@ -8139,10 +8139,10 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sTrainerMons_ChampionRematchSquirtle),
         .party = {.TrainerMon = sTrainerMons_ChampionRematchSquirtle}
     },
-    [TRAINER_CHAMPION_REMATCH_BULBASAUR] = {
+    [TRAINER_CHAMPION_BLUE_REMATCH_BULBA] = {
         .trainerClass = CLASS_CHAMPION_2,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_BLUE,
         .trainerName = _("TERRY"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
@@ -8150,10 +8150,10 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sTrainerMons_ChampionRematchBulbasaur),
         .party = {.TrainerMon = sTrainerMons_ChampionRematchBulbasaur}
     },
-    [TRAINER_CHAMPION_REMATCH_CHARMANDER] = {
+    [TRAINER_CHAMPION_BLUE_REMATCH_CHARM] = {
         .trainerClass = CLASS_CHAMPION_2,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL,
+        .trainerPic = TRAINER_PIC_CHAMPION_RIVAL_BLUE,
         .trainerName = _("TERRY"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,

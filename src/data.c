@@ -49,29 +49,22 @@ const struct SpriteFrameImage gTrainerBackPicTable_Red[] =
     gTrainerBackPic_Red + 0x2000, 0x0800,
 };
 
-const struct SpriteFrameImage gTrainerBackPicTable_Leaf[] =
+const struct SpriteFrameImage gTrainerBackPicTable_Blue[] =
 {
-    gTrainerBackPic_Leaf, 0x0800,
-    gTrainerBackPic_Leaf + 0x0800, 0x0800,
-    gTrainerBackPic_Leaf + 0x1000, 0x0800,
-    gTrainerBackPic_Leaf + 0x1800, 0x0800,
-    gTrainerBackPic_Leaf + 0x2000, 0x0800,
+    gTrainerBackPic_Blue, 0x0800,
+    gTrainerBackPic_Blue + 0x0800, 0x0800,
+    gTrainerBackPic_Blue + 0x1000, 0x0800,
+    gTrainerBackPic_Blue + 0x1800, 0x0800,
+    gTrainerBackPic_Blue + 0x2000, 0x0800,
 };
 
-const struct SpriteFrameImage gTrainerBackPicTable_Pokedude[] =
+const struct SpriteFrameImage gTrainerBackPicTable_Green[] =
 {
-    gTrainerBackPic_Pokedude, 0x0800,
-    gTrainerBackPic_Pokedude + 0x0800, 0x0800,
-    gTrainerBackPic_Pokedude + 0x1000, 0x0800,
-    gTrainerBackPic_Pokedude + 0x1800, 0x0800,
-};
-
-const struct SpriteFrameImage gTrainerBackPicTable_OldMan[] =
-{
-    gTrainerBackPic_OldMan, 0x0800,
-    gTrainerBackPic_OldMan + 0x0800, 0x0800,
-    gTrainerBackPic_OldMan + 0x1000, 0x0800,
-    gTrainerBackPic_OldMan + 0x1800, 0x0800,
+    gTrainerBackPic_Green, 0x0800,
+    gTrainerBackPic_Green + 0x0800, 0x0800,
+    gTrainerBackPic_Green + 0x1000, 0x0800,
+    gTrainerBackPic_Green + 0x1800, 0x0800,
+    gTrainerBackPic_Green + 0x2000, 0x0800,
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_RSBrendan[] =
@@ -88,6 +81,22 @@ const struct SpriteFrameImage gTrainerBackPicTable_RSMay[] =
     gTrainerBackPic_RSMay + 0x0800, 0x0800,
     gTrainerBackPic_RSMay + 0x1000, 0x0800,
     gTrainerBackPic_RSMay + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_Pokedude[] =
+{
+    gTrainerBackPic_Pokedude, 0x0800,
+    gTrainerBackPic_Pokedude + 0x0800, 0x0800,
+    gTrainerBackPic_Pokedude + 0x1000, 0x0800,
+    gTrainerBackPic_Pokedude + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_OldMan[] =
+{
+    gTrainerBackPic_OldMan, 0x0800,
+    gTrainerBackPic_OldMan + 0x0800, 0x0800,
+    gTrainerBackPic_OldMan + 0x1000, 0x0800,
+    gTrainerBackPic_OldMan + 0x1800, 0x0800,
 };
 
 static const union AnimCmd sAnim_GeneralFrame0[] =

@@ -674,7 +674,7 @@ void InitHostRFUtgtGname(struct GFtgtGname *data, u8 activity, bool32 started, s
         data->child_sprite_gender[i] = child_sprite_genders;
         child_sprite_genders >>= 8;
     }
-    data->playerGender = gSaveBlock2Ptr->playerGender;
+    data->playerGender = gSaveBlock2Ptr->avatarGender;
     data->activity = activity;
     data->started = started;
     data->unk_00.language = GAME_LANGUAGE;

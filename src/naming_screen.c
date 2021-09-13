@@ -1296,11 +1296,11 @@ static void NamingScreen_NoCreateIcon(void)
 
 static void NamingScreen_CreatePlayerIcon(void)
 {
-    u8 rivalGfxId;
+    u8 playerGfxId;
     u8 spriteId;
 
-    rivalGfxId = GetRivalAvatarGraphicsIdByStateIdAndGender(0, sNamingScreenData->monSpecies);
-    spriteId = AddPseudoObjectEvent(rivalGfxId, SpriteCallbackDummy, 0x38, 0x25, 0);
+    playerGfxId = GetRivalAvatarGraphicsIdByStateIdAndGender(0, gSaveBlock2Ptr->avatarChoice);
+    spriteId = AddPseudoObjectEvent(playerGfxId, SpriteCallbackDummy, 0x38, 0x25, 0);
     gSprites[spriteId].oam.priority = 3;
     StartSpriteAnim(&gSprites[spriteId], 4);
 }
@@ -1337,25 +1337,14 @@ static const union AnimCmd *const gUnknown_83E23BC[] = {
 
 static void NamingScreen_CreateRivalIcon(void)
 {
-    const struct SpriteSheet sheet = {
-        gUnknown_83E1980, 0x900, 255
-    };
-    const struct SpritePalette palette = {
-        gUnknown_8E98004, 255
-    };
-    struct SpriteTemplate template;
-    const struct SubspriteTable * tables_p;
+    u8 playerGfxId;
     u8 spriteId;
+    u8 rivalCharacter = (gSaveBlock2Ptr->avatarChoice == BLUE) ? RED : BLUE;
 
-    MakeObjectTemplateFromObjectEventGraphicsInfo(OBJ_EVENT_GFX_RED_NORMAL, SpriteCallbackDummy, &template, &tables_p);
-
-    template.tileTag = sheet.tag;
-    template.paletteTag = palette.tag;
-    template.anims = gUnknown_83E23BC;
-    LoadSpriteSheet(&sheet);
-    LoadSpritePalette(&palette);
-    spriteId = CreateSprite(&template, 0x38, 0x25, 0);
+    playerGfxId = GetRivalAvatarGraphicsIdByStateIdAndGender(0, rivalCharacter);
+    spriteId = AddPseudoObjectEvent(playerGfxId, SpriteCallbackDummy, 0x38, 0x25, 0);
     gSprites[spriteId].oam.priority = 3;
+    StartSpriteAnim(&gSprites[spriteId], 4);
 }
 
 static bool8 (*const sKeyboardKeyHandlers[])(u8) = {
@@ -1952,27 +1941,27 @@ static bool8 IsLetter(u8 character)
 
 static void Debug_DoNamingScreen_Player(void)
 {
-    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
+    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->avatarChoice, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
 }
 
 static void Debug_DoNamingScreen_Box(void)
 {
-    DoNamingScreen(NAMING_SCREEN_BOX, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
+    DoNamingScreen(NAMING_SCREEN_BOX, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->avatarChoice, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
 }
 
 static void Debug_DoNamingScreen_CaughtMon(void)
 {
-    DoNamingScreen(NAMING_SCREEN_CAUGHT_MON, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
+    DoNamingScreen(NAMING_SCREEN_CAUGHT_MON, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->avatarChoice, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
 }
 
 static void Debug_DoNamingScreen_NameRater(void)
 {
-    DoNamingScreen(NAMING_SCREEN_NAME_RATER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
+    DoNamingScreen(NAMING_SCREEN_NAME_RATER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->avatarChoice, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
 }
 
 static void Debug_DoNamingScreen_Rival(void)
 {
-    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
+    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->avatarChoice, MON_MALE, 0, CB2_ReturnToFieldWithOpenMenu);
 }
 
 //--------------------------------------------------

@@ -73,6 +73,24 @@ CeruleanCity_EventScript_Rival:: @ 81664CC
 	call_if_eq CeruleanCity_EventScript_RivalBulbasaur
 	compare VAR_STARTER_MON, 0
 	call_if_eq CeruleanCity_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 5
+	call_if_eq CeruleanCity_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 4
+	call_if_eq CeruleanCity_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 3
+	call_if_eq CeruleanCity_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 8
+	call_if_eq CeruleanCity_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 7
+	call_if_eq CeruleanCity_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 6
+	call_if_eq CeruleanCity_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 11
+	call_if_eq CeruleanCity_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 10
+	call_if_eq CeruleanCity_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 9
+	call_if_eq CeruleanCity_EventScript_RivalCharmander
 	famechecker FAMECHECKER_BILL, 0
 	msgbox CeruleanCity_Text_RivalPostBattle
 	closemessage
@@ -96,16 +114,49 @@ CeruleanCity_EventScript_Rival:: @ 81664CC
 	releaseall
 	end
 
-CeruleanCity_EventScript_RivalSquirtle:: @ 8166582
-	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN_SQUIRTLE, CeruleanCity_Text_RivalDefeat
+CeruleanCity_EventScript_RivalSquirtle::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq CeruleanCity_EventScript_RivalBlueSquirtle
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq CeruleanCity_EventScript_RivalRedSquirtle
 	return
 
-CeruleanCity_EventScript_RivalBulbasaur:: @ 816658D
-	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN_BULBASAUR, CeruleanCity_Text_RivalDefeat
+CeruleanCity_EventScript_RivalBulbasaur::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq CeruleanCity_EventScript_RivalBlueBulbasaur
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq CeruleanCity_EventScript_RivalRedBulbasaur
 	return
 
-CeruleanCity_EventScript_RivalCharmander:: @ 8166598
-	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN_CHARMANDER, CeruleanCity_Text_RivalDefeat
+CeruleanCity_EventScript_RivalCharmander::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq CeruleanCity_EventScript_RivalBlueCharmander
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq CeruleanCity_EventScript_RivalRedCharmander
+	return
+
+CeruleanCity_EventScript_RivalBlueSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_CERULEAN_SQUIR, CeruleanCity_Text_RivalDefeat
+	return
+
+CeruleanCity_EventScript_RivalBlueBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_CERULEAN_BULBA, CeruleanCity_Text_RivalDefeat
+	return
+
+CeruleanCity_EventScript_RivalBlueCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_CERULEAN_CHARM, CeruleanCity_Text_RivalDefeat
+	return
+
+CeruleanCity_EventScript_RivalRedSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_CERULEAN_SQUIR, CeruleanCity_Text_RivalDefeat
+	return
+
+CeruleanCity_EventScript_RivalRedBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_CERULEAN_BULBA, CeruleanCity_Text_RivalDefeat
+	return
+
+CeruleanCity_EventScript_RivalRedCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_CERULEAN_CHARM, CeruleanCity_Text_RivalDefeat
 	return
 
 CeruleanCity_EventScript_RivalStartExit:: @ 81665A3

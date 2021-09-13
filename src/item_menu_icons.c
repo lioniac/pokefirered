@@ -12,7 +12,7 @@ static EWRAM_DATA void * sItemIconTilesBufferPadded = NULL;
 static void sub_8098560(struct Sprite * sprite);
 static void sub_80985BC(struct Sprite * sprite);
 
-static const struct OamData sOamData_BagOrSatchel = {
+static const struct OamData sOamData_Bags = {
     .affineMode = ST_OAM_AFFINE_NORMAL,
     .shape = ST_OAM_SQUARE,
     .size = 3,
@@ -38,7 +38,7 @@ static const union AnimCmd sAnim_BagOrSatchel_OpenPokeBallsPocket[] = {
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnimTable_BagOrSatchel[] = {
+static const union AnimCmd *const sAnimTable_Bags[] = {
     sAnim_BagOrSatchel_OpenKeyItemPocket,
     sAnim_BagOrSatchel_OpenPokeBallsPocket,
     sAnim_BagOrSatchel_OpenItemPocket
@@ -57,35 +57,63 @@ static const union AffineAnimCmd sAffineAnim_Wobble[] = {
     AFFINEANIMCMD_END
 };
 
-static const union AffineAnimCmd *const sAffineAnimTable_BagOrSatchel[] = {
+static const union AffineAnimCmd *const sAffineAnimTable_Bags[] = {
     sAffineAnim_Idle,
     sAffineAnim_Wobble
 };
 
-const struct CompressedSpriteSheet gSpriteSheet_Backpack = {
-    gUnknown_8E8362C,
+const struct CompressedSpriteSheet gSpriteSheet_BagRed = {
+    gBagSprite_Red,
     0x2000,
     100
 };
 
-const struct CompressedSpriteSheet gSpriteSheet_Satchel = {
-    gUnknown_8E83DBC,
+const struct CompressedSpriteSheet gSpriteSheet_BagBlue = {
+    gBagSprite_Blue,
     0x2000,
     100
 };
 
-const struct CompressedSpritePalette gSpritePalette_BagOrSatchel = {
-    gUnknown_8E84560,
+const struct CompressedSpriteSheet gSpriteSheet_BagGreen = {
+    gBagSprite_Green,
+    0x2000,
+    100
+};
+
+const struct CompressedSpriteSheet gSpriteSheet_BagBrendan = {
+    gBagSprite_Brendan,
+    0x2000,
+    100
+};
+
+const struct CompressedSpriteSheet gSpriteSheet_BagMay = {
+    gBagSprite_May,
+    0x2000,
+    100
+};
+
+const struct CompressedSpritePalette gSpritePalette_BagRedGreen = {
+    gBagPal_RedGreen,
+    100
+};
+
+const struct CompressedSpritePalette gSpritePalette_BagBlue = {
+    gBagPal_Blue,
+    100
+};
+
+const struct CompressedSpritePalette gSpritePalette_BagBrendanMay = {
+    gBagPal_BrendanMay,
     100
 };
 
 static const struct SpriteTemplate sSpriteTemplate_BagOrSatchel = {
     100,
     100,
-    &sOamData_BagOrSatchel,
-    sAnimTable_BagOrSatchel,
+    &sOamData_Bags,
+    sAnimTable_Bags,
     NULL,
-    sAffineAnimTable_BagOrSatchel,
+    sAffineAnimTable_Bags,
     SpriteCallbackDummy
 };
 

@@ -166,6 +166,16 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         input->pressedSelectButton = TRUE;
     }
 
+    if ((heldKeys & L_BUTTON) && input->pressedAButton)
+    {
+        if (!FlagGet(FLAG_USED_SHINY_CHEAT))
+        {
+            VarSet(VAR_GENERATE_SHINY, 1);
+            FlagSet(FLAG_USED_SHINY_CHEAT);
+            PlaySE(SE_SUCCESS);
+        }
+    }
+
 #if DEBUG
     if ((heldKeys & B_BUTTON) && input->pressedStartButton)
     {
@@ -558,17 +568,17 @@ static const u8 *GetInteractedBackgroundEventScript(struct MapPosition *position
             gSpecialVar_Facing = direction;
             return EventScript_HiddenItemScript;
         }
-        else if (gSaveBlock1Ptr->season == 1 && gSpecialVar_0x8004 >= 0x0C4 && gSpecialVar_0x8004 <= 0x0F3)
+        else if (gSaveBlock2Ptr->season == 1 && gSpecialVar_0x8004 >= 0x0C4 && gSpecialVar_0x8004 <= 0x0F3)
         {
             gSpecialVar_Facing = direction;
             return EventScript_HiddenItemScript;
         }
-        else if (gSaveBlock1Ptr->season == 2 && gSpecialVar_0x8004 >= 0x0F4 && gSpecialVar_0x8004 <= 0x123)
+        else if (gSaveBlock2Ptr->season == 2 && gSpecialVar_0x8004 >= 0x0F4 && gSpecialVar_0x8004 <= 0x123)
         {
             gSpecialVar_Facing = direction;
             return EventScript_HiddenItemScript;
         }
-        else if (gSaveBlock1Ptr->season == 3 && gSpecialVar_0x8004 >= 0x124 && gSpecialVar_0x8004 <= 0x153)
+        else if (gSaveBlock2Ptr->season == 3 && gSpecialVar_0x8004 >= 0x124 && gSpecialVar_0x8004 <= 0x153)
         {
             gSpecialVar_Facing = direction;
             return EventScript_HiddenItemScript;

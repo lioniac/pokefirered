@@ -1,14 +1,20 @@
 gOtherText_NewName:: @ 81C574F
     .string "NEW NAME$"
 
-gNameChoice_Green:: @ 81C5758
-    .string "GREEN$"
-
-gNameChoice_Red:: @ 81C575E
+gNameChoice_Red::
     .string "RED$"
 
-gNameChoice_Blue:: @ 81C5762
+gNameChoice_Blue::
     .string "BLUE$"
+
+gNameChoice_Green::
+    .string "GREEN$"
+
+gNameChoice_Brendan::
+    .string "BRENDAN$"
+
+gNameChoice_May::
+    .string "MAY$"
 
 gNewGame_HelpDocs1:: @ 81C582D
     .string "The various buttons will be explained in\n"
@@ -40,9 +46,8 @@ gNewGame_HelpDocs7:: @ 81C5981
     .string "game, or on how to do things,\n"
     .string "press the L or R Button.$"
 
-gOakText_AskPlayerGender:: @ 81C59D5
-    .string "Now tell me. Are you a boy?\n"
-    .string "Or are you a girl?$"
+gOakText_AskPlayerCharacter:: @ 81C59D5
+    .string "Now tell me. Who are you?$"
 
 gNewGameAdventureIntro1::
     .string "In the world which you are about to\n"

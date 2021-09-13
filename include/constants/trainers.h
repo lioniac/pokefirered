@@ -124,7 +124,6 @@
 #define TRAINER_PIC_TAMER                 103
 #define TRAINER_PIC_BIRD_KEEPER           104
 #define TRAINER_PIC_BLACK_BELT            105
-#define TRAINER_PIC_RIVAL_1               106
 #define TRAINER_PIC_SCIENTIST             107
 #define TRAINER_PIC_LEADER_GIOVANNI       108
 #define TRAINER_PIC_ROCKET_GRUNT_M        109
@@ -142,8 +141,8 @@
 #define TRAINER_PIC_LEADER_BLAINE         121
 #define TRAINER_PIC_LEADER_SABRINA        122
 #define TRAINER_PIC_GENTLEMAN             123
-#define TRAINER_PIC_RIVAL_2               124
-#define TRAINER_PIC_CHAMPION_RIVAL        125
+#define TRAINER_PIC_RIVAL_BLUE            124
+#define TRAINER_PIC_PLAYER_BLUE           125
 #define TRAINER_PIC_CHANNELER             126
 #define TRAINER_PIC_TWINS                 127
 #define TRAINER_PIC_COOL_COUPLE           128
@@ -153,8 +152,8 @@
 #define TRAINER_PIC_PROFESSOR_OAK         132
 #define TRAINER_PIC_RS_BRENDAN_2          133
 #define TRAINER_PIC_RS_MAY_2              134
-#define TRAINER_PIC_RED                   135
-#define TRAINER_PIC_LEAF                  136
+#define TRAINER_PIC_PLAYER_RED            135
+#define TRAINER_PIC_PLAYER_GREEN          136
 #define TRAINER_PIC_ROCKET_GRUNT_F        137
 #define TRAINER_PIC_PSYCHIC_F             138
 #define TRAINER_PIC_CRUSH_GIRL            139
@@ -166,6 +165,8 @@
 #define TRAINER_PIC_RUIN_MANIAC           145
 #define TRAINER_PIC_LADY                  146
 #define TRAINER_PIC_PAINTER               147
+#define TRAINER_PIC_CHAMPION_RIVAL_RED    149
+#define TRAINER_PIC_CHAMPION_RIVAL_BLUE   150
 
 // Leftover from R/S
 #define TRAINER_SECRET_BASE              1024

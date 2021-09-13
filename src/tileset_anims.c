@@ -252,7 +252,7 @@ static void _InitSecondaryTilesetAnimation(void)
 
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
-    switch(gSaveBlock1Ptr->season)
+    switch(gSaveBlock2Ptr->season)
     {
     case 3:
         AppendTilesetAnimToBuffer(sTilesetAnims_General_Winter_Flower[timer % NELEMS(sTilesetAnims_General_Winter_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);

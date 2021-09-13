@@ -1116,9 +1116,14 @@ const u32 gUnknown_8E83444[] = INCBIN_U32("graphics/item_menu/bag_tilemap2.bin.l
 const u32 gBagBgPalette[] = INCBIN_U32("graphics/item_menu/bag_pal1.gbapal.lz"); // palette 1 (Boy + misc Pal)
 const u32 gBagBgPalette_FemaleOverride[] = INCBIN_U32("graphics/item_menu/bag_pal2.gbapal.lz"); // palette 2 (Girl)
 
-const u32 gUnknown_8E8362C[] = INCBIN_U32("graphics/interface/unk_8E8362C.4bpp.lz");
-const u32 gUnknown_8E83DBC[] = INCBIN_U32("graphics/interface/unk_8E83DBC.4bpp.lz");
-const u32 gUnknown_8E84560[] = INCBIN_U32("graphics/interface/unk_8E84560.gbapal.lz");
+const u32 gBagSprite_Red[]     = INCBIN_U32("graphics/interface/bag_red.4bpp.lz");
+const u32 gBagSprite_Green[]   = INCBIN_U32("graphics/interface/bag_green.4bpp.lz");
+const u32 gBagPal_RedGreen[]   = INCBIN_U32("graphics/interface/bag_redgreen.gbapal.lz");
+const u32 gBagSprite_Blue[]    = INCBIN_U32("graphics/interface/bag_blue.4bpp.lz");
+const u32 gBagPal_Blue[]       = INCBIN_U32("graphics/interface/bag_blue.gbapal.lz");
+const u32 gBagSprite_Brendan[] = INCBIN_U32("graphics/interface/bag_brendan.4bpp.lz");
+const u32 gBagSprite_May[]     = INCBIN_U32("graphics/interface/bag_may.4bpp.lz");
+const u32 gBagPal_BrendanMay[] = INCBIN_U32("graphics/interface/bag_brendanmay.gbapal.lz");
 
 const u32 gFile_graphics_interface_bag_swap_sheet[] = INCBIN_U32("graphics/interface/bag_swap.4bpp.lz");
 const u32 gFile_graphics_interface_bag_swap_palette[] = INCBIN_U32("graphics/interface/bag_swap.gbapal.lz");

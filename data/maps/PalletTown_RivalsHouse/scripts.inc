@@ -142,21 +142,21 @@ PalletTown_RivalsHouse_EventScript_PleaseGiveMonsRest:: @ 8168EEC
 	end
 
 PalletTown_RivalsHouse_EventScript_GiveTownMap:: @ 8168EF6
-	msgbox PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp
-	closemessage
-	checkitemspace ITEM_TOWN_MAP, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq PalletTown_RivalsHouse_EventScript_NoRoomForTownMap
-	applymovement LOCALID_DAISY, Movement_WalkInPlaceFastestRight
-	waitmovement 0
-	removeobject LOCALID_TOWN_MAP
-	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2
-	delay 15
-	applymovement LOCALID_DAISY, Movement_FacePlayer
-	waitmovement 0
-	delay 12
-	giveitem_msg PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy, ITEM_TOWN_MAP, 1, MUS_OBTAIN_KEY_ITEM
-	release
+@	msgbox PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp
+@	closemessage
+@	checkitemspace ITEM_TOWN_MAP, 1
+@	compare VAR_RESULT, FALSE
+@	goto_if_eq PalletTown_RivalsHouse_EventScript_NoRoomForTownMap
+@	applymovement LOCALID_DAISY, Movement_WalkInPlaceFastestRight
+@	waitmovement 0
+@	removeobject LOCALID_TOWN_MAP
+@	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2
+@	delay 15
+@	applymovement LOCALID_DAISY, Movement_FacePlayer
+@	waitmovement 0
+@	delay 12
+@	giveitem_msg PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy, ITEM_TOWN_MAP, 1, MUS_OBTAIN_KEY_ITEM
+@	release
 	end
 
 PalletTown_RivalsHouse_EventScript_NoRoomForTownMap:: @ 8168F4F

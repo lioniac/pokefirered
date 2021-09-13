@@ -45,9 +45,9 @@
 #define FLAG_0x027               0x027
 
 // Hide/show flags
-#define FLAG_HIDE_BULBASAUR_BALL                           0x028
-#define FLAG_HIDE_SQUIRTLE_BALL                            0x029
-#define FLAG_HIDE_CHARMANDER_BALL                          0x02A
+#define FLAG_HIDE_LEFT_BALL                                0x028
+#define FLAG_HIDE_MIDDLE_BALL                              0x029
+#define FLAG_HIDE_RIGHT_BALL                               0x02A
 #define FLAG_HIDE_OAK_IN_HIS_LAB                           0x02B
 #define FLAG_HIDE_OAK_IN_PALLET_TOWN                       0x02C
 #define FLAG_HIDE_RIVAL_IN_LAB                             0x02D
@@ -530,7 +530,7 @@
 #define FLAG_0x1FF               0x1FF
 #define FLAG_SEASON_CHANGE       0x200
 #define FLAG_HIDE_MOM_SEASON     0x201
-#define FLAG_0x202               0x202
+#define FLAG_USED_SHINY_CHEAT    0x202
 #define FLAG_0x203               0x203
 #define FLAG_0x204               0x204
 #define FLAG_0x205               0x205
@@ -753,9 +753,9 @@
 #define FLAG_NO_ROOM_FOR_TOGEPI_EGG                      0x2DB
 #define FLAG_RECOVERED_SAPPHIRE                          0x2DC
 #define FLAG_GOT_RUBY                                    0x2DD
-#define FLAG_TUTOR_FRENZY_PLANT                          0x2DE
-#define FLAG_TUTOR_BLAST_BURN                            0x2DF
-#define FLAG_TUTOR_HYDRO_CANNON                          0x2E0
+#define FLAG_TUTOR_CAPE_BRINK                            0x2DE
+#define FLAG_0x2DF                                       0x2DF
+#define FLAG_0x2E0                                       0x2E0
 #define FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK             0x2E1
 #define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL            0x2E2
 #define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE             0x2E3

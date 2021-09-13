@@ -6,21 +6,17 @@ PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting:: @ 818DC94
     .string "{RIVAL}: Gramps!\n"
     .string "I'm fed up with waiting!$"
 
-PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe:: @ 818DCB9
-    .string "{RIVAL}: Hey! Gramps! No fair!\n"
-    .string "What about me?$"
+PalletTown_ProfessorOaksLab_Text_RivalGoAheadIHaveMine:: @ 818DCB9
+    .string "{RIVAL}: Hey, {PLAYER}! Go ahead!\n"
+    .string "I already have mine!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer:: @ 818DCE2
     .string "{RIVAL}: Heh, I don't need to be\n"
     .string "greedy like you. I'm mature!\p"
     .string "Go ahead and choose, {PLAYER}!$"
 
-PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen:: @ 818DD34
-    .string "{RIVAL}: I'll take this one, then!$"
-
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak:: @ 818DD52
-    .string "{RIVAL} received the {STR_VAR_1}\n"
-    .string "from PROF. OAK!$"
+    .string "{RIVAL} have a {STR_VAR_1}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher:: @ 818DD75
     .string "{RIVAL}: My POKéMON looks a lot\n"
@@ -61,12 +57,8 @@ PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps:: @ 818DEC8
 PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap:: @ 818DEF3
     .string "{PLAYER}, I hate to say it, but you\n"
     .string "won't be necessary for this.\p"
-    .string "I know! I'll borrow a TOWN MAP\n"
-    .string "from my sis!\p"
-    .string "I'll tell her not to lend you one,\n"
-    .string "{PLAYER}! Hahaha!\p"
     .string "Don't bother coming around to\n"
-    .string "my place after this!$"
+    .string "my place after this! Hahaha!$"
 
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne:: @ 818DFBC
     .string "OAK: {RIVAL}?\n"
@@ -86,8 +78,7 @@ PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne:: @ 818DFBC
     .string "Go on, choose!$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival:: @ 818E0EA
-    .string "OAK: Be patient, {RIVAL}.\n"
-    .string "You can have one, too!$"
+    .string "OAK: Be patient, {RIVAL}$."
 
 PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose:: @ 818E116
     .string "OAK: Now, {PLAYER}.\p"
@@ -117,6 +108,60 @@ PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur:: @ 818E272
     .string "It's very easy to raise.\p"
     .string "So, {PLAYER}, you want to go with\n"
     .string "the GRASS POKéMON BULBASAUR?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingCyndaquil::
+    .string "Ah! CYNDAQUIL is your choice.\n"
+    .string "You should raise it patiently.\p"
+    .string "So, {PLAYER}, you're claiming the\n"
+    .string "FIRE POKéMON CYNDAQUIL?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingTotodile::
+    .string "Hm! TOTODILE is your choice.\n"
+    .string "It's one worth raising.\p"
+    .string "So, {PLAYER}, you've decided on the\n"
+    .string "WATER POKéMON TOTODILE?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingChikorita::
+    .string "I see! CHIKORITA is your choice.\n"
+    .string "It's very easy to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the GRASS POKéMON CHIKORITA?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingTorchic::
+    .string "Ah! TORCHIC is your choice.\n"
+    .string "You should raise it patiently.\p"
+    .string "So, {PLAYER}, you're claiming the\n"
+    .string "FIRE POKéMON TORCHIC?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingMudkip::
+    .string "Hm! MUDKIP is your choice.\n"
+    .string "It's one worth raising.\p"
+    .string "So, {PLAYER}, you've decided on the\n"
+    .string "WATER POKéMON MUDKIP?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingTreecko::
+    .string "I see! TREECKO is your choice.\n"
+    .string "It's very easy to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the GRASS POKéMON TREECKO?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingPonyta::
+    .string "Ah! PONYTA is your choice.\n"
+    .string "You should raise it patiently.\p"
+    .string "So, {PLAYER}, you're claiming the\n"
+    .string "FIRE POKéMON PONYTA?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingSpheal::
+    .string "Hm! SPHEAL is your choice.\n"
+    .string "It's one worth raising.\p"
+    .string "So, {PLAYER}, you've decided on the\n"
+    .string "WATER POKéMON SPHEAL?$"
+
+PalletTown_ProfessorOaksLab_Text_OakChoosingSeedot::
+    .string "I see! SEEDOT is your choice.\n"
+    .string "It's very easy to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the GRASS POKéMON SEEDOT?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic:: @ 818E2E5
     .string "This POKéMON is really quite\n"
@@ -264,9 +309,14 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage:: @ 818EAF4
     .string "PROF. OAK, please visit us!\n"
     .string "…$"
 
-PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide:: @ 818EBE6
+PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide1:: @ 818EBE6
     .string "I study POKéMON as PROF. OAK's\n"
     .string "AIDE.$"
+
+PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide2::
+    .string "I heard you can get an one-time-only\n"
+    .string "shiny Pokémon if you hit 'A' while\p"
+    .string "holding 'L' before an encounter.$"
 
 PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons:: @ 818EC0B
     .string "Hi, {PLAYER}. I bet you've become\n"

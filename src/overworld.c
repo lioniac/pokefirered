@@ -384,12 +384,12 @@ void IncrementSeasonPedometer()
     {
         u16 stepsRemaining;
 
-        if (gSaveBlock1Ptr->seasonPedometer < 0xFFFFFF)
-            gSaveBlock1Ptr->seasonPedometer++;
+        if (gSaveBlock2Ptr->seasonPedometer < 0xFFFFFF)
+            gSaveBlock2Ptr->seasonPedometer++;
         else
-            gSaveBlock1Ptr->seasonPedometer = 1;
+            gSaveBlock2Ptr->seasonPedometer = 1;
 
-        stepsRemaining = STEPS_FOR_SEASON_CHANGE - (gSaveBlock1Ptr->seasonPedometer % STEPS_FOR_SEASON_CHANGE);
+        stepsRemaining = STEPS_FOR_SEASON_CHANGE - (gSaveBlock2Ptr->seasonPedometer % STEPS_FOR_SEASON_CHANGE);
         VarSet(VAR_STEPS_FOR_NEXT_SEASON, stepsRemaining);
 
         if (stepsRemaining == 0)
@@ -2163,7 +2163,7 @@ static void mli4_mapscripts_and_other(void)
     ResetObjectEvents();
     GetCameraFocusCoords(&x, &y);
     player = GetInitialPlayerAvatarState();
-    InitPlayerAvatar(x, y, player->direction, gSaveBlock2Ptr->playerGender);
+    InitPlayerAvatar(x, y, player->direction, gSaveBlock2Ptr->avatarChoice);
     SetPlayerAvatarTransitionFlags(player->transitionFlags);
     ResetInitialPlayerAvatarState();
     TrySpawnObjectEvents(0, 0);

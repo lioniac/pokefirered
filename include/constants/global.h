@@ -36,9 +36,17 @@
 
 #define NUM_TOWER_CHALLENGE_TYPES 4
 
-#define MALE   0
-#define FEMALE 1
+#define MALE    0
+#define FEMALE  1
 #define GENDER_COUNT 2
+
+#define RED     0
+#define BLUE    1
+#define GREEN   2
+#define BRENDAN 3
+#define MAY     4
+#define CHAR_COUNT 5
+#define OAK     5
 
 #define BARD_SONG_LENGTH       6
 #define NUM_STORYTELLER_TALES  4

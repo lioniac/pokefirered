@@ -166,12 +166,24 @@ void NewGameInitData(void)
     memset(&gSaveBlock1Ptr->follower, 0, sizeof(gSaveBlock1Ptr->follower));
     
     //Seasons Random Weather
-    gSaveBlock1Ptr->seasonPedometer = 0;
-    gSaveBlock1Ptr->season = 0;
-    VarSet(VAR_SEASON, 0);
+    gSaveBlock2Ptr->seasonPedometer = 0;
+    gSaveBlock2Ptr->season = 4;
+    VarSet(VAR_SEASON, 4);
     VarSet(VAR_STEPS_FOR_NEXT_SEASON, STEPS_FOR_SEASON_CHANGE);
     RtcCalcLocalTime();
-
+    VarSet(VAR_OBJ_GFX_ID_RIVAL, (gSaveBlock2Ptr->avatarChoice == BLUE) ? 0 : 7);
+    switch (gSaveBlock2Ptr->avatarChoice)
+    {
+    case RED:
+    case BLUE:
+    case BRENDAN:
+        gSaveBlock2Ptr->avatarGender = MALE;
+        break;
+    case GREEN:
+    case MAY:
+        gSaveBlock2Ptr->avatarGender = FEMALE;
+        break;
+    }
     //Gen6 Exp. Share
     gSaveBlock2Ptr->expShare = 0;
 }

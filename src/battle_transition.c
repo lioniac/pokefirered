@@ -1829,7 +1829,7 @@ static bool8 BT_Phase2Mugshot_LoadGfx(struct Task *task)
     BT_GetBg0TilemapAndTilesetBase(&tilemapAddr, &tilesetAddr);
     CpuCopy16(sVsBarTileset, tilesetAddr, 0x1E0);
     LoadPalette(sVsBarOpponentPalettes[task->tWhichMugshot], 0xF0, 0x20);
-    LoadPalette(sVsBarPlayerPalettes[gSaveBlock2Ptr->playerGender], 0xFA, 0xC);
+    LoadPalette(sVsBarPlayerPalettes[gSaveBlock2Ptr->avatarChoice], 0xFA, 0xC);
     for (i = 0; i < 20; ++i)
         for (j = 0; j < 32; ++j, ++mugshotsMap)
             tilemapAddr[i * 32 + j] = *mugshotsMap | 0xF000; // use palette #15
@@ -2048,7 +2048,7 @@ static void BT_Phase2Mugshots_CreateSprites(struct Task *task)
     gReservedSpritePaletteCount = 10;
     mugshotId = task->tWhichMugshot;
     task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[mugshotId], sMugshotsOpponentCoords[mugshotId][0] - 32, sMugshotsOpponentCoords[mugshotId][1] + 42, 0, gDecompressionBuffer);
-    task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId_Debug(gSaveBlock2Ptr->playerGender, TRUE), 272, 106, 0, gDecompressionBuffer);
+    task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId_Debug(gSaveBlock2Ptr->avatarChoice, TRUE), 272, 106, 0, gDecompressionBuffer);
     gReservedSpritePaletteCount = 12;
     opponentSprite = &gSprites[task->tOpponentSpriteId];
     playerSprite = &gSprites[task->tPlayerSpriteId];

@@ -315,7 +315,7 @@ struct Follower
 struct SaveBlock2
 {
     /*0x000*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
-    /*0x008*/ u8 playerGender; // MALE, FEMALE
+    /*0x008*/ u8 avatarChoice; // RED, BLUE, GREEN, BRENDAN, MAY
     /*0x009*/ u8 specialSaveWarpFlags;
     /*0x00A*/ u8 playerTrainerId[4];
     /*0x00E*/ u16 playTimeHours;
@@ -343,10 +343,15 @@ struct SaveBlock2
     /*0xAF0*/ struct BerryCrush berryCrush;
     /*0xB00*/ struct PokemonJumpResults pokeJump;
     /*0xB10*/ struct BerryPickingResults berryPick;
-    /*0xB20*/ u8 filler_B20[0x400];
-    /*0xF20*/ u32 encryptionKey;
+//  /*0xB20*/ u8 filler_B20[0x400];
+    /*0xB20*/ bool8 autoRun;
+              u8  avatarChoiceFlags[CHAR_COUNT];
+              u8  avatarGender;
+              u8  season;
+              u16 seasonPedometer;
+              u8  filler_B20[0x400 - sizeof(bool8) - sizeof(u8[CHAR_COUNT]) - (sizeof(u8)*2) - sizeof(u16)];
 
-    /*0xF24*/ bool8 autoRun;
+    /*0xF20*/ u32 encryptionKey;
 }; // size: 0xF25
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;

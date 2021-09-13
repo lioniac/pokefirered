@@ -276,31 +276,43 @@ static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_R
 static const u8 sTimeColonInvisibleTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT};
 static const u8 sTrainerCardFontIds[] = {0, 2, 0};
 
-static const u8 sTrainerPicOffsets[2][GENDER_COUNT][2] = 
+static const u8 sTrainerPicOffsets[2][CHAR_COUNT][2] = 
 {
     // Kanto
     {
-        [MALE]   = {13, 4}, 
-        [FEMALE] = {13, 4}
+        [RED]     = {13, 4}, 
+        [BLUE]    = {13, 4}, 
+        [GREEN]   = {13, 4},
+        [BRENDAN] = {13, 4}, 
+        [MAY]     = {13, 4}
     },
     // Hoenn
     {
-        [MALE]   = {1, 0}, 
-        [FEMALE] = {1, 0}
+        [RED]     = {1, 0}, 
+        [BLUE]    = {1, 0},
+        [GREEN]   = {1, 0},
+        [BRENDAN] = {1, 0}, 
+        [MAY]     = {1, 0}
     }
 };
 
-static const u8 sTrainerPicFacilityClasses[][2] = 
+static const u8 sTrainerPicFacilityClasses[][CHAR_COUNT] = 
 {
     [CARD_TYPE_FRLG] = 
     {
-        [MALE]   = FACILITY_CLASS_RED, 
-        [FEMALE] = FACILITY_CLASS_LEAF
+        [RED]     = FACILITY_CLASS_RED, 
+        [BLUE]    = FACILITY_CLASS_BLUE,
+        [GREEN]   = FACILITY_CLASS_GREEN,
+        [BRENDAN] = FACILITY_CLASS_BRENDAN,
+        [MAY]     = FACILITY_CLASS_MAY
     },
     [CARD_TYPE_RSE] = 
     {
-        [MALE]   = FACILITY_CLASS_BRENDAN, 
-        [FEMALE] = FACILITY_CLASS_MAY
+        [RED]     = FACILITY_CLASS_RED, 
+        [BLUE]    = FACILITY_CLASS_BLUE,
+        [GREEN]   = FACILITY_CLASS_GREEN,
+        [BRENDAN] = FACILITY_CLASS_BRENDAN,
+        [MAY]     = FACILITY_CLASS_MAY
     },
 };
 
@@ -795,7 +807,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     u32 playTime;
     u8 i;
 
-    trainerCard->rse.gender = gSaveBlock2Ptr->playerGender;
+    trainerCard->rse.gender = gSaveBlock2Ptr->avatarGender;
     trainerCard->rse.playTimeHours = gSaveBlock2Ptr->playTimeHours;
     trainerCard->rse.playTimeMinutes = gSaveBlock2Ptr->playTimeMinutes;
 
@@ -1490,9 +1502,9 @@ static bool8 SetTrainerCardBgsAndPals(void)
             LoadPalette(sKantoTrainerCardBadges_Pal, 48, 32);
         break;
     case 4:
-        if (sTrainerCardDataPtr->cardType == CARD_TYPE_RSE && sTrainerCardDataPtr->trainerCard.rse.gender != MALE)
+        if (sTrainerCardDataPtr->cardType == CARD_TYPE_RSE && gSaveBlock2Ptr->avatarChoice != MALE)
             LoadPalette(sHoennTrainerCardFemaleBackground_Pal, 16, 32);
-        else if (sTrainerCardDataPtr->trainerCard.rse.gender != MALE)
+        else if (gSaveBlock2Ptr->avatarChoice != MALE)
             LoadPalette(sKantoTrainerCardFemaleBackground_Pal, 16, 32);
         break;
     case 5:
@@ -1910,26 +1922,26 @@ static u8 GetCardType(void)
 
 static void CreateTrainerCardTrainerPic(void)
 {
-    u8 facilityClass = sTrainerPicFacilityClasses[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender];
+    u8 facilityClass = sTrainerPicFacilityClasses[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice];
 
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers == 1)
     {
         facilityClass = sTrainerCardDataPtr->trainerCard.facilityClass;
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(facilityClass), TRUE, sTrainerPicOffsets[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender][0],
-                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender][1], 8, 2);
+        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(facilityClass), TRUE, sTrainerPicOffsets[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice][0],
+                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice][1], 8, 2);
     }
     else
     {
         if (sTrainerCardDataPtr->cardType != CARD_TYPE_FRLG)
         {
-            CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(facilityClass), TRUE, sTrainerPicOffsets[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender][0],
-                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender][1], 8, 2);
+            CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(facilityClass), TRUE, sTrainerPicOffsets[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice][0],
+                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice][1], 8, 2);
         }
         else
         {
-            CreateTrainerCardTrainerPicSprite(PlayerGenderToFrontTrainerPicId_Debug(sTrainerCardDataPtr->trainerCard.rse.gender, TRUE), TRUE,
-                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender][0],
-                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][sTrainerCardDataPtr->trainerCard.rse.gender][1],
+            CreateTrainerCardTrainerPicSprite(PlayerGenderToFrontTrainerPicId_Debug(gSaveBlock2Ptr->avatarChoice, TRUE), TRUE,
+                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice][0],
+                    sTrainerPicOffsets[sTrainerCardDataPtr->cardType][gSaveBlock2Ptr->avatarChoice][1],
                     8, 2);
         }
     }

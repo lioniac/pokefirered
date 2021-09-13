@@ -211,7 +211,7 @@ static void DebugAction_CompletePokedex(u8 taskId)
 static void DebugAction_ChangeSeason(u8 taskId)
 {
     FlagSet(FLAG_SEASON_CHANGE);
-    gSaveBlock1Ptr->seasonPedometer = 0;
+    gSaveBlock2Ptr->seasonPedometer = 0;
 }
 
 static void DebugAction_AccessPC(u8 taskId)

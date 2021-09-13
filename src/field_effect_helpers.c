@@ -281,7 +281,7 @@ u32 FldEff_TallGrass(void)
     y = gFieldEffectArguments[1];
     sub_8063BC4(&x, &y, 8, 8);
 
-    switch(gSaveBlock1Ptr->season)
+    switch(gSaveBlock2Ptr->season)
     {
     case 3:
         spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS_WINTER], x, y, 0);

@@ -479,7 +479,7 @@ static void FieldEffectScript_LoadFadedPal_Seasons(void)
     const struct SpritePalette * spritePalette;
     u8 idx;
 
-    switch (gSaveBlock1Ptr->season)
+    switch (gSaveBlock2Ptr->season)
     {
     case 3:
         spritePalette = &gSpritePalette_GeneralFieldEffect1Winter;
@@ -494,7 +494,7 @@ static void FieldEffectScript_LoadFadedPal_Seasons(void)
         spritePalette = &gSpritePalette_GeneralFieldEffect1;
         break;
     default:
-        DoSoftReset();
+        spritePalette = &gSpritePalette_GeneralFieldEffect1;
         break;
     }
 
@@ -565,7 +565,7 @@ bool8 FieldEffectCmd_loadfadedpalnotint_callnative(const u8 **script, u32 *val)
     return TRUE;
 }
 
-static void FieldEffectFreeGraphicsResources(struct Sprite * sprite)
+void FieldEffectFreeGraphicsResources(struct Sprite * sprite)
 {
     u16 tileStart = sprite->sheetTileStart;
     u8 paletteNum = sprite->oam.paletteNum;
@@ -3313,7 +3313,7 @@ static void UseFlyEffect_7(struct Task * task)
         objectEvent->inanimate = FALSE;
         objectEvent->hasShadow = FALSE;
         sub_8087204(task->data[1], objectEvent->spriteId);
-        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->playerGender * 2 + 1);
+        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->avatarChoice * 2 + 1);
         sub_80877FC(&gSprites[task->data[1]], 0);
         gSprites[task->data[1]].callback = sub_8087828;
         CameraObjectReset2();
@@ -3401,7 +3401,7 @@ static void sub_8087220(struct Sprite * sprite)
             sprite->affineAnims = sUnknown_83CC1CC;
             InitSpriteAffineAnim(sprite);
             StartSpriteAffineAnim(sprite, 0);
-            if (gSaveBlock2Ptr->playerGender == MALE)
+            if (gSaveBlock2Ptr->avatarGender == MALE) // <edit>
                 sprite->x = 0x80;
             else
                 sprite->x = 0x76;
@@ -3457,7 +3457,7 @@ static void sub_8087364(struct Sprite * sprite)
             sprite->affineAnims = sUnknown_83CC1CC;
             InitSpriteAffineAnim(sprite);
             StartSpriteAffineAnim(sprite, 1);
-            if (gSaveBlock2Ptr->playerGender == MALE)
+            if (gSaveBlock2Ptr->avatarGender == MALE) // <edit>
                 sprite->x = 0x70;
             else
                 sprite->x = 0x64;
@@ -3554,7 +3554,7 @@ static void FlyInEffect_1(struct Task * task)
         task->data[1] = sub_8087168();
         sub_80871C8(task->data[1]);
         sub_8087204(task->data[1], objectEvent->spriteId);
-        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->playerGender * 2 + 2);
+        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->avatarChoice * 2 + 2);
         sub_80877FC(&gSprites[task->data[1]], 1);
         gSprites[task->data[1]].callback = sub_8087828;
     }

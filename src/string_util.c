@@ -36,7 +36,10 @@ extern u8 gExpandedPlaceholder_Maxie[];
 extern u8 gExpandedPlaceholder_Kyogre[];
 extern u8 gExpandedPlaceholder_Groudon[];
 extern u8 gExpandedPlaceholder_Red[];
+extern u8 gExpandedPlaceholder_Blue[];
 extern u8 gExpandedPlaceholder_Green[];
+extern u8 gExpandedPlaceholder_Brendan[];
+extern u8 gExpandedPlaceholder_May[];
 
 u8 *StringCopy10(u8 *dest, const u8 *src)
 {
@@ -382,7 +385,7 @@ static u8 *ExpandPlaceholder_StringVar3(void)
 
 static u8 *ExpandPlaceholder_KunChan(void)
 {
-    if (gSaveBlock2Ptr->playerGender == MALE)
+    if (gSaveBlock2Ptr->avatarGender == MALE)
         return gExpandedPlaceholder_Kun;
     else
         return gExpandedPlaceholder_Chan;
@@ -392,10 +395,16 @@ static u8 *ExpandPlaceholder_RivalName(void)
 {
     if (gSaveBlock1Ptr->rivalName[0] == EOS)
     {
-        if (gSaveBlock2Ptr->playerGender == MALE)
-            return gExpandedPlaceholder_Green;
-        else
+        switch (gSaveBlock2Ptr->avatarChoice)
+        {
+        case BLUE:
             return gExpandedPlaceholder_Red;
+        case RED:
+        case GREEN:
+        case BRENDAN:
+        case MAY:
+            return gExpandedPlaceholder_Blue;
+        }
     }
     else
     {

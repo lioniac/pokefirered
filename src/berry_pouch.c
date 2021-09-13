@@ -619,7 +619,7 @@ static bool8 BerryPouchLoadGfx(void)
         break;
     case 2:
         LoadCompressedPalette(gBerryPouchBgPals, 0, 0x60);
-        if (gSaveBlock2Ptr->playerGender != MALE)
+        if (gSaveBlock2Ptr->avatarGender != MALE)
             LoadCompressedPalette(gBerryPouchBgPal0FemaleOverride, 0, 0x20);
         sResources->data[0]++;
         break;

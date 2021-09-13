@@ -38,6 +38,24 @@ PokemonTower_2F_EventScript_Rival:: @ 81632A7
 	call_if_eq PokemonTower_2F_EventScript_RivalBulbasaur
 	compare VAR_STARTER_MON, 0
 	call_if_eq PokemonTower_2F_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 5
+	call_if_eq PokemonTower_2F_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 4
+	call_if_eq PokemonTower_2F_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 3
+	call_if_eq PokemonTower_2F_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 8
+	call_if_eq PokemonTower_2F_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 7
+	call_if_eq PokemonTower_2F_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 6
+	call_if_eq PokemonTower_2F_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 11
+	call_if_eq PokemonTower_2F_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 10
+	call_if_eq PokemonTower_2F_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 9
+	call_if_eq PokemonTower_2F_EventScript_RivalCharmander
 	msgbox PokemonTower_2F_Text_RivalPostBattle
 	closemessage
 	playbgm MUS_RIVAL_EXIT, 0
@@ -65,24 +83,57 @@ PokemonTower_2F_EventScript_RivalFacePlayerDown:: @ 816334B
 	waitmovement 0
 	return
 
-PokemonTower_2F_EventScript_RivalSquirtle:: @ 816335D
-	trainerbattle_no_intro TRAINER_RIVAL_POKENON_TOWER_SQUIRTLE, PokemonTower_2F_Text_RivalDefeat
+PokemonTower_2F_EventScript_RivalSquirtle::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq PokemonTower_2F_EventScript_RivalBlueSquirtle
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq PokemonTower_2F_EventScript_RivalRedSquirtle
 	return
 
-PokemonTower_2F_EventScript_RivalBulbasaur:: @ 8163368
-	trainerbattle_no_intro TRAINER_RIVAL_POKENON_TOWER_BULBASAUR, PokemonTower_2F_Text_RivalDefeat
+PokemonTower_2F_EventScript_RivalBulbasaur::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq PokemonTower_2F_EventScript_RivalBlueBulbasaur
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq PokemonTower_2F_EventScript_RivalRedBulbasaur
 	return
 
-PokemonTower_2F_EventScript_RivalCharmander:: @ 8163373
-	trainerbattle_no_intro TRAINER_RIVAL_POKENON_TOWER_CHARMANDER, PokemonTower_2F_Text_RivalDefeat
+PokemonTower_2F_EventScript_RivalCharmander::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq PokemonTower_2F_EventScript_RivalBlueCharmander
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq PokemonTower_2F_EventScript_RivalRedCharmander
 	return
 
-PokemonTower_2F_EventScript_RivalExitRight:: @ 816337E
+PokemonTower_2F_EventScript_RivalBlueSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_POKEMON_TOWER_SQUIR, PokemonTower_2F_Text_RivalDefeat
+	return
+
+PokemonTower_2F_EventScript_RivalBlueBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_POKEMON_TOWER_BULBA, PokemonTower_2F_Text_RivalDefeat
+	return
+
+PokemonTower_2F_EventScript_RivalBlueCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_POKEMON_TOWER_CHARM, PokemonTower_2F_Text_RivalDefeat
+	return
+
+PokemonTower_2F_EventScript_RivalRedSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_POKEMON_TOWER_SQUIR, PokemonTower_2F_Text_RivalDefeat
+	return
+
+PokemonTower_2F_EventScript_RivalRedBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_POKEMON_TOWER_BULBA, PokemonTower_2F_Text_RivalDefeat
+	return
+
+PokemonTower_2F_EventScript_RivalRedCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_POKEMON_TOWER_CHARM, PokemonTower_2F_Text_RivalDefeat
+	return
+
+PokemonTower_2F_EventScript_RivalExitRight::
 	applymovement LOCALID_RIVAL, PokemonTower_2F_Movement_RivalExitRight
 	waitmovement 0
 	return
 
-PokemonTower_2F_EventScript_RivalExitDown:: @ 8163389
+PokemonTower_2F_EventScript_RivalExitDown::
 	applymovement LOCALID_RIVAL, PokemonTower_2F_Movement_RivalExitDown
 	waitmovement 0
 	return

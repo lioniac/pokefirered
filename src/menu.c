@@ -395,6 +395,53 @@ s8 Menu_ProcessInputNoWrapAround(void)
     return MENU_NOTHING_CHOSEN;
 }
 
+s8 Menu_ProcessInputAvatarChoice(void)
+{
+    u8 oldPos = sMenu.cursorPos;
+
+    if (JOY_NEW(A_BUTTON))
+    {
+        if (!sMenu.APressMuted)
+            PlaySE(SE_SELECT);
+        return sMenu.cursorPos;
+    }
+    if (JOY_NEW(B_BUTTON))
+    {
+        return MENU_B_PRESSED;
+    }
+    if (JOY_NEW(DPAD_UP))
+    {
+        Menu_MoveCursor(-1);
+        PlaySE(SE_SELECT);
+        if (sMenu.cursorPos == RED)
+            return MENU_SCROLL_RED;
+        if (sMenu.cursorPos == BLUE)
+            return MENU_SCROLL_BLUE;
+        if (sMenu.cursorPos == GREEN)
+            return MENU_SCROLL_GREEN;
+        if (sMenu.cursorPos == BRENDAN)
+            return MENU_SCROLL_BRENDAN;
+        if (sMenu.cursorPos == MAY)
+            return MENU_SCROLL_MAY;
+    }
+    if (JOY_NEW(DPAD_DOWN))
+    {
+        Menu_MoveCursor(1);
+        PlaySE(SE_SELECT);
+        if (sMenu.cursorPos == RED)
+            return MENU_SCROLL_RED;
+        if (sMenu.cursorPos == BLUE)
+            return MENU_SCROLL_BLUE;
+        if (sMenu.cursorPos == GREEN)
+            return MENU_SCROLL_GREEN;
+        if (sMenu.cursorPos == BRENDAN)
+            return MENU_SCROLL_BRENDAN;
+        if (sMenu.cursorPos == MAY)
+            return MENU_SCROLL_MAY;
+    }
+    return MENU_NOTHING_CHOSEN;
+}
+
 s8 Menu_ProcessInput_other(void)
 {
     if (JOY_NEW(A_BUTTON))

@@ -54,6 +54,24 @@ SilphCo_7F_EventScript_RivalScene:: @ 81619D4
 	call_if_eq SilphCo_7F_EventScript_RivalBulbasaur
 	compare VAR_STARTER_MON, 0
 	call_if_eq SilphCo_7F_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 5
+	call_if_eq SilphCo_7F_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 4
+	call_if_eq SilphCo_7F_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 3
+	call_if_eq SilphCo_7F_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 8
+	call_if_eq SilphCo_7F_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 7
+	call_if_eq SilphCo_7F_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 6
+	call_if_eq SilphCo_7F_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 11
+	call_if_eq SilphCo_7F_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 10
+	call_if_eq SilphCo_7F_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 9
+	call_if_eq SilphCo_7F_EventScript_RivalCharmander
 	msgbox SilphCo_7F_Text_RivalPostBattle
 	closemessage
 	playbgm MUS_RIVAL_EXIT, 0
@@ -78,16 +96,49 @@ SilphCo_7F_EventScript_RivalApproachTop:: @ 8161A73
 SilphCo_7F_EventScript_RivalApproachBottom:: @ 8161A7F
 	return
 
-SilphCo_7F_EventScript_RivalSquirtle:: @ 8161A80
-	trainerbattle_no_intro TRAINER_RIVAL_SILPH_SQUIRTLE, SilphCo_7F_Text_RivalDefeat
+SilphCo_7F_EventScript_RivalSquirtle::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq SilphCo_7F_EventScript_RivalBlueSquirtle
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq SilphCo_7F_EventScript_RivalRedSquirtle
 	return
 
-SilphCo_7F_EventScript_RivalBulbasaur:: @ 8161A8B
-	trainerbattle_no_intro TRAINER_RIVAL_SILPH_BULBASAUR, SilphCo_7F_Text_RivalDefeat
+SilphCo_7F_EventScript_RivalBulbasaur::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq SilphCo_7F_EventScript_RivalBlueBulbasaur
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq SilphCo_7F_EventScript_RivalRedBulbasaur
 	return
 
-SilphCo_7F_EventScript_RivalCharmander:: @ 8161A96
-	trainerbattle_no_intro TRAINER_RIVAL_SILPH_CHARMANDER, SilphCo_7F_Text_RivalDefeat
+SilphCo_7F_EventScript_RivalCharmander::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq SilphCo_7F_EventScript_RivalBlueCharmander
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq SilphCo_7F_EventScript_RivalRedCharmander
+	return
+
+SilphCo_7F_EventScript_RivalBlueSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_SILPH_SQUIR, SilphCo_7F_Text_RivalDefeat
+	return
+
+SilphCo_7F_EventScript_RivalBlueBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_SILPH_BULBA, SilphCo_7F_Text_RivalDefeat
+	return
+
+SilphCo_7F_EventScript_RivalBlueCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_SILPH_CHARM, SilphCo_7F_Text_RivalDefeat
+	return
+
+SilphCo_7F_EventScript_RivalRedSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_SILPH_SQUIR, SilphCo_7F_Text_RivalDefeat
+	return
+
+SilphCo_7F_EventScript_RivalRedBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_SILPH_BULBA, SilphCo_7F_Text_RivalDefeat
+	return
+
+SilphCo_7F_EventScript_RivalRedCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_SILPH_CHARM, SilphCo_7F_Text_RivalDefeat
 	return
 
 SilphCo_7F_EventScript_RivalExitTop:: @ 8161AA1

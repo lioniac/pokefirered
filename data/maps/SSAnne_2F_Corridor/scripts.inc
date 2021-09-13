@@ -45,6 +45,24 @@ SSAnne_2F_Corridor_EventScript_RivalTrigger:: @ 8160903
 	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBulbasaur
 	compare VAR_STARTER_MON, 0
 	call_if_eq SSAnne_2F_Corridor_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 5
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 4
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 3
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 8
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 7
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 6
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalCharmander
+	compare VAR_STARTER_MON, 11
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalSquirtle
+	compare VAR_STARTER_MON, 10
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBulbasaur
+	compare VAR_STARTER_MON, 9
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalCharmander
 	msgbox SSAnne_2F_Corridor_Text_RivalPostBattle
 	closemessage
 	delay 10
@@ -78,16 +96,49 @@ SSAnne_2F_Corridor_EventScript_RivalApproachRight:: @ 81609CA
 	waitmovement 0
 	return
 
-SSAnne_2F_Corridor_EventScript_RivalSquirtle:: @ 81609DC
-	trainerbattle_no_intro TRAINER_RIVAL_SS_ANNE_SQUIRTLE, SSAnne_2F_Corridor_Text_RivalDefeat
+SSAnne_2F_Corridor_EventScript_RivalSquirtle::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBlueSquirtle
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalRedSquirtle
 	return
 
-SSAnne_2F_Corridor_EventScript_RivalBulbasaur:: @ 81609E7
-	trainerbattle_no_intro TRAINER_RIVAL_SS_ANNE_BULBASAUR, SSAnne_2F_Corridor_Text_RivalDefeat
+SSAnne_2F_Corridor_EventScript_RivalBulbasaur::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBlueBulbasaur
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalRedBulbasaur
 	return
 
-SSAnne_2F_Corridor_EventScript_RivalCharmander:: @ 81609F2
-	trainerbattle_no_intro TRAINER_RIVAL_SS_ANNE_CHARMANDER, SSAnne_2F_Corridor_Text_RivalDefeat
+SSAnne_2F_Corridor_EventScript_RivalCharmander::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalBlueCharmander
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq SSAnne_2F_Corridor_EventScript_RivalRedCharmander
+	return
+
+SSAnne_2F_Corridor_EventScript_RivalBlueSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_SS_ANNE_SQUIR, SSAnne_2F_Corridor_Text_RivalDefeat
+	return
+
+SSAnne_2F_Corridor_EventScript_RivalBlueBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_SS_ANNE_BULBA, SSAnne_2F_Corridor_Text_RivalDefeat
+	return
+
+SSAnne_2F_Corridor_EventScript_RivalBlueCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_SS_ANNE_CHARM, SSAnne_2F_Corridor_Text_RivalDefeat
+	return
+
+SSAnne_2F_Corridor_EventScript_RivalRedSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_SS_ANNE_SQUIR, SSAnne_2F_Corridor_Text_RivalDefeat
+	return
+
+SSAnne_2F_Corridor_EventScript_RivalRedBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_SS_ANNE_BULBA, SSAnne_2F_Corridor_Text_RivalDefeat
+	return
+
+SSAnne_2F_Corridor_EventScript_RivalRedCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_SS_ANNE_CHARM, SSAnne_2F_Corridor_Text_RivalDefeat
 	return
 
 SSAnne_2F_Corridor_EventScript_RivalExitLeft:: @ 81609FD

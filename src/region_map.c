@@ -384,7 +384,10 @@ static void SetFlyWarpDestination(u16);
 static const u16 sTopBar_Pal[] = INCBIN_U16("graphics/region_map/top_bar.gbapal"); // Palette for the top bar and dynamic text color
 static const u16 sMapCursor_Pal[] = INCBIN_U16("graphics/region_map/cursor.gbapal");
 static const u16 sPlayerIcon_RedPal[] = INCBIN_U16("graphics/region_map/player_icon_red.gbapal");
-static const u16 sPlayerIcon_LeafPal[] = INCBIN_U16("graphics/region_map/player_icon_leaf.gbapal");
+static const u16 sPlayerIcon_BluePal[] = INCBIN_U16("graphics/region_map/player_icon_blue.gbapal");
+static const u16 sPlayerIcon_GreenPal[] = INCBIN_U16("graphics/region_map/player_icon_leaf.gbapal");
+static const u16 sPlayerIcon_BrendanPal[] = INCBIN_U16("graphics/region_map/player_icon_brendan.gbapal");
+static const u16 sPlayerIcon_MayPal[] = INCBIN_U16("graphics/region_map/player_icon_may.gbapal");
 static const u16 sMiscIcon_Pal[] = INCBIN_U16("graphics/region_map/misc_icon.gbapal"); // For dungeon and fly icons
 static const u16 sRegionMap_Pal[] = INCBIN_U16("graphics/region_map/region_map.gbapal");
 static const u16 unref_83EF37C[] = {
@@ -399,7 +402,10 @@ static const u32 sSwitchMapCursorLeft_Gfx[] = INCBIN_U32("graphics/region_map/sw
 static const u32 sSwitchMapCursorRight_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_cursor_right.4bpp.lz");
 static const u32 sMapCursor_Gfx[] = INCBIN_U32("graphics/region_map/cursor.4bpp.lz");
 static const u32 sPlayerIcon_Red[] = INCBIN_U32("graphics/region_map/player_icon_red.4bpp.lz");
-static const u32 sPlayerIcon_Leaf[] = INCBIN_U32("graphics/region_map/player_icon_leaf.4bpp.lz");
+static const u32 sPlayerIcon_Blue[] = INCBIN_U32("graphics/region_map/player_icon_blue.4bpp.lz");
+static const u32 sPlayerIcon_Green[] = INCBIN_U32("graphics/region_map/player_icon_leaf.4bpp.lz");
+static const u32 sPlayerIcon_Brendan[] = INCBIN_U32("graphics/region_map/player_icon_brendan.4bpp.lz");
+static const u32 sPlayerIcon_May[] = INCBIN_U32("graphics/region_map/player_icon_may.4bpp.lz");
 static const u32 sRegionMap_Gfx[] = INCBIN_U32("graphics/region_map/region_map.4bpp.lz");
 static const u32 sMapEdge_Gfx[] = INCBIN_U32("graphics/region_map/map_edge.4bpp.lz");
 static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_menu.bin.lz");
@@ -3812,10 +3818,24 @@ static u8 GetSelectedMapSection(u8 whichMap, u8 layer, s16 y, s16 x)
 static void CreatePlayerIcon(u16 tileTag, u16 palTag)
 {
     sPlayerIcon = AllocZeroed(sizeof(struct PlayerIcon));
-    if (gSaveBlock2Ptr->playerGender == FEMALE)
-        LZ77UnCompWram(sPlayerIcon_Leaf, sPlayerIcon->tiles);
-    else
+    switch (gSaveBlock2Ptr->avatarChoice)
+    {
+    case RED:
         LZ77UnCompWram(sPlayerIcon_Red, sPlayerIcon->tiles);
+        break;
+    case BLUE:
+        LZ77UnCompWram(sPlayerIcon_Blue, sPlayerIcon->tiles);
+        break;
+    case GREEN:
+        LZ77UnCompWram(sPlayerIcon_Green, sPlayerIcon->tiles);
+        break;
+    case BRENDAN:
+        LZ77UnCompWram(sPlayerIcon_Brendan, sPlayerIcon->tiles);
+        break;
+    case MAY:
+        LZ77UnCompWram(sPlayerIcon_May, sPlayerIcon->tiles);
+        break;
+    }
     sPlayerIcon->tileTag = tileTag;
     sPlayerIcon->palTag = palTag;
     sPlayerIcon->x = GetMapCursorX();
@@ -3845,8 +3865,21 @@ static void CreatePlayerIconSprite(void)
         .callback = SpriteCallbackDummy
     };
 
-    if (gSaveBlock2Ptr->playerGender == FEMALE)
-        spritePalette.data = sPlayerIcon_LeafPal;
+    switch (gSaveBlock2Ptr->avatarChoice)
+    {
+    case BLUE:
+        spritePalette.data = sPlayerIcon_BluePal;
+        break;
+    case GREEN:
+        spritePalette.data = sPlayerIcon_GreenPal;
+        break;
+    case BRENDAN:
+        spritePalette.data = sPlayerIcon_BrendanPal;
+        break;
+    case MAY:
+        spritePalette.data = sPlayerIcon_MayPal;
+        break;
+    }
 
     LoadSpriteSheet(&spriteSheet);
     LoadSpritePalette(&spritePalette);

@@ -201,14 +201,14 @@ static u16 GetCurrentMapWildMonHeaderId(void)
             }
             else
             {
-                if (gWildMonHeaders[i+(gSaveBlock1Ptr->season * 2)].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
-                    gWildMonHeaders[i+(gSaveBlock1Ptr->season * 2)].mapNum == gSaveBlock1Ptr->location.mapNum)
+                if (gWildMonHeaders[i+(gSaveBlock2Ptr->season * 2)].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
+                    gWildMonHeaders[i+(gSaveBlock2Ptr->season * 2)].mapNum == gSaveBlock1Ptr->location.mapNum)
                 {
                     RtcCalcLocalTime();
                     if (gLocalTime.hours >= 18 || gLocalTime.hours < 6)
-                        i += (gSaveBlock1Ptr->season * 2) + 1;
+                        i += (gSaveBlock2Ptr->season * 2) + 1;
                     else
-                        i += (gSaveBlock1Ptr->season * 2);
+                        i += (gSaveBlock2Ptr->season * 2);
                 }
             }
             if (!UnlockedTanobyOrAreNotInTanoby())

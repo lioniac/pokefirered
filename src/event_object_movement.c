@@ -471,6 +471,12 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_RS_GROUDON                  0x1119
 #define OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION       0x111A
 #define OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW         0x111B
+#define OBJ_EVENT_PAL_TAG_PLAYER_BLUE                 0x1130
+#define OBJ_EVENT_PAL_TAG_PLAYER_BLUE_REFLECTION      0x1131
+#define OBJ_EVENT_PAL_TAG_PLAYER_BRENDAN              0x1132
+#define OBJ_EVENT_PAL_TAG_PLAYER_BRENDAN_REFLECTION   0x1133
+#define OBJ_EVENT_PAL_TAG_PLAYER_MAY                  0x1134
+#define OBJ_EVENT_PAL_TAG_PLAYER_MAY_REFLECTION       0x1135
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 // Dynamic Overworld Palettes
@@ -509,7 +515,6 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_32 0x1121
 #define OBJ_EVENT_PAL_TAG_33 0x1122
 #define OBJ_EVENT_PAL_TAG_34 0x1123
-#define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 // END
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -539,6 +544,12 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Meteorite,               OBJ_EVENT_PAL_TAG_METEORITE},
     {gObjectEventPal_SSAnne,                  OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
+    {gObjectEventPal_Blue,                    OBJ_EVENT_PAL_TAG_PLAYER_BLUE},
+    {gObjectEventPal_BlueReflection,          OBJ_EVENT_PAL_TAG_PLAYER_BLUE_REFLECTION},
+    {gObjectEventPal_Brendan,                 OBJ_EVENT_PAL_TAG_PLAYER_BRENDAN},
+    {gObjectEventPal_BrendanReflection,       OBJ_EVENT_PAL_TAG_PLAYER_BRENDAN_REFLECTION},
+    {gObjectEventPal_May,                     OBJ_EVENT_PAL_TAG_PLAYER_MAY},
+    {gObjectEventPal_MayReflection,           OBJ_EVENT_PAL_TAG_PLAYER_MAY_REFLECTION},
     {},
 };
 
@@ -2037,14 +2048,8 @@ void LoadObjectEventPalette(u16 paletteTag)
 {
     u16 i = FindObjectEventPaletteIndexByTag(paletteTag);
 
-#ifdef BUGFIX
     if (sObjectEventSpritePalettes[i].tag != OBJ_EVENT_PAL_TAG_NONE)
-#else
-    if (i != OBJ_EVENT_PAL_TAG_NONE) // always true
-#endif
-    {
         TryLoadObjectPalette(&sObjectEventSpritePalettes[i]);
-    }
 }
 
 void Unused_LoadObjectEventPaletteSet(u16 *paletteTags)

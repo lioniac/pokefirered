@@ -1,84 +1,84 @@
 #ifndef GUARD_CONSTANTS_OPPONENTS_H
 #define GUARD_CONSTANTS_OPPONENTS_H
 
-#define TRAINER_NONE                               0
-#define TRAINER_AQUA_LEADER_1                      1
-#define TRAINER_TEAM_AQUA_1                        2
-#define TRAINER_TEAM_AQUA_2                        3
-#define TRAINER_AROMA_LADY_1                       4
-#define TRAINER_RUIN_MANIAC_1                      5
-#define TRAINER_INTERVIEWER_1                      6
-#define TRAINER_TUBER_1                            7
-#define TRAINER_TUBER_2                            8
-#define TRAINER_COOLTRAINER_1                      9
-#define TRAINER_COOLTRAINER_2                     10
-#define TRAINER_HEX_MANIAC_1                      11
-#define TRAINER_LADY_1                            12
-#define TRAINER_BEAUTY_1                          13
-#define TRAINER_RICH_BOY_1                        14
-#define TRAINER_POKEMANIAC_1                      15
-#define TRAINER_SWIMMER_MALE_1                    16
-#define TRAINER_BLACK_BELT_1                      17
-#define TRAINER_GUITARIST_1                       18
-#define TRAINER_KINDLER_1                         19
-#define TRAINER_CAMPER_1                          20
-#define TRAINER_BUG_MANIAC_1                      21
-#define TRAINER_PSYCHIC_1                         22
-#define TRAINER_PSYCHIC_2                         23
-#define TRAINER_GENTLEMAN_1                       24
-#define TRAINER_ELITE_FOUR_SIDNEY                 25
-#define TRAINER_ELITE_FOUR_PHOEBE                 26
-#define TRAINER_LEADER_ROXANNE                    27
-#define TRAINER_LEADER_BRAWLY                     28
-#define TRAINER_LEADER_TATE_LIZA                  29
-#define TRAINER_SCHOOL_KID_1                      30
-#define TRAINER_SCHOOL_KID_2                      31
-#define TRAINER_SR_AND_JR_1                       32
-#define TRAINER_POKEFAN_1                         33
-#define TRAINER_POKEFAN_2                         34
-#define TRAINER_EXPERT_1                          35
-#define TRAINER_EXPERT_2                          36
-#define TRAINER_YOUNGSTER_1                       37
-#define TRAINER_CHAMPION_1                        38
-#define TRAINER_FISHERMAN_1                       39
-#define TRAINER_TRIATHLETE_1                      40
-#define TRAINER_TRIATHLETE_2                      41
-#define TRAINER_TRIATHLETE_3                      42
-#define TRAINER_TRIATHLETE_4                      43
-#define TRAINER_TRIATHLETE_5                      44
-#define TRAINER_TRIATHLETE_6                      45
-#define TRAINER_DRAGON_TAMER_1                    46
-#define TRAINER_BIRD_KEEPER_1                     47
-#define TRAINER_NINJA_BOY_1                       48
-#define TRAINER_BATTLE_GIRL_1                     49
-#define TRAINER_PARASOL_LADY_1                    50
-#define TRAINER_SWIMMER_FEMALE_1                  51
-#define TRAINER_PICNICKER_1                       52
-#define TRAINER_TWINS_1                           53
-#define TRAINER_SAILOR_1                          54
-#define TRAINER_BOARDER_1                         55
-#define TRAINER_BOARDER_2                         56
-#define TRAINER_COLLECTOR_1                       57
-#define TRAINER_PKMN_TRAINER_2                    58
-#define TRAINER_PKMN_TRAINER_3                    59
-#define TRAINER_PKMN_TRAINER_4                    60
-#define TRAINER_PKMN_TRAINER_5                    61
-#define TRAINER_PKMN_TRAINER_6                    62
-#define TRAINER_PKMN_TRAINER_7                    63
-#define TRAINER_PKMN_TRAINER_8                    64
-#define TRAINER_PKMN_BREEDER_1                    65
-#define TRAINER_PKMN_BREEDER_2                    66
-#define TRAINER_PKMN_RANGER_1                     67
-#define TRAINER_PKMN_RANGER_2                     68
-#define TRAINER_MAGMA_LEADER_1                    69
-#define TRAINER_TEAM_MAGMA_1                      70
-#define TRAINER_TEAM_MAGMA_2                      71
-#define TRAINER_LASS_1                            72
-#define TRAINER_BUG_CATCHER_1                     73
-#define TRAINER_HIKER_1                           74
-#define TRAINER_YOUNG_COUPLE_1                    75
-#define TRAINER_OLD_COUPLE_1                      76
-#define TRAINER_SIS_AND_BRO_1                     77
+#define TRAINER_NONE                               0 // UNUSED
+#define TRAINER_AQUA_LEADER_1                      1 // UNUSED
+#define TRAINER_TEAM_AQUA_1                        2 // UNUSED
+#define TRAINER_TEAM_AQUA_2                        3 // UNUSED
+#define TRAINER_AROMA_LADY_1                       4 // UNUSED
+#define TRAINER_RUIN_MANIAC_1                      5 // UNUSED
+#define TRAINER_INTERVIEWER_1                      6 // UNUSED
+#define TRAINER_TUBER_1                            7 // UNUSED
+#define TRAINER_TUBER_2                            8 // UNUSED
+#define TRAINER_COOLTRAINER_1                      9 // UNUSED
+#define TRAINER_COOLTRAINER_2                     10 // UNUSED
+#define TRAINER_HEX_MANIAC_1                      11 // UNUSED
+#define TRAINER_LADY_1                            12 // UNUSED
+#define TRAINER_BEAUTY_1                          13 // UNUSED
+#define TRAINER_RICH_BOY_1                        14 // UNUSED
+#define TRAINER_POKEMANIAC_1                      15 // UNUSED
+#define TRAINER_SWIMMER_MALE_1                    16 // UNUSED
+#define TRAINER_BLACK_BELT_1                      17 // UNUSED
+#define TRAINER_GUITARIST_1                       18 // UNUSED
+#define TRAINER_KINDLER_1                         19 // UNUSED
+#define TRAINER_CAMPER_1                          20 // UNUSED
+#define TRAINER_BUG_MANIAC_1                      21 // UNUSED
+#define TRAINER_PSYCHIC_1                         22 // UNUSED
+#define TRAINER_PSYCHIC_2                         23 // UNUSED
+#define TRAINER_GENTLEMAN_1                       24 // UNUSED
+#define TRAINER_ELITE_FOUR_SIDNEY                 25 // UNUSED
+#define TRAINER_ELITE_FOUR_PHOEBE                 26 // UNUSED
+#define TRAINER_LEADER_ROXANNE                    27 // UNUSED
+#define TRAINER_LEADER_BRAWLY                     28 // UNUSED
+#define TRAINER_LEADER_TATE_LIZA                  29 // UNUSED
+#define TRAINER_SCHOOL_KID_1                      30 // UNUSED
+#define TRAINER_SCHOOL_KID_2                      31 // UNUSED
+#define TRAINER_SR_AND_JR_1                       32 // UNUSED
+#define TRAINER_POKEFAN_1                         33 // UNUSED
+#define TRAINER_POKEFAN_2                         34 // UNUSED
+#define TRAINER_EXPERT_1                          35 // UNUSED
+#define TRAINER_EXPERT_2                          36 // UNUSED
+#define TRAINER_YOUNGSTER_1                       37 // UNUSED
+#define TRAINER_CHAMPION_1                        38 // UNUSED
+#define TRAINER_FISHERMAN_1                       39 // UNUSED
+#define TRAINER_TRIATHLETE_1                      40 // UNUSED
+#define TRAINER_TRIATHLETE_2                      41 // UNUSED
+#define TRAINER_TRIATHLETE_3                      42 // UNUSED
+#define TRAINER_TRIATHLETE_4                      43 // UNUSED
+#define TRAINER_TRIATHLETE_5                      44 // UNUSED
+#define TRAINER_TRIATHLETE_6                      45 // UNUSED
+#define TRAINER_DRAGON_TAMER_1                    46 // UNUSED
+#define TRAINER_BIRD_KEEPER_1                     47 // UNUSED
+#define TRAINER_NINJA_BOY_1                       48 // UNUSED
+#define TRAINER_BATTLE_GIRL_1                     49 // UNUSED
+#define TRAINER_PARASOL_LADY_1                    50 // UNUSED
+#define TRAINER_RIVAL_RED_OAKS_LAB_SQUIR          51 // TRAINER_SWIMMER_FEMALE_1
+#define TRAINER_RIVAL_RED_OAKS_LAB_BULBA          52 //
+#define TRAINER_RIVAL_RED_OAKS_LAB_CHARM          53 //
+#define TRAINER_RIVAL_RED_ROUTE22_EARLY_SQUIR     54 //
+#define TRAINER_RIVAL_RED_ROUTE22_EARLY_BULBA     55 //
+#define TRAINER_RIVAL_RED_ROUTE22_EARLY_CHARM     56 //
+#define TRAINER_RIVAL_RED_CERULEAN_SQUIR          57 //
+#define TRAINER_RIVAL_RED_CERULEAN_BULBA          58 //
+#define TRAINER_RIVAL_RED_CERULEAN_CHARM          59 //
+#define TRAINER_RIVAL_RED_SS_ANNE_SQUIR           60 //
+#define TRAINER_RIVAL_RED_SS_ANNE_BULBA           61 //
+#define TRAINER_RIVAL_RED_SS_ANNE_CHARM           62 //
+#define TRAINER_RIVAL_RED_POKEMON_TOWER_SQUIR     63 //
+#define TRAINER_RIVAL_RED_POKEMON_TOWER_BULBA     64 //
+#define TRAINER_RIVAL_RED_POKEMON_TOWER_CHARM     65 //
+#define TRAINER_RIVAL_RED_SILPH_SQUIR             66 //
+#define TRAINER_RIVAL_RED_SILPH_BULBA             67 //
+#define TRAINER_RIVAL_RED_SILPH_CHARM             68 //
+#define TRAINER_RIVAL_RED_ROUTE22_LATE_SQUIR      69 //
+#define TRAINER_RIVAL_RED_ROUTE22_LATE_BULBA      70 //
+#define TRAINER_RIVAL_RED_ROUTE22_LATE_CHARM      71 //
+#define TRAINER_CHAMPION_RED_FIRST_SQUIR          72 //
+#define TRAINER_CHAMPION_RED_FIRST_BULBA          73 //
+#define TRAINER_CHAMPION_RED_FIRST_CHARM          74 //
+#define TRAINER_CHAMPION_RED_REMATCH_SQUIR        75 //
+#define TRAINER_CHAMPION_RED_REMATCH_BULBA        76 //
+#define TRAINER_CHAMPION_RED_REMATCH_CHARM        77 // TRAINER_SIS_AND_BRO_1
 #define TRAINER_AQUA_ADMIN_MATT                   78
 #define TRAINER_AQUA_ADMIN_SHELLY                 79
 #define TRAINER_MAGMA_ADMIN_TABITHA               80
@@ -114,7 +114,7 @@
 #define TRAINER_BUG_CATCHER_CALE                 110
 #define TRAINER_BUG_CATCHER_KEIGO                111
 #define TRAINER_BUG_CATCHER_ELIJAH               112
-#define TRAINER_BUG_CATCHER_2                    113
+#define TRAINER_BUG_CATCHER_2                    113 // UNUSED
 #define TRAINER_BUG_CATCHER_BRENT                114
 #define TRAINER_BUG_CATCHER_CONNER               115
 #define TRAINER_LASS_JANICE                      116
@@ -125,7 +125,7 @@
 #define TRAINER_LASS_IRIS                        121
 #define TRAINER_LASS_RELI                        122
 #define TRAINER_LASS_ALI                         123
-#define TRAINER_LASS_2                           124
+#define TRAINER_LASS_2                           124 // UNUSED
 #define TRAINER_LASS_HALEY                       125
 #define TRAINER_LASS_ANN                         126
 #define TRAINER_LASS_DAWN                        127
@@ -148,7 +148,7 @@
 #define TRAINER_CAMPER_ETHAN                     144
 #define TRAINER_CAMPER_RICKY                     145
 #define TRAINER_CAMPER_JEFF                      146
-#define TRAINER_CAMPER_2                         147
+#define TRAINER_CAMPER_2                         147 // UNUSED
 #define TRAINER_CAMPER_CHRIS                     148
 #define TRAINER_CAMPER_DREW                      149
 #define TRAINER_PICNICKER_DIANA                  150
@@ -175,9 +175,9 @@
 #define TRAINER_SUPER_NERD_AIDAN                 171
 #define TRAINER_SUPER_NERD_GLENN                 172
 #define TRAINER_SUPER_NERD_LESLIE                173
-#define TRAINER_SUPER_NERD_1                     174
-#define TRAINER_SUPER_NERD_2                     175
-#define TRAINER_SUPER_NERD_3                     176
+#define TRAINER_SUPER_NERD_1                     174 // UNUSED
+#define TRAINER_SUPER_NERD_2                     175 // UNUSED
+#define TRAINER_SUPER_NERD_3                     176 // UNUSED
 #define TRAINER_SUPER_NERD_ERIK                  177
 #define TRAINER_SUPER_NERD_AVERY                 178
 #define TRAINER_SUPER_NERD_DEREK                 179
@@ -211,14 +211,14 @@
 #define TRAINER_BIKER_LUKAS                      207
 #define TRAINER_BIKER_ISAAC                      208
 #define TRAINER_BIKER_GERALD                     209
-#define TRAINER_BURGLAR_1                        210
-#define TRAINER_BURGLAR_2                        211
-#define TRAINER_BURGLAR_3                        212
+#define TRAINER_BURGLAR_1                        210 // UNUSED
+#define TRAINER_BURGLAR_2                        211 // UNUSED
+#define TRAINER_BURGLAR_3                        212 // UNUSED
 #define TRAINER_BURGLAR_QUINN                    213
 #define TRAINER_BURGLAR_RAMON                    214
 #define TRAINER_BURGLAR_DUSTY                    215
 #define TRAINER_BURGLAR_ARNIE                    216
-#define TRAINER_BURGLAR_4                        217
+#define TRAINER_BURGLAR_4                        217 // UNUSED
 #define TRAINER_BURGLAR_SIMON                    218
 #define TRAINER_BURGLAR_LEWIS                    219
 #define TRAINER_ENGINEER_BAILY                   220
@@ -264,7 +264,7 @@
 #define TRAINER_GAMER_DIRK                       260
 #define TRAINER_GAMER_DARIAN                     261
 #define TRAINER_GAMER_STAN                       262
-#define TRAINER_GAMER_1                          263
+#define TRAINER_GAMER_1                          263 // UNUSED
 #define TRAINER_GAMER_RICH                       264
 #define TRAINER_BEAUTY_BRIDGET                   265
 #define TRAINER_BEAUTY_TAMIA                     266
@@ -327,15 +327,15 @@
 #define TRAINER_BLACK_BELT_KIYO                  323
 #define TRAINER_BLACK_BELT_TAKASHI               324
 #define TRAINER_BLACK_BELT_DAISUKE               325
-#define TRAINER_RIVAL_OAKS_LAB_SQUIRTLE          326
-#define TRAINER_RIVAL_OAKS_LAB_BULBASAUR         327
-#define TRAINER_RIVAL_OAKS_LAB_CHARMANDER        328
-#define TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE     329
-#define TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR    330
-#define TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER   331
-#define TRAINER_RIVAL_CERULEAN_SQUIRTLE          332
-#define TRAINER_RIVAL_CERULEAN_BULBASAUR         333
-#define TRAINER_RIVAL_CERULEAN_CHARMANDER        334
+#define TRAINER_RIVAL_BLUE_OAKS_LAB_SQUIR        326
+#define TRAINER_RIVAL_BLUE_OAKS_LAB_BULBA        327
+#define TRAINER_RIVAL_BLUE_OAKS_LAB_CHARM        328
+#define TRAINER_RIVAL_BLUE_ROUTE22_EARLY_SQUIR   329
+#define TRAINER_RIVAL_BLUE_ROUTE22_EARLY_BULBA   330
+#define TRAINER_RIVAL_BLUE_ROUTE22_EARLY_CHARM   331
+#define TRAINER_RIVAL_BLUE_CERULEAN_SQUIR        332
+#define TRAINER_RIVAL_BLUE_CERULEAN_BULBA        333
+#define TRAINER_RIVAL_BLUE_CERULEAN_CHARM        334
 #define TRAINER_SCIENTIST_TED                    335
 #define TRAINER_SCIENTIST_CONNOR                 336
 #define TRAINER_SCIENTIST_JERRY                  337
@@ -427,21 +427,21 @@
 #define TRAINER_GENTLEMAN_TUCKER                 423
 #define TRAINER_GENTLEMAN_NORTON                 424
 #define TRAINER_GENTLEMAN_WALTER                 425
-#define TRAINER_RIVAL_SS_ANNE_SQUIRTLE           426
-#define TRAINER_RIVAL_SS_ANNE_BULBASAUR          427
-#define TRAINER_RIVAL_SS_ANNE_CHARMANDER         428
-#define TRAINER_RIVAL_POKENON_TOWER_SQUIRTLE     429
-#define TRAINER_RIVAL_POKENON_TOWER_BULBASAUR    430
-#define TRAINER_RIVAL_POKENON_TOWER_CHARMANDER   431
-#define TRAINER_RIVAL_SILPH_SQUIRTLE             432
-#define TRAINER_RIVAL_SILPH_BULBASAUR            433
-#define TRAINER_RIVAL_SILPH_CHARMANDER           434
-#define TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE      435
-#define TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR     436
-#define TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER    437
-#define TRAINER_CHAMPION_FIRST_SQUIRTLE          438
-#define TRAINER_CHAMPION_FIRST_BULBASAUR         439
-#define TRAINER_CHAMPION_FIRST_CHARMANDER        440
+#define TRAINER_RIVAL_BLUE_SS_ANNE_SQUIR         426
+#define TRAINER_RIVAL_BLUE_SS_ANNE_BULBA         427
+#define TRAINER_RIVAL_BLUE_SS_ANNE_CHARM         428
+#define TRAINER_RIVAL_BLUE_POKEMON_TOWER_SQUIR   429
+#define TRAINER_RIVAL_BLUE_POKEMON_TOWER_BULBA   430
+#define TRAINER_RIVAL_BLUE_POKEMON_TOWER_CHARM   431
+#define TRAINER_RIVAL_BLUE_SILPH_SQUIR           432
+#define TRAINER_RIVAL_BLUE_SILPH_BULBA           433
+#define TRAINER_RIVAL_BLUE_SILPH_CHARM           434
+#define TRAINER_RIVAL_BLUE_ROUTE22_LATE_SQUIR    435
+#define TRAINER_RIVAL_BLUE_ROUTE22_LATE_BULBA    436
+#define TRAINER_RIVAL_BLUE_ROUTE22_LATE_CHARM    437
+#define TRAINER_CHAMPION_BLUE_FIRST_SQUIR        438
+#define TRAINER_CHAMPION_BLUE_FIRST_BULBA        439
+#define TRAINER_CHAMPION_BLUE_FIRST_CHARM        440
 #define TRAINER_CHANNELER_PATRICIA               441
 #define TRAINER_CHANNELER_CARLY                  442
 #define TRAINER_CHANNELER_HOPE                   443
@@ -740,9 +740,9 @@
 #define TRAINER_ELITE_FOUR_BRUNO_2               736
 #define TRAINER_ELITE_FOUR_AGATHA_2              737
 #define TRAINER_ELITE_FOUR_LANCE_2               738
-#define TRAINER_CHAMPION_REMATCH_SQUIRTLE        739
-#define TRAINER_CHAMPION_REMATCH_BULBASAUR       740
-#define TRAINER_CHAMPION_REMATCH_CHARMANDER      741
+#define TRAINER_CHAMPION_BLUE_REMATCH_SQUIR      739
+#define TRAINER_CHAMPION_BLUE_REMATCH_BULBA      740
+#define TRAINER_CHAMPION_BLUE_REMATCH_CHARM      741
 #define TRAINER_CUE_BALL_PAXTON                  742
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 

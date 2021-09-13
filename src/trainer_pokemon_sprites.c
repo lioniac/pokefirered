@@ -301,17 +301,24 @@ u16 CreateTrainerCardTrainerPicSprite(u16 species, bool8 isFrontPic, u16 destX, 
     return sub_810C0C0(species, 0, 0, isFrontPic, destX, destY, paletteSlot, windowId, TRUE);
 }
 
-u16 PlayerGenderToFrontTrainerPicId_Debug(u8 gender, bool8 getClass)
+u16 PlayerGenderToFrontTrainerPicId_Debug(u8 character, bool8 getClass)
 {
     if (getClass == TRUE)
     {
-        switch (gender)
+        switch (character)
         {
         default:
-            return gFacilityClassToPicIndex[0x87];
-        case MALE:
+        case RED:
             return gFacilityClassToPicIndex[0x86];
+        case BLUE:
+            return gFacilityClassToPicIndex[0x7C];
+        case GREEN:
+            return gFacilityClassToPicIndex[0x87];
+        case BRENDAN:
+            return gFacilityClassToPicIndex[0x84];
+        case MAY:
+            return gFacilityClassToPicIndex[0x85];
         }
     }
-    return gender;
+    return character;
 }

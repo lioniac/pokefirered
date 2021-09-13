@@ -453,12 +453,16 @@ static const struct WindowTemplate sCreditsWindowTemplate = {
     .baseBlock = 0x008
 };
 
-static const u16 sMalePlayerSpritePal[] = INCBIN_U16("graphics/credits/unk_8410E10.gbapal");
-static const u32 sMalePlayerSpriteGfx[] = INCBIN_U32("graphics/credits/unk_8410E30.4bpp.lz");
-static const u16 sFemalePlayerSpritePal[] = INCBIN_U16("graphics/credits/unk_8411BF8.gbapal");
-static const u32 sFemalePlayerSpriteGfx[] = INCBIN_U32("graphics/credits/unk_8411C18.4bpp.lz");
-static const u16 sRivalSpritePal[] = INCBIN_U16("graphics/credits/unk_84129A0.gbapal");
-static const u32 sRivalSpriteGfx[] = INCBIN_U32("graphics/credits/unk_84129C0.4bpp.lz");
+static const u16 sPlayerRedSpritePal[] = INCBIN_U16("graphics/credits/unk_8410E10.gbapal");
+static const u32 sPlayerRedSpriteGfx[] = INCBIN_U32("graphics/credits/unk_8410E30.4bpp.lz");
+static const u16 sPlayerBlueSpritePal[] = INCBIN_U16("graphics/credits/credits_blue_pal.gbapal");
+static const u32 sPlayerBlueSpriteGfx[] = INCBIN_U32("graphics/credits/credits_blue_gfx.4bpp.lz");
+static const u16 sPlayerGreenSpritePal[] = INCBIN_U16("graphics/credits/unk_8411BF8.gbapal");
+static const u32 sPlayerGreenSpriteGfx[] = INCBIN_U32("graphics/credits/unk_8411C18.4bpp.lz");
+static const u16 sPlayerBrendanSpritePal[] = INCBIN_U16("graphics/credits/credits_brendan_pal.gbapal");
+static const u32 sPlayerBrendanSpriteGfx[] = INCBIN_U32("graphics/credits/credits_brendan_gfx.4bpp.lz");
+static const u16 sPlayerMaySpritePal[] = INCBIN_U16("graphics/credits/credits_may_pal.gbapal");
+static const u32 sPlayerMaySpriteGfx[] = INCBIN_U32("graphics/credits/credits_may_gfx.4bpp.lz");
 static const u16 sGroundSpritePal_Grass[] = INCBIN_U16("graphics/credits/unk_8413318.gbapal");
 static const u32 sGroundSpriteGfx_Grass[] = INCBIN_U32("graphics/credits/unk_8413338.4bpp.lz");
 static const u16 sGroundSpritePal_Dirt[] = INCBIN_U16("graphics/credits/unk_8413854.gbapal");
@@ -1359,30 +1363,52 @@ static void LoadPlayerOrRivalSprite(u8 whichScene)
         {
         case 0:
             // Player
-            if (gSaveBlock2Ptr->playerGender == MALE)
+            switch (gSaveBlock2Ptr->avatarChoice)
             {
-                sprSheet.data = sMalePlayerSpriteGfx;
+            case RED:
+                sprSheet.data = sPlayerRedSpriteGfx;
                 sprSheet.size = 0x3000;
                 sprSheet.tag = data->playerTilesTag;
                 LoadCompressedSpriteSheet(&sprSheet);
-                LoadPalette(sMalePlayerSpritePal, 0x1F0, 0x20);
-            }
-            else
-            {
-                sprSheet.data = sFemalePlayerSpriteGfx;
+                LoadPalette(sPlayerRedSpritePal, 0x1F0, 0x20);
+                break;
+            case BLUE:
+                sprSheet.data = sPlayerBlueSpriteGfx;
                 sprSheet.size = 0x3000;
                 sprSheet.tag = data->playerTilesTag;
                 LoadCompressedSpriteSheet(&sprSheet);
-                LoadPalette(sFemalePlayerSpritePal, 0x1F0, 0x20);
+                LoadPalette(sPlayerBlueSpritePal, 0x1F0, 0x20);
+                break;
+            case GREEN:
+                sprSheet.data = sPlayerGreenSpriteGfx;
+                sprSheet.size = 0x3000;
+                sprSheet.tag = data->playerTilesTag;
+                LoadCompressedSpriteSheet(&sprSheet);
+                LoadPalette(sPlayerGreenSpritePal, 0x1F0, 0x20);
+                break;
+            case BRENDAN:
+                sprSheet.data = sPlayerBrendanSpriteGfx;
+                sprSheet.size = 0x3000;
+                sprSheet.tag = data->playerTilesTag;
+                LoadCompressedSpriteSheet(&sprSheet);
+                LoadPalette(sPlayerBrendanSpritePal, 0x1F0, 0x20);
+                break;
+            case MAY:
+                sprSheet.data = sPlayerMaySpriteGfx;
+                sprSheet.size = 0x3000;
+                sprSheet.tag = data->playerTilesTag;
+                LoadCompressedSpriteSheet(&sprSheet);
+                LoadPalette(sPlayerMaySpritePal, 0x1F0, 0x20);
+                break;
             }
             break;
         case 1:
             // Rival
-            sprSheet.data = sRivalSpriteGfx;
+            sprSheet.data = (gSaveBlock2Ptr->avatarChoice == BLUE) ? sPlayerRedSpriteGfx : sPlayerBlueSpriteGfx;
             sprSheet.size = 0x3000;
             sprSheet.tag = data->playerTilesTag;
             LoadCompressedSpriteSheet(&sprSheet);
-            LoadPalette(sRivalSpritePal, 0x1F0, 0x20);
+            LoadPalette(((gSaveBlock2Ptr->avatarChoice == BLUE) ? sPlayerRedSpritePal : sPlayerBlueSpritePal), 0x1F0, 0x20);
             break;
         }
         sprTemplate = sPlayerOrRivalSpriteTemplate;

@@ -1107,15 +1107,15 @@ u8 SetRandomWeather(void)
     
     if (FlagGet(FLAG_SEASON_CHANGE))
     {
-        if (gSaveBlock1Ptr->season == 3)
-            gSaveBlock1Ptr->season=0;
+        if (gSaveBlock2Ptr->season == 3)
+            gSaveBlock2Ptr->season=0;
         else
-            gSaveBlock1Ptr->season++;
+            gSaveBlock2Ptr->season++;
 
-        VarSet(VAR_SEASON, gSaveBlock1Ptr->season);
+        VarSet(VAR_SEASON, gSaveBlock2Ptr->season);
 
         //Enforce Season Weather at beginning of each Season
-        switch(gSaveBlock1Ptr->season)
+        switch(gSaveBlock2Ptr->season)
         {
         case SEASON_SPRING:
             weather = WEATHER_SUNNY;
@@ -1146,7 +1146,7 @@ u8 SetRandomWeather(void)
         {
             // 20 possibilities from 0 to 19; 5% each number
             random = Random() % 20;
-            switch (gSaveBlock1Ptr->season)
+            switch (gSaveBlock2Ptr->season)
             {
             case SEASON_SPRING:
                 if (random <= 11)                // 60%

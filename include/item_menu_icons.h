@@ -3,9 +3,14 @@
 
 #include "global.h"
 
-extern const struct CompressedSpriteSheet gSpriteSheet_Backpack;
-extern const struct CompressedSpriteSheet gSpriteSheet_Satchel;
-extern const struct CompressedSpritePalette gSpritePalette_BagOrSatchel;
+extern const struct CompressedSpriteSheet   gSpriteSheet_BagRed;
+extern const struct CompressedSpriteSheet   gSpriteSheet_BagBlue;
+extern const struct CompressedSpriteSheet   gSpriteSheet_BagGreen;
+extern const struct CompressedSpriteSheet   gSpriteSheet_BagBrendan;
+extern const struct CompressedSpriteSheet   gSpriteSheet_BagMay;
+extern const struct CompressedSpritePalette gSpritePalette_BagRedGreen;
+extern const struct CompressedSpritePalette gSpritePalette_BagBlue;
+extern const struct CompressedSpritePalette gSpritePalette_BagBrendanMay;
 
 extern const struct CompressedSpriteSheet gBagSwapSpriteSheet;
 extern const struct CompressedSpritePalette gBagSwapSpritePalette;

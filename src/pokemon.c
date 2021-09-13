@@ -1531,7 +1531,16 @@ const struct SpriteTemplate gSpriteTemplates_TrainerBackpics[] =
         .paletteTag = 0,
         .oam = &gOamData_BattlerPlayer,
         .anims = NULL, 
-        .images = gTrainerBackPicTable_Leaf,
+        .images = gTrainerBackPicTable_Blue,
+        .affineAnims = gSpriteAffineAnimTable_BattlerPlayer,
+        .callback = SpriteCB_AllyMon,
+    },
+    {
+        .tileTag = SPRITE_INVALID_TAG,
+        .paletteTag = 0,
+        .oam = &gOamData_BattlerPlayer,
+        .anims = NULL, 
+        .images = gTrainerBackPicTable_Green,
         .affineAnims = gSpriteAffineAnimTable_BattlerPlayer,
         .callback = SpriteCB_AllyMon,
     },
@@ -1785,7 +1794,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     SetBoxMonData(boxMon, MON_DATA_MET_GAME, &gGameVersion);
     value = ITEM_POKE_BALL;
     SetBoxMonData(boxMon, MON_DATA_POKEBALL, &value);
-    SetBoxMonData(boxMon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+    SetBoxMonData(boxMon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->avatarGender);
 
     if (fixedIV < 32)
     {
@@ -3468,7 +3477,7 @@ u8 GiveMonToPlayer(struct Pokemon *mon)
     s32 i;
 
     SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
-    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->avatarGender);
     SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
 
     for (i = 0; i < PARTY_SIZE; i++)

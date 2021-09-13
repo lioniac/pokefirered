@@ -7,7 +7,16 @@ static const union AnimCmd sAnimCmd_Red_1[] = {
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnimCmd_Leaf_1[] = {
+static const union AnimCmd sAnimCmd_Blue_1[] = {
+    ANIMCMD_FRAME(1, 20),
+    ANIMCMD_FRAME(2, 6),
+    ANIMCMD_FRAME(3, 6),
+    ANIMCMD_FRAME(4, 24),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnimCmd_Green_1[] = {
     ANIMCMD_FRAME(1, 20),
     ANIMCMD_FRAME(2, 6),
     ANIMCMD_FRAME(3, 6),
@@ -55,9 +64,14 @@ const union AnimCmd *const sBackAnims_Red[] = {
     sAnimCmd_Red_1
 };
 
-const union AnimCmd *const sBackAnims_Leaf[] = {
+const union AnimCmd *const sBackAnims_Blue[] = {
     sAnim_GeneralFrame0,
-    sAnimCmd_Leaf_1
+    sAnimCmd_Blue_1
+};
+
+const union AnimCmd *const sBackAnims_Green[] = {
+    sAnim_GeneralFrame0,
+    sAnimCmd_Green_1
 };
 
 const union AnimCmd *const sBackAnims_Pokedude[] = {
@@ -82,7 +96,8 @@ const union AnimCmd *const sBackAnims_RSMay[] = {
 
 const union AnimCmd *const *const gTrainerBackAnimsPtrTable[] = {
     sBackAnims_Red,
-    sBackAnims_Leaf,
+    sBackAnims_Blue,
+    sBackAnims_Green,
     sBackAnims_RSBrendan,
     sBackAnims_RSMay,
     sBackAnims_Pokedude,

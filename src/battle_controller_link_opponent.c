@@ -1121,13 +1121,26 @@ static void LinkOpponentHandleDrawTrainerPic(void)
             else
                 trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_PKMN_TRAINER_2];
         }
-        else if (gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender != MALE)
-        {
-            trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_LEAF];
-        }
         else
         {
-            trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_RED];
+            switch (gSaveBlock2Ptr->avatarChoice)
+            {
+            case RED:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_RED];
+                break;
+            case BLUE:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_BLUE];
+                break;
+            case GREEN:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_GREEN];
+                break;
+            case BRENDAN:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_BRENDAN];
+                break;
+            case MAY:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_MAY];
+                break;
+            }
         }
     }
     else
@@ -1146,13 +1159,26 @@ static void LinkOpponentHandleDrawTrainerPic(void)
             else
                 trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_PKMN_TRAINER_2];
         }
-        else if (gLinkPlayers[GetMultiplayerId() ^ BIT_SIDE].gender != MALE)
-        {
-            trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_LEAF];
-        }
         else
         {
-            trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_RED];
+            switch (gSaveBlock2Ptr->avatarChoice)
+            {
+            case RED:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_RED];
+                break;
+            case BLUE:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_BLUE];
+                break;
+            case GREEN:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_GREEN];
+                break;
+            case BRENDAN:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_BRENDAN];
+                break;
+            case MAY:
+                trainerPicId = gFacilityClassToPicIndex[FACILITY_CLASS_MAY];
+                break;
+            }
         }
     }
     DecompressTrainerFrontPic(trainerPicId, gActiveBattler);

@@ -63,6 +63,24 @@ Route22_EventScript_EarlyRival:: @ 81682BE
 	call_if_eq Route22_EventScript_EarlyRivalBulbasaur
 	compare VAR_STARTER_MON, 0
 	call_if_eq Route22_EventScript_EarlyRivalCharmander
+	compare VAR_STARTER_MON, 5
+	call_if_eq Route22_EventScript_EarlyRivalSquirtle
+	compare VAR_STARTER_MON, 4
+	call_if_eq Route22_EventScript_EarlyRivalBulbasaur
+	compare VAR_STARTER_MON, 3
+	call_if_eq Route22_EventScript_EarlyRivalCharmander
+	compare VAR_STARTER_MON, 8
+	call_if_eq Route22_EventScript_EarlyRivalSquirtle
+	compare VAR_STARTER_MON, 7
+	call_if_eq Route22_EventScript_EarlyRivalBulbasaur
+	compare VAR_STARTER_MON, 6
+	call_if_eq Route22_EventScript_EarlyRivalCharmander
+	compare VAR_STARTER_MON, 11
+	call_if_eq Route22_EventScript_EarlyRivalSquirtle
+	compare VAR_STARTER_MON, 10
+	call_if_eq Route22_EventScript_EarlyRivalBulbasaur
+	compare VAR_STARTER_MON, 9
+	call_if_eq Route22_EventScript_EarlyRivalCharmander
 	msgbox Route22_Text_EarlyRivalPostBattle
 	closemessage
 	delay 10
@@ -90,16 +108,49 @@ Route22_EventScript_EarlyRivalApproachBottom:: @ 816835B
 	waitmovement 0
 	return
 
-Route22_EventScript_EarlyRivalSquirtle:: @ 816836D
-	trainerbattle_earlyrival TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+Route22_EventScript_EarlyRivalSquirtle::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq Route22_EventScript_EarlyRivalBlueSquirtle
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq Route22_EventScript_EarlyRivalRedSquirtle
 	return
 
-Route22_EventScript_EarlyRivalBulbasaur:: @ 816837C
-	trainerbattle_earlyrival TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+Route22_EventScript_EarlyRivalBulbasaur::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq Route22_EventScript_EarlyRivalBlueBulbasaur
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq Route22_EventScript_EarlyRivalRedBulbasaur
 	return
 
-Route22_EventScript_EarlyRivalCharmander:: @ 816838B
-	trainerbattle_earlyrival TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+Route22_EventScript_EarlyRivalCharmander::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq Route22_EventScript_EarlyRivalBlueCharmander
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq Route22_EventScript_EarlyRivalRedCharmander
+	return
+
+Route22_EventScript_EarlyRivalBlueSquirtle::
+	trainerbattle_earlyrival TRAINER_RIVAL_BLUE_ROUTE22_EARLY_SQUIR, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	return
+
+Route22_EventScript_EarlyRivalBlueBulbasaur::
+	trainerbattle_earlyrival TRAINER_RIVAL_BLUE_ROUTE22_EARLY_BULBA, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	return
+
+Route22_EventScript_EarlyRivalBlueCharmander::
+	trainerbattle_earlyrival TRAINER_RIVAL_BLUE_ROUTE22_EARLY_CHARM, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	return
+
+Route22_EventScript_EarlyRivalRedSquirtle::
+	trainerbattle_earlyrival TRAINER_RIVAL_RED_ROUTE22_EARLY_SQUIR, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	return
+
+Route22_EventScript_EarlyRivalRedBulbasaur::
+	trainerbattle_earlyrival TRAINER_RIVAL_RED_ROUTE22_EARLY_BULBA, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	return
+
+Route22_EventScript_EarlyRivalRedCharmander::
+	trainerbattle_earlyrival TRAINER_RIVAL_RED_ROUTE22_EARLY_CHARM, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
 	return
 
 Route22_EventScript_EarlyRivalExit:: @ 816839A
@@ -223,6 +274,24 @@ Route22_EventScript_LateRival:: @ 816841F
 	call_if_eq Route22_EventScript_LateRivalBulbasaur
 	compare VAR_STARTER_MON, 0
 	call_if_eq Route22_EventScript_LateRivalCharmander
+	compare VAR_STARTER_MON, 5
+	call_if_eq Route22_EventScript_LateRivalSquirtle
+	compare VAR_STARTER_MON, 4
+	call_if_eq Route22_EventScript_LateRivalBulbasaur
+	compare VAR_STARTER_MON, 3
+	call_if_eq Route22_EventScript_LateRivalCharmander
+	compare VAR_STARTER_MON, 8
+	call_if_eq Route22_EventScript_LateRivalSquirtle
+	compare VAR_STARTER_MON, 7
+	call_if_eq Route22_EventScript_LateRivalBulbasaur
+	compare VAR_STARTER_MON, 6
+	call_if_eq Route22_EventScript_LateRivalCharmander
+	compare VAR_STARTER_MON, 11
+	call_if_eq Route22_EventScript_LateRivalSquirtle
+	compare VAR_STARTER_MON, 10
+	call_if_eq Route22_EventScript_LateRivalBulbasaur
+	compare VAR_STARTER_MON, 9
+	call_if_eq Route22_EventScript_LateRivalCharmander
 	msgbox Route22_Text_LateRivalPostBattle
 	closemessage
 	delay 10
@@ -246,16 +315,49 @@ Route22_EventScript_LateRivalApproachBottom:: @ 81684A7
 	waitmovement 0
 	return
 
-Route22_EventScript_LateRivalSquirtle:: @ 81684B9
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE, Route22_Text_LateRivalDefeat
+Route22_EventScript_LateRivalSquirtle::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq Route22_EventScript_LateRivalBlueSquirtle
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq Route22_EventScript_LateRivalRedSquirtle
 	return
 
-Route22_EventScript_LateRivalBulbasaur:: @ 81684C4
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR, Route22_Text_LateRivalDefeat
+Route22_EventScript_LateRivalBulbasaur::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq Route22_EventScript_LateRivalBlueBulbasaur
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq Route22_EventScript_LateRivalRedBulbasaur
 	return
 
-Route22_EventScript_LateRivalCharmander:: @ 81684CF
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER, Route22_Text_LateRivalDefeat
+Route22_EventScript_LateRivalCharmander::
+	compare VAR_OBJ_GFX_ID_RIVAL, 7
+	call_if_eq Route22_EventScript_LateRivalBlueCharmander
+	compare VAR_OBJ_GFX_ID_RIVAL, 0
+	call_if_eq Route22_EventScript_LateRivalRedCharmander
+	return
+
+Route22_EventScript_LateRivalBlueSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_ROUTE22_LATE_SQUIR, Route22_Text_LateRivalDefeat
+	return
+
+Route22_EventScript_LateRivalBlueBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_ROUTE22_LATE_BULBA, Route22_Text_LateRivalDefeat
+	return
+
+Route22_EventScript_LateRivalBlueCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_BLUE_ROUTE22_LATE_CHARM, Route22_Text_LateRivalDefeat
+	return
+
+Route22_EventScript_LateRivalRedSquirtle::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_ROUTE22_LATE_SQUIR, Route22_Text_LateRivalDefeat
+	return
+
+Route22_EventScript_LateRivalRedBulbasaur::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_ROUTE22_LATE_BULBA, Route22_Text_LateRivalDefeat
+	return
+
+Route22_EventScript_LateRivalRedCharmander::
+	trainerbattle_no_intro TRAINER_RIVAL_RED_ROUTE22_LATE_CHARM, Route22_Text_LateRivalDefeat
 	return
 
 Route22_Movement_LateRivalExit:: @ 81684DA

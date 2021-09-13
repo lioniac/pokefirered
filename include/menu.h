@@ -5,8 +5,13 @@
 #include "text.h"
 #include "window.h"
 
+#define MENU_SCROLL_MAY     -7
+#define MENU_SCROLL_BRENDAN -6
+#define MENU_SCROLL_GREEN   -5
+#define MENU_SCROLL_BLUE    -4
+#define MENU_SCROLL_RED     -3
 #define MENU_NOTHING_CHOSEN -2
-#define MENU_B_PRESSED -1
+#define MENU_B_PRESSED      -1
 
 struct MenuAction
 {
@@ -47,6 +52,7 @@ void PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 i
 s8 Menu_ProcessInputNoWrapAround_other(void);
 s8 Menu_ProcessInput_other(void);
 s8 Menu_ProcessInputNoWrapAround(void);
+s8 Menu_ProcessInputAvatarChoice(void);
 s8 Menu_ProcessInput(void);
 u8 Menu_GetCursorPos(void);
 u8 Menu_MoveCursorNoWrapAround(s8 cursorDelta);

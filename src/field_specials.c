@@ -75,7 +75,7 @@ static void Task_SuspendListMenu(u8 taskId);
 static void Task_RedrawScrollArrowsAndWaitInput(u8 taskId);
 static void Task_CreateMenuRemoveScrollIndicatorArrowPair(u8 taskId);
 static void Task_ListMenuRemoveScrollIndicatorArrowPair(u8 taskId);
-static u16 GetStarterSpeciesById(u16 starterIdx);
+static u16 GetStarterSpeciesById(u16 starterIdx, u8 season);
 static void ChangeBoxPokemonNickname_CB(void);
 static void ChangePokemonNickname_CB(void);
 static void Task_RunPokemonLeagueLightingEffect(u8 taskId);
@@ -147,7 +147,7 @@ u8 GetPlayerTrainerIdOnesDigit(void)
 
 void BufferBigGuyOrBigGirlString(void)
 {
-    if (gSaveBlock2Ptr->playerGender == MALE)
+    if (gSaveBlock2Ptr->avatarGender == MALE)
         StringCopy(gStringVar1, gText_BigGuy);
     else
         StringCopy(gStringVar1, gText_BigGirl);
@@ -155,7 +155,7 @@ void BufferBigGuyOrBigGirlString(void)
 
 void BufferSonOrDaughterString(void)
 {
-    if (gSaveBlock2Ptr->playerGender == MALE)
+    if (gSaveBlock2Ptr->avatarGender == MALE)
         StringCopy(gStringVar1, gText_Daughter);
     else
         StringCopy(gStringVar1, gText_Son);
@@ -438,7 +438,7 @@ bool8 AreLeadMonEVsMaxedOut(void)
 
 bool8 IsStarterFirstStageInParty(void)
 {
-    u16 species = GetStarterSpeciesById(VarGet(VAR_STARTER_MON));
+    u16 species = GetStarterSpeciesById(VarGet(VAR_STARTER_MON), VarGet(VAR_SEASON));
     u8 partyCount = CalculatePlayerPartyCount();
     u8 i;
     for (i = 0; i < partyCount; i++)
@@ -1537,22 +1537,56 @@ void ForcePlayerToStartSurfing(void)
     SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_SURFING);
 }
 
-static const u16 sStarterSpecies[] = {
-    SPECIES_BULBASAUR,
+static const u16 sStarterSpeciesSpring[] = {
+    SPECIES_CHARMANDER,
     SPECIES_SQUIRTLE,
-    SPECIES_CHARMANDER
+    SPECIES_BULBASAUR
 };
 
-static u16 GetStarterSpeciesById(u16 idx)
+static const u16 sStarterSpeciesSummer[] = {
+    SPECIES_CYNDAQUIL,
+    SPECIES_TOTODILE,
+    SPECIES_CHIKORITA
+};
+
+static const u16 sStarterSpeciesAutumn[] = {
+    SPECIES_TORCHIC,
+    SPECIES_MUDKIP,
+    SPECIES_TREECKO
+};
+
+static const u16 sStarterSpeciesWinter[] = {
+    SPECIES_PONYTA,
+    SPECIES_SPHEAL,
+    SPECIES_SEEDOT
+};
+
+static u16 GetStarterSpeciesById(u16 idx, u8 season)
 {
-    if (idx >= NELEMS(sStarterSpecies))
-        idx = 0;
-    return sStarterSpecies[idx];
+    switch (season)
+    {
+    case 0:
+        if (idx >= NELEMS(sStarterSpeciesSpring))
+            idx = 0;
+        return sStarterSpeciesSpring[idx];
+    case 1:
+        if (idx >= NELEMS(sStarterSpeciesSummer))
+            idx = 0;
+        return sStarterSpeciesSummer[idx];
+    case 2:
+        if (idx >= NELEMS(sStarterSpeciesAutumn))
+            idx = 0;
+        return sStarterSpeciesAutumn[idx];
+    case 3:
+        if (idx >= NELEMS(sStarterSpeciesWinter))
+            idx = 0;
+        return sStarterSpeciesWinter[idx];
+    }
 }
 
 u16 GetStarterSpecies(void)
 {
-    return GetStarterSpeciesById(VarGet(VAR_STARTER_MON));
+    return GetStarterSpeciesById(VarGet(VAR_STARTER_MON), VarGet(VAR_SEASON));
 }
 
 void SetSeenMon(void)
@@ -2233,15 +2267,18 @@ void StopPokemonLeagueLightingEffectTask(void)
 }
 
 static const u16 sCapeBrinkCompatibleSpecies[] = {
-    SPECIES_VENUSAUR,
     SPECIES_CHARIZARD,
     SPECIES_BLASTOISE,
-    SPECIES_MEGANIUM,
+    SPECIES_VENUSAUR,
     SPECIES_TYPHLOSION,
     SPECIES_FERALIGATR,
-    SPECIES_SCEPTILE,
+    SPECIES_MEGANIUM,
     SPECIES_BLAZIKEN,
-    SPECIES_SWAMPERT
+    SPECIES_SWAMPERT,
+    SPECIES_SCEPTILE,
+    SPECIES_RAPIDASH,
+    SPECIES_WALREIN,
+    SPECIES_SHIFTRY
 };
 
 bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
@@ -2255,6 +2292,8 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     u8 numMovesKnown = 0;
     u8 leadMonSlot = GetLeadMonIndex();
     u8 i;
+    u16 move;
+
     gSpecialVar_0x8007 = leadMonSlot;
     for (i = 0; i < NELEMS(sCapeBrinkCompatibleSpecies); i++)
     {
@@ -2264,29 +2303,40 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
             break;
         }
     }
+
     if (i == NELEMS(sCapeBrinkCompatibleSpecies) || GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_FRIENDSHIP) != 255)
         return FALSE;
-    if (tutorMonId == 0 || tutorMonId == 3 || tutorMonId == 6)
+
+    switch (tutorMonId)
     {
-        StringCopy(gStringVar2, gMoveNames[MOVE_FRENZY_PLANT]);
-        gSpecialVar_0x8005 = MOVETUTOR_FRENZY_PLANT;
-        if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
-            return FALSE;
+    case 0:
+    case 3:
+    case 6:
+    case 9:
+        move = MOVE_OVERHEAT;
+        break;
+    case 1:
+    case 4:
+    case 7:
+    case 10:
+        move = MOVE_BLIZZARD;
+        break;
+    case 2:
+        move = MOVE_FRENZY_PLANT;
+        break;
+    case 5:
+    case 8:
+    case 11:
+        move = MOVE_SOLAR_BEAM;
+        break;
     }
-    else if (tutorMonId == 1 || tutorMonId == 4 || tutorMonId == 7)
-    {
-        StringCopy(gStringVar2, gMoveNames[MOVE_BLAST_BURN]);
-        gSpecialVar_0x8005 = MOVETUTOR_BLAST_BURN;
-        if (FlagGet(FLAG_TUTOR_BLAST_BURN) == TRUE)
-            return FALSE;
-    }
-    else
-    {
-        StringCopy(gStringVar2, gMoveNames[MOVE_HYDRO_CANNON]);
-        gSpecialVar_0x8005 = MOVETUTOR_HYDRO_CANNON;
-        if (FlagGet(FLAG_TUTOR_HYDRO_CANNON) == TRUE)
-            return FALSE;
-    }
+
+    StringCopy(gStringVar2, gMoveNames[move]);
+    gSpecialVar_0x8005 = move;
+
+    if (FlagGet(FLAG_TUTOR_CAPE_BRINK) == TRUE)
+        return FALSE;
+    
     if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_MOVE1) != MOVE_NONE)
         numMovesKnown++;
     if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_MOVE2) != MOVE_NONE)
@@ -2295,6 +2345,7 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
         numMovesKnown++;
     if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_MOVE4) != MOVE_NONE)
         numMovesKnown++;
+    
     gSpecialVar_0x8006 = numMovesKnown;
     return TRUE;
 }
@@ -2303,19 +2354,22 @@ bool8 HasLearnedAllMovesFromCapeBrinkTutor(void)
 {
     // 8005 is set by CapeBrinkGetMoveToTeachLeadPokemon
     u8 r4 = 0;
-    if (gSpecialVar_0x8005 == MOVETUTOR_FRENZY_PLANT)
-        FlagSet(FLAG_TUTOR_FRENZY_PLANT);
-    else if (gSpecialVar_0x8005 == MOVETUTOR_BLAST_BURN)
-        FlagSet(FLAG_TUTOR_BLAST_BURN);
-    else
-        FlagSet(FLAG_TUTOR_HYDRO_CANNON);
-    if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
+
+    switch (gSpecialVar_0x8005)
+    {
+    case MOVE_OVERHEAT:
+    case MOVE_BLIZZARD:
+    case MOVE_FRENZY_PLANT:
+    case MOVE_SOLAR_BEAM:
+        FlagSet(FLAG_TUTOR_CAPE_BRINK);
+        break;
+    default:
+        break;
+    }
+
+    if (FlagGet(FLAG_TUTOR_CAPE_BRINK) == TRUE)
         r4++;
-    if (FlagGet(FLAG_TUTOR_BLAST_BURN) == TRUE)
-        r4++;
-    if (FlagGet(FLAG_TUTOR_HYDRO_CANNON) == TRUE)
-        r4++;
-    if (r4 == 3)
+    if (r4 == 1)
         return TRUE;
     else
         return FALSE;
@@ -2761,3 +2815,26 @@ void GetCurrentDayString(void)
         break;
     }
 }
+
+void BufferAndSetSeason(void)
+{
+    switch (VarGet(VAR_SEASON))
+    {
+    case 0:
+        gSaveBlock2Ptr->season = 0;
+        StringCopy(gStringVar1, gText_Spring);
+        break;    
+    case 1:
+        gSaveBlock2Ptr->season = 1;
+        StringCopy(gStringVar1, gText_Summer);
+        break;    
+    case 2:
+        gSaveBlock2Ptr->season = 2;
+        StringCopy(gStringVar1, gText_Autumn);
+        break;    
+    case 3:
+        gSaveBlock2Ptr->season = 3;
+        StringCopy(gStringVar1, gText_Winter);
+        break;    
+    }
+} 
