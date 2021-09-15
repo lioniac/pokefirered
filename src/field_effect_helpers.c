@@ -61,7 +61,7 @@ static s16 GetReflectionVerticalOffset(struct ObjectEvent * objectEvent)
     return GetObjectEventGraphicsInfo(objectEvent->graphicsId)->height - 2;
 }
 
-#define OBJ_EVENT_PAL_TAG_10 0x1102
+#define OBJ_EVENT_PAL_TAG_01 0x1102
 
 void LoadObjectReflectionPalette(struct ObjectEvent * objectEvent, struct Sprite * sprite)
 {
@@ -73,8 +73,8 @@ void LoadObjectReflectionPalette(struct ObjectEvent * objectEvent, struct Sprite
         // When walking on a bridge high above water (Route 120), the reflection is a solid dark blue color.
         // This is so the sprite blends in with the dark water metatile underneath the bridge.
         sprite->data[2] = bridgeReflectionVerticalOffsets[bridgeType - 1];
-        LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_10);
-        sprite->oam.paletteNum = IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_10);
+        LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_01);
+        sprite->oam.paletteNum = IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_01);
         UpdatePaletteGammaType(sprite->oam.paletteNum, GAMMA_NORMAL);
         UpdateSpritePaletteWithWeather(sprite->oam.paletteNum);
     }
@@ -968,7 +968,8 @@ u32 FldEff_SurfBlob(void)
     struct Sprite * sprite;
 
     sub_8063BC4((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[7], gFieldEffectArguments[0], gFieldEffectArguments[1], 0x96);
+    LoadFieldEffectPalette(FLDEFFOBJ_SURF_BLOB);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB], gFieldEffectArguments[0], gFieldEffectArguments[1], 0x96);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];

@@ -650,8 +650,8 @@ static const union AnimCmd *const sSpriteAnimTable_Emoticons[] = {
 };
 
 static const struct SpriteTemplate sSpriteTemplate_Emoticons = {
-    .tileTag = 0xFFFF,
-    .paletteTag = 0x1100,   ////LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_8)
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_00,
     .oam = &sOamData_Emoticons,
     .anims = sSpriteAnimTable_Emoticons,
     .images = sSpriteImages_Emoticons,
@@ -663,9 +663,9 @@ u8 FldEff_ExclamationMarkIcon1(void)
 {
     u8 spriteId, paletteNum;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_8)
-    UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1100), GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1100));
+    LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_00);
+    UpdatePaletteGammaType(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00), GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_Emoticons, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -678,9 +678,9 @@ u8 FldEff_DoubleExclMarkIcon(void)
 {
     u8 spriteId, paletteNum;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_8)
-    UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1100), GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1100));
+    LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_00);
+    UpdatePaletteGammaType(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00), GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_Emoticons, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -693,9 +693,9 @@ u8 FldEff_XIcon(void)
 {
     u8 spriteId, paletteNum;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_8)
-    UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1100), GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1100));
+    LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_00);
+    UpdatePaletteGammaType(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00), GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_Emoticons, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -708,9 +708,9 @@ u8 FldEff_SmileyFaceIcon(void)
 {
     u8 spriteId, paletteNum;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_8)
-    UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1100), GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1100));
+    LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_00);
+    UpdatePaletteGammaType(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00), GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_Emoticons, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -723,9 +723,9 @@ u8 FldEff_QuestionMarkIcon(void)
 {
     u8 spriteId, paletteNum;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_8)
-    UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1100), GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1100));
+    LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_00);
+    UpdatePaletteGammaType(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00), GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_00));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_Emoticons, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)

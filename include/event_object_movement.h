@@ -49,6 +49,13 @@ typedef void (*MovementAction)(u8 direction);
 #define GROUND_EFFECT_FLAG_HOT_SPRINGS           (1 << 18)
 #define GROUND_EFFECT_FLAG_SEAWEED               (1 << 19)
 
+// Dynamic Overworld Palettes
+#define OBJ_EVENT_PAL_TAG_00  0x1100
+#define OBJ_EVENT_PAL_TAG_01  0x1102
+#define OBJ_EVENT_PAL_TAG_02  0x1103
+#define OBJ_EVENT_PAL_TAG_03  0x1104
+#define OBJ_EVENT_PAL_TAG_04  0x1105
+
 struct PairedPalettes
 {
     u16 tag;
