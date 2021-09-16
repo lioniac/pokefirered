@@ -23,7 +23,6 @@
 #include "constants/items.h"
 #include "constants/quest_log.h"
 #include "constants/songs.h"
-#include "overworld.h"
 
 struct ItemPcResources
 {
@@ -542,9 +541,6 @@ static void ItemPc_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *
 
 static void ItemPc_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
 {
-    u8 i, j, temp;
-    s8 offset;
-
     if (sStateDataPtr->moveModeOrigPos != 0xFF)
     {
         if (sStateDataPtr->moveModeOrigPos == (u8)itemId)

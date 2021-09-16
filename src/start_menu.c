@@ -51,7 +51,6 @@ enum StartMenuOption
     STARTMENU_EXIT,
     STARTMENU_RETIRE,
     STARTMENU_PLAYER2,
-    STARTMENU_QUESTS,
     MAX_STARTMENU_ITEMS
 };
 
@@ -92,7 +91,6 @@ static bool8 StartMenuOptionCallback(void);
 static bool8 StartMenuExitCallback(void);
 static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkPlayerCallback(void);
-static bool8 StartMenuQuestsCallback(void);
 static bool8 StartCB_Save1(void);
 static bool8 StartCB_Save2(void);
 static void StartMenu_PrepareForSave(void);
@@ -129,8 +127,7 @@ static const struct MenuAction sStartMenuActionTable[] = {
     { gStartMenuText_Option, {.u8_void = StartMenuOptionCallback} },
     { gStartMenuText_Exit, {.u8_void = StartMenuExitCallback} },
     { gStartMenuText_Retire, {.u8_void = StartMenuSafariZoneRetireCallback} },
-    { gStartMenuText_Player, {.u8_void = StartMenuLinkPlayerCallback} },
-    { gStartMenuText_Quests, {.u8_void = StartMenuQuestsCallback} }
+    { gStartMenuText_Player, {.u8_void = StartMenuLinkPlayerCallback} }
 };
 
 static const struct WindowTemplate sSafariZoneStatsWindowTemplate = {
@@ -152,8 +149,7 @@ static const u8 *const sStartMenuDescPointers[] = {
     gStartMenuDesc_Option,
     gStartMenuDesc_Exit,
     gStartMenuDesc_Retire,
-    gStartMenuDesc_Player,
-    gStartMenuDesc_Quests
+    gStartMenuDesc_Player
 };
 
 static const struct BgTemplate sBGTemplates_AfterLinkSaveMessage[] = {
@@ -218,12 +214,11 @@ static void SetUpStartMenu_NormalField(void)
         AppendToStartMenuItems(STARTMENU_POKEDEX);
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEMON);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET) == TRUE)
-        AppendToStartMenuItems(STARTMENU_QUESTS);
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
     AppendToStartMenuItems(STARTMENU_OPTION);
+    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_SafariZone(void)
@@ -234,6 +229,7 @@ static void SetUpStartMenu_SafariZone(void)
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_OPTION);
+    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_Link(void)
@@ -242,6 +238,7 @@ static void SetUpStartMenu_Link(void)
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER2);
     AppendToStartMenuItems(STARTMENU_OPTION);
+    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_UnionRoom(void)
@@ -250,6 +247,7 @@ static void SetUpStartMenu_UnionRoom(void)
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_OPTION);
+    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void DrawSafariZoneStatsWindow(void)
@@ -566,18 +564,6 @@ static bool8 StartMenuLinkPlayerCallback(void)
         PlayRainStoppingSoundEffect();
         CleanupOverworldWindowsAndTilemaps();
         ShowTrainerCardInLink(gLocalLinkPlayerId, CB2_ReturnToFieldWithOpenMenu);
-        return TRUE;
-    }
-    return FALSE;
-}
-
-static bool8 StartMenuQuestsCallback(void)
-{
-    if (!gPaletteFade.active)
-    {
-        PlayRainStoppingSoundEffect();
-        DestroySafariZoneStatsWindow();
-        CleanupOverworldWindowsAndTilemaps();
         return TRUE;
     }
     return FALSE;

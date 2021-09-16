@@ -174,7 +174,6 @@ const u8 gStartMenuText_Save[] = _("SAVE");
 const u8 gStartMenuText_Option[] = _("OPTION");
 const u8 gStartMenuText_Exit[] = _("EXIT");
 const u8 gStartMenuText_Retire[] = _("RETIRE");
-const u8 gStartMenuText_Quests[] = _("QUESTS");
 const u8 gUnknown_84162A9[] = _("{STR_VAR_1}/{STR_VAR_2}\nBALLS  {STR_VAR_3}");
 const u8 gText_TimesStrVar1[] = _("×{STR_VAR_1}");
 const u8 gUnknown_84162BD[] = _(" BERRY");
@@ -920,7 +919,6 @@ const u8 gStartMenuDesc_Save[] = _("Save your game with a complete record\nof yo
 const u8 gStartMenuDesc_Option[] = _("Adjust various game settings such as text\nspeed, game rules, etc.");
 const u8 gStartMenuDesc_Exit[] = _("Close this MENU window.");
 const u8 gStartMenuDesc_Retire[] = _("Retire from the SAFARI GAME and return to\nthe registration counter.");
-const u8 gStartMenuDesc_Quests[] = _("View information on active and completed\nquests.");
 
 #include "data/text/quest_log.h"
 
