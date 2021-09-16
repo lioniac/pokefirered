@@ -184,6 +184,10 @@ void NewGameInitData(void)
         gSaveBlock2Ptr->avatarGender = FEMALE;
         break;
     }
+
+    //Fly or Town Map from Start Menu
+    gSaveBlock2Ptr->flyMapFromStartMenu = FALSE;
+
     //Gen6 Exp. Share
     gSaveBlock2Ptr->expShare = 0;
 }

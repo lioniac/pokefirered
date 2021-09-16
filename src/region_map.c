@@ -613,7 +613,7 @@ ALIGNED(4) static const bool8 sRegionMapPermissions[REGIONMAP_TYPE_COUNT][MAPPER
     {
         [MAPPERM_HAS_SWITCH_BUTTON]    = FALSE, 
         [MAPPERM_HAS_MAP_PREVIEW]      = FALSE, 
-        [MAPPERM_HAS_OPEN_ANIM]        = FALSE, 
+        [MAPPERM_HAS_OPEN_ANIM]        = TRUE, 
         [MAPPERM_HAS_FLY_DESTINATIONS] = TRUE 
     }
 };
@@ -4359,8 +4359,6 @@ static void Task_FlyMap(u8 taskId)
         InitMapIcons(GetSelectedRegionMap(), taskId, GetMainMapTask());
         CreateMapCursor(0, 0);
         CreatePlayerIcon(1, 1);
-        SetMapCursorInvisibility(FALSE);
-        SetPlayerIconInvisibility(FALSE);
         sFlyMap->state++;
         break;
     case 1:
@@ -4388,6 +4386,8 @@ static void Task_FlyMap(u8 taskId)
         if (!gPaletteFade.active)
         {
             DisplayCurrentMapName();
+            SetMapCursorInvisibility(FALSE);
+            SetPlayerIconInvisibility(FALSE);
             PutWindowTilemap(WIN_MAP_NAME);
             DisplayCurrentDungeonName();
             PutWindowTilemap(WIN_DUNGEON_NAME);
@@ -4489,6 +4489,8 @@ static void FreeFlyMap(u8 taskId)
     FreeAllWindowBuffers();
     if (sFlyMap->selectedDestination == TRUE)
         SetMainCallback2(CB2_ReturnToField);
+    else if (gSaveBlock2Ptr->flyMapFromStartMenu == TRUE)
+        SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
     else
         SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
     FREE_IF_NOT_NULL(sFlyMap);

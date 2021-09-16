@@ -39,16 +39,19 @@
 #include "clock.h"
 #include "rtc.h"
 #include "string_util.h"
+#include "region_map.h"
+
+#define MOVE_FLY 19
 
 enum StartMenuOption
 {
     STARTMENU_POKEDEX = 0,
     STARTMENU_POKEMON,
     STARTMENU_BAG,
+    STARTMENU_MAP,
     STARTMENU_PLAYER,
     STARTMENU_SAVE,
     STARTMENU_OPTION,
-    STARTMENU_EXIT,
     STARTMENU_RETIRE,
     STARTMENU_PLAYER2,
     MAX_STARTMENU_ITEMS
@@ -88,7 +91,7 @@ static bool8 StartMenuBagCallback(void);
 static bool8 StartMenuPlayerCallback(void);
 static bool8 StartMenuSaveCallback(void);
 static bool8 StartMenuOptionCallback(void);
-static bool8 StartMenuExitCallback(void);
+static bool8 StartMenuMapCallback(void);
 static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkPlayerCallback(void);
 static bool8 StartCB_Save1(void);
@@ -117,15 +120,16 @@ static void CloseSaveStatsWindow(void);
 static void CloseStartMenu(void);
 static void GetStartMenuClock(void);
 static void StartMenu_PrintClock(void);
+static bool8 CheckPartyMove(u16 moveId);
 
 static const struct MenuAction sStartMenuActionTable[] = {
     { gStartMenuText_Pokedex, {.u8_void = StartMenuPokedexCallback} },
     { gStartMenuText_Pokemon, {.u8_void = StartMenuPokemonCallback} },
     { gStartMenuText_Bag, {.u8_void = StartMenuBagCallback} },
+    { gStartMenuText_Map, {.u8_void = StartMenuMapCallback} },
     { gStartMenuText_Player, {.u8_void = StartMenuPlayerCallback} },
     { gStartMenuText_Save, {.u8_void = StartMenuSaveCallback} },
     { gStartMenuText_Option, {.u8_void = StartMenuOptionCallback} },
-    { gStartMenuText_Exit, {.u8_void = StartMenuExitCallback} },
     { gStartMenuText_Retire, {.u8_void = StartMenuSafariZoneRetireCallback} },
     { gStartMenuText_Player, {.u8_void = StartMenuLinkPlayerCallback} }
 };
@@ -144,10 +148,10 @@ static const u8 *const sStartMenuDescPointers[] = {
     gStartMenuDesc_Pokedex,
     gStartMenuDesc_Pokemon,
     gStartMenuDesc_Bag,
+    gStartMenuDesc_Map,
     gStartMenuDesc_Player,
     gStartMenuDesc_Save,
     gStartMenuDesc_Option,
-    gStartMenuDesc_Exit,
     gStartMenuDesc_Retire,
     gStartMenuDesc_Player
 };
@@ -190,6 +194,20 @@ static ALIGNED(2) const u8 sTextColor_StatName[] = { 1, 2, 3 };
 static ALIGNED(2) const u8 sTextColor_StatValue[] = { 1, 4, 5 };
 static ALIGNED(2) const u8 sTextColor_LocationHeader[] = { 1, 6, 7 };
 
+static bool8 CheckPartyMove(u16 moveId)
+{
+    u8 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+        if (!species)
+            break;
+        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && MonKnowsMove(&gPlayerParty[i], moveId) == TRUE)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 static void SetUpStartMenu(void)
 {
     sNumStartMenuItems = 0;
@@ -197,10 +215,15 @@ static void SetUpStartMenu(void)
         SetUpStartMenu_Link();
     else if (InUnionRoom() == TRUE)
         SetUpStartMenu_UnionRoom();
-    else if (GetSafariZoneFlag() == TRUE)
-        SetUpStartMenu_SafariZone();
-    else
-        SetUpStartMenu_NormalField();
+    else 
+    {
+        if ((CheckPartyMove(MOVE_FLY) == TRUE) && IsMapTypeOutdoors(GetCurrentMapType()) == TRUE)
+            gSaveBlock2Ptr->flyMapFromStartMenu = TRUE;
+        if (GetSafariZoneFlag() == TRUE)
+            SetUpStartMenu_SafariZone();
+        else
+            SetUpStartMenu_NormalField();
+    }
 }
 
 static void AppendToStartMenuItems(u8 newEntry)
@@ -215,10 +238,10 @@ static void SetUpStartMenu_NormalField(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
+    AppendToStartMenuItems(STARTMENU_MAP);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_SafariZone(void)
@@ -227,27 +250,27 @@ static void SetUpStartMenu_SafariZone(void)
     AppendToStartMenuItems(STARTMENU_POKEDEX);
     AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
+    AppendToStartMenuItems(STARTMENU_MAP);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_Link(void)
 {
     AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
+    AppendToStartMenuItems(STARTMENU_MAP);
     AppendToStartMenuItems(STARTMENU_PLAYER2);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void SetUpStartMenu_UnionRoom(void)
 {
     AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
+    AppendToStartMenuItems(STARTMENU_MAP);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_OPTION);
-    AppendToStartMenuItems(STARTMENU_EXIT);
 }
 
 static void DrawSafariZoneStatsWindow(void)
@@ -451,7 +474,7 @@ static bool8 StartCB_HandleInput(void)
 static void StartMenu_FadeScreenIfLeavingOverworld(void)
 {
     if (sStartMenuCallback != StartMenuSaveCallback
-     && sStartMenuCallback != StartMenuExitCallback
+     && sStartMenuCallback != StartMenuMapCallback
      && sStartMenuCallback != StartMenuSafariZoneRetireCallback)
     {
         StopPokemonLeagueLightingEffectTask();
@@ -506,6 +529,24 @@ static bool8 StartMenuBagCallback(void)
     return FALSE;
 }
 
+static bool8 StartMenuMapCallback(void)
+{
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        DestroySafariZoneStatsWindow();
+        CleanupOverworldWindowsAndTilemaps();
+
+        if (gSaveBlock2Ptr->flyMapFromStartMenu == TRUE)
+            CB2_OpenFlyMap();
+        else
+            InitRegionMapWithExitCB(REGIONMAP_TYPE_NORMAL, CB2_ReturnToFieldWithOpenMenu);
+
+        return TRUE;
+    }
+    return FALSE;
+}
+
 static bool8 StartMenuPlayerCallback(void)
 {
     if (!gPaletteFade.active)
@@ -537,14 +578,6 @@ static bool8 StartMenuOptionCallback(void)
         return TRUE;
     }
     return FALSE;
-}
-
-static bool8 StartMenuExitCallback(void)
-{
-    DestroySafariZoneStatsWindow();
-    DestroyHelpMessageWindow_();
-    CloseStartMenu();
-    return TRUE;
 }
 
 static bool8 StartMenuSafariZoneRetireCallback(void)
@@ -1008,6 +1041,7 @@ static void CloseStartMenu(void)
     RemoveStartMenuWindow();
     ClearPlayerHeldMovementAndUnfreezeObjectEvents();
     ScriptContext2_Disable();
+    gSaveBlock2Ptr->flyMapFromStartMenu = FALSE;
 }
 
 void AppendToList(u8 *list, u8 *cursor, u8 newEntry)

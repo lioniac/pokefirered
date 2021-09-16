@@ -345,11 +345,12 @@ struct SaveBlock2
     /*0xB10*/ struct BerryPickingResults berryPick;
 //  /*0xB20*/ u8 filler_B20[0x400];
     /*0xB20*/ bool8 autoRun;
+              bool8 flyMapFromStartMenu;
               u8  avatarChoiceFlags[CHAR_COUNT];
               u8  avatarGender;
               u8  season;
               u16 seasonPedometer;
-              u8  filler_B20[0x400 - sizeof(bool8) - sizeof(u8[CHAR_COUNT]) - (sizeof(u8)*2) - sizeof(u16)];
+              u8  filler_B20[0x400 - (sizeof(bool8)*2) - sizeof(u8[CHAR_COUNT]) - (sizeof(u8)*2) - sizeof(u16)];
 
     /*0xF20*/ u32 encryptionKey;
 }; // size: 0xF25
