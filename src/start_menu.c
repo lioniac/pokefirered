@@ -36,7 +36,6 @@
 #include "help_system.h"
 #include "constants/songs.h"
 #include "constants/field_weather.h"
-#include "quest_menu.h"
 #include "clock.h"
 #include "rtc.h"
 #include "string_util.h"
@@ -579,8 +578,6 @@ static bool8 StartMenuQuestsCallback(void)
         PlayRainStoppingSoundEffect();
         DestroySafariZoneStatsWindow();
         CleanupOverworldWindowsAndTilemaps();
-        SetQuestMenuActive();
-        SetMainCallback2(CB2_QuestMenuFromStartMenu);
         return TRUE;
     }
     return FALSE;

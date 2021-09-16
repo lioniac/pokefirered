@@ -38,7 +38,6 @@
 #include "constants/trainer_card.h"
 #include "constants/help_system.h"
 #include "constants/follow_me.h"
-#include "constants/quests.h"
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
 	.set FALSE, 0

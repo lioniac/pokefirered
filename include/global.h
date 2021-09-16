@@ -817,10 +817,6 @@ struct ExternalEventFlags
 
 #define UNION_ROOM_KB_ROW_COUNT 10
 
-// quest menu
-#include "constants/quests.h"
-#define SIDE_QUEST_FLAGS_COUNT     ((SIDE_QUEST_COUNT / 8) + ((SIDE_QUEST_COUNT % 8) ? 1 : 0))
-
 struct SaveBlock1
 {
     /*0x0000*/ struct Coords16 pos;
@@ -883,13 +879,9 @@ struct SaveBlock1
     /*0x3D24*/ u8 filler3D24[0x10];
     /*0x3D34*/ u32 towerChallengeId;
     /*0x3D38*/ struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
-    /*0x????*/ u16 registeredItemR;
-    /*0x????*/ u16 registeredItemL;
-    /*0x????*/ struct Follower follower;
-    /*0x????*/ u8 unlockedQuests[SIDE_QUEST_FLAGS_COUNT];
-    /*0x????*/ u8 completedQuests[SIDE_QUEST_FLAGS_COUNT];
-    /*0x????*/ u16 seasonPedometer;
-    /*0x????*/ u8 season;
+    /*0x3D68*/ u16 registeredItemR;
+    /*0x3D6A*/ u16 registeredItemL;
+    /*0x3D6C*/ struct Follower follower;
 }; // size: 0x????
 
 struct MapPosition

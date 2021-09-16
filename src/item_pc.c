@@ -20,8 +20,6 @@
 #include "strings.h"
 #include "task.h"
 #include "text_window.h"
-#include "event_data.h"
-#include "quest_menu.h"
 #include "constants/items.h"
 #include "constants/quest_log.h"
 #include "constants/songs.h"
@@ -103,67 +101,6 @@ static u8 ItemPc_GetOrCreateSubwindow(u8 idx);
 static void ItemPc_DestroySubwindow(u8 idx);
 static void ItemPc_PrintOnWindow5WithContinueTask(u8 taskId, const u8 * str, TaskFunc taskFunc);
 
-//QUEST MENU
-//static void DebugSideQuestMenu(void);
-static void SetQuestMenuInactive(void);
-static bool8 IsQuestMenuActive(void);
-static void Task_QuestMenuDetails(u8 taskId);
-static void Task_QuestMenuCancel(u8 taskId);
-
-static const u8 sText_Quests[] = _(" Quests");
-static const u8 sText_QuestMenu_Details[] = _("Details");
-static const u8 sText_Cancel[] = _("Cancel");
-static const u8 sText_QuestMenu_Unk[] = _("{COLOR LIGHT_GRAY}?????????");
-static const u8 sText_QuestMenu_Active[] = _("{COLOR BLUE}Active");
-static const u8 sText_QuestMenu_Objectives[] = _("{COLOR BLUE}{STR_VAR_1}/{STR_VAR_2}");
-static const u8 sText_QuestMenu_TurnIn[] = _("{COLOR RED}Turn In");
-static const u8 sText_QuestMenu_Complete[] = _("{COLOR GREEN}Done");
-static const u8 sText_QuestMenu_Exit[] = _("Exit the Quest Menu");
-static const u8 sText_QuestMenu_SelectedQuest[] = _("Do what with\nthis quest?");
-static const u8 sText_QuestMenu_DisplayDetails[] = _("Contact: {STR_VAR_1}\nLocation: {STR_VAR_2}");
-static const u8 sText_QuestMenu_Difficulty[] = _("Difficulty: {STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n");
-static const u8 sText_QuestMenu_DifficultyEasy[] = _("{COLOR LIGHT_GREEN}{SHADOW DARK_GRAY}Easy");
-static const u8 sText_QuestMenu_DifficultyNormal[] = _("{COLOR DYNAMIC_COLOR2}{SHADOW DARK_GRAY}Normal");
-static const u8 sText_QuestMenu_DifficultyHard[] = _("{COLOR 21}{SHADOW DARK_GRAY}Hard");
-static const u8 sText_QuestMenu_DifficultySpecial[] = _("{COLOR RED}{SHADOW DARK_GRAY}Special");
-
-//menu actions
-// Selected an incomplete quest
-static const struct MenuAction sQuestSubmenuOptions[] =
-{
-    {sText_QuestMenu_Details,           {.void_u8 = Task_QuestMenuDetails}},
-    {sText_Cancel,                      {.void_u8 = Task_QuestMenuCancel}},
-};
-
-// completed quest selection
-static const struct MenuAction sCompletedQuestSubmenuOptions[] =
-{
-    {sText_QuestMenu_Details,           {.void_u8 = Task_QuestMenuDetails}},
-    {sText_Cancel,                      {.void_u8 = Task_QuestMenuCancel}},
-};
-
-// the item IDs that correspond to the quest's difficulty
-static const u16 sSideQuestDifficultyItemIds[] = 
-{
-	ITEM_POKE_BALL,
-	ITEM_GREAT_BALL,
-	ITEM_ULTRA_BALL,
-	ITEM_MASTER_BALL,
-};
-
-// The difficulty text displayed in the quest's description
-static const u8 *const sSideQuestDifficultyText[] =
-{
-    sText_QuestMenu_DifficultyEasy,
-    sText_QuestMenu_DifficultyNormal,
-    sText_QuestMenu_DifficultyHard,
-    sText_QuestMenu_DifficultySpecial,
-};
-
-#include "data/quest_objective_funcs.c"
-#include "data/quests.c"
-
-// ITEM PC MENU
 static const struct BgTemplate sBgTemplates[2] = {
     {
         .bg = 0,
@@ -274,9 +211,6 @@ static const struct WindowTemplate sSubwindowTemplates[] = {
 void ItemPc_Init(u8 kind, MainCallback callback)
 {
     u8 i;
-
-    //DebugSideQuestMenu();
-    GetSetQuestFlag(SIDE_QUEST_4, QUEST_MENU_COMPLETE_QUEST); // FOOTHOLD
 
     if (kind >= 2)
     {
@@ -547,28 +481,12 @@ static void ItemPc_BuildListMenuTemplate(void)
 {
     u16 i;
 
-    if (IsQuestMenuActive())
+    for (i = 0; i < sStateDataPtr->nItems; i++)
     {
-        for (i = 0; i < sStateDataPtr->nItems; i++)
-        {
-            if (GetSetQuestFlag(i, FLAG_GET_UNLOCKED))
-                sListMenuItems[i].label = sSideQuests[i].name;
-            else
-                sListMenuItems[i].label = sText_QuestMenu_Unk;
-
-            sListMenuItems[i].index = i;
-        }
+        sListMenuItems[i].label = ItemId_GetName(gSaveBlock1Ptr->pcItems[i].itemId);
+        sListMenuItems[i].index = i;
     }
-    else
-    {
-        for (i = 0; i < sStateDataPtr->nItems; i++)
-        {
-            sListMenuItems[i].label = ItemId_GetName(gSaveBlock1Ptr->pcItems[i].itemId);
-            sListMenuItems[i].index = i;
-        }
-    }
-
-    sListMenuItems[i].label = gOtherText_Exit;
+    sListMenuItems[i].label = gFameCheckerText_Cancel;
     sListMenuItems[i].index = LIST_CANCEL;
 
     gMultiuseListMenuTemplate.items = sListMenuItems;
@@ -601,53 +519,23 @@ static void ItemPc_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *
     if (sStateDataPtr->moveModeOrigPos == 0xFF)
     {
         DestroyItemMenuIcon(sStateDataPtr->itemMenuIconSlot ^ 1);
-
-        if (!IsQuestMenuActive())
+        if (itemIndex != -2)
         {
-            if (itemIndex != LIST_CANCEL)
-            {
-                itemId = ItemPc_GetItemIdBySlotId(itemIndex);
-                CreateItemMenuIcon(itemId, sStateDataPtr->itemMenuIconSlot);
-                if (ItemId_GetPocket(itemId) == POCKET_TM_CASE)
-                    desc = gMoveNames[ItemIdToBattleMoveId(itemId)];
-                else
-                    desc = ItemId_GetDescription(itemId);
-            }
+            itemId = ItemPc_GetItemIdBySlotId(itemIndex);
+            CreateItemMenuIcon(itemId, sStateDataPtr->itemMenuIconSlot);
+            if (ItemId_GetPocket(itemId) == POCKET_TM_CASE)
+                desc = gMoveNames[ItemIdToBattleMoveId(itemId)];
             else
-            {
-                CreateItemMenuIcon(ITEM_N_A, sStateDataPtr->itemMenuIconSlot);
-                desc = gText_ReturnToPC;
-            }
+                desc = ItemId_GetDescription(itemId);
         }
         else
         {
-            if (itemIndex != LIST_CANCEL)
-            {
-                if (GetSetQuestFlag(itemIndex, FLAG_GET_UNLOCKED))
-                {
-                    itemId = sSideQuestDifficultyItemIds[sSideQuests[itemIndex].difficulty];
-                    desc = sText_QuestMenu_Difficulty;
-                    StringCopy(gStringVar1, sSideQuestDifficultyText[sSideQuests[itemIndex].difficulty]);
-                }
-                else
-                {
-                    itemId = ITEM_NONE;
-                    desc = sText_QuestMenu_Unk;
-                }
-
-                CreateItemMenuIcon(itemId, sStateDataPtr->itemMenuIconSlot);
-            }  
-            else
-            {
-                CreateItemMenuIcon(ITEM_N_A, sStateDataPtr->itemMenuIconSlot);
-                desc = sText_QuestMenu_Exit;
-            }
+            CreateItemMenuIcon(ITEM_N_A, sStateDataPtr->itemMenuIconSlot);
+            desc = gText_ReturnToPC;
         }
         sStateDataPtr->itemMenuIconSlot ^= 1;
         FillWindowPixelBuffer(1, 0);
         StringExpandPlaceholders(gStringVar4, desc);
-        if (IsQuestMenuActive() && GetSetQuestFlag(itemIndex, FLAG_GET_UNLOCKED))
-            StringAppend(gStringVar4, sSideQuests[itemIndex].desc);
         ItemPc_AddTextPrinterParameterized(1, 2, gStringVar4, 0, 3, 2, 0, 0, 3);
     }
 }
@@ -664,52 +552,12 @@ static void ItemPc_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
         else
             ItemPc_PrintOrRemoveCursorAt(y, 0xFF);
     }
-    
     if (itemId != LIST_CANCEL)
     {
-        if (IsQuestMenuActive())
-        {
-            i = 0;
-            j = 0;
-            offset = 0;
-            temp = 0;
-
-            if (GetSetQuestFlag(itemId, FLAG_GET_COMPLETED))
-            {
-                offset = 15;
-                StringCopy(gStringVar4, sText_QuestMenu_Complete);
-            }
-            else if (!GetSetQuestFlag(itemId, FLAG_GET_UNLOCKED))
-                StringCopy(gStringVar4, gExpandedPlaceholder_Empty);
-            else if (sSideQuests[itemId].completedObjectives() >= sSideQuests[itemId].objectives)
-            {
-                offset = 2;
-                StringCopy(gStringVar4, sText_QuestMenu_TurnIn);
-            }
-            else if (sSideQuests[itemId].objectives == 1)
-            {
-                offset = 6;
-                StringCopy(gStringVar4, sText_QuestMenu_Active);
-            }
-            else
-            {
-                i = NumDigits(sSideQuests[itemId].completedObjectives());
-                j = NumDigits(sSideQuests[itemId].objectives);
-                offset = 30 - 5 * (i + j);
-                ConvertIntToDecimalStringN(gStringVar1, sSideQuests[itemId].completedObjectives(), STR_CONV_MODE_RIGHT_ALIGN, i);
-                ConvertIntToDecimalStringN(gStringVar2, sSideQuests[itemId].objectives, STR_CONV_MODE_LEFT_ALIGN, j);
-                StringExpandPlaceholders(gStringVar4, sText_QuestMenu_Objectives);
-            }
-            
-            ItemPc_AddTextPrinterParameterized(windowId, 0, gStringVar4, 100 + offset, y, 0, 0, TEXT_SPEED_FF, 1);
-        }
-        else
-        {
-            u16 quantity = ItemPc_GetItemQuantityBySlotId(itemId);
-            ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_RIGHT_ALIGN, 3);
-            StringExpandPlaceholders(gStringVar4, gText_TimesStrVar1);
-            ItemPc_AddTextPrinterParameterized(windowId, 0, gStringVar4, 110, y, 0, 0, 0xFF, 1);
-        }
+        u16 quantity = ItemPc_GetItemQuantityBySlotId(itemId);
+        ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_RIGHT_ALIGN, 3);
+        StringExpandPlaceholders(gStringVar4, gText_TimesStrVar1);
+        ItemPc_AddTextPrinterParameterized(windowId, 0, gStringVar4, 110, y, 0, 0, 0xFF, 1);
     }
 }
 
@@ -734,10 +582,7 @@ static void ItemPc_PrintOrRemoveCursorAt(u8 y, u8 colorIdx)
 
 static void ItemPc_PrintWithdrawItem(void)
 {
-    if (IsQuestMenuActive())
-        ItemPc_AddTextPrinterParameterized(2, 0, sText_Quests, 0, 1, 0, 1, 0, 0);
-    else
-        ItemPc_AddTextPrinterParameterized(2, 0, gText_WithdrawItem, 0, 1, 0, 1, 0, 0);
+    ItemPc_AddTextPrinterParameterized(2, 0, gText_WithdrawItem, 0, 1, 0, 1, 0, 0);
 }
 
 static void ItemPc_PlaceTopMenuScrollIndicatorArrows(void)
@@ -806,7 +651,6 @@ static void Task_ItemPcTurnOff2(u8 taskId)
 {
     s16 * data = gTasks[taskId].data;
 
-    SetQuestMenuInactive();
     if (!gPaletteFade.active && !IsPCScreenEffectRunning_TurnOff())
     {
         DestroyListMenuTask(data[0], &sListMenuState.scroll, &sListMenuState.row);
@@ -839,21 +683,13 @@ static void ItemPc_CountPcItems(void)
 {
     u16 i;
 
-    if (IsQuestMenuActive())
+    ItemPcCompaction();
+    sStateDataPtr->nItems = 0;
+    for (i = 0; i < PC_ITEMS_COUNT; sStateDataPtr->nItems++, i++)
     {
-        sStateDataPtr->nItems = SIDE_QUEST_COUNT;
+        if (gSaveBlock1Ptr->pcItems[i].itemId == ITEM_NONE)
+            break;
     }
-    else
-    {
-        ItemPcCompaction();
-        sStateDataPtr->nItems = 0;
-        for (i = 0; i < PC_ITEMS_COUNT; sStateDataPtr->nItems++, i++)
-        {
-            if (gSaveBlock1Ptr->pcItems[i].itemId == ITEM_NONE)
-                break;
-        }
-    }
-
     sStateDataPtr->maxShowed = sStateDataPtr->nItems + 1 <= 6 ? sStateDataPtr->nItems + 1 : 6;
 }
 
@@ -891,7 +727,7 @@ static void Task_ItemPcMain(u8 taskId)
 
     if (!gPaletteFade.active && !IsPCScreenEffectRunning_TurnOn())
     {
-        if (!IsQuestMenuActive() && JOY_NEW(SELECT_BUTTON))
+        if (JOY_NEW(SELECT_BUTTON))
         {
             ListMenuGetScrollAndRow(data[0], &scroll, &row);
             if (scroll + row != sStateDataPtr->nItems)
@@ -901,47 +737,25 @@ static void Task_ItemPcMain(u8 taskId)
                 return;
             }
         }
-
         input = ListMenu_ProcessInput(data[0]);
         ListMenuGetScrollAndRow(data[0], &sListMenuState.scroll, &sListMenuState.row);
         switch (input)
         {
-        case LIST_NOTHING_CHOSEN:
+        case -1:
             break;
-        case LIST_CANCEL:
+        case -2:
             PlaySE(SE_SELECT);
             ItemPc_SetInitializedFlag(FALSE);
             gTasks[taskId].func = Task_ItemPcTurnOff1;
             break;
         default:
-            if (IsQuestMenuActive())
-            {
-                if (GetSetQuestFlag(input, FLAG_GET_UNLOCKED))
-                {
-                    PlaySE(SE_SELECT);
-                    ItemPc_SetMessageWindowPalette(1);
-                    ItemPc_RemoveScrollIndicatorArrowPair();
-                    data[1] = input;
-                    //data[2] = QuestMenu_GetItemQuantityBySlotId(input);
-                    data[2] = 0;
-                    ItemPc_PrintOrRemoveCursor(data[0], 2);            
-                    gTasks[taskId].func = Task_ItemPcSubmenuInit;
-                }
-                else
-                {
-                    PlaySE(SE_FAILURE);
-                }
-            }
-            else
-            {
-                PlaySE(SE_SELECT);
-                ItemPc_SetMessageWindowPalette(1);
-                ItemPc_RemoveScrollIndicatorArrowPair();
-                data[1] = input;
-                data[2] = ItemPc_GetItemQuantityBySlotId(input);
-                ItemPc_PrintOrRemoveCursor(data[0], 2);
-                gTasks[taskId].func = Task_ItemPcSubmenuInit;
-            }
+            PlaySE(SE_SELECT);
+            ItemPc_SetMessageWindowPalette(1);
+            ItemPc_RemoveScrollIndicatorArrowPair();
+            data[1] = input;
+            data[2] = ItemPc_GetItemQuantityBySlotId(input);
+            ItemPc_PrintOrRemoveCursor(data[0], 2);
+            gTasks[taskId].func = Task_ItemPcSubmenuInit;
             break;
         }
     }
@@ -1030,33 +844,10 @@ static void Task_ItemPcSubmenuInit(u8 taskId)
 
     ItemPc_SetBorderStyleOnWindow(4);
     windowId = ItemPc_GetOrCreateSubwindow(0);
-
-    if (IsQuestMenuActive())
-    {
-        if (GetSetQuestFlag(data[1], FLAG_GET_COMPLETED))
-        {
-            // completed
-            PrintTextArray(4, 2, 8, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, NELEMS(sCompletedQuestSubmenuOptions), sCompletedQuestSubmenuOptions);
-            Menu_InitCursor(4, 2, 0, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, NELEMS(sCompletedQuestSubmenuOptions), 0);
-
-        }
-        else
-        {
-            // unlocked
-            PrintTextArray(4, 2, 8, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, NELEMS(sQuestSubmenuOptions), sQuestSubmenuOptions);
-            Menu_InitCursor(4, 2, 0, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, NELEMS(sQuestSubmenuOptions), 0);
-        }
-
-        StringCopy(gStringVar4, sText_QuestMenu_SelectedQuest);
-    }
-    else
-    {
-        PrintTextArray(4, 2, 8, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, 3, sItemPcSubmenuOptions);
-        Menu_InitCursor(4, 2, 0, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, 3, 0);
-        CopyItemName(ItemPc_GetItemIdBySlotId(data[1]), gStringVar1);
-        StringExpandPlaceholders(gStringVar4, gText_Var1IsSelected);
-    }
-
+    PrintTextArray(4, 2, 8, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, 3, sItemPcSubmenuOptions);
+    Menu_InitCursor(4, 2, 0, 2, GetFontAttribute(2, FONTATTR_MAX_LETTER_HEIGHT) + 2, 3, 0);
+    CopyItemName(ItemPc_GetItemIdBySlotId(data[1]), gStringVar1);
+    StringExpandPlaceholders(gStringVar4, gText_Var1IsSelected);
     ItemPc_AddTextPrinterParameterized(windowId, 2, gStringVar4, 0, 2, 1, 0, 0, 1);
     ScheduleBgCopyTilemapToVram(0);
     gTasks[taskId].func = Task_ItemPcSubmenuRun;
@@ -1075,19 +866,7 @@ static void Task_ItemPcSubmenuRun(u8 taskId)
         break;
     default:
         PlaySE(SE_SELECT);
-        if (IsQuestMenuActive())
-        {
-            u8 questIndex = ItemPc_GetCursorPosition();
-
-            if (GetSetQuestFlag(questIndex, FLAG_GET_COMPLETED))
-                sCompletedQuestSubmenuOptions[input].func.void_u8(taskId);
-            else       
-                sQuestSubmenuOptions[input].func.void_u8(taskId);
-        }
-        else
-        {
-            sItemPcSubmenuOptions[input].func.void_u8(taskId);
-        }
+        sItemPcSubmenuOptions[input].func.void_u8(taskId);
     }
 }
 
@@ -1369,148 +1148,3 @@ static void ItemPc_PrintOnWindow5WithContinueTask(u8 taskId, const u8 * str, Tas
     DisplayMessageAndContinueTask(taskId, 5, 0x3AC, 0x0B, 2, GetTextSpeedSetting(), str, taskFunc);
     ScheduleBgCopyTilemapToVram(0);
 }
-
-//// NEW - QUEST MENU ////
-//// Functions
-void SetQuestMenuActive(void)
-{
-    FlagSet(FLAG_QUEST_MENU_ACTIVE);
-}
-
-static void SetQuestMenuInactive(void)
-{
-    FlagClear(FLAG_QUEST_MENU_ACTIVE);
-}
-
-static bool8 IsQuestMenuActive(void)
-{
-    return FlagGet(FLAG_QUEST_MENU_ACTIVE);
-}
-
-s8 GetSetQuestFlag(u8 quest, u8 caseId)
-{
-    u8 index;
-    u8 bit;
-    u8 mask;
-
-    index = quest / 8; //8 bits per byte
-    bit = quest % 8;
-    mask = 1 << bit;
-
-    switch (caseId)
-    {
-    case FLAG_GET_UNLOCKED:
-        return gSaveBlock1Ptr->unlockedQuests[index] & mask;
-    case FLAG_SET_UNLOCKED:
-        gSaveBlock1Ptr->unlockedQuests[index] |= mask;
-        return 1;
-    case FLAG_GET_COMPLETED:
-        return gSaveBlock1Ptr->completedQuests[index] & mask;
-    case FLAG_SET_COMPLETED:
-        gSaveBlock1Ptr->completedQuests[index] |= mask;
-        return 1;
-    }
-
-    return -1;  //failure
-}
-
-static void QuestMenuSubmenuSelectionMessage(u8 taskId)
-{
-    s16 * data = gTasks[taskId].data;
-
-    ClearStdWindowAndFrameToTransparent(4, FALSE);
-    ItemPc_DestroySubwindow(0);
-    ClearWindowTilemap(4);
-    data[8] = 1;
-    PutWindowTilemap(0);
-    ScheduleBgCopyTilemapToVram(0);
-}
-
-static void Task_QuestMenuCleanUp(u8 taskId)
-{
-    s16 * data = gTasks[taskId].data;
-
-    ItemPc_DestroySubwindow(2);
-    PutWindowTilemap(1);
-    DestroyListMenuTask(data[0], &sListMenuState.scroll, &sListMenuState.row);
-
-    ItemPc_CountPcItems();
-    ItemPc_SetCursorPosition();
-    ItemPc_BuildListMenuTemplate();
-    data[0] = ListMenuInit(&gMultiuseListMenuTemplate, sListMenuState.scroll, sListMenuState.row);
-    ScheduleBgCopyTilemapToVram(0);
-    ItemPc_ReturnFromSubmenu(taskId);
-}
-
-static void Task_QuestMenuRefreshAfterAcknowledgement(u8 taskId)
-{
-    if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
-    {
-        PlaySE(SE_SELECT);
-        Task_QuestMenuCleanUp(taskId);
-    }
-}
-
-static void QuestMenu_DisplaySubMenuMessage(u8 taskId)
-{
-    s16 * data = gTasks[taskId].data;
-    u8 windowId;
-
-    windowId = ItemPc_GetOrCreateSubwindow(2);
-    AddTextPrinterParameterized(windowId, 2, gStringVar4, 0, 2, 0, NULL);
-    gTasks[taskId].func = Task_QuestMenuRefreshAfterAcknowledgement;
-}
-
-static void Task_QuestMenuCancel(u8 taskId)
-{
-    s16 * data = gTasks[taskId].data;
-
-    ClearStdWindowAndFrameToTransparent(4, FALSE);
-    ItemPc_DestroySubwindow(0);
-    ClearWindowTilemap(4);
-    PutWindowTilemap(0);
-    PutWindowTilemap(1);
-    ItemPc_PrintOrRemoveCursor(data[0], 1);
-    ScheduleBgCopyTilemapToVram(0);
-    ItemPc_ReturnFromSubmenu(taskId);
-}
-
-static void Task_QuestMenuDetails(u8 taskId)
-{
-    u8 questIndex = ItemPc_GetCursorPosition();
-
-    QuestMenuSubmenuSelectionMessage(taskId);
-    StringCopy(gStringVar1, sSideQuests[questIndex].poc);
-    StringCopy(gStringVar2, sSideQuests[questIndex].map);
-    StringExpandPlaceholders(gStringVar4, sText_QuestMenu_DisplayDetails);
-    QuestMenu_DisplaySubMenuMessage(taskId);
-}
-
-void CopyQuestName(u8 *dst, u8 questId)
-{
-    StringCopy(dst, sSideQuests[questId].name);
-}
-
-void CB2_QuestMenuFromStartMenu(void)
-{
-    ItemPc_Init(0, CB2_ReturnToField);
-}
-
-/*
-static void DebugSideQuestMenu(void)
-{
-    FlagSet(FLAG_QUEST_MENU_ACTIVE);
-    
-    GetSetQuestFlag(0, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(3, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(3, FLAG_SET_COMPLETED);
-    GetSetQuestFlag(6, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(8, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(10, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(11, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(11, FLAG_SET_COMPLETED);
-    GetSetQuestFlag(14, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(20, FLAG_SET_UNLOCKED);
-    GetSetQuestFlag(23, FLAG_SET_UNLOCKED);
-}
-*/
