@@ -312,6 +312,23 @@ struct Follower
     /*0x15*/ u8 locked;
 }; /* size = 0x18 */
 
+struct Roamer
+{
+    /*0x00*/ u32 ivs;
+    /*0x04*/ u32 personality;
+    /*0x08*/ u16 species;
+    /*0x0A*/ u16 hp;
+    /*0x0C*/ u8 level;
+    /*0x0D*/ u8 status;
+    /*0x0E*/ u8 cool;
+    /*0x0F*/ u8 beauty;
+    /*0x10*/ u8 cute;
+    /*0x11*/ u8 smart;
+    /*0x12*/ u8 tough;
+    /*0x13*/ bool8 active;
+    /*0x14*/ u8 filler[0x8];
+};
+
 struct SaveBlock2
 {
     /*0x000*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
@@ -350,7 +367,23 @@ struct SaveBlock2
               u8  avatarGender;
               u8  season;
               u16 seasonPedometer;
-              u8  filler_B20[0x400 - (sizeof(bool8)*2) - sizeof(u8[CHAR_COUNT]) - (sizeof(u8)*2) - sizeof(u16)];
+              u16 roamers[3];
+              u8  currentRoamer;
+              u8  currentRoamerLocation;
+              struct Roamer roamer;
+              u8  filler_B20[
+                  0x400 
+                  - sizeof(bool8)           // bool8 autoRun
+                  - sizeof(bool8)           // bool8 flyMapFromStartMenu
+                  - sizeof(u8[CHAR_COUNT])  // u8  avatarChoiceFlags[CHAR_COUNT];
+                  - sizeof(u8)              // u8  avatarGender;
+                  - sizeof(u8)              // u8  season;
+                  - sizeof(u16)             // u16 seasonPedometer;
+                  - sizeof(u16[3])          // u16 roamers[3];
+                  - sizeof(u8)              // u8  currentRoamer;
+                  - sizeof(u8)              // u8  currentRoamerLocation;
+                  - sizeof(struct Roamer)   // struct Roamer roamer;
+              ];
 
     /*0xF20*/ u32 encryptionKey;
 }; // size: 0xF25
@@ -408,23 +441,6 @@ struct Pokeblock
     u8 bitter;
     u8 sour;
     u8 feel;
-};
-
-struct Roamer
-{
-    /*0x00*/ u32 ivs;
-    /*0x04*/ u32 personality;
-    /*0x08*/ u16 species;
-    /*0x0A*/ u16 hp;
-    /*0x0C*/ u8 level;
-    /*0x0D*/ u8 status;
-    /*0x0E*/ u8 cool;
-    /*0x0F*/ u8 beauty;
-    /*0x10*/ u8 cute;
-    /*0x11*/ u8 smart;
-    /*0x12*/ u8 tough;
-    /*0x13*/ bool8 active;
-    /*0x14*/ u8 filler[0x8];
 };
 
 struct RamScriptData
@@ -869,7 +885,7 @@ struct SaveBlock1
     /*0x309C*/ u8 giftRibbons[11];
     /*0x30A7*/ struct ExternalEventData externalEventData;
     /*0x30BB*/ struct ExternalEventFlags externalEventFlags;
-    /*0x30D0*/ struct Roamer roamer;
+    /*0x30D0*/ struct Roamer fillerOldRoamer;
     /*0x30EC*/ struct EnigmaBerry enigmaBerry;
     /*0x3120*/ struct MEventBuffers mysteryEventBuffers;
     /*0x348C*/ u8 filler_348C[400];

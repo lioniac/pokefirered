@@ -1318,7 +1318,7 @@
 	.4byte \pointer
 	.endm
 
-	.macro vbufferstring byte:req, pointer:req
+	.macro bufferstring byte:req, pointer:req
 	.byte 0xbf
 	.byte \byte
 	.4byte \pointer

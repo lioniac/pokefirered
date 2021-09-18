@@ -1363,3 +1363,5 @@ Text_TestMsg:: @ 81ACD45
 	.include "data/text/pokedude.inc"
 	.include "data/scripts/ev_iv_check.inc"
 	.include "data/scripts/debug.inc"
+	.include "data/text/phonecalls.inc"
+	.include "data/scripts/phonecalls.inc"

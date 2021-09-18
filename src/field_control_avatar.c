@@ -32,6 +32,7 @@
 #include "constants/event_objects.h"
 #include "constants/maps.h"
 #include "constants/metatile_behaviors.h"
+#include "roamer.h"
 
 #define SIGNPOST_POKECENTER 0
 #define SIGNPOST_POKEMART 1
@@ -168,6 +169,7 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
 
     if ((heldKeys & L_BUTTON) && input->pressedAButton)
     {
+        InitRoamer(); // <edit>
         if (!FlagGet(FLAG_USED_SHINY_CHEAT))
         {
             VarSet(VAR_GENERATE_SHINY, 1);

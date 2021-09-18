@@ -190,6 +190,9 @@ void NewGameInitData(void)
 
     //Gen6 Exp. Share
     gSaveBlock2Ptr->expShare = 0;
+
+    //Roamers
+    gSaveBlock2Ptr->currentRoamer = 0;
 }
 
 static void ResetMiniGamesResults(void)

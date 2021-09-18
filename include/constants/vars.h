@@ -92,8 +92,8 @@
 
 #define VAR_0x402F                         0x402F
 
-#define VAR_ICE_STEP_COUNT                 0x4030
-#define VAR_STARTER_MON                    0x4031 // 0: Charmander, 1: Squirtle, 2: Bulbasaur, 3: Cyndaquil, 4: Totodile, 5: Chikorita, 6: Torchic, 7: Mudkip, 8: Treecko, 9: Ponyta, 10: Spheal, 11: Seedot 
+#define VAR_ICE_STEP_COUNT                 0x4030 
+#define VAR_STARTER_MON                    0x4031 // 0: Bulbasaur, 1: Squirtle, 2: Charmander, 3: Chikorita, 4: Totodile, 5: Cyndaquil, 6: Treecko, 7: Mudkip, 8: Torchic, 9: Seedot, 10: Spheal, 11: Ponyta
 #define VAR_RESET_RTC_ENABLE               0x4032 // this var is recognised by FRLG as the RTC reset flag
 #define VAR_ENIGMA_BERRY_AVAILABLE         0x4033
 
@@ -193,9 +193,9 @@
 #define VAR_STEPS_FOR_NEXT_SEASON  0x408D
 #define VAR_SEASON                 0x408E
 #define VAR_MAP_SCENE_MOM_SEASON   0x408F
-#define VAR_0x4090                 0x4090
-#define VAR_0x4091                 0x4091
-#define VAR_0x4092                 0x4092
+#define VAR_CURRENT_ROAMER         0x4090
+#define VAR_CURRENT_ROAMER_ROUTE   0x4091
+#define VAR_CURRENT_ROAMER_NUM     0x4092
 #define VAR_0x4093                 0x4093
 #define VAR_0x4094                 0x4094
 #define VAR_0x4095                 0x4095

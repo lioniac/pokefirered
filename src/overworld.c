@@ -378,9 +378,7 @@ void IncrementGameStat(u8 statId)
 
 void IncrementSeasonPedometer()
 {
-    u8 currMapType = GetCurrentMapType();
-
-    if (currMapType >= 1 && currMapType <= 3)
+    if (IsMapTypeOutdoors(GetCurrentMapType()))
     {
         u16 stepsRemaining;
 
@@ -394,7 +392,14 @@ void IncrementSeasonPedometer()
 
         if (stepsRemaining == 0)
             FlagSet(FLAG_SEASON_CHANGE);
-    }
+
+        if (FlagGet(FLAG_ROAMER_PHONE_CALL) && stepsRemaining % 11 == 0)
+        {
+            ScriptContext2_Enable();
+            ScriptContext1_SetupScript(EventScript_RoamersPhoneCall);
+            FlagClear(FLAG_ROAMER_PHONE_CALL);
+        }
+    } 
 }
 
 u32 GetGameStat(u8 statId)

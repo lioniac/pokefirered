@@ -531,7 +531,7 @@
 #define FLAG_SEASON_CHANGE       0x200
 #define FLAG_HIDE_MOM_SEASON     0x201
 #define FLAG_USED_SHINY_CHEAT    0x202
-#define FLAG_0x203               0x203
+#define FLAG_ROAMER_PHONE_CALL   0x203
 #define FLAG_0x204               0x204
 #define FLAG_0x205               0x205
 #define FLAG_0x206               0x206

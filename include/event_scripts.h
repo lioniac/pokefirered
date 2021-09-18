@@ -1260,4 +1260,7 @@ extern const u8 EventScript_Debug_GetMons[];
 extern const u8 EventScript_Debug_PC[];
 extern const u8 EventScript_Debug_Clock[];
 
+// PhoneCalls
+extern const u8 EventScript_RoamersPhoneCall[];
+
 #endif //GUARD_EVENT_SCRIPTS_H

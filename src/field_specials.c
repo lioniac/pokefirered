@@ -1538,27 +1538,27 @@ void ForcePlayerToStartSurfing(void)
 }
 
 static const u16 sStarterSpeciesSpring[] = {
-    SPECIES_CHARMANDER,
+    SPECIES_BULBASAUR,
     SPECIES_SQUIRTLE,
-    SPECIES_BULBASAUR
+    SPECIES_CHARMANDER
 };
 
 static const u16 sStarterSpeciesSummer[] = {
-    SPECIES_CYNDAQUIL,
+    SPECIES_CHIKORITA,
     SPECIES_TOTODILE,
-    SPECIES_CHIKORITA
+    SPECIES_CYNDAQUIL
 };
 
 static const u16 sStarterSpeciesAutumn[] = {
-    SPECIES_TORCHIC,
+    SPECIES_TREECKO,
     SPECIES_MUDKIP,
-    SPECIES_TREECKO
+    SPECIES_TORCHIC
 };
 
 static const u16 sStarterSpeciesWinter[] = {
-    SPECIES_PONYTA,
+    SPECIES_SEEDOT,
     SPECIES_SPHEAL,
-    SPECIES_SEEDOT
+    SPECIES_PONYTA
 };
 
 static u16 GetStarterSpeciesById(u16 idx, u8 season)
@@ -1572,15 +1572,15 @@ static u16 GetStarterSpeciesById(u16 idx, u8 season)
     case 1:
         if (idx >= NELEMS(sStarterSpeciesSummer))
             idx = 0;
-        return sStarterSpeciesSummer[idx];
+        return sStarterSpeciesSummer[idx-3];
     case 2:
         if (idx >= NELEMS(sStarterSpeciesAutumn))
             idx = 0;
-        return sStarterSpeciesAutumn[idx];
+        return sStarterSpeciesAutumn[idx-6];
     case 3:
         if (idx >= NELEMS(sStarterSpeciesWinter))
             idx = 0;
-        return sStarterSpeciesWinter[idx];
+        return sStarterSpeciesWinter[idx-9];
     }
 }
 
