@@ -458,8 +458,8 @@ u16 GetUnionRoomTrainerClass(void);
 void CreateEventLegalEnemyMon(void);
 void HandleSetPokedexFlag(u16 nationalNum, u8 caseId, u32 personality);
 bool8 CheckBattleTypeGhost(struct Pokemon *mon, u8 bank);
-struct OakSpeechNidoranFStruct *OakSpeechNidoranFSetup(u8 battlePosition, bool8 enable);
-void OakSpeechNidoranFFreeResources(void);
-void *OakSpeechNidoranFGetBuffer(u8 bufferId);
+struct OakSpeechEeveeStruct *OakSpeechEeveeSetup(u8 battlePosition, bool8 enable);
+void OakSpeechEeveeFreeResources(void);
+void *OakSpeechEeveeGetBuffer(u8 bufferId);
 
 #endif // GUARD_POKEMON_H

@@ -49,7 +49,7 @@
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
 #define HOENN_TO_NATIONAL(name)     [HOENN_DEX_##name - 1] = NATIONAL_DEX_##name
 
-struct OakSpeechNidoranFStruct
+struct OakSpeechEeveeStruct
 {
     u8 spriteCount:4;
     u8 battlePosition:4;
@@ -69,7 +69,7 @@ EWRAM_DATA u8 gEnemyPartyCount = 0;
 EWRAM_DATA struct Pokemon gEnemyParty[PARTY_SIZE] = {};
 EWRAM_DATA struct Pokemon gPlayerParty[PARTY_SIZE] = {};
 EWRAM_DATA struct SpriteTemplate gMultiuseSpriteTemplate = {0};
-static EWRAM_DATA struct OakSpeechNidoranFStruct *sOakSpeechNidoranResources = NULL;
+static EWRAM_DATA struct OakSpeechEeveeStruct *sOakSpeechEeveeResources = NULL;
 
 static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u8 substructType);
 static u16 GetDeoxysStat(struct Pokemon *mon, s32 statId);
@@ -1653,7 +1653,7 @@ const u16 gLinkPlayerFacilityClasses[] =
     FACILITY_CLASS_BEAUTY_2, FACILITY_CLASS_AQUA_LEADER,
 };
 
-static const struct OamData sOakSpeechNidoranFDummyOamData = 
+static const struct OamData sOakSpeechEeveeDummyOamData = 
 {
     .y = 0,
     .affineMode = 0,
@@ -1669,11 +1669,11 @@ static const struct OamData sOakSpeechNidoranFDummyOamData =
     .paletteNum = 0,
 };
 
-static const struct SpriteTemplate sOakSpeechNidoranFDummyTemplate = 
+static const struct SpriteTemplate sOakSpeechEeveeDummyTemplate = 
 {
     .tileTag = SPRITE_INVALID_TAG,
     .paletteTag = SPRITE_INVALID_TAG,
-    .oam = &sOakSpeechNidoranFDummyOamData,
+    .oam = &sOakSpeechEeveeDummyOamData,
     .anims = gDummySpriteAnimTable, 
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
@@ -2674,12 +2674,12 @@ void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition)
     }
     else
     {
-        if (sOakSpeechNidoranResources)
+        if (sOakSpeechEeveeResources)
         {
-            if (battlerPosition >= (s8)sOakSpeechNidoranResources->battlePosition) // why a cast?!? changing the unk0_2 type to s8 causes extra shifts, but a cast is the correct fix. why, compiler?
+            if (battlerPosition >= (s8)sOakSpeechEeveeResources->battlePosition) // why a cast?!? changing the unk0_2 type to s8 causes extra shifts, but a cast is the correct fix. why, compiler?
                 battlerPosition = 0;
 
-            gMultiuseSpriteTemplate = sOakSpeechNidoranResources->templates[battlerPosition];
+            gMultiuseSpriteTemplate = sOakSpeechEeveeResources->templates[battlerPosition];
         }
         else
         {
@@ -5989,7 +5989,7 @@ bool8 CheckBattleTypeGhost(struct Pokemon *mon, u8 battlerId)
     return FALSE;
 }
 
-static void OakSpeechNidoranFSetupTemplate(struct OakSpeechNidoranFStruct *structPtr, u8 battlePosition)
+static void OakSpeechEeveeSetupTemplate(struct OakSpeechEeveeStruct *structPtr, u8 battlePosition)
 {
     u16 i = 0, j = 0;
 
@@ -6015,13 +6015,13 @@ static void OakSpeechNidoranFSetupTemplate(struct OakSpeechNidoranFStruct *struc
 }
 
 // not used
-static void OakSpeechNidoranFSetupTemplateDummy(struct OakSpeechNidoranFStruct *structPtr)
+static void OakSpeechEeveeSetupTemplateDummy(struct OakSpeechEeveeStruct *structPtr)
 {
     u16 i, j;
 
     for (i = 0; i < (s8)structPtr->spriteCount; ++i)
     {
-        structPtr->templates[i] = sOakSpeechNidoranFDummyTemplate;
+        structPtr->templates[i] = sOakSpeechEeveeDummyTemplate;
         for (j = 0; j < structPtr->frameCount; ++j)
             structPtr->frameImages[i * structPtr->spriteCount + j].data = &structPtr->bufferPtrs[i][j * 0x800];
         structPtr->templates[i].images = &structPtr->frameImages[i * structPtr->spriteCount]; // should be frameCount logically
@@ -6030,38 +6030,38 @@ static void OakSpeechNidoranFSetupTemplateDummy(struct OakSpeechNidoranFStruct *
     }
 }
 
-struct OakSpeechNidoranFStruct *OakSpeechNidoranFSetup(u8 battlePosition, bool8 enable)
+struct OakSpeechEeveeStruct *OakSpeechEeveeSetup(u8 battlePosition, bool8 enable)
 {
     s32 size;
     u8 i, flags = 0;
 
-    if (sOakSpeechNidoranResources != NULL)
+    if (sOakSpeechEeveeResources != NULL)
     {
-        if (sOakSpeechNidoranResources->enable == 0xA3)
+        if (sOakSpeechEeveeResources->enable == 0xA3)
             return NULL;
-        memset(sOakSpeechNidoranResources, 0, sizeof(struct OakSpeechNidoranFStruct));
-        sOakSpeechNidoranResources = NULL;
+        memset(sOakSpeechEeveeResources, 0, sizeof(struct OakSpeechEeveeStruct));
+        sOakSpeechEeveeResources = NULL;
     }
-    sOakSpeechNidoranResources = AllocZeroed(0x18);
-    if (sOakSpeechNidoranResources == NULL)
+    sOakSpeechEeveeResources = AllocZeroed(0x18);
+    if (sOakSpeechEeveeResources == NULL)
         return NULL;
     switch (enable)
     {
     case TRUE:
         if (battlePosition == 4)
         {
-            sOakSpeechNidoranResources->spriteCount = 4;
-            sOakSpeechNidoranResources->battlePosition = 4;
+            sOakSpeechEeveeResources->spriteCount = 4;
+            sOakSpeechEeveeResources->battlePosition = 4;
         }
         else
         {
             if (battlePosition > 4)
                 battlePosition = 0;
-            sOakSpeechNidoranResources->spriteCount = 1;
-            sOakSpeechNidoranResources->battlePosition = 1;
+            sOakSpeechEeveeResources->spriteCount = 1;
+            sOakSpeechEeveeResources->battlePosition = 1;
         }
-        sOakSpeechNidoranResources->frameCount = 4;
-        sOakSpeechNidoranResources->enable2 = TRUE;
+        sOakSpeechEeveeResources->frameCount = 4;
+        sOakSpeechEeveeResources->enable2 = TRUE;
         break;
     case FALSE:
     default:
@@ -6069,17 +6069,17 @@ struct OakSpeechNidoranFStruct *OakSpeechNidoranFSetup(u8 battlePosition, bool8 
             battlePosition = 1;
         if (battlePosition > 8)
             battlePosition = 8;
-        sOakSpeechNidoranResources->spriteCount = (battlePosition << 16) >> 16;
-        sOakSpeechNidoranResources->battlePosition = battlePosition;
-        sOakSpeechNidoranResources->frameCount = 4;
-        sOakSpeechNidoranResources->enable2 = FALSE;
+        sOakSpeechEeveeResources->spriteCount = (battlePosition << 16) >> 16;
+        sOakSpeechEeveeResources->battlePosition = battlePosition;
+        sOakSpeechEeveeResources->frameCount = 4;
+        sOakSpeechEeveeResources->enable2 = FALSE;
         break;
     }
-    size = sOakSpeechNidoranResources->frameCount * 0x800;
-    sOakSpeechNidoranResources->sizePerSprite = size;
-    sOakSpeechNidoranResources->dataBuffer = AllocZeroed(sOakSpeechNidoranResources->spriteCount * size);
-    sOakSpeechNidoranResources->bufferPtrs = AllocZeroed(sOakSpeechNidoranResources->spriteCount * 0x20);
-    if (sOakSpeechNidoranResources->dataBuffer == NULL ||  sOakSpeechNidoranResources->bufferPtrs == NULL)
+    size = sOakSpeechEeveeResources->frameCount * 0x800;
+    sOakSpeechEeveeResources->sizePerSprite = size;
+    sOakSpeechEeveeResources->dataBuffer = AllocZeroed(sOakSpeechEeveeResources->spriteCount * size);
+    sOakSpeechEeveeResources->bufferPtrs = AllocZeroed(sOakSpeechEeveeResources->spriteCount * 0x20);
+    if (sOakSpeechEeveeResources->dataBuffer == NULL ||  sOakSpeechEeveeResources->bufferPtrs == NULL)
     {
         flags |= 1;
     }
@@ -6087,93 +6087,93 @@ struct OakSpeechNidoranFStruct *OakSpeechNidoranFSetup(u8 battlePosition, bool8 
     {
         do
         {
-            for (i = 0; i < (s8)sOakSpeechNidoranResources->spriteCount; ++i)
-                sOakSpeechNidoranResources->bufferPtrs[i] = &sOakSpeechNidoranResources->dataBuffer[sOakSpeechNidoranResources->sizePerSprite * i];
+            for (i = 0; i < (s8)sOakSpeechEeveeResources->spriteCount; ++i)
+                sOakSpeechEeveeResources->bufferPtrs[i] = &sOakSpeechEeveeResources->dataBuffer[sOakSpeechEeveeResources->sizePerSprite * i];
         } while (0);
     }
-    sOakSpeechNidoranResources->templates = AllocZeroed(sizeof(struct SpriteTemplate) * sOakSpeechNidoranResources->spriteCount);
-    sOakSpeechNidoranResources->frameImages = AllocZeroed(sOakSpeechNidoranResources->spriteCount * sizeof(struct SpriteFrameImage) * sOakSpeechNidoranResources->frameCount);
-    if (sOakSpeechNidoranResources->templates == NULL || sOakSpeechNidoranResources->frameImages == NULL)
+    sOakSpeechEeveeResources->templates = AllocZeroed(sizeof(struct SpriteTemplate) * sOakSpeechEeveeResources->spriteCount);
+    sOakSpeechEeveeResources->frameImages = AllocZeroed(sOakSpeechEeveeResources->spriteCount * sizeof(struct SpriteFrameImage) * sOakSpeechEeveeResources->frameCount);
+    if (sOakSpeechEeveeResources->templates == NULL || sOakSpeechEeveeResources->frameImages == NULL)
     {
         flags |= 2;
     }
     else
     {
-        for (i = 0; i < sOakSpeechNidoranResources->frameCount * sOakSpeechNidoranResources->spriteCount; ++i)
-                sOakSpeechNidoranResources->frameImages[i].size = 0x800;
-        switch (sOakSpeechNidoranResources->enable2)
+        for (i = 0; i < sOakSpeechEeveeResources->frameCount * sOakSpeechEeveeResources->spriteCount; ++i)
+                sOakSpeechEeveeResources->frameImages[i].size = 0x800;
+        switch (sOakSpeechEeveeResources->enable2)
         {
         case TRUE:
-            OakSpeechNidoranFSetupTemplate(sOakSpeechNidoranResources, battlePosition);
+            OakSpeechEeveeSetupTemplate(sOakSpeechEeveeResources, battlePosition);
             break;
         case FALSE:
         default:
-            OakSpeechNidoranFSetupTemplateDummy(sOakSpeechNidoranResources);
+            OakSpeechEeveeSetupTemplateDummy(sOakSpeechEeveeResources);
             break;
         }
     }
     if (flags & 2)
     {
-        if (sOakSpeechNidoranResources->frameImages != NULL)
-            FREE_AND_SET_NULL(sOakSpeechNidoranResources->frameImages);
-        if (sOakSpeechNidoranResources->templates != NULL)
-            FREE_AND_SET_NULL(sOakSpeechNidoranResources->templates);
+        if (sOakSpeechEeveeResources->frameImages != NULL)
+            FREE_AND_SET_NULL(sOakSpeechEeveeResources->frameImages);
+        if (sOakSpeechEeveeResources->templates != NULL)
+            FREE_AND_SET_NULL(sOakSpeechEeveeResources->templates);
     }
     if (flags & 1)
     {
-        if (sOakSpeechNidoranResources->bufferPtrs != NULL)
-            FREE_AND_SET_NULL(sOakSpeechNidoranResources->bufferPtrs);
-        if (sOakSpeechNidoranResources->dataBuffer != NULL)
-            FREE_AND_SET_NULL(sOakSpeechNidoranResources->dataBuffer);
+        if (sOakSpeechEeveeResources->bufferPtrs != NULL)
+            FREE_AND_SET_NULL(sOakSpeechEeveeResources->bufferPtrs);
+        if (sOakSpeechEeveeResources->dataBuffer != NULL)
+            FREE_AND_SET_NULL(sOakSpeechEeveeResources->dataBuffer);
     }
     if (flags)
     {
-        memset(sOakSpeechNidoranResources, 0, sizeof(struct OakSpeechNidoranFStruct));
-        FREE_AND_SET_NULL(sOakSpeechNidoranResources);
+        memset(sOakSpeechEeveeResources, 0, sizeof(struct OakSpeechEeveeStruct));
+        FREE_AND_SET_NULL(sOakSpeechEeveeResources);
     }
     else
     {
-        sOakSpeechNidoranResources->enable = 0xA3;
+        sOakSpeechEeveeResources->enable = 0xA3;
     }
-    return sOakSpeechNidoranResources;
+    return sOakSpeechEeveeResources;
 }
 
-void OakSpeechNidoranFFreeResources(void)
+void OakSpeechEeveeFreeResources(void)
 {
-    if (sOakSpeechNidoranResources != NULL)
+    if (sOakSpeechEeveeResources != NULL)
     {
-        if (sOakSpeechNidoranResources->enable != 0xA3)
+        if (sOakSpeechEeveeResources->enable != 0xA3)
         {
-            memset(sOakSpeechNidoranResources, 0, sizeof(struct OakSpeechNidoranFStruct));
-            sOakSpeechNidoranResources = NULL;
+            memset(sOakSpeechEeveeResources, 0, sizeof(struct OakSpeechEeveeStruct));
+            sOakSpeechEeveeResources = NULL;
         }
         else
         {
-            if (sOakSpeechNidoranResources->frameImages != NULL)
-                FREE_AND_SET_NULL(sOakSpeechNidoranResources->frameImages);
-            if (sOakSpeechNidoranResources->templates != NULL)
-                FREE_AND_SET_NULL(sOakSpeechNidoranResources->templates);
-            if (sOakSpeechNidoranResources->bufferPtrs != NULL)
-                FREE_AND_SET_NULL(sOakSpeechNidoranResources->bufferPtrs);                    
-            if (sOakSpeechNidoranResources->dataBuffer != NULL)
-                FREE_AND_SET_NULL(sOakSpeechNidoranResources->dataBuffer);
-            memset(sOakSpeechNidoranResources, 0, sizeof(struct OakSpeechNidoranFStruct));
-            FREE_AND_SET_NULL(sOakSpeechNidoranResources);
+            if (sOakSpeechEeveeResources->frameImages != NULL)
+                FREE_AND_SET_NULL(sOakSpeechEeveeResources->frameImages);
+            if (sOakSpeechEeveeResources->templates != NULL)
+                FREE_AND_SET_NULL(sOakSpeechEeveeResources->templates);
+            if (sOakSpeechEeveeResources->bufferPtrs != NULL)
+                FREE_AND_SET_NULL(sOakSpeechEeveeResources->bufferPtrs);                    
+            if (sOakSpeechEeveeResources->dataBuffer != NULL)
+                FREE_AND_SET_NULL(sOakSpeechEeveeResources->dataBuffer);
+            memset(sOakSpeechEeveeResources, 0, sizeof(struct OakSpeechEeveeStruct));
+            FREE_AND_SET_NULL(sOakSpeechEeveeResources);
         }
 
     }
 }
 
-void *OakSpeechNidoranFGetBuffer(u8 bufferId)
+void *OakSpeechEeveeGetBuffer(u8 bufferId)
 {
-    if (sOakSpeechNidoranResources->enable != 0xA3)
+    if (sOakSpeechEeveeResources->enable != 0xA3)
     {
         return NULL;
     }
     else
     {
-        if (bufferId >= (s8)sOakSpeechNidoranResources->spriteCount)
+        if (bufferId >= (s8)sOakSpeechEeveeResources->spriteCount)
             bufferId = 0;
-        return sOakSpeechNidoranResources->bufferPtrs[bufferId];
+        return sOakSpeechEeveeResources->bufferPtrs[bufferId];
     }
 }

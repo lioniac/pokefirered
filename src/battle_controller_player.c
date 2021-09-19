@@ -2194,7 +2194,7 @@ static void PlayerHandleDrawTrainerPic(void)
         if ((gLinkPlayers[GetMultiplayerId()].version & 0xFF) == VERSION_RUBY
          || (gLinkPlayers[GetMultiplayerId()].version & 0xFF) == VERSION_SAPPHIRE
          || (gLinkPlayers[GetMultiplayerId()].version & 0xFF) == VERSION_EMERALD)
-            trainerPicId = gLinkPlayers[GetMultiplayerId()].gender + BACK_PIC_RS_BRENDAN;
+            trainerPicId = gLinkPlayers[GetMultiplayerId()].gender + BACK_PIC_BRENDAN;
         else
             trainerPicId = gLinkPlayers[GetMultiplayerId()].gender + BACK_PIC_RED;
     }

@@ -1090,103 +1090,7 @@ const union AnimCmd *const gAnimTable_83A3410[] = {
     gAnimCmd_83A2F7C,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_RedGreenNormal[] = {
-    gAnimCmd_83A2AC4,
-    gAnimCmd_83A2ACC,
-    gAnimCmd_83A2AD4,
-    gAnimCmd_83A2ADC,
-    gAnimCmd_83A2AE4,
-    gAnimCmd_83A2AF8,
-    gAnimCmd_83A2B0C,
-    gAnimCmd_83A2B20,
-    gAnimCmd_83A2B34,
-    gAnimCmd_83A2B48,
-    gAnimCmd_83A2B5C,
-    gAnimCmd_83A2B70,
-    gAnimCmd_83A2B84,
-    gAnimCmd_83A2B98,
-    gAnimCmd_83A2BAC,
-    gAnimCmd_83A2BC0,
-    gAnimCmd_83A2BD4,
-    gAnimCmd_83A2BE8,
-    gAnimCmd_83A2BFC,
-    gAnimCmd_83A2C10,
-    gAnimCmd_83A2F40,
-    gAnimCmd_83A2F54,
-    gAnimCmd_83A2F68,
-    gAnimCmd_83A2F7C,
-    gAnimCmd_83A2EC8,
-    gAnimCmd_83A2EE0,
-    gAnimCmd_83A2EF8,
-    gAnimCmd_83A2F10,
-    gAnimCmd_83A2F28,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BlueNormal[] = {
-    gAnimCmd_83A2AC4,
-    gAnimCmd_83A2ACC,
-    gAnimCmd_83A2AD4,
-    gAnimCmd_83A2ADC,
-    gAnimCmd_83A2AE4,
-    gAnimCmd_83A2AF8,
-    gAnimCmd_83A2B0C,
-    gAnimCmd_83A2B20,
-    gAnimCmd_83A2B34,
-    gAnimCmd_83A2B48,
-    gAnimCmd_83A2B5C,
-    gAnimCmd_83A2B70,
-    gAnimCmd_83A2B84,
-    gAnimCmd_83A2B98,
-    gAnimCmd_83A2BAC,
-    gAnimCmd_83A2BC0,
-    gAnimCmd_83A2BD4,
-    gAnimCmd_83A2BE8,
-    gAnimCmd_83A2BFC,
-    gAnimCmd_83A2C10,
-    gAnimCmd_83A2F40,
-    gAnimCmd_83A2F54,
-    gAnimCmd_83A2F68,
-    gAnimCmd_83A2F7C,
-    gAnimCmd_83A2EC8,
-    gAnimCmd_83A2EE0,
-    gAnimCmd_83A2EF8,
-    gAnimCmd_83A2F10,
-    gAnimCmd_83A2F28,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BrendanNormal[] = {
-    gAnimCmd_83A2AC4,
-    gAnimCmd_83A2ACC,
-    gAnimCmd_83A2AD4,
-    gAnimCmd_83A2ADC,
-    gAnimCmd_83A2AE4,
-    gAnimCmd_83A2AF8,
-    gAnimCmd_83A2B0C,
-    gAnimCmd_83A2B20,
-    gAnimCmd_83A2B34,
-    gAnimCmd_83A2B48,
-    gAnimCmd_83A2B5C,
-    gAnimCmd_83A2B70,
-    gAnimCmd_83A2B84,
-    gAnimCmd_83A2B98,
-    gAnimCmd_83A2BAC,
-    gAnimCmd_83A2BC0,
-    gAnimCmd_83A2BD4,
-    gAnimCmd_83A2BE8,
-    gAnimCmd_83A2BFC,
-    gAnimCmd_83A2C10,
-    gAnimCmd_83A2F40,
-    gAnimCmd_83A2F54,
-    gAnimCmd_83A2F68,
-    gAnimCmd_83A2F7C,
-    gAnimCmd_83A2EC8,
-    gAnimCmd_83A2EE0,
-    gAnimCmd_83A2EF8,
-    gAnimCmd_83A2F10,
-    gAnimCmd_83A2F28,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_MayNormal[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_PlayerNormal[] = {
     gAnimCmd_83A2AC4,
     gAnimCmd_83A2ACC,
     gAnimCmd_83A2AD4,
@@ -1261,88 +1165,7 @@ const union AnimCmd *const gAnimTable_83A34E4[] = {
     gAnimCmd_83A3128,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_RedGreenSurf[] = {
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A300C,
-    gAnimCmd_83A3014,
-    gAnimCmd_83A301C,
-    gAnimCmd_83A3024,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BlueSurf[] = {
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A300C,
-    gAnimCmd_83A3014,
-    gAnimCmd_83A301C,
-    gAnimCmd_83A3024,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BrendanSurf[] = {
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A2C48,
-    gAnimCmd_83A2C50,
-    gAnimCmd_83A2C58,
-    gAnimCmd_83A2C60,
-    gAnimCmd_83A300C,
-    gAnimCmd_83A3014,
-    gAnimCmd_83A301C,
-    gAnimCmd_83A3024,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_MaySurf[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_PlayerSurf[] = {
     gAnimCmd_83A2C48,
     gAnimCmd_83A2C50,
     gAnimCmd_83A2C58,
@@ -1393,15 +1216,15 @@ const union AnimCmd *const gObjectEventImageAnimTable_Nurse[] = {
     gAnimCmd_83A3184,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_RedGreenItem[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_PlayerItem[] = {
     gAnimCmd_83A2F90,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_RedGreenVSSeeker[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_PlayerVSSeeker[] = {
     gAnimCmd_83A2FA8,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_RedGreenVSSeekerBike[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_PlayerVSSeekerBike[] = {
     gAnimCmd_83A2FD8,
     gAnimCmd_83A313C,
     gAnimCmd_83A3144,
@@ -1410,103 +1233,7 @@ const union AnimCmd *const gObjectEventImageAnimTable_RedGreenVSSeekerBike[] = {
     gAnimCmd_83A3170,
 };
 
-const union AnimCmd *const gObjectEventImageAnimTable_RedGreenFish[] = {
-    gAnimCmd_83A31BC,
-    gAnimCmd_83A31D0,
-    gAnimCmd_83A31E4,
-    gAnimCmd_83A31F8,
-    gAnimCmd_83A320C,
-    gAnimCmd_83A3220,
-    gAnimCmd_83A3234,
-    gAnimCmd_83A3248,
-    gAnimCmd_83A325C,
-    gAnimCmd_83A3270,
-    gAnimCmd_83A3284,
-    gAnimCmd_83A3298,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BlueItem[] = {
-    gAnimCmd_83A2F90,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BlueVSSeeker[] = {
-    gAnimCmd_83A2FA8,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BlueVSSeekerBike[] = {
-    gAnimCmd_83A2FD8,
-    gAnimCmd_83A313C,
-    gAnimCmd_83A3144,
-    gAnimCmd_83A3150,
-    gAnimCmd_83A315C,
-    gAnimCmd_83A3170,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BlueFish[] = {
-    gAnimCmd_83A31BC,
-    gAnimCmd_83A31D0,
-    gAnimCmd_83A31E4,
-    gAnimCmd_83A31F8,
-    gAnimCmd_83A320C,
-    gAnimCmd_83A3220,
-    gAnimCmd_83A3234,
-    gAnimCmd_83A3248,
-    gAnimCmd_83A325C,
-    gAnimCmd_83A3270,
-    gAnimCmd_83A3284,
-    gAnimCmd_83A3298,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BrendanItem[] = {
-    gAnimCmd_83A2F90,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BrendanVSSeeker[] = {
-    gAnimCmd_83A2FA8,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BrendanVSSeekerBike[] = {
-    gAnimCmd_83A2FD8,
-    gAnimCmd_83A313C,
-    gAnimCmd_83A3144,
-    gAnimCmd_83A3150,
-    gAnimCmd_83A315C,
-    gAnimCmd_83A3170,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_BrendanFish[] = {
-    gAnimCmd_83A31BC,
-    gAnimCmd_83A31D0,
-    gAnimCmd_83A31E4,
-    gAnimCmd_83A31F8,
-    gAnimCmd_83A320C,
-    gAnimCmd_83A3220,
-    gAnimCmd_83A3234,
-    gAnimCmd_83A3248,
-    gAnimCmd_83A325C,
-    gAnimCmd_83A3270,
-    gAnimCmd_83A3284,
-    gAnimCmd_83A3298,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_MayItem[] = {
-    gAnimCmd_83A2F90,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_MayVSSeeker[] = {
-    gAnimCmd_83A2FA8,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_MayVSSeekerBike[] = {
-    gAnimCmd_83A2FD8,
-    gAnimCmd_83A313C,
-    gAnimCmd_83A3144,
-    gAnimCmd_83A3150,
-    gAnimCmd_83A315C,
-    gAnimCmd_83A3170,
-};
-
-const union AnimCmd *const gObjectEventImageAnimTable_MayFish[] = {
+const union AnimCmd *const gObjectEventImageAnimTable_PlayerFish[] = {
     gAnimCmd_83A31BC,
     gAnimCmd_83A31D0,
     gAnimCmd_83A31E4,
@@ -1541,7 +1268,7 @@ const struct UnkStruct_083A3698 gUnknown_83A3698[] = {
         .animPos = {1, 3, 0, 2},
     },
     {
-        .anims = gObjectEventImageAnimTable_RedGreenNormal,
+        .anims = gObjectEventImageAnimTable_PlayerNormal,
         .animPos = {1, 3, 0, 2},
     },
     {
@@ -1549,7 +1276,7 @@ const struct UnkStruct_083A3698 gUnknown_83A3698[] = {
         .animPos = {1, 3, 0, 2},
     },
     {
-        .anims = gObjectEventImageAnimTable_RedGreenSurf,
+        .anims = gObjectEventImageAnimTable_PlayerSurf,
         .animPos = {1, 3, 0, 2},
     },
     {
@@ -1557,7 +1284,7 @@ const struct UnkStruct_083A3698 gUnknown_83A3698[] = {
         .animPos = {1, 3, 0, 2},
     },
     {
-        .anims = gObjectEventImageAnimTable_RedGreenFish,
+        .anims = gObjectEventImageAnimTable_PlayerFish,
         .animPos = {1, 3, 0, 2},
     },
     {

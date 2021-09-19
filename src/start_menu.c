@@ -238,7 +238,8 @@ static void SetUpStartMenu_NormalField(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
-    AppendToStartMenuItems(STARTMENU_MAP);
+    if (VarGet(VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE) == 2)
+        AppendToStartMenuItems(STARTMENU_MAP);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
     AppendToStartMenuItems(STARTMENU_OPTION);

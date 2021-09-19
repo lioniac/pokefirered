@@ -318,6 +318,8 @@ u16 PlayerGenderToFrontTrainerPicId_Debug(u8 character, bool8 getClass)
             return gFacilityClassToPicIndex[0x84];
         case MAY:
             return gFacilityClassToPicIndex[0x85];
+        case OAK:
+            return gFacilityClassToPicIndex[0x83];
         }
     }
     return character;

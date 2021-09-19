@@ -497,9 +497,10 @@ struct BattleScripting
 enum
 {
     BACK_PIC_RED,
+    BACK_PIC_BLUE,
     BACK_PIC_LEAF,
-    BACK_PIC_RS_BRENDAN,
-    BACK_PIC_RS_MAY,
+    BACK_PIC_BRENDAN,
+    BACK_PIC_MAY,
     BACK_PIC_POKEDUDE,
     BACK_PIC_OLDMAN
 };

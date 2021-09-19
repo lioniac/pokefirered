@@ -37,8 +37,8 @@
 #define OBJ_EVENT_GFX_MAY_VS_SEEKER            33
 #define OBJ_EVENT_GFX_MAY_VS_SEEKER_BIKE       34
 #define OBJ_EVENT_GFX_RS_UNUSED_PADDING        35
-#define OBJ_EVENT_GFX_RS_BRENDAN               36
-#define OBJ_EVENT_GFX_RS_MAY                   37
+#define OBJ_EVENT_GFX_RS_UNUSED_BRENDAN        36
+#define OBJ_EVENT_GFX_RS_UNUSED_MAY            37
 #define OBJ_EVENT_GFX_LITTLE_BOY               38
 #define OBJ_EVENT_GFX_LITTLE_GIRL              39
 #define OBJ_EVENT_GFX_YOUNGSTER                40

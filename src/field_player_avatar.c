@@ -1138,8 +1138,8 @@ static const u8 sPlayerAvatarGfxIds[][CHAR_COUNT] = {
 };
 
 static const u8 sHoennLinkPartnerGfxIds[] = {
-    OBJ_EVENT_GFX_RS_BRENDAN,
-    OBJ_EVENT_GFX_RS_MAY
+    OBJ_EVENT_GFX_BRENDAN_NORMAL,
+    OBJ_EVENT_GFX_MAY_NORMAL
 };
 
 u8 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
