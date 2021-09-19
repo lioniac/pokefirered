@@ -3345,7 +3345,7 @@ static u8 sub_8087168(void)
     struct Sprite * sprite;
     spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0xff, 0xb4, 0x1);
     sprite = &gSprites[spriteId];
-    sprite->oam.paletteNum = 0;
+    sprite->oam.paletteNum = (gSaveBlock2Ptr->avatarChoice == RED || gSaveBlock2Ptr->avatarChoice == GREEN) ? 0 : 1;
     sprite->oam.priority = 1;
     sprite->callback = sub_8087220;
     return spriteId;
@@ -3554,7 +3554,7 @@ static void FlyInEffect_1(struct Task * task)
         task->data[1] = sub_8087168();
         sub_80871C8(task->data[1]);
         sub_8087204(task->data[1], objectEvent->spriteId);
-        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->avatarChoice * 2 + 2);
+        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->avatarChoice * 2 + 2); // <edit>
         sub_80877FC(&gSprites[task->data[1]], 1);
         gSprites[task->data[1]].callback = sub_8087828;
     }

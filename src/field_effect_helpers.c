@@ -166,8 +166,8 @@ u8 CreateWarpArrowSprite(void)
     u8 spriteId;
     struct Sprite * sprite;
 
-    LoadFieldEffectPalette_(8, FALSE);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[8], 0, 0, 0x52);
+    LoadFieldEffectPalette_(FLDEFFOBJ_ARROW, FALSE);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_ARROW], 0, 0, 0x52);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
@@ -202,6 +202,7 @@ void ShowWarpArrowSprite(u8 spriteId, u8 direction, s16 x, s16 y)
         sprite->invisible = FALSE;
         sprite->data[0] = x;
         sprite->data[1] = y;
+        sprite->oam.paletteNum = (gSaveBlock2Ptr->avatarChoice == RED || gSaveBlock2Ptr->avatarChoice == GREEN) ? 0 : 1;
         StartSpriteAnim(sprite, direction - 1);
     }
 }
