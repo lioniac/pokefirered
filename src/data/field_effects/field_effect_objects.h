@@ -1159,13 +1159,39 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SandDisguisePlaceholder =
     .callback = UpdateDisguiseFieldEffect,
 };
 
-static const struct SpriteFrameImage sPicTable_Bird[] =
+static const struct SpriteFrameImage sPicTable_BirdRed[] =
 {
-    overworld_frame(gFieldEffectObjectPic_Bird, 8, 8, 0),
-    overworld_frame(gFieldEffectObjectPic_Bird, 8, 8, 1),
-    overworld_frame(gFieldEffectObjectPic_Bird, 8, 8, 2),
-    overworld_frame(gFieldEffectObjectPic_Bird, 8, 8, 3),
-    overworld_frame(gFieldEffectObjectPic_Bird, 8, 8, 4),
+    overworld_frame(gFieldEffectObjectPic_BirdRed, 8, 8, 0),
+    overworld_frame(gFieldEffectObjectPic_BirdRed, 8, 8, 1),
+    overworld_frame(gFieldEffectObjectPic_BirdRed, 8, 8, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_BirdBlue[] =
+{
+    overworld_frame(gFieldEffectObjectPic_BirdBlue, 8, 8, 0),
+    overworld_frame(gFieldEffectObjectPic_BirdBlue, 8, 8, 1),
+    overworld_frame(gFieldEffectObjectPic_BirdBlue, 8, 8, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_BirdGreen[] =
+{
+    overworld_frame(gFieldEffectObjectPic_BirdGreen, 8, 8, 0),
+    overworld_frame(gFieldEffectObjectPic_BirdGreen, 8, 8, 1),
+    overworld_frame(gFieldEffectObjectPic_BirdGreen, 8, 8, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_BirdBrendan[] =
+{
+    overworld_frame(gFieldEffectObjectPic_BirdBrendan, 8, 8, 0),
+    overworld_frame(gFieldEffectObjectPic_BirdBrendan, 8, 8, 1),
+    overworld_frame(gFieldEffectObjectPic_BirdBrendan, 8, 8, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_BirdMay[] =
+{
+    overworld_frame(gFieldEffectObjectPic_BirdMay, 8, 8, 0),
+    overworld_frame(gFieldEffectObjectPic_BirdMay, 8, 8, 1),
+    overworld_frame(gFieldEffectObjectPic_BirdMay, 8, 8, 2),
 };
 
 static const union AnimCmd sAnim_Bird_0[] =
@@ -1207,13 +1233,57 @@ static const union AnimCmd *const sAnimTable_Bird[] =
     sAnim_Bird_4,
 };
 
-const struct SpriteTemplate gFieldEffectObjectTemplate_Bird =
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdRed =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = OBJ_EVENT_PAL_TAG_00,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_64x64,
     .anims = sAnimTable_Bird,
-    .images = sPicTable_Bird,
+    .images = sPicTable_BirdRed,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdBlue =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_BLUE,
+    .oam = &gObjectEventBaseOam_64x64,
+    .anims = sAnimTable_Bird,
+    .images = sPicTable_BirdBlue,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdGreen =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_GREEN,
+    .oam = &gObjectEventBaseOam_64x64,
+    .anims = sAnimTable_Bird,
+    .images = sPicTable_BirdGreen,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdBrendan =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_BRENDAN,
+    .oam = &gObjectEventBaseOam_64x64,
+    .anims = sAnimTable_Bird,
+    .images = sPicTable_BirdBrendan,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdMay =
+{
+    .tileTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_MAY,
+    .oam = &gObjectEventBaseOam_64x64,
+    .anims = sAnimTable_Bird,
+    .images = sPicTable_BirdMay,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };

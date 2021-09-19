@@ -169,7 +169,7 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
 
     if ((heldKeys & L_BUTTON) && input->pressedAButton)
     {
-        InitRoamer(); // <edit>
+        // InitRoamer(); // <edit> <test>
         if (!FlagGet(FLAG_USED_SHINY_CHEAT))
         {
             VarSet(VAR_GENERATE_SHINY, 1);

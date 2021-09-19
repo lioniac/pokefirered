@@ -27,7 +27,11 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_DeepSandFootprints;
 /*const struct SpriteTemplate gFieldEffectObjectTemplate_Sparkle;*/
 const struct SpriteTemplate gFieldEffectObjectTemplate_TreeDisguise;
 const struct SpriteTemplate gFieldEffectObjectTemplate_MountainDisguise;
-const struct SpriteTemplate gFieldEffectObjectTemplate_Bird;
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdRed;
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdBlue;
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdGreen;
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdBrendan;
+const struct SpriteTemplate gFieldEffectObjectTemplate_BirdMay;
 const struct SpriteTemplate gFieldEffectObjectTemplate_BikeTireTracks;
 const struct SpriteTemplate gFieldEffectObjectTemplate_SandDisguisePlaceholder;
 const struct SpriteTemplate gFieldEffectObjectTemplate_SandPile;
@@ -68,7 +72,7 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_DEEP_SAND_FOOTPRINTS]  = &gFieldEffectObjectTemplate_DeepSandFootprints,
     [FLDEFFOBJ_TREE_DISGUISE]         = &gFieldEffectObjectTemplate_TreeDisguise,
     [FLDEFFOBJ_MOUNTAIN_DISGUISE]     = &gFieldEffectObjectTemplate_MountainDisguise,
-    [FLDEFFOBJ_BIRD]                  = &gFieldEffectObjectTemplate_Bird,
+    [FLDEFFOBJ_BIRD_RED]              = &gFieldEffectObjectTemplate_BirdRed,
     [FLDEFFOBJ_BIKE_TIRE_TRACKS]      = &gFieldEffectObjectTemplate_BikeTireTracks,
     [FLDEFFOBJ_SAND_DISGUISE]         = &gFieldEffectObjectTemplate_SandDisguisePlaceholder,
     [FLDEFFOBJ_SAND_PILE]             = &gFieldEffectObjectTemplate_SandPile,
@@ -78,4 +82,8 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_ASH_LAUNCH]            = &gFieldEffectObjectTemplate_AshLaunch,
     [FLDEFFOBJ_BUBBLES]               = &gFieldEffectObjectTemplate_Bubbles,
     [FLDEFFOBJ_SMALL_SPARKLE]         = &gFieldEffectObjectTemplate_SmallSparkle,
+    [FLDEFFOBJ_BIRD_BLUE]             = &gFieldEffectObjectTemplate_BirdBlue,
+    [FLDEFFOBJ_BIRD_GREEN]            = &gFieldEffectObjectTemplate_BirdGreen,
+    [FLDEFFOBJ_BIRD_BRENDAN]          = &gFieldEffectObjectTemplate_BirdBrendan,
+    [FLDEFFOBJ_BIRD_MAY]              = &gFieldEffectObjectTemplate_BirdMay,
 };

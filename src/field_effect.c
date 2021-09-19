@@ -3151,9 +3151,29 @@ u8 FldEff_NpcFlyOut(void)
 {
     u8 spriteId;
     struct Sprite *sprite;
+    u8 bird;
 
-    LoadFieldEffectPalette(FLDEFFOBJ_BIRD);
-    spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0x78, 0, 1);
+    switch (gSaveBlock2Ptr->avatarChoice)
+    {
+    case RED:
+        bird = FLDEFFOBJ_BIRD_RED;
+        break;
+    case BLUE:
+        bird = FLDEFFOBJ_BIRD_BLUE;
+        break;
+    case GREEN:
+        bird = FLDEFFOBJ_BIRD_GREEN;
+        break;
+    case BRENDAN:
+        bird = FLDEFFOBJ_BIRD_BRENDAN;
+        break;
+    case MAY:
+        bird = FLDEFFOBJ_BIRD_MAY;
+        break;
+    }
+
+    LoadFieldEffectPalette(bird);
+    spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[bird], 0x78, 0, 1);
     sprite = &gSprites[spriteId];
 
     sprite->oam.priority = 1;
@@ -3313,7 +3333,7 @@ static void UseFlyEffect_7(struct Task * task)
         objectEvent->inanimate = FALSE;
         objectEvent->hasShadow = FALSE;
         sub_8087204(task->data[1], objectEvent->spriteId);
-        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->avatarChoice * 2 + 1);
+        StartSpriteAnim(&gSprites[task->data[1]], 1);
         sub_80877FC(&gSprites[task->data[1]], 0);
         gSprites[task->data[1]].callback = sub_8087828;
         CameraObjectReset2();
@@ -3343,9 +3363,31 @@ static u8 sub_8087168(void)
 {
     u8 spriteId;
     struct Sprite * sprite;
-    spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0xff, 0xb4, 0x1);
+    u8 bird;
+
+    switch (gSaveBlock2Ptr->avatarChoice)
+    {
+    case RED:
+        bird = FLDEFFOBJ_BIRD_RED;
+        break;
+    case BLUE:
+        bird = FLDEFFOBJ_BIRD_BLUE;
+        break;
+    case GREEN:
+        bird = FLDEFFOBJ_BIRD_GREEN;
+        break;
+    case BRENDAN:
+        bird = FLDEFFOBJ_BIRD_BRENDAN;
+        break;
+    case MAY:
+        bird = FLDEFFOBJ_BIRD_MAY;
+        break;
+    }
+
+    spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[bird], 0xff, 0xb4, 0x1);
     sprite = &gSprites[spriteId];
-    sprite->oam.paletteNum = (gSaveBlock2Ptr->avatarChoice == RED || gSaveBlock2Ptr->avatarChoice == GREEN) ? 0 : 1;
+    // sprite->oam.paletteNum = (gSaveBlock2Ptr->avatarChoice == RED || gSaveBlock2Ptr->avatarChoice == GREEN) ? 0 : 1;
+    sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = sub_8087220;
     return spriteId;
@@ -3401,7 +3443,7 @@ static void sub_8087220(struct Sprite * sprite)
             sprite->affineAnims = sUnknown_83CC1CC;
             InitSpriteAffineAnim(sprite);
             StartSpriteAffineAnim(sprite, 0);
-            if (gSaveBlock2Ptr->avatarGender == MALE) // <edit>
+            if (gSaveBlock2Ptr->avatarGender == MALE)
                 sprite->x = 0x80;
             else
                 sprite->x = 0x76;
@@ -3457,7 +3499,7 @@ static void sub_8087364(struct Sprite * sprite)
             sprite->affineAnims = sUnknown_83CC1CC;
             InitSpriteAffineAnim(sprite);
             StartSpriteAffineAnim(sprite, 1);
-            if (gSaveBlock2Ptr->avatarGender == MALE) // <edit>
+            if (gSaveBlock2Ptr->avatarGender == MALE)
                 sprite->x = 0x70;
             else
                 sprite->x = 0x64;
@@ -3554,7 +3596,7 @@ static void FlyInEffect_1(struct Task * task)
         task->data[1] = sub_8087168();
         sub_80871C8(task->data[1]);
         sub_8087204(task->data[1], objectEvent->spriteId);
-        StartSpriteAnim(&gSprites[task->data[1]], gSaveBlock2Ptr->avatarChoice * 2 + 2); // <edit>
+        StartSpriteAnim(&gSprites[task->data[1]], 2);
         sub_80877FC(&gSprites[task->data[1]], 1);
         gSprites[task->data[1]].callback = sub_8087828;
     }

@@ -106,7 +106,7 @@
 #define FLDEFFOBJ_DEEP_SAND_FOOTPRINTS     23
 #define FLDEFFOBJ_TREE_DISGUISE            24
 #define FLDEFFOBJ_MOUNTAIN_DISGUISE        25
-#define FLDEFFOBJ_BIRD                     26
+#define FLDEFFOBJ_BIRD_RED                 26
 #define FLDEFFOBJ_BIKE_TIRE_TRACKS         27
 #define FLDEFFOBJ_SAND_DISGUISE            28
 #define FLDEFFOBJ_SAND_PILE                29
@@ -119,5 +119,9 @@
 #define FLDEFFOBJ_TALL_GRASS_SUMMER        36
 #define FLDEFFOBJ_TALL_GRASS_AUTUMN        37
 #define FLDEFFOBJ_TALL_GRASS_WINTER        38
+#define FLDEFFOBJ_BIRD_BLUE                39
+#define FLDEFFOBJ_BIRD_GREEN               40
+#define FLDEFFOBJ_BIRD_BRENDAN             41
+#define FLDEFFOBJ_BIRD_MAY                 42
 
 #endif // GUARD_CONSTANTS_FIELD_EFFECTS_H
