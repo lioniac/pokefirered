@@ -3,6 +3,7 @@ static const struct TrainerMon sTrainerMons_AquaLeader1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -11,6 +12,7 @@ static const struct TrainerMon sTrainerMons_TeamAqua1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -19,6 +21,7 @@ static const struct TrainerMon sTrainerMons_TeamAqua2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -27,6 +30,7 @@ static const struct TrainerMon sTrainerMons_AromaLady1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -35,6 +39,7 @@ static const struct TrainerMon sTrainerMons_RuinManiac1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -43,6 +48,7 @@ static const struct TrainerMon sTrainerMons_Interviewer1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -51,6 +57,7 @@ static const struct TrainerMon sTrainerMons_Tuber1[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -59,6 +66,7 @@ static const struct TrainerMon sTrainerMons_Tuber2[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -67,6 +75,7 @@ static const struct TrainerMon sTrainerMons_Cooltrainer1[] = {
         .iv = 100,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -75,6 +84,7 @@ static const struct TrainerMon sTrainerMons_Cooltrainer2[] = {
         .iv = 100,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -83,6 +93,7 @@ static const struct TrainerMon sTrainerMons_HexManiac1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -91,6 +102,7 @@ static const struct TrainerMon sTrainerMons_Lady1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -99,6 +111,7 @@ static const struct TrainerMon sTrainerMons_Beauty1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -107,6 +120,7 @@ static const struct TrainerMon sTrainerMons_RichBoy1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -115,6 +129,7 @@ static const struct TrainerMon sTrainerMons_Pokemaniac1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -123,6 +138,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMale1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -131,6 +147,7 @@ static const struct TrainerMon sTrainerMons_BlackBelt1[] = {
         .iv = 100,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -139,6 +156,7 @@ static const struct TrainerMon sTrainerMons_Guitarist1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -147,6 +165,7 @@ static const struct TrainerMon sTrainerMons_Kindler1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -155,6 +174,7 @@ static const struct TrainerMon sTrainerMons_Camper1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -163,6 +183,7 @@ static const struct TrainerMon sTrainerMons_BugManiac1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -171,6 +192,7 @@ static const struct TrainerMon sTrainerMons_Psychic1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -179,6 +201,7 @@ static const struct TrainerMon sTrainerMons_Psychic2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -187,6 +210,7 @@ static const struct TrainerMon sTrainerMons_Gentleman1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -195,6 +219,7 @@ static const struct TrainerMon sTrainerMons_EliteFourSidney[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -203,6 +228,7 @@ static const struct TrainerMon sTrainerMons_EliteFourPhoebe[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -211,6 +237,7 @@ static const struct TrainerMon sTrainerMons_LeaderRoxanne[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -219,6 +246,7 @@ static const struct TrainerMon sTrainerMons_LeaderBrawly[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -227,6 +255,7 @@ static const struct TrainerMon sTrainerMons_LeaderTateLiza[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -235,6 +264,7 @@ static const struct TrainerMon sTrainerMons_SchoolKid1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -243,6 +273,7 @@ static const struct TrainerMon sTrainerMons_SchoolKid2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -251,6 +282,7 @@ static const struct TrainerMon sTrainerMons_SrAndJr1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -259,6 +291,7 @@ static const struct TrainerMon sTrainerMons_Pokefan1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -267,6 +300,7 @@ static const struct TrainerMon sTrainerMons_Pokefan2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -275,6 +309,7 @@ static const struct TrainerMon sTrainerMons_Expert1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -283,6 +318,7 @@ static const struct TrainerMon sTrainerMons_Expert2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -291,6 +327,7 @@ static const struct TrainerMon sTrainerMons_Youngster1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -299,6 +336,7 @@ static const struct TrainerMon sTrainerMons_Champion1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -307,6 +345,7 @@ static const struct TrainerMon sTrainerMons_Fisherman1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -315,6 +354,7 @@ static const struct TrainerMon sTrainerMons_Triathlete1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -323,6 +363,7 @@ static const struct TrainerMon sTrainerMons_Triathlete2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -331,6 +372,7 @@ static const struct TrainerMon sTrainerMons_Triathlete3[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -339,6 +381,7 @@ static const struct TrainerMon sTrainerMons_Triathlete4[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -347,6 +390,7 @@ static const struct TrainerMon sTrainerMons_Triathlete5[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -355,6 +399,7 @@ static const struct TrainerMon sTrainerMons_Triathlete6[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -363,6 +408,7 @@ static const struct TrainerMon sTrainerMons_DragonTamer1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -371,6 +417,7 @@ static const struct TrainerMon sTrainerMons_BirdKeeper1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -379,6 +426,7 @@ static const struct TrainerMon sTrainerMons_NinjaBoy1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -387,6 +435,7 @@ static const struct TrainerMon sTrainerMons_BattleGirl1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -395,6 +444,7 @@ static const struct TrainerMon sTrainerMons_ParasolLady1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -403,6 +453,7 @@ static const struct TrainerMon sTrainerMons_SwimmerFemale1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -411,6 +462,7 @@ static const struct TrainerMon sTrainerMons_Picnicker1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -419,6 +471,7 @@ static const struct TrainerMon sTrainerMons_Twins1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -427,6 +480,7 @@ static const struct TrainerMon sTrainerMons_Sailor1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -435,6 +489,7 @@ static const struct TrainerMon sTrainerMons_Boarder1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -443,6 +498,7 @@ static const struct TrainerMon sTrainerMons_Boarder2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -451,6 +507,7 @@ static const struct TrainerMon sTrainerMons_Collector1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -459,6 +516,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -467,6 +525,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer3[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -475,6 +534,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer4[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -483,6 +543,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer5[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -491,6 +552,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer6[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -499,6 +561,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer7[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -507,6 +570,7 @@ static const struct TrainerMon sTrainerMons_PkmnTrainer8[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -515,6 +579,7 @@ static const struct TrainerMon sTrainerMons_PkmnBreeder1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -523,6 +588,7 @@ static const struct TrainerMon sTrainerMons_PkmnBreeder2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -531,6 +597,7 @@ static const struct TrainerMon sTrainerMons_PkmnRanger1[] = {
         .iv = 100,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -539,6 +606,7 @@ static const struct TrainerMon sTrainerMons_PkmnRanger2[] = {
         .iv = 100,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -547,6 +615,7 @@ static const struct TrainerMon sTrainerMons_MagmaLeader1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -555,6 +624,7 @@ static const struct TrainerMon sTrainerMons_TeamMagma1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -563,6 +633,7 @@ static const struct TrainerMon sTrainerMons_TeamMagma2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -571,6 +642,7 @@ static const struct TrainerMon sTrainerMons_Lass1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -579,6 +651,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -587,6 +660,7 @@ static const struct TrainerMon sTrainerMons_Hiker1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -595,11 +669,13 @@ static const struct TrainerMon sTrainerMons_YoungCouple1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -608,6 +684,7 @@ static const struct TrainerMon sTrainerMons_OldCouple1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -616,6 +693,7 @@ static const struct TrainerMon sTrainerMons_SisAndBro1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -624,6 +702,7 @@ static const struct TrainerMon sTrainerMons_AquaAdminMatt[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -632,6 +711,7 @@ static const struct TrainerMon sTrainerMons_AquaAdminShelly[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -640,6 +720,7 @@ static const struct TrainerMon sTrainerMons_MagmaAdminTabitha[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -648,6 +729,7 @@ static const struct TrainerMon sTrainerMons_MagmaAdminCourtney[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -656,6 +738,7 @@ static const struct TrainerMon sTrainerMons_LeaderWattson[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -664,6 +747,7 @@ static const struct TrainerMon sTrainerMons_LeaderFlannery[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -672,6 +756,7 @@ static const struct TrainerMon sTrainerMons_LeaderNorman[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -680,6 +765,7 @@ static const struct TrainerMon sTrainerMons_LeaderWinona[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -688,6 +774,7 @@ static const struct TrainerMon sTrainerMons_LeaderWallace[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -696,6 +783,7 @@ static const struct TrainerMon sTrainerMons_EliteFourGlacia[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -704,6 +792,7 @@ static const struct TrainerMon sTrainerMons_EliteFourDrake[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -712,11 +801,13 @@ static const struct TrainerMon sTrainerMons_YoungsterBen[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -725,6 +816,7 @@ static const struct TrainerMon sTrainerMons_YoungsterCalvin[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -733,16 +825,19 @@ static const struct TrainerMon sTrainerMons_YoungsterJosh[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -751,11 +846,13 @@ static const struct TrainerMon sTrainerMons_YoungsterTimmy[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -764,11 +861,13 @@ static const struct TrainerMon sTrainerMons_YoungsterJoey[] = {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -777,6 +876,7 @@ static const struct TrainerMon sTrainerMons_YoungsterDan[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -785,11 +885,13 @@ static const struct TrainerMon sTrainerMons_YoungsterChad[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
 };
 
@@ -798,6 +900,7 @@ static const struct TrainerMon sTrainerMons_YoungsterTyler[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
 };
 
@@ -806,6 +909,7 @@ static const struct TrainerMon sTrainerMons_YoungsterEddie[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -814,11 +918,13 @@ static const struct TrainerMon sTrainerMons_YoungsterDillon[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -827,16 +933,19 @@ static const struct TrainerMon sTrainerMons_YoungsterYasu[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -845,11 +954,13 @@ static const struct TrainerMon sTrainerMons_YoungsterDave[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
 };
 
@@ -858,11 +969,13 @@ static const struct TrainerMon sTrainerMons_YoungsterBen2[] = {
         .iv = 20,
         .lvl = 17,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 17,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -871,11 +984,13 @@ static const struct TrainerMon sTrainerMons_BugCatcherRick[] = {
         .iv = 0,
         .lvl = 6,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 6,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
 };
 
@@ -884,16 +999,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherDoug[] = {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_KAKUNA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -902,6 +1020,7 @@ static const struct TrainerMon sTrainerMons_BugCatcherSammy[] = {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -910,16 +1029,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherColton[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
 };
 
@@ -928,21 +1050,25 @@ static const struct TrainerMon sTrainerMons_BugCatcherGreg[] = {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_KAKUNA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
 };
 
@@ -951,11 +1077,13 @@ static const struct TrainerMon sTrainerMons_BugCatcherJames[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
 };
 
@@ -964,11 +1092,13 @@ static const struct TrainerMon sTrainerMons_BugCatcherKent[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_KAKUNA,
+        .gender = MON_MALE,
     },
 };
 
@@ -977,16 +1107,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherRobby[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
 };
 
@@ -995,21 +1128,25 @@ static const struct TrainerMon sTrainerMons_BugCatcherCale[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_KAKUNA,
+        .gender = MON_MALE,
     },
 };
 
@@ -1018,16 +1155,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherKeigo[] = {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1036,6 +1176,7 @@ static const struct TrainerMon sTrainerMons_BugCatcherElijah[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_BUTTERFREE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1044,16 +1185,19 @@ static const struct TrainerMon sTrainerMons_BugCatcher2[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_VENONAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -1062,11 +1206,13 @@ static const struct TrainerMon sTrainerMons_BugCatcherBrent[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_BEEDRILL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_BEEDRILL,
+        .gender = MON_MALE,
     },
 };
 
@@ -1075,16 +1221,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherConner[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_VENONAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -1093,11 +1242,13 @@ static const struct TrainerMon sTrainerMons_LassJanice[] = {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 9,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
 };
 
@@ -1106,11 +1257,13 @@ static const struct TrainerMon sTrainerMons_LassSally[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -1119,6 +1272,7 @@ static const struct TrainerMon sTrainerMons_LassRobin[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_JIGGLYPUFF,
+        .gender = MON_MALE,
     },
 };
 
@@ -1127,16 +1281,19 @@ static const struct TrainerMon sTrainerMons_LassCrissy[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_PARAS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_PARAS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_PARASECT,
+        .gender = MON_MALE,
     },
 };
 
@@ -1145,11 +1302,13 @@ static const struct TrainerMon sTrainerMons_LassMiriam[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
 };
 
@@ -1158,6 +1317,7 @@ static const struct TrainerMon sTrainerMons_LassIris[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -1166,11 +1326,13 @@ static const struct TrainerMon sTrainerMons_LassReli[] = {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -1179,16 +1341,19 @@ static const struct TrainerMon sTrainerMons_LassAli[] = {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
 };
 
@@ -1197,11 +1362,13 @@ static const struct TrainerMon sTrainerMons_Lass2[] = {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -1210,16 +1377,19 @@ static const struct TrainerMon sTrainerMons_LassHaley[] = {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
 };
 
@@ -1228,11 +1398,13 @@ static const struct TrainerMon sTrainerMons_LassAnn[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -1241,11 +1413,13 @@ static const struct TrainerMon sTrainerMons_LassDawn[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -1254,11 +1428,13 @@ static const struct TrainerMon sTrainerMons_LassPaige[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -1267,16 +1443,19 @@ static const struct TrainerMon sTrainerMons_LassAndrea[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -1285,26 +1464,31 @@ static const struct TrainerMon sTrainerMons_LassMegan[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -1313,11 +1497,13 @@ static const struct TrainerMon sTrainerMons_LassJulia[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -1326,11 +1512,13 @@ static const struct TrainerMon sTrainerMons_LassKay[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
     },
 };
 
@@ -1339,11 +1527,13 @@ static const struct TrainerMon sTrainerMons_LassLisa[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
     },
 };
 
@@ -1352,11 +1542,13 @@ static const struct TrainerMon sTrainerMons_SailorEdmond[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -1365,11 +1557,13 @@ static const struct TrainerMon sTrainerMons_SailorTrevor[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
 };
 
@@ -1378,6 +1572,7 @@ static const struct TrainerMon sTrainerMons_SailorLeonard[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -1386,16 +1581,19 @@ static const struct TrainerMon sTrainerMons_SailorDuncan[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
 };
 
@@ -1404,11 +1602,13 @@ static const struct TrainerMon sTrainerMons_SailorHuey[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -1417,16 +1617,19 @@ static const struct TrainerMon sTrainerMons_SailorDylan[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
 };
 
@@ -1435,6 +1638,7 @@ static const struct TrainerMon sTrainerMons_SailorPhillip[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -1443,11 +1647,13 @@ static const struct TrainerMon sTrainerMons_SailorDwayne[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -1456,12 +1662,14 @@ static const struct TrainerMon sTrainerMons_CamperLiam[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
         .moves = {MOVE_SCRATCH, MOVE_DEFENSE_CURL, MOVE_SAND_ATTACK, MOVE_NONE},
     },
 };
@@ -1471,11 +1679,13 @@ static const struct TrainerMon sTrainerMons_CamperShane[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -1484,6 +1694,7 @@ static const struct TrainerMon sTrainerMons_CamperEthan[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
 };
 
@@ -1492,6 +1703,7 @@ static const struct TrainerMon sTrainerMons_CamperRicky[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_SQUIRTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1500,11 +1712,13 @@ static const struct TrainerMon sTrainerMons_CamperJeff[] = {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1513,6 +1727,7 @@ static const struct TrainerMon sTrainerMons_Camper2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -1521,11 +1736,13 @@ static const struct TrainerMon sTrainerMons_CamperChris[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -1534,21 +1751,25 @@ static const struct TrainerMon sTrainerMons_CamperDrew[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
 };
 
@@ -1557,6 +1778,7 @@ static const struct TrainerMon sTrainerMons_PicnickerDiana[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -1565,11 +1787,13 @@ static const struct TrainerMon sTrainerMons_PicnickerNancy[] = {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -1578,16 +1802,19 @@ static const struct TrainerMon sTrainerMons_PicnickerIsabelle[] = {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
 };
 
@@ -1596,11 +1823,13 @@ static const struct TrainerMon sTrainerMons_PicnickerKelsey[] = {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -1609,21 +1838,25 @@ static const struct TrainerMon sTrainerMons_PicnickerAlicia[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
 };
 
@@ -1632,6 +1865,7 @@ static const struct TrainerMon sTrainerMons_PicnickerCaitlin[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -1640,11 +1874,13 @@ static const struct TrainerMon sTrainerMons_PicnickerHeidi[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -1653,11 +1889,13 @@ static const struct TrainerMon sTrainerMons_PicnickerCarol[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -1666,16 +1904,19 @@ static const struct TrainerMon sTrainerMons_PicnickerSofia[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_JIGGLYPUFF,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -1684,11 +1925,13 @@ static const struct TrainerMon sTrainerMons_PicnickerMartha[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -1697,11 +1940,13 @@ static const struct TrainerMon sTrainerMons_PicnickerTina[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -1710,26 +1955,31 @@ static const struct TrainerMon sTrainerMons_PicnickerHannah[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -1738,11 +1988,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacMark[] = {
         .iv = 30,
         .lvl = 29,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 29,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
     },
 };
 
@@ -1751,11 +2003,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacHerman[] = {
         .iv = 30,
         .lvl = 20,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 20,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1764,16 +2018,19 @@ static const struct TrainerMon sTrainerMons_PokemaniacCooper[] = {
         .iv = 30,
         .lvl = 20,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 20,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 20,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1782,11 +2039,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacSteve[] = {
         .iv = 30,
         .lvl = 22,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 22,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1795,6 +2054,7 @@ static const struct TrainerMon sTrainerMons_PokemaniacWinston[] = {
         .iv = 30,
         .lvl = 25,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1803,16 +2063,19 @@ static const struct TrainerMon sTrainerMons_PokemaniacDawson[] = {
         .iv = 30,
         .lvl = 40,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 40,
         .species = SPECIES_LAPRAS,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 40,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
     },
 };
 
@@ -1821,11 +2084,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacAshton[] = {
         .iv = 30,
         .lvl = 23,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 23,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -1834,11 +2099,13 @@ static const struct TrainerMon sTrainerMons_SuperNerdJovan[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -1847,16 +2114,19 @@ static const struct TrainerMon sTrainerMons_SuperNerdMiguel[] = {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
 };
 
@@ -1865,24 +2135,28 @@ static const struct TrainerMon sTrainerMons_SuperNerdAidan[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SONIC_BOOM, MOVE_SUPERSONIC, MOVE_THUNDER_SHOCK, MOVE_TACKLE},
     },
 };
@@ -1892,16 +2166,19 @@ static const struct TrainerMon sTrainerMons_SuperNerdGlenn[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
 };
 
@@ -1910,6 +2187,7 @@ static const struct TrainerMon sTrainerMons_SuperNerdLeslie[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_SMOG, MOVE_SELF_DESTRUCT},
     },
 };
@@ -1919,16 +2197,19 @@ static const struct TrainerMon sTrainerMons_SuperNerd1[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
 };
 
@@ -1937,21 +2218,25 @@ static const struct TrainerMon sTrainerMons_SuperNerd2[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -1960,11 +2245,13 @@ static const struct TrainerMon sTrainerMons_SuperNerd3[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -1973,16 +2260,19 @@ static const struct TrainerMon sTrainerMons_SuperNerdErik[] = {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
     },
 };
 
@@ -1991,21 +2281,25 @@ static const struct TrainerMon sTrainerMons_SuperNerdAvery[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2014,6 +2308,7 @@ static const struct TrainerMon sTrainerMons_SuperNerdDerek[] = {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -2022,11 +2317,13 @@ static const struct TrainerMon sTrainerMons_SuperNerdZac[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -2035,16 +2332,19 @@ static const struct TrainerMon sTrainerMons_HikerMarcos[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -2053,11 +2353,13 @@ static const struct TrainerMon sTrainerMons_HikerFranklin[] = {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2066,21 +2368,25 @@ static const struct TrainerMon sTrainerMons_HikerNob[] = {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2089,6 +2395,7 @@ static const struct TrainerMon sTrainerMons_HikerWayne[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -2097,12 +2404,14 @@ static const struct TrainerMon sTrainerMons_HikerAlan[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .moves = {MOVE_HARDEN, MOVE_ROCK_THROW, MOVE_BIND, MOVE_SCREECH},
     },
 };
@@ -2112,16 +2421,19 @@ static const struct TrainerMon sTrainerMons_HikerBrice[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2130,12 +2442,14 @@ static const struct TrainerMon sTrainerMons_HikerClark[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .moves = {MOVE_HARDEN, MOVE_ROCK_THROW, MOVE_BIND, MOVE_SCREECH},
     },
 };
@@ -2145,11 +2459,13 @@ static const struct TrainerMon sTrainerMons_HikerTrent[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
     },
 };
 
@@ -2158,18 +2474,21 @@ static const struct TrainerMon sTrainerMons_HikerDudley[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
 };
@@ -2179,6 +2498,7 @@ static const struct TrainerMon sTrainerMons_HikerAllen[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
 };
@@ -2188,11 +2508,13 @@ static const struct TrainerMon sTrainerMons_HikerEric[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -2201,21 +2523,25 @@ static const struct TrainerMon sTrainerMons_HikerLenny[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2224,16 +2550,19 @@ static const struct TrainerMon sTrainerMons_HikerOliver[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2242,12 +2571,14 @@ static const struct TrainerMon sTrainerMons_HikerLucas[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
 };
@@ -2257,18 +2588,21 @@ static const struct TrainerMon sTrainerMons_BikerJared[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_POISON_GAS},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -2278,12 +2612,14 @@ static const struct TrainerMon sTrainerMons_BikerMalik[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
 };
@@ -2293,30 +2629,35 @@ static const struct TrainerMon sTrainerMons_BikerErnest[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_POUND},
     },
 };
@@ -2326,18 +2667,21 @@ static const struct TrainerMon sTrainerMons_BikerAlex[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -2347,12 +2691,14 @@ static const struct TrainerMon sTrainerMons_BikerLao[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -2362,6 +2708,7 @@ static const struct TrainerMon sTrainerMons_Biker1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -2370,6 +2717,7 @@ static const struct TrainerMon sTrainerMons_BikerHideo[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
 };
 
@@ -2378,18 +2726,21 @@ static const struct TrainerMon sTrainerMons_BikerRuben[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -2399,6 +2750,7 @@ static const struct TrainerMon sTrainerMons_BikerBilly[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };
 
@@ -2407,12 +2759,14 @@ static const struct TrainerMon sTrainerMons_BikerNikolas[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_CHARGE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_CHARGE},
     },
 };
@@ -2422,12 +2776,14 @@ static const struct TrainerMon sTrainerMons_BikerJaxon[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
 };
@@ -2437,30 +2793,35 @@ static const struct TrainerMon sTrainerMons_BikerWilliam[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SELF_DESTRUCT, MOVE_TACKLE},
     },
 };
@@ -2470,24 +2831,28 @@ static const struct TrainerMon sTrainerMons_BikerLukas[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -2497,18 +2862,21 @@ static const struct TrainerMon sTrainerMons_BikerIsaac[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -2518,12 +2886,14 @@ static const struct TrainerMon sTrainerMons_BikerGerald[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
 };
@@ -2533,11 +2903,13 @@ static const struct TrainerMon sTrainerMons_Burglar1[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -2546,6 +2918,7 @@ static const struct TrainerMon sTrainerMons_Burglar2[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2554,16 +2927,19 @@ static const struct TrainerMon sTrainerMons_Burglar3[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
     },
 };
 
@@ -2572,16 +2948,19 @@ static const struct TrainerMon sTrainerMons_BurglarQuinn[] = {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
     },
 };
 
@@ -2590,6 +2969,7 @@ static const struct TrainerMon sTrainerMons_BurglarRamon[] = {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
     },
 };
 
@@ -2598,11 +2978,13 @@ static const struct TrainerMon sTrainerMons_BurglarDusty[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
 };
 
@@ -2611,11 +2993,13 @@ static const struct TrainerMon sTrainerMons_BurglarArnie[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
 };
 
@@ -2624,11 +3008,13 @@ static const struct TrainerMon sTrainerMons_Burglar4[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
 };
 
@@ -2637,6 +3023,7 @@ static const struct TrainerMon sTrainerMons_BurglarSimon[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
     },
 };
 
@@ -2645,11 +3032,13 @@ static const struct TrainerMon sTrainerMons_BurglarLewis[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
     },
 };
 
@@ -2658,11 +3047,13 @@ static const struct TrainerMon sTrainerMons_EngineerBaily[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -2671,6 +3062,7 @@ static const struct TrainerMon sTrainerMons_EngineerBraxton[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -2679,16 +3071,19 @@ static const struct TrainerMon sTrainerMons_EngineerBernie[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -2697,16 +3092,19 @@ static const struct TrainerMon sTrainerMons_FishermanDale[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -2715,16 +3113,19 @@ static const struct TrainerMon sTrainerMons_FishermanBarny[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -2733,16 +3134,19 @@ static const struct TrainerMon sTrainerMons_FishermanNed[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -2751,11 +3155,13 @@ static const struct TrainerMon sTrainerMons_FishermanChip[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -2764,6 +3170,7 @@ static const struct TrainerMon sTrainerMons_FishermanHank[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -2772,21 +3179,25 @@ static const struct TrainerMon sTrainerMons_FishermanElliot[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
 };
 
@@ -2795,21 +3206,25 @@ static const struct TrainerMon sTrainerMons_FishermanRonald[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -2818,11 +3233,13 @@ static const struct TrainerMon sTrainerMons_FishermanClaude[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -2831,31 +3248,37 @@ static const struct TrainerMon sTrainerMons_FishermanWade[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
 };
 
@@ -2864,11 +3287,13 @@ static const struct TrainerMon sTrainerMons_FishermanNolan[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -2877,11 +3302,13 @@ static const struct TrainerMon sTrainerMons_FishermanAndrew[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
 };
 
@@ -2890,11 +3317,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleLuis[] = {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 16,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -2903,11 +3332,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleRichard[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -2916,16 +3347,19 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleReece[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -2934,11 +3368,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleMatthew[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
 };
 
@@ -2947,21 +3383,25 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleDouglas[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
 };
 
@@ -2970,16 +3410,19 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleDavid[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -2988,11 +3431,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleTony[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3001,26 +3446,31 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleAxle[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_TENTACRUEL,
+        .gender = MON_MALE,
     },
 };
 
@@ -3029,11 +3479,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleBarry[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -3042,6 +3494,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleDean[] = {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -3050,21 +3503,25 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleDarrin[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3073,11 +3530,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleSpencer[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_TENTACRUEL,
+        .gender = MON_MALE,
     },
 };
 
@@ -3086,6 +3545,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleJack[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -3094,11 +3554,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleJerome[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -3107,16 +3569,19 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleRoland[] = {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3125,16 +3590,19 @@ static const struct TrainerMon sTrainerMons_CueBallKoji[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -3143,11 +3611,13 @@ static const struct TrainerMon sTrainerMons_CueBallLuke[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -3156,11 +3626,13 @@ static const struct TrainerMon sTrainerMons_CueBallCamron[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -3169,11 +3641,13 @@ static const struct TrainerMon sTrainerMons_CueBallRaul[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
     },
 };
 
@@ -3182,11 +3656,13 @@ static const struct TrainerMon sTrainerMons_CueBallIsaiah[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
     },
 };
 
@@ -3195,6 +3671,7 @@ static const struct TrainerMon sTrainerMons_CueBallZeek[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -3203,21 +3680,25 @@ static const struct TrainerMon sTrainerMons_CueBallJamal[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -3226,11 +3707,13 @@ static const struct TrainerMon sTrainerMons_CueBallCorey[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -3239,16 +3722,19 @@ static const struct TrainerMon sTrainerMons_CueBallChase[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_TENTACRUEL,
+        .gender = MON_MALE,
     },
 };
 
@@ -3257,11 +3743,13 @@ static const struct TrainerMon sTrainerMons_GamerHugo[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3270,11 +3758,13 @@ static const struct TrainerMon sTrainerMons_GamerJasper[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
 };
 
@@ -3283,11 +3773,13 @@ static const struct TrainerMon sTrainerMons_GamerDirk[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -3296,11 +3788,13 @@ static const struct TrainerMon sTrainerMons_GamerDarian[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -3309,16 +3803,19 @@ static const struct TrainerMon sTrainerMons_GamerStan[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
 };
 
@@ -3327,6 +3824,7 @@ static const struct TrainerMon sTrainerMons_Gamer1[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -3335,11 +3833,13 @@ static const struct TrainerMon sTrainerMons_GamerRich[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -3348,21 +3848,25 @@ static const struct TrainerMon sTrainerMons_BeautyBridget[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
 };
 
@@ -3371,11 +3875,13 @@ static const struct TrainerMon sTrainerMons_BeautyTamia[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
 };
 
@@ -3384,6 +3890,7 @@ static const struct TrainerMon sTrainerMons_BeautyLori[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
     },
 };
 
@@ -3392,16 +3899,19 @@ static const struct TrainerMon sTrainerMons_BeautyLola[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3410,11 +3920,13 @@ static const struct TrainerMon sTrainerMons_BeautySheila[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -3423,6 +3935,7 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleTiffany[] = {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -3431,16 +3944,19 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleNora[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -3449,11 +3965,13 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleMelissa[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -3462,11 +3980,13 @@ static const struct TrainerMon sTrainerMons_BeautyGrace[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_WIGGLYTUFF,
+        .gender = MON_MALE,
     },
 };
 
@@ -3475,11 +3995,13 @@ static const struct TrainerMon sTrainerMons_BeautyOlivia[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -3488,16 +4010,19 @@ static const struct TrainerMon sTrainerMons_BeautyLauren[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
     },
 };
 
@@ -3506,26 +4031,31 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleAnya[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
 };
 
@@ -3534,11 +4064,13 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleAlice[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -3547,16 +4079,19 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleConnie[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -3565,16 +4100,19 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleShirley[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3583,21 +4121,25 @@ static const struct TrainerMon sTrainerMons_PsychicJohan[] = {
         .iv = 50,
         .lvl = 31,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 31,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 31,
         .species = SPECIES_MR_MIME,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 31,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3606,11 +4148,13 @@ static const struct TrainerMon sTrainerMons_PsychicTyron[] = {
         .iv = 50,
         .lvl = 34,
         .species = SPECIES_MR_MIME,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 34,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3619,16 +4163,19 @@ static const struct TrainerMon sTrainerMons_PsychicCameron[] = {
         .iv = 50,
         .lvl = 33,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 33,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 33,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
     },
 };
 
@@ -3637,6 +4184,7 @@ static const struct TrainerMon sTrainerMons_PsychicPreston[] = {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
     },
 };
 
@@ -3645,16 +4193,19 @@ static const struct TrainerMon sTrainerMons_RockerRandall[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -3663,11 +4214,13 @@ static const struct TrainerMon sTrainerMons_RockerLuca[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -3676,11 +4229,13 @@ static const struct TrainerMon sTrainerMons_JugglerDalton[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MR_MIME,
+        .gender = MON_MALE,
     },
 };
 
@@ -3689,21 +4244,25 @@ static const struct TrainerMon sTrainerMons_JugglerNelson[] = {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 41,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3712,21 +4271,25 @@ static const struct TrainerMon sTrainerMons_JugglerKirk[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
 };
 
@@ -3735,11 +4298,13 @@ static const struct TrainerMon sTrainerMons_JugglerShawn[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
 };
 
@@ -3748,6 +4313,7 @@ static const struct TrainerMon sTrainerMons_JugglerGregory[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MR_MIME,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_ROLE_PLAY, MOVE_DOUBLE_SLAP, MOVE_ENCORE},
     },
 };
@@ -3757,24 +4323,28 @@ static const struct TrainerMon sTrainerMons_JugglerEdward[] = {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_LIGHT_SCREEN, MOVE_SPARK, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_LIGHT_SCREEN, MOVE_SPARK, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_SPARK, MOVE_SELF_DESTRUCT, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MR_MIME,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_ROLE_PLAY, MOVE_REFLECT, MOVE_ENCORE},
     },
 };
@@ -3784,6 +4354,7 @@ static const struct TrainerMon sTrainerMons_JugglerKayden[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
 };
 
@@ -3792,11 +4363,13 @@ static const struct TrainerMon sTrainerMons_JugglerNate[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -3805,11 +4378,13 @@ static const struct TrainerMon sTrainerMons_TamerPhil[] = {
         .iv = 40,
         .lvl = 34,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 34,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
 };
 
@@ -3818,16 +4393,19 @@ static const struct TrainerMon sTrainerMons_TamerEdgar[] = {
         .iv = 40,
         .lvl = 33,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 33,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 33,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
 };
 
@@ -3836,6 +4414,7 @@ static const struct TrainerMon sTrainerMons_TamerJason[] = {
         .iv = 40,
         .lvl = 43,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
 };
 
@@ -3844,11 +4423,13 @@ static const struct TrainerMon sTrainerMons_TamerCole[] = {
         .iv = 40,
         .lvl = 39,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 39,
         .species = SPECIES_TAUROS,
+        .gender = MON_MALE,
     },
 };
 
@@ -3857,11 +4438,13 @@ static const struct TrainerMon sTrainerMons_TamerVincent[] = {
         .iv = 40,
         .lvl = 44,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 44,
         .species = SPECIES_GOLDUCK,
+        .gender = MON_MALE,
     },
 };
 
@@ -3870,21 +4453,25 @@ static const struct TrainerMon sTrainerMons_TamerJohn[] = {
         .iv = 40,
         .lvl = 42,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 42,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 42,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 42,
         .species = SPECIES_TAUROS,
+        .gender = MON_MALE,
     },
 };
 
@@ -3893,11 +4480,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperSebastian[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -3906,26 +4495,31 @@ static const struct TrainerMon sTrainerMons_BirdKeeperPerry[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -3934,21 +4528,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperRobert[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -3957,6 +4555,7 @@ static const struct TrainerMon sTrainerMons_BirdKeeperDonald[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_FARFETCHD,
+        .gender = MON_MALE,
     },
 };
 
@@ -3965,11 +4564,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperBenny[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -3978,21 +4579,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperEdwin[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_FARFETCHD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
 };
 
@@ -4001,16 +4606,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperChester[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
 };
 
@@ -4019,11 +4627,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperWilton[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4032,6 +4642,7 @@ static const struct TrainerMon sTrainerMons_BirdKeeperRamiro[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
 };
 
@@ -4040,21 +4651,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperJacob[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4063,16 +4678,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperRoger[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -4081,21 +4699,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperReed[] = {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -4104,11 +4726,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperKeith[] = {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_FARFETCHD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 39,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4117,16 +4741,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperCarter[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -4135,21 +4762,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperMitch[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4158,11 +4789,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperBeck[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4171,16 +4804,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperMarlon[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4189,12 +4825,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltKoichi[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4204,18 +4842,21 @@ static const struct TrainerMon sTrainerMons_BlackBeltMike[] = {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4225,12 +4866,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltHideki[] = {
         .iv = 100,
         .lvl = 32,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 32,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4240,6 +4883,7 @@ static const struct TrainerMon sTrainerMons_BlackBeltAaron[] = {
         .iv = 100,
         .lvl = 36,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4249,18 +4893,21 @@ static const struct TrainerMon sTrainerMons_BlackBeltHitoshi[] = {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4270,12 +4917,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltAtsushi[] = {
         .iv = 100,
         .lvl = 40,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 40,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4285,6 +4934,7 @@ static const struct TrainerMon sTrainerMons_BlackBeltKiyo[] = {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4294,18 +4944,21 @@ static const struct TrainerMon sTrainerMons_BlackBeltTakashi[] = {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4315,18 +4968,21 @@ static const struct TrainerMon sTrainerMons_BlackBeltDaisuke[] = {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -4336,6 +4992,7 @@ static const struct TrainerMon sTrainerMons_RivalOaksLabSquirtle[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_SQUIRTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -4344,6 +5001,7 @@ static const struct TrainerMon sTrainerMons_RivalOaksLabBulbasaur[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -4352,6 +5010,7 @@ static const struct TrainerMon sTrainerMons_RivalOaksLabCharmander[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -4361,6 +5020,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22EarlySquirtle[] = {
         .lvl = 9,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_NONE, MOVE_NONE},
     },
     {
@@ -4368,6 +5028,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22EarlySquirtle[] = {
         .lvl = 9,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_SQUIRTLE,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE},
     },
 };
@@ -4378,6 +5039,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22EarlyBulbasaur[] = {
         .lvl = 9,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_NONE, MOVE_NONE},
     },
     {
@@ -4385,6 +5047,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22EarlyBulbasaur[] = {
         .lvl = 9,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_NONE, MOVE_NONE},
     },
 };
@@ -4395,6 +5058,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22EarlyCharmander[] = {
         .lvl = 9,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_NONE, MOVE_NONE},
     },
     {
@@ -4402,6 +5066,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22EarlyCharmander[] = {
         .lvl = 9,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCRATCH, MOVE_GROWL, MOVE_NONE, MOVE_NONE},
     },
 };
@@ -4412,6 +5077,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanSquirtle[] = {
         .lvl = 17,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
     {
@@ -4419,6 +5085,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanSquirtle[] = {
         .lvl = 16,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_ABRA,
+        .gender = MON_MALE,
         .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
@@ -4426,6 +5093,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanSquirtle[] = {
         .lvl = 15,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
     },
     {
@@ -4433,6 +5101,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanSquirtle[] = {
         .lvl = 18,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_SQUIRTLE,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_WITHDRAW, MOVE_WATER_GUN},
     },
 };
@@ -4443,6 +5112,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanBulbasaur[] = {
         .lvl = 17,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
     {
@@ -4450,6 +5120,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanBulbasaur[] = {
         .lvl = 16,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_ABRA,
+        .gender = MON_MALE,
         .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
@@ -4457,6 +5128,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanBulbasaur[] = {
         .lvl = 15,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
     },
     {
@@ -4464,6 +5136,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanBulbasaur[] = {
         .lvl = 18,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_VINE_WHIP, MOVE_LEECH_SEED},
     },
 };
@@ -4474,6 +5147,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanCharmander[] = {
         .lvl = 17,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
     {
@@ -4481,6 +5155,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanCharmander[] = {
         .lvl = 16,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_ABRA,
+        .gender = MON_MALE,
         .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
@@ -4488,6 +5163,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanCharmander[] = {
         .lvl = 15,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
     },
     {
@@ -4495,6 +5171,7 @@ static const struct TrainerMon sTrainerMons_RivalCeruleanCharmander[] = {
         .lvl = 18,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
         .moves = {MOVE_METAL_CLAW, MOVE_EMBER, MOVE_GROWL, MOVE_SCRATCH},
     },
 };
@@ -4504,11 +5181,13 @@ static const struct TrainerMon sTrainerMons_ScientistTed[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
 };
 
@@ -4517,24 +5196,28 @@ static const struct TrainerMon sTrainerMons_ScientistConnor[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -4544,16 +5227,19 @@ static const struct TrainerMon sTrainerMons_ScientistJerry[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -4562,12 +5248,14 @@ static const struct TrainerMon sTrainerMons_ScientistJose[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -4577,6 +5265,7 @@ static const struct TrainerMon sTrainerMons_ScientistRodney[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -4585,24 +5274,28 @@ static const struct TrainerMon sTrainerMons_ScientistBeau[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM, MOVE_SUPERSONIC},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM, MOVE_SUPERSONIC},
     },
 };
@@ -4612,30 +5305,35 @@ static const struct TrainerMon sTrainerMons_ScientistTaylor[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM, MOVE_SUPERSONIC, MOVE_THUNDER_SHOCK},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM, MOVE_SUPERSONIC, MOVE_THUNDER_SHOCK},
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_SELF_DESTRUCT},
     },
 };
@@ -4645,11 +5343,13 @@ static const struct TrainerMon sTrainerMons_ScientistJoshua[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };
 
@@ -4658,11 +5358,13 @@ static const struct TrainerMon sTrainerMons_ScientistParker[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -4671,18 +5373,21 @@ static const struct TrainerMon sTrainerMons_ScientistEd[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_TACKLE, MOVE_SMOG},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM, MOVE_SUPERSONIC},
     },
 };
@@ -4692,11 +5397,13 @@ static const struct TrainerMon sTrainerMons_ScientistTravis[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
 };
 
@@ -4705,16 +5412,19 @@ static const struct TrainerMon sTrainerMons_ScientistBraydon[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -4723,11 +5433,13 @@ static const struct TrainerMon sTrainerMons_ScientistIvan[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -4737,18 +5449,21 @@ static const struct TrainerMon sTrainerMons_BossGiovanni[] = {
         .lvl = 25,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 252,
         .lvl = 24,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
     {
         .iv = 252,
         .lvl = 29,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_KANGASKHAN,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -4758,24 +5473,28 @@ static const struct TrainerMon sTrainerMons_BossGiovanni2[] = {
         .lvl = 37,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
     {
         .iv = 252,
         .lvl = 35,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_KANGASKHAN,
+        .gender = MON_FEMALE,
     },
     {
         .iv = 252,
         .lvl = 37,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
     {
         .iv = 252,
         .lvl = 41,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_NIDOQUEEN,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -4785,6 +5504,7 @@ static const struct TrainerMon sTrainerMons_LeaderGiovanni[] = {
         .lvl = 50,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DUGTRIO,
+        .gender = MON_MALE,
         .moves = {MOVE_SAND_ATTACK, MOVE_DIG, MOVE_FISSURE, MOVE_EARTHQUAKE},
     },
     {
@@ -4792,6 +5512,7 @@ static const struct TrainerMon sTrainerMons_LeaderGiovanni[] = {
         .lvl = 53,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_SCREECH, MOVE_SLASH, MOVE_FURY_SWIPES, MOVE_DOUBLE_TEAM},
     },
     {
@@ -4799,6 +5520,7 @@ static const struct TrainerMon sTrainerMons_LeaderGiovanni[] = {
         .lvl = 53,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_NIDOQUEEN,
+        .gender = MON_FEMALE,
         .moves = {MOVE_TAIL_WHIP, MOVE_EARTHQUAKE, MOVE_DOUBLE_KICK, MOVE_THUNDER},
     },
     {
@@ -4806,6 +5528,7 @@ static const struct TrainerMon sTrainerMons_LeaderGiovanni[] = {
         .lvl = 55,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_NIDOKING,
+        .gender = MON_MALE,
         .moves = {MOVE_THUNDER, MOVE_LEER, MOVE_EARTHQUAKE, MOVE_DOUBLE_KICK},
     },
     {
@@ -4813,6 +5536,7 @@ static const struct TrainerMon sTrainerMons_LeaderGiovanni[] = {
         .lvl = 55,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_ROCK_SLIDE, MOVE_FURY_ATTACK, MOVE_EARTHQUAKE, MOVE_HORN_DRILL},
     },
 };
@@ -4822,11 +5546,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt[] = {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -4835,16 +5561,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt2[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -4853,11 +5582,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt3[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -4866,11 +5597,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt4[] = {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
 };
 
@@ -4879,11 +5612,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt5[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
 };
 
@@ -4892,11 +5627,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt6[] = {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 15,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -4905,11 +5642,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt7[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -4918,11 +5657,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt8[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -4931,11 +5672,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt9[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -4944,18 +5687,21 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt10[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_HARDEN},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS, MOVE_NONE},
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS, MOVE_NONE},
     },
 };
@@ -4965,21 +5711,25 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt11[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
 };
 
@@ -4988,12 +5738,14 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt12[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_HARDEN},
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
     },
 };
@@ -5003,30 +5755,35 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt13[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
         .moves = {MOVE_BITE, MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_LEECH_LIFE},
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS, MOVE_NONE},
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_DISABLE, MOVE_HARDEN, MOVE_POUND},
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
         .moves = {MOVE_BITE, MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_LEECH_LIFE},
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
         .moves = {MOVE_HYPER_FANG, MOVE_QUICK_ATTACK, MOVE_TAIL_WHIP, MOVE_TACKLE},
     },
 };
@@ -5036,16 +5793,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt14[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5054,11 +5814,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt15[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -5067,16 +5829,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt16[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -5085,16 +5850,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt17[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
 };
 
@@ -5103,11 +5871,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt18[] = {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 21,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -5116,16 +5886,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt19[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -5134,11 +5907,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt20[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5147,21 +5922,25 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt21[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -5170,11 +5949,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt22[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
 };
 
@@ -5183,11 +5964,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt23[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -5196,26 +5979,31 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt24[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -5224,16 +6012,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt25[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5242,11 +6033,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt26[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5255,16 +6048,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt27[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5273,6 +6069,7 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt28[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
 };
 
@@ -5281,6 +6078,7 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt29[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
 };
 
@@ -5289,11 +6087,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt30[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5302,16 +6102,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt31[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -5320,24 +6123,28 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt32[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
         .moves = {MOVE_SCARY_FACE, MOVE_HYPER_FANG, MOVE_QUICK_ATTACK, MOVE_TAIL_WHIP},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
         .moves = {MOVE_GLARE, MOVE_BITE, MOVE_POISON_STING, MOVE_LEER},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
         .moves = {MOVE_WING_ATTACK, MOVE_BITE, MOVE_ASTONISH, MOVE_SUPERSONIC},
     },
 };
@@ -5347,11 +6154,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt33[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5360,11 +6169,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt34[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -5373,21 +6184,25 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt35[] = {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 26,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
 };
 
@@ -5396,16 +6211,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt36[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
 };
 
@@ -5414,16 +6232,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt37[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
 };
 
@@ -5432,16 +6253,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt38[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
 };
 
@@ -5450,6 +6274,7 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt39[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -5458,26 +6283,31 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt40[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -5486,16 +6316,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt41[] = {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 32,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
     },
 };
 
@@ -5504,30 +6337,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerSamuel[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_SWIFT, MOVE_SAND_ATTACK, MOVE_POISON_STING},
     },
     {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_SWIFT, MOVE_SAND_ATTACK, MOVE_POISON_STING},
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK, MOVE_SCARY_FACE},
     },
     {
         .iv = 100,
         .lvl = 39,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_ATTACK, MOVE_HORN_ATTACK, MOVE_POISON_STING, MOVE_DOUBLE_KICK},
     },
     {
         .iv = 100,
         .lvl = 39,
         .species = SPECIES_NIDOKING,
+        .gender = MON_MALE,
         .moves = {MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_FOCUS_ENERGY},
     },
 };
@@ -5537,30 +6375,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerGeorge[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .moves = {MOVE_EGG_BOMB, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_SLEEP_POWDER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_SWIPES, MOVE_SWIFT, MOVE_POISON_STING, MOVE_SAND_ATTACK},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
         .moves = {MOVE_SPIKE_CANNON, MOVE_SPIKES, MOVE_AURORA_BEAM, MOVE_SUPERSONIC},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_LIGHT_SCREEN},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAME_WHEEL, MOVE_ROAR, MOVE_BITE, MOVE_TAKE_DOWN},
     },
 };
@@ -5570,30 +6413,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerColby[] = {
         .iv = 100,
         .lvl = 41,
         .species = SPECIES_KINGLER,
+        .gender = MON_MALE,
         .moves = {MOVE_GUILLOTINE, MOVE_STOMP, MOVE_MUD_SHOT, MOVE_BUBBLE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
         .moves = {MOVE_BODY_SLAM, MOVE_DOUBLE_SLAP, MOVE_WATER_GUN, MOVE_HYPNOSIS},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_TENTACRUEL,
+        .gender = MON_MALE,
         .moves = {MOVE_BARRIER, MOVE_WRAP, MOVE_BUBBLE_BEAM, MOVE_ACID},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
         .moves = {MOVE_WATER_GUN, MOVE_SMOKESCREEN, MOVE_TWISTER, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_BLASTOISE,
+        .gender = MON_MALE,
         .moves = {MOVE_WATER_GUN, MOVE_BITE, MOVE_RAPID_SPIN, MOVE_RAIN_DANCE},
     },
 };
@@ -5603,30 +6451,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerPaul[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_SLOWPOKE,
+        .gender = MON_MALE,
         .moves = {MOVE_HEADBUTT, MOVE_CONFUSION, MOVE_WATER_GUN, MOVE_DISABLE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
         .moves = {MOVE_AURORA_BEAM, MOVE_CLAMP, MOVE_SUPERSONIC, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_KINGLER,
+        .gender = MON_MALE,
         .moves = {MOVE_GUILLOTINE, MOVE_STOMP, MOVE_MUD_SHOT, MOVE_BUBBLE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_BUBBLE_BEAM, MOVE_SWIFT, MOVE_RECOVER, MOVE_RAPID_SPIN},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_GOLDUCK,
+        .gender = MON_MALE,
         .moves = {MOVE_CONFUSION, MOVE_SCRATCH, MOVE_SCREECH, MOVE_DISABLE},
     },
 };
@@ -5636,30 +6489,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerRolando[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
         .moves = {MOVE_SUPER_FANG, MOVE_PURSUIT, MOVE_SCARY_FACE, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_SLEEP_POWDER, MOVE_SWEET_SCENT, MOVE_SYNTHESIS},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
         .moves = {MOVE_WATER_GUN, MOVE_BITE, MOVE_RAPID_SPIN, MOVE_TAIL_WHIP},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_SLASH, MOVE_SMOKESCREEN, MOVE_SCARY_FACE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_CHARIZARD,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_WING_ATTACK, MOVE_SMOKESCREEN, MOVE_SCARY_FACE},
     },
 };
@@ -5669,30 +6527,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerGilbert[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
         .moves = {MOVE_WING_ATTACK, MOVE_FEATHER_DANCE, MOVE_WHIRLWIND, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
         .moves = {MOVE_DRILL_PECK, MOVE_MIRROR_MOVE, MOVE_PURSUIT, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_PAY_DAY, MOVE_FAINT_ATTACK, MOVE_SCREECH, MOVE_BITE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
         .moves = {MOVE_SLAM, MOVE_DISABLE, MOVE_WRAP, MOVE_SUPERSONIC},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_TAUROS,
+        .gender = MON_MALE,
         .moves = {MOVE_HORN_ATTACK, MOVE_SCARY_FACE, MOVE_SWAGGER, MOVE_TAIL_WHIP},
     },
 };
@@ -5702,30 +6565,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerOwen[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
         .moves = {MOVE_SCRATCH, MOVE_POISON_STING, MOVE_DOUBLE_KICK, MOVE_BITE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
         .moves = {MOVE_HORN_ATTACK, MOVE_POISON_STING, MOVE_DOUBLE_KICK, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
         .moves = {MOVE_SUPER_FANG, MOVE_PURSUIT, MOVE_SCARY_FACE, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_SWIPES, MOVE_SWIFT, MOVE_SLASH, MOVE_POISON_STING},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_ROCK_BLAST, MOVE_SCARY_FACE, MOVE_STOMP, MOVE_TAIL_WHIP},
     },
 };
@@ -5735,30 +6603,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerBerke[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_SEEL,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_AURORA_BEAM, MOVE_ICY_WIND, MOVE_GROWL},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_ROCK_BLAST, MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_KINGLER,
+        .gender = MON_MALE,
         .moves = {MOVE_GUILLOTINE, MOVE_STOMP, MOVE_MUD_SHOT, MOVE_BUBBLE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .moves = {MOVE_SLAM, MOVE_SANDSTORM, MOVE_DRAGON_BREATH, MOVE_ROCK_THROW},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
         .moves = {MOVE_SPIKE_CANNON, MOVE_AURORA_BEAM, MOVE_SUPERSONIC, MOVE_PROTECT},
     },
 };
@@ -5768,30 +6641,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerYuji[] = {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_SWIFT, MOVE_SAND_ATTACK, MOVE_POISON_STING},
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_ROCK_BLAST, MOVE_MAGNITUDE, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .moves = {MOVE_DRAGON_BREATH, MOVE_SANDSTORM, MOVE_ROCK_THROW, MOVE_BIND},
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_ROCK_BLAST, MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
         .moves = {MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_LEER, MOVE_GROWL},
     },
 };
@@ -5801,30 +6679,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerWarren[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
         .moves = {MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_LEER, MOVE_GROWL},
     },
     {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
         .moves = {MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_LEER, MOVE_GROWL},
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK, MOVE_SCARY_FACE},
     },
     {
         .iv = 100,
         .lvl = 39,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
         .moves = {MOVE_FURY_SWIPES, MOVE_BITE, MOVE_POISON_STING, MOVE_DOUBLE_KICK},
     },
     {
         .iv = 100,
         .lvl = 39,
         .species = SPECIES_NIDOQUEEN,
+        .gender = MON_FEMALE,
         .moves = {MOVE_BODY_SLAM, MOVE_BITE, MOVE_POISON_STING, MOVE_DOUBLE_KICK},
     },
 };
@@ -5834,30 +6717,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerMary[] = {
         .iv = 100,
         .lvl = 22,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
         .moves = {MOVE_WRAP, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_GROWTH},
     },
     {
         .iv = 100,
         .lvl = 22,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
         .moves = {MOVE_POISON_POWDER, MOVE_STUN_SPORE, MOVE_ABSORB, MOVE_SWEET_SCENT},
     },
     {
         .iv = 100,
         .lvl = 22,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
         .moves = {MOVE_VINE_WHIP, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_GROWTH},
     },
     {
         .iv = 100,
         .lvl = 22,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
         .moves = {MOVE_ABSORB, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_SWEET_SCENT},
     },
     {
         .iv = 100,
         .lvl = 22,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_SLEEP_POWDER, MOVE_VINE_WHIP, MOVE_LEECH_SEED},
     },
 };
@@ -5867,30 +6755,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerCaroline[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_STUN_SPORE, MOVE_POISON_POWDER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_VICTREEBEL,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_STUN_SPORE, MOVE_SLEEP_POWDER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PARAS,
+        .gender = MON_MALE,
         .moves = {MOVE_GROWTH, MOVE_SLASH, MOVE_LEECH_LIFE, MOVE_STUN_SPORE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PARASECT,
+        .gender = MON_MALE,
         .moves = {MOVE_SPORE, MOVE_SLASH, MOVE_LEECH_LIFE, MOVE_POISON_POWDER},
     },
 };
@@ -5900,30 +6793,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerAlexa[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
         .moves = {MOVE_LIGHT_SCREEN, MOVE_COSMIC_POWER, MOVE_DOUBLE_SLAP, MOVE_ENCORE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_JIGGLYPUFF,
+        .gender = MON_MALE,
         .moves = {MOVE_SING, MOVE_BODY_SLAM, MOVE_ROLLOUT, MOVE_DISABLE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_PAY_DAY, MOVE_FAINT_ATTACK, MOVE_BITE, MOVE_SCREECH},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_DEWGONG,
+        .gender = MON_MALE,
         .moves = {MOVE_SHEER_COLD, MOVE_TAKE_DOWN, MOVE_REST, MOVE_AURORA_BEAM},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_CHANSEY,
+        .gender = MON_FEMALE,
         .moves = {MOVE_SING, MOVE_EGG_BOMB, MOVE_SOFT_BOILED, MOVE_MINIMIZE},
     },
 };
@@ -5933,30 +6831,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerShannon[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_BEEDRILL,
+        .gender = MON_MALE,
         .moves = {MOVE_PIN_MISSILE, MOVE_TWINEEDLE, MOVE_AGILITY, MOVE_PURSUIT},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_BUTTERFREE,
+        .gender = MON_MALE,
         .moves = {MOVE_SAFEGUARD, MOVE_PSYBEAM, MOVE_GUST, MOVE_SUPERSONIC},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PARASECT,
+        .gender = MON_MALE,
         .moves = {MOVE_SPORE, MOVE_LEECH_LIFE, MOVE_SLASH, MOVE_GROWTH},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_VENONAT,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYBEAM, MOVE_STUN_SPORE, MOVE_LEECH_LIFE, MOVE_DISABLE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_VENOMOTH,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYBEAM, MOVE_GUST, MOVE_SUPERSONIC, MOVE_LEECH_LIFE},
     },
 };
@@ -5966,30 +6869,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerNaomi[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_SWIPES, MOVE_SCREECH, MOVE_FAINT_ATTACK, MOVE_PAY_DAY},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
         .moves = {MOVE_AGILITY, MOVE_TAKE_DOWN, MOVE_FIRE_SPIN, MOVE_STOMP},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_ATTACK, MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_GROWL},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK, MOVE_IMPRISON},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
         .moves = {MOVE_SAFEGUARD, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_FIRE_SPIN},
     },
 };
@@ -5999,30 +6907,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerBrooke[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_TANGELA,
+        .gender = MON_MALE,
         .moves = {MOVE_SLAM, MOVE_BIND, MOVE_MEGA_DRAIN, MOVE_INGRAIN},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
         .moves = {MOVE_ACID, MOVE_MOONLIGHT, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_VILEPLUME,
+        .gender = MON_MALE,
         .moves = {MOVE_MEGA_DRAIN, MOVE_ACID, MOVE_STUN_SPORE, MOVE_AROMATHERAPY},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_SWEET_SCENT, MOVE_GROWL, MOVE_LEECH_SEED},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_VENUSAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_GROWTH, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER},
     },
 };
@@ -6032,30 +6945,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerAustina[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_SCARY_FACE, MOVE_STOMP},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
         .moves = {MOVE_DOUBLE_KICK, MOVE_FURY_SWIPES, MOVE_BITE, MOVE_FLATTER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NIDOQUEEN,
+        .gender = MON_FEMALE,
         .moves = {MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_BITE, MOVE_GROWL},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
         .moves = {MOVE_HORN_ATTACK, MOVE_POISON_STING, MOVE_FOCUS_ENERGY, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NIDOKING,
+        .gender = MON_MALE,
         .moves = {MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_PECK},
     },
 };
@@ -6065,30 +6983,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerJulie[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_SWIPES, MOVE_BITE, MOVE_SCREECH, MOVE_FAINT_ATTACK},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_GRUDGE},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
         .moves = {MOVE_FURY_ATTACK, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN, MOVE_AGILITY},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
         .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_QUICK_ATTACK},
     },
     {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
         .moves = {MOVE_THUNDER, MOVE_THUNDER_WAVE, MOVE_SLAM, MOVE_DOUBLE_TEAM},
     },
 };
@@ -6099,6 +7022,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei[] = {
         .lvl = 58,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DEWGONG,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_HAIL, MOVE_SAFEGUARD},
     },
@@ -6107,6 +7031,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei[] = {
         .lvl = 57,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SPIKES, MOVE_PROTECT, MOVE_HAIL, MOVE_DIVE},
     },
@@ -6115,6 +7040,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei[] = {
         .lvl = 58,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_AMNESIA, MOVE_YAWN},
     },
@@ -6123,6 +7049,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_JYNX,
+        .gender = MON_FEMALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_ICE_PUNCH, MOVE_DOUBLE_SLAP, MOVE_LOVELY_KISS, MOVE_ATTRACT},
     },
@@ -6131,6 +7058,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_LAPRAS,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_CONFUSE_RAY, MOVE_ICE_BEAM, MOVE_SURF, MOVE_BODY_SLAM},
     },
@@ -6142,6 +7070,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno[] = {
         .lvl = 57,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_IRON_TAIL, MOVE_ROAR},
     },
@@ -6150,6 +7079,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno[] = {
         .lvl = 59,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SKY_UPPERCUT, MOVE_MACH_PUNCH, MOVE_ROCK_TOMB, MOVE_COUNTER},
     },
@@ -6158,6 +7088,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno[] = {
         .lvl = 59,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_MEGA_KICK, MOVE_FORESIGHT, MOVE_BRICK_BREAK, MOVE_FACADE},
     },
@@ -6166,6 +7097,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SAND_TOMB},
     },
@@ -6174,6 +7106,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno[] = {
         .lvl = 62,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_CROSS_CHOP, MOVE_BULK_UP, MOVE_SCARY_FACE, MOVE_ROCK_TOMB},
     },
@@ -6185,6 +7118,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GENGAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SHADOW_PUNCH, MOVE_CONFUSE_RAY, MOVE_TOXIC, MOVE_DOUBLE_TEAM},
     },
@@ -6193,6 +7127,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_CONFUSE_RAY, MOVE_POISON_FANG, MOVE_AIR_CUTTER, MOVE_BITE},
     },
@@ -6201,6 +7136,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha[] = {
         .lvl = 59,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPNOSIS, MOVE_DREAM_EATER, MOVE_CURSE, MOVE_MEAN_LOOK},
     },
@@ -6209,6 +7145,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha[] = {
         .lvl = 62,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_SCREECH, MOVE_IRON_TAIL, MOVE_BITE},
     },
@@ -6217,6 +7154,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha[] = {
         .lvl = 64,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GENGAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_HYPNOSIS, MOVE_NIGHTMARE},
     },
@@ -6228,6 +7166,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance[] = {
         .lvl = 62,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_DRAGON_RAGE, MOVE_TWISTER, MOVE_BITE},
     },
@@ -6236,6 +7175,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DRAGONAIR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_DRAGON_RAGE, MOVE_OUTRAGE},
     },
@@ -6244,6 +7184,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance[] = {
         .lvl = 60,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DRAGONAIR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_THUNDER_WAVE, MOVE_OUTRAGE},
     },
@@ -6252,6 +7193,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance[] = {
         .lvl = 64,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_AERODACTYL,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_ANCIENT_POWER, MOVE_WING_ATTACK, MOVE_SCARY_FACE},
     },
@@ -6260,6 +7202,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance[] = {
         .lvl = 66,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DRAGONITE,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_OUTRAGE, MOVE_WING_ATTACK},
     },
@@ -6270,12 +7213,14 @@ static const struct TrainerMon sTrainerMons_LeaderBrock[] = {
         .iv = 30,
         .lvl = 12,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 30,
         .lvl = 14,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_BIND, MOVE_ROCK_TOMB, MOVE_NONE},
     },
 };
@@ -6286,6 +7231,7 @@ static const struct TrainerMon sTrainerMons_LeaderMisty[] = {
         .lvl = 18,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_TACKLE, MOVE_HARDEN, MOVE_RECOVER, MOVE_WATER_PULSE},
     },
     {
@@ -6293,6 +7239,7 @@ static const struct TrainerMon sTrainerMons_LeaderMisty[] = {
         .lvl = 21,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_RECOVER, MOVE_RAPID_SPIN, MOVE_WATER_PULSE},
     },
 };
@@ -6303,6 +7250,7 @@ static const struct TrainerMon sTrainerMons_LeaderLtSurge[] = {
         .lvl = 24,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SONIC_BOOM, MOVE_TACKLE, MOVE_SCREECH, MOVE_SHOCK_WAVE},
     },
     {
@@ -6310,6 +7258,7 @@ static const struct TrainerMon sTrainerMons_LeaderLtSurge[] = {
         .lvl = 26,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
         .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_SHOCK_WAVE},
     },
     {
@@ -6317,6 +7266,7 @@ static const struct TrainerMon sTrainerMons_LeaderLtSurge[] = {
         .lvl = 28,
         .evs = RIVAL_MON_EARLY_EV_SPREAD,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
         .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_SHOCK_WAVE},
     },
 };
@@ -6327,6 +7277,7 @@ static const struct TrainerMon sTrainerMons_LeaderErika[] = {
         .lvl = 32,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_VICTREEBEL,
+        .gender = MON_MALE,
         .moves = {MOVE_STUN_SPORE, MOVE_ACID, MOVE_POISON_POWDER, MOVE_GIGA_DRAIN},
     },
     {
@@ -6334,6 +7285,7 @@ static const struct TrainerMon sTrainerMons_LeaderErika[] = {
         .lvl = 34,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_TANGELA,
+        .gender = MON_MALE,
         .moves = {MOVE_POISON_POWDER, MOVE_CONSTRICT, MOVE_INGRAIN, MOVE_GIGA_DRAIN},
     },
     {
@@ -6341,6 +7293,7 @@ static const struct TrainerMon sTrainerMons_LeaderErika[] = {
         .lvl = 38,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_VILEPLUME,
+        .gender = MON_MALE,
         .moves = {MOVE_SLEEP_POWDER, MOVE_ACID, MOVE_STUN_SPORE, MOVE_GIGA_DRAIN},
     },
 };
@@ -6351,6 +7304,7 @@ static const struct TrainerMon sTrainerMons_LeaderKoga[] = {
         .lvl = 40,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
     },
     {
@@ -6358,6 +7312,7 @@ static const struct TrainerMon sTrainerMons_LeaderKoga[] = {
         .lvl = 42,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
         .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_ACID_ARMOR, MOVE_TOXIC},
     },
     {
@@ -6365,6 +7320,7 @@ static const struct TrainerMon sTrainerMons_LeaderKoga[] = {
         .lvl = 44,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
     },
     {
@@ -6372,6 +7328,7 @@ static const struct TrainerMon sTrainerMons_LeaderKoga[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
     },
 };
@@ -6382,6 +7339,7 @@ static const struct TrainerMon sTrainerMons_LeaderBlaine[] = {
         .lvl = 43,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
         .moves = {MOVE_BITE, MOVE_ROAR, MOVE_TAKE_DOWN, MOVE_FIRE_BLAST},
     },
     {
@@ -6389,6 +7347,7 @@ static const struct TrainerMon sTrainerMons_LeaderBlaine[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
         .moves = {MOVE_STOMP, MOVE_BOUNCE, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST},
     },
     {
@@ -6396,6 +7355,7 @@ static const struct TrainerMon sTrainerMons_LeaderBlaine[] = {
         .lvl = 48,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
         .moves = {MOVE_STOMP, MOVE_BOUNCE, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST},
     },
     {
@@ -6403,6 +7363,7 @@ static const struct TrainerMon sTrainerMons_LeaderBlaine[] = {
         .lvl = 50,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
         .moves = {MOVE_BITE, MOVE_ROAR, MOVE_TAKE_DOWN, MOVE_FIRE_BLAST},
     },
 };
@@ -6413,6 +7374,7 @@ static const struct TrainerMon sTrainerMons_LeaderSabrina[] = {
         .lvl = 37,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYBEAM, MOVE_REFLECT, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
     },
     {
@@ -6420,6 +7382,7 @@ static const struct TrainerMon sTrainerMons_LeaderSabrina[] = {
         .lvl = 38,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_MR_MIME,
+        .gender = MON_MALE,
         .moves = {MOVE_BARRIER, MOVE_PSYBEAM, MOVE_BATON_PASS, MOVE_CALM_MIND},
     },
     {
@@ -6427,6 +7390,7 @@ static const struct TrainerMon sTrainerMons_LeaderSabrina[] = {
         .lvl = 40,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_VENOMOTH,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYBEAM, MOVE_GUST, MOVE_LEECH_LIFE, MOVE_SUPERSONIC},
     },
     {
@@ -6434,6 +7398,7 @@ static const struct TrainerMon sTrainerMons_LeaderSabrina[] = {
         .lvl = 44,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
     },
 };
@@ -6443,11 +7408,13 @@ static const struct TrainerMon sTrainerMons_GentlemanThomas[] = {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 18,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
 };
 
@@ -6456,11 +7423,13 @@ static const struct TrainerMon sTrainerMons_GentlemanArthur[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -6469,6 +7438,7 @@ static const struct TrainerMon sTrainerMons_GentlemanTucker[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -6477,6 +7447,7 @@ static const struct TrainerMon sTrainerMons_GentlemanNorton[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
 };
 
@@ -6485,11 +7456,13 @@ static const struct TrainerMon sTrainerMons_GentlemanWalter[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
     },
 };
 
@@ -6499,24 +7472,28 @@ static const struct TrainerMon sTrainerMons_RivalSsAnneSquirtle[] = {
         .lvl = 19,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 16,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 18,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 20,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -6526,24 +7503,28 @@ static const struct TrainerMon sTrainerMons_RivalSsAnneBulbasaur[] = {
         .lvl = 19,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 16,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 18,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 20,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -6553,24 +7534,28 @@ static const struct TrainerMon sTrainerMons_RivalSsAnneCharmander[] = {
         .lvl = 19,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 16,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 18,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 20,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
 };
 
@@ -6580,30 +7565,35 @@ static const struct TrainerMon sTrainerMons_RivalPokenonTowerSquirtle[] = {
         .lvl = 25,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 23,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 22,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 20,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 25,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -6613,30 +7603,35 @@ static const struct TrainerMon sTrainerMons_RivalPokenonTowerBulbasaur[] = {
         .lvl = 25,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 23,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 22,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 20,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 25,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -6646,30 +7641,35 @@ static const struct TrainerMon sTrainerMons_RivalPokenonTowerCharmander[] = {
         .lvl = 25,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 23,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 22,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
     },
     {
         .iv = 140,
         .lvl = 20,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 25,
         .evs = RIVAL_MON_MIDGAME_EV_SPREAD,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
 };
 
@@ -6679,30 +7679,35 @@ static const struct TrainerMon sTrainerMons_RivalSilphSquirtle[] = {
         .lvl = 37,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 38,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 35,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 35,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
     },
     {
         .iv = 210,
         .lvl = 40,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_BLASTOISE,
+        .gender = MON_MALE,
     },
 };
 
@@ -6712,30 +7717,35 @@ static const struct TrainerMon sTrainerMons_RivalSilphBulbasaur[] = {
         .lvl = 37,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 38,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 35,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 35,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
     },
     {
         .iv = 210,
         .lvl = 40,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_VENUSAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -6745,30 +7755,35 @@ static const struct TrainerMon sTrainerMons_RivalSilphCharmander[] = {
         .lvl = 37,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 38,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 35,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
     },
     {
         .iv = 180,
         .lvl = 35,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
     },
     {
         .iv = 210,
         .lvl = 40,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_CHARIZARD,
+        .gender = MON_MALE,
     },
 };
 
@@ -6778,6 +7793,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateSquirtle[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
         .moves = {MOVE_FEATHER_DANCE, MOVE_WING_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
     {
@@ -6785,6 +7801,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateSquirtle[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK},
     },
     {
@@ -6792,6 +7809,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateSquirtle[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_LEER, MOVE_AGILITY},
     },
     {
@@ -6799,6 +7817,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateSquirtle[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
         .moves = {MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE},
     },
     {
@@ -6806,6 +7825,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateSquirtle[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_FUTURE_SIGHT, MOVE_DISABLE},
     },
     {
@@ -6813,6 +7833,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateSquirtle[] = {
         .lvl = 53,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_BLASTOISE,
+        .gender = MON_MALE,
         .moves = {MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_BITE, MOVE_RAPID_SPIN},
     },
 };
@@ -6823,6 +7844,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateBulbasaur[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
         .moves = {MOVE_FEATHER_DANCE, MOVE_WING_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
     {
@@ -6830,6 +7852,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateBulbasaur[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK},
     },
     {
@@ -6837,6 +7860,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateBulbasaur[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .moves = {MOVE_HYDRO_PUMP, MOVE_TWISTER, MOVE_LEER, MOVE_RAIN_DANCE},
     },
     {
@@ -6844,6 +7868,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateBulbasaur[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_LEER, MOVE_AGILITY},
     },
     {
@@ -6851,6 +7876,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateBulbasaur[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_FUTURE_SIGHT, MOVE_DISABLE},
     },
     {
@@ -6858,6 +7884,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateBulbasaur[] = {
         .lvl = 53,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_VENUSAUR,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_SWEET_SCENT, MOVE_GROWTH, MOVE_SYNTHESIS},
     },
 };
@@ -6868,6 +7895,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateCharmander[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
         .moves = {MOVE_FEATHER_DANCE, MOVE_WING_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
     {
@@ -6875,6 +7903,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateCharmander[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK},
     },
     {
@@ -6882,6 +7911,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateCharmander[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
         .moves = {MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE},
     },
     {
@@ -6889,6 +7919,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateCharmander[] = {
         .lvl = 45,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .moves = {MOVE_HYDRO_PUMP, MOVE_TWISTER, MOVE_LEER, MOVE_RAIN_DANCE},
     },
     {
@@ -6896,6 +7927,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateCharmander[] = {
         .lvl = 47,
         .evs = RIVAL_MON_ENDGAME_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_FUTURE_SIGHT, MOVE_DISABLE},
     },
     {
@@ -6903,6 +7935,7 @@ static const struct TrainerMon sTrainerMons_RivalRoute22LateCharmander[] = {
         .lvl = 53,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_CHARIZARD,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_WING_ATTACK, MOVE_SLASH, MOVE_SCARY_FACE},
     },
 };
@@ -6913,6 +7946,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstSquirtle[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_AERIAL_ACE, MOVE_FEATHER_DANCE, MOVE_SAND_ATTACK, MOVE_WHIRLWIND},
     },
@@ -6921,6 +7955,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstSquirtle[] = {
         .lvl = 63,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT},
     },
@@ -6929,6 +7964,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstSquirtle[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCARY_FACE},
     },
@@ -6937,6 +7973,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstSquirtle[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_ROAR, MOVE_BITE},
     },
@@ -6945,6 +7982,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstSquirtle[] = {
         .lvl = 67,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_GIGA_DRAIN, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN},
     },
@@ -6953,6 +7991,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstSquirtle[] = {
         .lvl = 69,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_BLASTOISE,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_HYDRO_PUMP, MOVE_RAIN_DANCE, MOVE_SKULL_BASH, MOVE_BITE},
     },
@@ -6964,6 +8003,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstBulbasaur[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_AERIAL_ACE, MOVE_FEATHER_DANCE, MOVE_SAND_ATTACK, MOVE_WHIRLWIND},
     },
@@ -6972,6 +8012,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstBulbasaur[] = {
         .lvl = 63,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT},
     },
@@ -6980,6 +8021,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstBulbasaur[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCARY_FACE},
     },
@@ -6988,6 +8030,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstBulbasaur[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_BITE, MOVE_THRASH},
     },
@@ -6996,6 +8039,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstBulbasaur[] = {
         .lvl = 67,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_ROAR, MOVE_BITE},
     },
@@ -7004,6 +8048,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstBulbasaur[] = {
         .lvl = 69,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_VENUSAUR,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_SOLAR_BEAM, MOVE_SYNTHESIS, MOVE_SUNNY_DAY, MOVE_GROWTH},
     },
@@ -7015,6 +8060,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstCharmander[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_AERIAL_ACE, MOVE_FEATHER_DANCE, MOVE_SAND_ATTACK, MOVE_WHIRLWIND},
     },
@@ -7023,6 +8069,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstCharmander[] = {
         .lvl = 63,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT},
     },
@@ -7031,6 +8078,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstCharmander[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCARY_FACE},
     },
@@ -7039,6 +8087,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstCharmander[] = {
         .lvl = 65,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_GIGA_DRAIN, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN},
     },
@@ -7047,6 +8096,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstCharmander[] = {
         .lvl = 67,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_BITE, MOVE_THRASH},
     },
@@ -7055,6 +8105,7 @@ static const struct TrainerMon sTrainerMons_ChampionFirstCharmander[] = {
         .lvl = 69,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_CHARIZARD,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_FIRE_BLAST, MOVE_AERIAL_ACE, MOVE_SLASH, MOVE_FIRE_SPIN},
     },
@@ -7065,6 +8116,7 @@ static const struct TrainerMon sTrainerMons_ChannelerPatricia[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7073,6 +8125,7 @@ static const struct TrainerMon sTrainerMons_ChannelerCarly[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7081,6 +8134,7 @@ static const struct TrainerMon sTrainerMons_ChannelerHope[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7089,6 +8143,7 @@ static const struct TrainerMon sTrainerMons_ChannelerPaula[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7097,11 +8152,13 @@ static const struct TrainerMon sTrainerMons_ChannelerLaurel[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7110,6 +8167,7 @@ static const struct TrainerMon sTrainerMons_ChannelerJody[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7118,6 +8176,7 @@ static const struct TrainerMon sTrainerMons_ChannelerTammy[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7126,6 +8185,7 @@ static const struct TrainerMon sTrainerMons_ChannelerRuth[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7134,6 +8194,7 @@ static const struct TrainerMon sTrainerMons_ChannelerKarina[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7142,6 +8203,7 @@ static const struct TrainerMon sTrainerMons_ChannelerJanae[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7150,16 +8212,19 @@ static const struct TrainerMon sTrainerMons_ChannelerAngelica[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7168,6 +8233,7 @@ static const struct TrainerMon sTrainerMons_ChannelerEmilia[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7176,6 +8242,7 @@ static const struct TrainerMon sTrainerMons_ChannelerJennifer[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7184,6 +8251,7 @@ static const struct TrainerMon sTrainerMons_Channeler1[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7192,6 +8260,7 @@ static const struct TrainerMon sTrainerMons_Channeler2[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7200,6 +8269,7 @@ static const struct TrainerMon sTrainerMons_Channeler3[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7208,6 +8278,7 @@ static const struct TrainerMon sTrainerMons_Channeler4[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7216,6 +8287,7 @@ static const struct TrainerMon sTrainerMons_Channeler5[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7224,16 +8296,19 @@ static const struct TrainerMon sTrainerMons_Channeler6[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7242,6 +8317,7 @@ static const struct TrainerMon sTrainerMons_Channeler7[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7250,6 +8326,7 @@ static const struct TrainerMon sTrainerMons_Channeler8[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7258,11 +8335,13 @@ static const struct TrainerMon sTrainerMons_ChannelerAmanda[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7271,6 +8350,7 @@ static const struct TrainerMon sTrainerMons_ChannelerStacy[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7279,16 +8359,19 @@ static const struct TrainerMon sTrainerMons_ChannelerTasha[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_GASTLY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_HAUNTER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7297,11 +8380,13 @@ static const struct TrainerMon sTrainerMons_HikerJeremy[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -7310,16 +8395,19 @@ static const struct TrainerMon sTrainerMons_PicnickerAlma[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
 };
 
@@ -7328,26 +8416,31 @@ static const struct TrainerMon sTrainerMons_PicnickerSusie[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -7356,11 +8449,13 @@ static const struct TrainerMon sTrainerMons_PicnickerValerie[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
 };
 
@@ -7369,21 +8464,25 @@ static const struct TrainerMon sTrainerMons_PicnickerGwen[] = {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 27,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -7392,18 +8491,21 @@ static const struct TrainerMon sTrainerMons_BikerVirgil[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
     },
 };
@@ -7413,11 +8515,13 @@ static const struct TrainerMon sTrainerMons_CamperFlint[] = {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7426,11 +8530,13 @@ static const struct TrainerMon sTrainerMons_PicnickerMissy[] = {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 31,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -7439,16 +8545,19 @@ static const struct TrainerMon sTrainerMons_PicnickerIrene[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_HORSEA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SEEL,
+        .gender = MON_MALE,
     },
 };
 
@@ -7457,16 +8566,19 @@ static const struct TrainerMon sTrainerMons_PicnickerDana[] = {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 20,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7475,21 +8587,25 @@ static const struct TrainerMon sTrainerMons_PicnickerAriana[] = {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 19,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
 };
 
@@ -7498,11 +8614,13 @@ static const struct TrainerMon sTrainerMons_PicnickerLeah[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7511,11 +8629,13 @@ static const struct TrainerMon sTrainerMons_CamperJustin[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
 };
 
@@ -7524,16 +8644,19 @@ static const struct TrainerMon sTrainerMons_PicnickerYazmin[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_TANGELA,
+        .gender = MON_MALE,
     },
 };
 
@@ -7542,16 +8665,19 @@ static const struct TrainerMon sTrainerMons_PicnickerKindra[] = {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 28,
         .species = SPECIES_ODDISH,
+        .gender = MON_MALE,
     },
 };
 
@@ -7560,11 +8686,13 @@ static const struct TrainerMon sTrainerMons_PicnickerBecky[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -7573,6 +8701,7 @@ static const struct TrainerMon sTrainerMons_PicnickerCelia[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -7581,6 +8710,7 @@ static const struct TrainerMon sTrainerMons_GentlemanBrooks[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -7589,11 +8719,13 @@ static const struct TrainerMon sTrainerMons_GentlemanLamar[] = {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 17,
         .species = SPECIES_PONYTA,
+        .gender = MON_MALE,
     },
 };
 
@@ -7602,11 +8734,13 @@ static const struct TrainerMon sTrainerMons_TwinsEliAnne[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_JIGGLYPUFF,
+        .gender = MON_MALE,
     },
 };
 
@@ -7615,12 +8749,14 @@ static const struct TrainerMon sTrainerMons_CoolCoupleRayTyra[] = {
         .iv = 100,
         .lvl = 45,
         .species = SPECIES_NIDOQUEEN,
+        .gender = MON_FEMALE,
         .moves = {MOVE_SUPERPOWER, MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_POISON_STING},
     },
     {
         .iv = 100,
         .lvl = 45,
         .species = SPECIES_NIDOKING,
+        .gender = MON_MALE,
         .moves = {MOVE_MEGAHORN, MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING},
     },
 };
@@ -7630,11 +8766,13 @@ static const struct TrainerMon sTrainerMons_YoungCoupleGiaJes[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -7643,11 +8781,13 @@ static const struct TrainerMon sTrainerMons_TwinsKiriJan[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SQUIRTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -7656,12 +8796,14 @@ static const struct TrainerMon sTrainerMons_CrushKinRonMya[] = {
         .iv = 50,
         .lvl = 29,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 29,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -7671,11 +8813,13 @@ static const struct TrainerMon sTrainerMons_YoungCoupleLeaJed[] = {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
     },
 };
 
@@ -7684,11 +8828,13 @@ static const struct TrainerMon sTrainerMons_SisAndBroLiaLuc[] = {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 30,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -7697,11 +8843,13 @@ static const struct TrainerMon sTrainerMons_SisAndBroLilIan[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -7710,6 +8858,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher3[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7718,6 +8867,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher4[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7726,6 +8876,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher5[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7734,6 +8885,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher6[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7742,6 +8894,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher7[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7750,6 +8903,7 @@ static const struct TrainerMon sTrainerMons_BugCatcher8[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7758,11 +8912,13 @@ static const struct TrainerMon sTrainerMons_YoungsterBen3[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7771,11 +8927,13 @@ static const struct TrainerMon sTrainerMons_YoungsterBen4[] = {
         .iv = 120,
         .lvl = 48,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 48,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
 };
 
@@ -7784,11 +8942,13 @@ static const struct TrainerMon sTrainerMons_YoungsterChad2[] = {
         .iv = 20,
         .lvl = 20,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 20,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
 };
 
@@ -7797,11 +8957,13 @@ static const struct TrainerMon sTrainerMons_LassReli2[] = {
         .iv = 20,
         .lvl = 20,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 20,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -7810,11 +8972,13 @@ static const struct TrainerMon sTrainerMons_LassReli3[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -7823,16 +8987,19 @@ static const struct TrainerMon sTrainerMons_YoungsterTimmy2[] = {
         .iv = 20,
         .lvl = 19,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 19,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 19,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -7841,16 +9008,19 @@ static const struct TrainerMon sTrainerMons_YoungsterTimmy3[] = {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -7859,16 +9029,19 @@ static const struct TrainerMon sTrainerMons_YoungsterTimmy4[] = {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -7877,11 +9050,13 @@ static const struct TrainerMon sTrainerMons_YoungsterChad3[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
 };
 
@@ -7890,11 +9065,13 @@ static const struct TrainerMon sTrainerMons_LassJanice2[] = {
         .iv = 20,
         .lvl = 20,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 20,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -7903,11 +9080,13 @@ static const struct TrainerMon sTrainerMons_LassJanice3[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -7916,11 +9095,13 @@ static const struct TrainerMon sTrainerMons_YoungsterChad4[] = {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -7929,11 +9110,13 @@ static const struct TrainerMon sTrainerMons_HikerFranklin2[] = {
         .iv = 40,
         .lvl = 25,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 25,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
     },
 };
 
@@ -7942,6 +9125,7 @@ static const struct TrainerMon sTrainerMons_PkmnProfProfOak[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7950,6 +9134,7 @@ static const struct TrainerMon sTrainerMons_PlayerBrendan[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7958,6 +9143,7 @@ static const struct TrainerMon sTrainerMons_PlayerMay[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7966,6 +9152,7 @@ static const struct TrainerMon sTrainerMons_PlayerRed[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7974,6 +9161,7 @@ static const struct TrainerMon sTrainerMons_PlayerLeaf[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -7982,11 +9170,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt42[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_HOUNDOUR,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_HOUNDOUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -7995,18 +9185,21 @@ static const struct TrainerMon sTrainerMons_PsychicJaclyn[] = {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_NATU,
+        .gender = MON_MALE,
         .moves = {MOVE_NIGHT_SHADE, MOVE_CONFUSE_RAY, MOVE_FUTURE_SIGHT, MOVE_WISH},
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_HEADBUTT, MOVE_AMNESIA, MOVE_YAWN},
     },
     {
         .iv = 100,
         .lvl = 49,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT},
     },
 };
@@ -8016,12 +9209,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlSharon[] = {
         .iv = 50,
         .lvl = 37,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 37,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -8031,16 +9226,19 @@ static const struct TrainerMon sTrainerMons_TuberAmira[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_POLIWAG,
+        .gender = MON_MALE,
     },
 };
 
@@ -8049,16 +9247,19 @@ static const struct TrainerMon sTrainerMons_PkmnBreederAlize[] = {
         .iv = 30,
         .lvl = 48,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 48,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 48,
         .species = SPECIES_MARILL,
+        .gender = MON_MALE,
     },
 };
 
@@ -8067,12 +9268,14 @@ static const struct TrainerMon sTrainerMons_PkmnRangerNicolas[] = {
         .iv = 100,
         .lvl = 51,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_SWEET_SCENT, MOVE_WRAP},
     },
     {
         .iv = 100,
         .lvl = 51,
         .species = SPECIES_VICTREEBEL,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE},
     },
 };
@@ -8082,12 +9285,14 @@ static const struct TrainerMon sTrainerMons_PkmnRangerMadeline[] = {
         .iv = 100,
         .lvl = 51,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
         .moves = {MOVE_PETAL_DANCE, MOVE_ACID, MOVE_SWEET_SCENT, MOVE_POISON_POWDER},
     },
     {
         .iv = 100,
         .lvl = 51,
         .species = SPECIES_VILEPLUME,
+        .gender = MON_MALE,
         .moves = {MOVE_PETAL_DANCE, MOVE_MOONLIGHT, MOVE_ACID, MOVE_STUN_SPORE},
     },
 };
@@ -8097,11 +9302,13 @@ static const struct TrainerMon sTrainerMons_AromaLadyNikki[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
     },
 };
 
@@ -8110,16 +9317,19 @@ static const struct TrainerMon sTrainerMons_RuinManiacStanly[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
     },
 };
 
@@ -8128,12 +9338,14 @@ static const struct TrainerMon sTrainerMons_LadyJacki[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_HOPPIP,
+        .gender = MON_MALE,
         .heldItem = ITEM_STARDUST,
     },
     {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_SKIPLOOM,
+        .gender = MON_MALE,
         .heldItem = ITEM_STARDUST,
     },
 };
@@ -8143,6 +9355,7 @@ static const struct TrainerMon sTrainerMons_PainterDaisy[] = {
         .iv = 50,
         .lvl = 50,
         .species = SPECIES_SMEARGLE,
+        .gender = MON_MALE,
         .moves = {MOVE_DYNAMIC_PUNCH, MOVE_DIZZY_PUNCH, MOVE_FOCUS_PUNCH, MOVE_MEGA_PUNCH},
     },
 };
@@ -8152,12 +9365,14 @@ static const struct TrainerMon sTrainerMons_BikerGoon[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_HAZE, MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_TACKLE},
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_ACID_ARMOR, MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE},
     },
 };
@@ -8167,6 +9382,7 @@ static const struct TrainerMon sTrainerMons_BikerGoon2[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_HAZE, MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_TACKLE},
     },
 };
@@ -8176,6 +9392,7 @@ static const struct TrainerMon sTrainerMons_BikerGoon3[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
 };
 
@@ -8184,6 +9401,7 @@ static const struct TrainerMon sTrainerMons_Biker2[] = {
         .iv = 0,
         .lvl = 5,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
 };
 
@@ -8192,11 +9410,13 @@ static const struct TrainerMon sTrainerMons_BugCatcherAnthony[] = {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 8,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8205,16 +9425,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherCharlie[] = {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_CATERPIE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 7,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
 };
 
@@ -8223,11 +9446,13 @@ static const struct TrainerMon sTrainerMons_TwinsEliAnne2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_JIGGLYPUFF,
+        .gender = MON_MALE,
     },
 };
 
@@ -8236,16 +9461,19 @@ static const struct TrainerMon sTrainerMons_YoungsterJohnson[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8254,18 +9482,21 @@ static const struct TrainerMon sTrainerMons_BikerRicardo[] = {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
     },
     {
         .iv = 0,
         .lvl = 22,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
     },
     {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
         .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_POUND},
     },
 };
@@ -8275,11 +9506,13 @@ static const struct TrainerMon sTrainerMons_BikerJaren[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
 };
 
@@ -8288,11 +9521,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt43[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_CUBONE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
     },
 };
 
@@ -8301,21 +9536,25 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt44[] = {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SANDSHREW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -8324,16 +9563,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt45[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_ZUBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
 };
 
@@ -8342,16 +9584,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt46[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8360,16 +9605,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt47[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8378,11 +9626,13 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt48[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
     },
 };
 
@@ -8391,18 +9641,21 @@ static const struct TrainerMon sTrainerMons_TeamRocketAdmin[] = {
         .iv = 150,
         .lvl = 52,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_SCREECH, MOVE_MINIMIZE, MOVE_ROCK_TOMB},
     },
     {
         .iv = 150,
         .lvl = 53,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_BITE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL},
     },
     {
         .iv = 150,
         .lvl = 54,
         .species = SPECIES_VILEPLUME,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE},
     },
 };
@@ -8412,18 +9665,21 @@ static const struct TrainerMon sTrainerMons_TeamRocketAdmin2[] = {
         .iv = 200,
         .lvl = 53,
         .species = SPECIES_GOLBAT,
+        .gender = MON_MALE,
         .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_AIR_CUTTER, MOVE_SHADOW_BALL},
     },
     {
         .iv = 200,
         .lvl = 54,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_EXPLOSION, MOVE_SHADOW_BALL},
     },
     {
         .iv = 200,
         .lvl = 55,
         .species = SPECIES_HOUNDOOM,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_SHADOW_BALL},
     },
 };
@@ -8433,30 +9689,35 @@ static const struct TrainerMon sTrainerMons_ScientistGideon[] = {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_SCREECH, MOVE_SPARK, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_CHARGE},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_MAGNEMITE,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SCREECH, MOVE_SWIFT, MOVE_SPARK, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_TRI_ATTACK, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_PORYGON,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_TRI_ATTACK, MOVE_CONVERSION, MOVE_RECOVER, MOVE_PSYBEAM},
     },
 };
@@ -8466,16 +9727,19 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleAmara[] = {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_SEEL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_SEEL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_DEWGONG,
+        .gender = MON_MALE,
     },
 };
 
@@ -8484,11 +9748,13 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleMaria[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -8497,16 +9763,19 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleAbigail[] = {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_PSYDUCK,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_PSYDUCK,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_GOLDUCK,
+        .gender = MON_MALE,
     },
 };
 
@@ -8515,6 +9784,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleFinn[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -8523,16 +9793,19 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleGarrett[] = {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SHELLDER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8541,26 +9814,31 @@ static const struct TrainerMon sTrainerMons_FishermanTommy[] = {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 33,
         .species = SPECIES_GOLDEEN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -8569,12 +9847,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlTanya[] = {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -8584,12 +9864,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltShea[] = {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -8599,12 +9881,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltHugh[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_MACHOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -8614,16 +9898,19 @@ static const struct TrainerMon sTrainerMons_CamperBryce[] = {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -8632,21 +9919,25 @@ static const struct TrainerMon sTrainerMons_PicnickerClaire[] = {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 35,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -8655,12 +9946,14 @@ static const struct TrainerMon sTrainerMons_CrushKinMikKia[] = {
         .iv = 50,
         .lvl = 39,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 39,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -8670,16 +9963,19 @@ static const struct TrainerMon sTrainerMons_AromaLadyViolet[] = {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_BULBASAUR,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 36,
         .species = SPECIES_IVYSAUR,
+        .gender = MON_MALE,
     },
 };
 
@@ -8688,21 +9984,25 @@ static const struct TrainerMon sTrainerMons_TuberAlexis[] = {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_STARYU,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_KRABBY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 34,
         .species = SPECIES_KRABBY,
+        .gender = MON_MALE,
     },
 };
 
@@ -8711,11 +10011,13 @@ static const struct TrainerMon sTrainerMons_TwinsJoyMeg[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -8724,6 +10026,7 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleTisha[] = {
         .iv = 0,
         .lvl = 38,
         .species = SPECIES_KINGLER,
+        .gender = MON_MALE,
     },
 };
 
@@ -8732,6 +10035,7 @@ static const struct TrainerMon sTrainerMons_PainterCelina[] = {
         .iv = 50,
         .lvl = 50,
         .species = SPECIES_SMEARGLE,
+        .gender = MON_MALE,
         .moves = {MOVE_FLY, MOVE_DIG, MOVE_DIVE, MOVE_BOUNCE},
     },
 };
@@ -8741,6 +10045,7 @@ static const struct TrainerMon sTrainerMons_PainterRayna[] = {
         .iv = 50,
         .lvl = 50,
         .species = SPECIES_SMEARGLE,
+        .gender = MON_MALE,
         .moves = {MOVE_CROSS_CHOP, MOVE_MEGAHORN, MOVE_DOUBLE_EDGE, MOVE_SELF_DESTRUCT},
     },
 };
@@ -8750,18 +10055,21 @@ static const struct TrainerMon sTrainerMons_LadyGillian[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_MAREEP,
+        .gender = MON_MALE,
         .heldItem = ITEM_STARDUST,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MAREEP,
+        .gender = MON_MALE,
         .heldItem = ITEM_STARDUST,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_FLAAFFY,
+        .gender = MON_MALE,
         .heldItem = ITEM_NUGGET,
     },
 };
@@ -8771,11 +10079,13 @@ static const struct TrainerMon sTrainerMons_YoungsterDestin[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -8784,16 +10094,19 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleToby[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_TENTACOOL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_TENTACRUEL,
+        .gender = MON_MALE,
     },
 };
 
@@ -8802,16 +10115,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt49[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GRIMER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };
 
@@ -8820,12 +10136,14 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt50[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
         .moves = {MOVE_MEMENTO, MOVE_HAZE, MOVE_SMOKESCREEN, MOVE_SLUDGE},
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
         .moves = {MOVE_HAZE, MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SELF_DESTRUCT},
     },
 };
@@ -8835,16 +10153,19 @@ static const struct TrainerMon sTrainerMons_TeamRocketGrunt51[] = {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_EKANS,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
     },
 };
 
@@ -8853,11 +10174,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperMilo[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -8866,11 +10189,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperChaz[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -8879,11 +10204,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperHarold[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_HOOTHOOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_NOCTOWL,
+        .gender = MON_MALE,
     },
 };
 
@@ -8892,11 +10219,13 @@ static const struct TrainerMon sTrainerMons_FishermanTylor[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_QWILFISH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_QWILFISH,
+        .gender = MON_MALE,
     },
 };
 
@@ -8905,11 +10234,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleMymo[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_KINGLER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8918,6 +10249,7 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleNicole[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_MARILL,
+        .gender = MON_MALE,
     },
 };
 
@@ -8926,11 +10258,13 @@ static const struct TrainerMon sTrainerMons_SisAndBroAvaGeb[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -8939,11 +10273,13 @@ static const struct TrainerMon sTrainerMons_AromaLadyRose[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_SUNKERN,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_SUNFLORA,
+        .gender = MON_MALE,
     },
 };
 
@@ -8952,6 +10288,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleSamir[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
     },
 };
 
@@ -8960,11 +10297,13 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleDenise[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_CHINCHOU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_LANTURN,
+        .gender = MON_MALE,
     },
 };
 
@@ -8973,11 +10312,13 @@ static const struct TrainerMon sTrainerMons_TwinsMiuMia[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -8986,11 +10327,13 @@ static const struct TrainerMon sTrainerMons_HikerEarl[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -8999,6 +10342,7 @@ static const struct TrainerMon sTrainerMons_RuinManiacFoster[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_GOLEM,
+        .gender = MON_MALE,
     },
 };
 
@@ -9007,11 +10351,13 @@ static const struct TrainerMon sTrainerMons_RuinManiacLarry[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9020,6 +10366,7 @@ static const struct TrainerMon sTrainerMons_HikerDaryl[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_SUDOWOODO,
+        .gender = MON_MALE,
     },
 };
 
@@ -9028,11 +10375,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacHector[] = {
         .iv = 30,
         .lvl = 49,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 49,
         .species = SPECIES_KANGASKHAN,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -9041,6 +10390,7 @@ static const struct TrainerMon sTrainerMons_PsychicDario[] = {
         .iv = 100,
         .lvl = 52,
         .species = SPECIES_GIRAFARIG,
+        .gender = MON_MALE,
         .moves = {MOVE_CRUNCH, MOVE_PSYBEAM, MOVE_ODOR_SLEUTH, MOVE_AGILITY},
     },
 };
@@ -9050,18 +10400,21 @@ static const struct TrainerMon sTrainerMons_PsychicRodette[] = {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_NATU,
+        .gender = MON_MALE,
         .moves = {MOVE_NIGHT_SHADE, MOVE_CONFUSE_RAY, MOVE_WISH, MOVE_FUTURE_SIGHT},
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_DROWZEE,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_DISABLE, MOVE_PSYCH_UP, MOVE_FUTURE_SIGHT},
     },
     {
         .iv = 100,
         .lvl = 50,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_HYPNOSIS, MOVE_PSYCH_UP, MOVE_FUTURE_SIGHT},
     },
 };
@@ -9071,11 +10424,13 @@ static const struct TrainerMon sTrainerMons_AromaLadyMiah[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_BELLOSSOM,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_BELLOSSOM,
+        .gender = MON_MALE,
     },
 };
 
@@ -9084,11 +10439,13 @@ static const struct TrainerMon sTrainerMons_YoungCoupleEveJon[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_GOLDUCK,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_PSYDUCK,
+        .gender = MON_MALE,
     },
 };
 
@@ -9097,24 +10454,28 @@ static const struct TrainerMon sTrainerMons_JugglerMason[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_LIGHT_SCREEN, MOVE_SPARK, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_PINECO,
+        .gender = MON_MALE,
         .moves = {MOVE_SPIKES, MOVE_BIDE, MOVE_RAPID_SPIN, MOVE_TAKE_DOWN},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_VOLTORB,
+        .gender = MON_GENDERLESS,
         .moves = {MOVE_SWIFT, MOVE_LIGHT_SCREEN, MOVE_SPARK, MOVE_SONIC_BOOM},
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_PINECO,
+        .gender = MON_MALE,
         .moves = {MOVE_SPIKES, MOVE_BIDE, MOVE_RAPID_SPIN, MOVE_EXPLOSION},
     },
 };
@@ -9124,18 +10485,21 @@ static const struct TrainerMon sTrainerMons_CrushGirlCyndy[] = {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_HITMONTOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -9145,12 +10509,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlJocelyn[] = {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -9160,16 +10526,19 @@ static const struct TrainerMon sTrainerMons_TamerEvan[] = {
         .iv = 40,
         .lvl = 48,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 48,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 49,
         .species = SPECIES_URSARING,
+        .gender = MON_MALE,
     },
 };
 
@@ -9178,11 +10547,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacMark2[] = {
         .iv = 90,
         .lvl = 33,
         .species = SPECIES_RHYHORN,
+        .gender = MON_MALE,
     },
     {
         .iv = 90,
         .lvl = 33,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
     },
 };
 
@@ -9191,12 +10562,14 @@ static const struct TrainerMon sTrainerMons_PkmnRangerLogan[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
         .moves = {MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE, MOVE_CONFUSION},
     },
     {
         .iv = 100,
         .lvl = 40,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .moves = {MOVE_EGG_BOMB, MOVE_STOMP, MOVE_CONFUSION, MOVE_HYPNOSIS},
     },
 };
@@ -9206,18 +10579,21 @@ static const struct TrainerMon sTrainerMons_PkmnRangerJackson[] = {
         .iv = 100,
         .lvl = 49,
         .species = SPECIES_TANGELA,
+        .gender = MON_MALE,
         .moves = {MOVE_SLAM, MOVE_MEGA_DRAIN, MOVE_BIND, MOVE_INGRAIN},
     },
     {
         .iv = 100,
         .lvl = 49,
         .species = SPECIES_EXEGGCUTE,
+        .gender = MON_MALE,
         .moves = {MOVE_CONFUSION, MOVE_POISON_POWDER, MOVE_BARRAGE, MOVE_REFLECT},
     },
     {
         .iv = 100,
         .lvl = 49,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .moves = {MOVE_CONFUSION, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_STOMP},
     },
 };
@@ -9227,16 +10603,19 @@ static const struct TrainerMon sTrainerMons_PkmnRangerBeth[] = {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_BELLSPROUT,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_GLOOM,
+        .gender = MON_MALE,
     },
 };
 
@@ -9245,6 +10624,7 @@ static const struct TrainerMon sTrainerMons_PkmnRangerKatelyn[] = {
         .iv = 100,
         .lvl = 52,
         .species = SPECIES_CHANSEY,
+        .gender = MON_FEMALE,
         .moves = {MOVE_EGG_BOMB, MOVE_DEFENSE_CURL, MOVE_MINIMIZE, MOVE_SOFT_BOILED},
     },
 };
@@ -9254,30 +10634,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerLeroy[] = {
         .iv = 100,
         .lvl = 47,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_SCARY_FACE},
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_HEADBUTT, MOVE_AMNESIA, MOVE_DISABLE},
     },
     {
         .iv = 100,
         .lvl = 47,
         .species = SPECIES_KANGASKHAN,
+        .gender = MON_FEMALE,
         .moves = {MOVE_DIZZY_PUNCH, MOVE_BITE, MOVE_ENDURE, MOVE_REVERSAL},
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .moves = {MOVE_CROSS_CHOP, MOVE_VITAL_THROW, MOVE_REVENGE, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 100,
         .lvl = 50,
         .species = SPECIES_URSARING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_FAINT_ATTACK, MOVE_SNORE, MOVE_REST},
     },
 };
@@ -9287,30 +10672,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerMichelle[] = {
         .iv = 100,
         .lvl = 47,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_SCREECH, MOVE_FAINT_ATTACK, MOVE_BITE},
     },
     {
         .iv = 100,
         .lvl = 47,
         .species = SPECIES_DEWGONG,
+        .gender = MON_MALE,
         .moves = {MOVE_ICE_BEAM, MOVE_TAKE_DOWN, MOVE_ICY_WIND, MOVE_GROWL},
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_CONFUSE_RAY, MOVE_WILL_O_WISP, MOVE_GRUDGE},
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
         .moves = {MOVE_BOUNCE, MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN},
     },
     {
         .iv = 100,
         .lvl = 50,
         .species = SPECIES_GIRAFARIG,
+        .gender = MON_MALE,
         .moves = {MOVE_CRUNCH, MOVE_PSYBEAM, MOVE_STOMP, MOVE_ODOR_SLEUTH},
     },
 };
@@ -9320,12 +10710,14 @@ static const struct TrainerMon sTrainerMons_CoolCoupleLexNya[] = {
         .iv = 100,
         .lvl = 52,
         .species = SPECIES_MILTANK,
+        .gender = MON_FEMALE,
         .moves = {MOVE_BODY_SLAM, MOVE_MILK_DRINK, MOVE_GROWL, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 100,
         .lvl = 52,
         .species = SPECIES_TAUROS,
+        .gender = MON_MALE,
         .moves = {MOVE_THRASH, MOVE_HORN_ATTACK, MOVE_PURSUIT, MOVE_SWAGGER},
     },
 };
@@ -9335,6 +10727,7 @@ static const struct TrainerMon sTrainerMons_RuinManiacBrandon[] = {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -9343,18 +10736,21 @@ static const struct TrainerMon sTrainerMons_RuinManiacBenjamin[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GEODUDE,
+        .gender = MON_MALE,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_ROLLOUT, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_ROCK_THROW, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_ROCK_THROW, MOVE_SELF_DESTRUCT},
     },
 };
@@ -9364,6 +10760,7 @@ static const struct TrainerMon sTrainerMons_PainterEdna[] = {
         .iv = 50,
         .lvl = 50,
         .species = SPECIES_SMEARGLE,
+        .gender = MON_MALE,
         .moves = {MOVE_FAKE_OUT, MOVE_EXTREME_SPEED, MOVE_PROTECT, MOVE_QUICK_ATTACK},
     },
 };
@@ -9373,11 +10770,13 @@ static const struct TrainerMon sTrainerMons_GentlemanClifford[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_GOLDUCK,
+        .gender = MON_MALE,
     },
 };
 
@@ -9386,6 +10785,7 @@ static const struct TrainerMon sTrainerMons_LadySelphy[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_NUGGET,
         .moves = {MOVE_PAY_DAY, MOVE_BITE, MOVE_TAUNT, MOVE_TORMENT},
     },
@@ -9393,6 +10793,7 @@ static const struct TrainerMon sTrainerMons_LadySelphy[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_NUGGET,
         .moves = {MOVE_PAY_DAY, MOVE_SCRATCH, MOVE_TORMENT, MOVE_TAUNT},
     },
@@ -9403,16 +10804,19 @@ static const struct TrainerMon sTrainerMons_RuinManiacLawson[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
     },
 };
 
@@ -9421,16 +10825,19 @@ static const struct TrainerMon sTrainerMons_PsychicLaura[] = {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_NATU,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_NATU,
+        .gender = MON_MALE,
     },
     {
         .iv = 100,
         .lvl = 49,
         .species = SPECIES_XATU,
+        .gender = MON_MALE,
     },
 };
 
@@ -9439,6 +10846,7 @@ static const struct TrainerMon sTrainerMons_PkmnBreederBethany[] = {
         .iv = 30,
         .lvl = 50,
         .species = SPECIES_CHANSEY,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -9447,16 +10855,19 @@ static const struct TrainerMon sTrainerMons_PkmnBreederAllison[] = {
         .iv = 30,
         .lvl = 48,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 48,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 30,
         .lvl = 48,
         .species = SPECIES_CLEFABLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9465,6 +10876,7 @@ static const struct TrainerMon sTrainerMons_BugCatcherGarret[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_HERACROSS,
+        .gender = MON_MALE,
     },
 };
 
@@ -9473,21 +10885,25 @@ static const struct TrainerMon sTrainerMons_BugCatcherJonah[] = {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_YANMA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_BEEDRILL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_YANMA,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_BEEDRILL,
+        .gender = MON_MALE,
     },
 };
 
@@ -9496,11 +10912,13 @@ static const struct TrainerMon sTrainerMons_BugCatcherVance[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_VENONAT,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_VENOMOTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -9509,16 +10927,19 @@ static const struct TrainerMon sTrainerMons_YoungsterNash[] = {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_WEEPINBELL,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_VICTREEBEL,
+        .gender = MON_MALE,
     },
 };
 
@@ -9527,11 +10948,13 @@ static const struct TrainerMon sTrainerMons_YoungsterCordell[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_FARFETCHD,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_FARFETCHD,
+        .gender = MON_MALE,
     },
 };
 
@@ -9540,21 +10963,25 @@ static const struct TrainerMon sTrainerMons_LassDalia[] = {
         .iv = 0,
         .lvl = 46,
         .species = SPECIES_HOPPIP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_HOPPIP,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 47,
         .species = SPECIES_SKIPLOOM,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_SKIPLOOM,
+        .gender = MON_MALE,
     },
 };
 
@@ -9563,6 +10990,7 @@ static const struct TrainerMon sTrainerMons_LassJoana[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_SNUBBULL,
+        .gender = MON_MALE,
     },
 };
 
@@ -9571,11 +10999,13 @@ static const struct TrainerMon sTrainerMons_CamperRiley[] = {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_PINSIR,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 50,
         .species = SPECIES_HERACROSS,
+        .gender = MON_MALE,
     },
 };
 
@@ -9584,16 +11014,19 @@ static const struct TrainerMon sTrainerMons_PicnickerMarcy[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_PARAS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_PARAS,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 49,
         .species = SPECIES_PARASECT,
+        .gender = MON_MALE,
     },
 };
 
@@ -9602,16 +11035,19 @@ static const struct TrainerMon sTrainerMons_RuinManiacLayton[] = {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 0,
         .lvl = 48,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
 };
 
@@ -9620,11 +11056,13 @@ static const struct TrainerMon sTrainerMons_PicnickerKelsey2[] = {
         .iv = 20,
         .lvl = 21,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 21,
         .species = SPECIES_NIDORAN_F,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -9633,11 +11071,13 @@ static const struct TrainerMon sTrainerMons_PicnickerKelsey3[] = {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -9646,11 +11086,13 @@ static const struct TrainerMon sTrainerMons_PicnickerKelsey4[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -9659,6 +11101,7 @@ static const struct TrainerMon sTrainerMons_CamperRicky2[] = {
         .iv = 20,
         .lvl = 22,
         .species = SPECIES_SQUIRTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9667,6 +11110,7 @@ static const struct TrainerMon sTrainerMons_CamperRicky3[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9675,6 +11119,7 @@ static const struct TrainerMon sTrainerMons_CamperRicky4[] = {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_WARTORTLE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9683,11 +11128,13 @@ static const struct TrainerMon sTrainerMons_CamperJeff2[] = {
         .iv = 20,
         .lvl = 21,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 21,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9696,11 +11143,13 @@ static const struct TrainerMon sTrainerMons_CamperJeff3[] = {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9709,11 +11158,13 @@ static const struct TrainerMon sTrainerMons_CamperJeff4[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9722,16 +11173,19 @@ static const struct TrainerMon sTrainerMons_PicnickerIsabelle2[] = {
         .iv = 20,
         .lvl = 21,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 21,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 18,
         .species = SPECIES_PIDGEY,
+        .gender = MON_MALE,
     },
 };
 
@@ -9740,16 +11194,19 @@ static const struct TrainerMon sTrainerMons_PicnickerIsabelle3[] = {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 26,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
 };
 
@@ -9758,16 +11215,19 @@ static const struct TrainerMon sTrainerMons_PicnickerIsabelle4[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 50,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
 };
 
@@ -9776,16 +11236,19 @@ static const struct TrainerMon sTrainerMons_YoungsterYasu2[] = {
         .iv = 40,
         .lvl = 22,
         .species = SPECIES_RATTATA,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 22,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 22,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9794,16 +11257,19 @@ static const struct TrainerMon sTrainerMons_YoungsterYasu3[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
 };
 
@@ -9812,16 +11278,19 @@ static const struct TrainerMon sTrainerMons_EngineerBernie2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MAGNETON,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -9830,11 +11299,13 @@ static const struct TrainerMon sTrainerMons_GamerDarian2[] = {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -9843,11 +11314,13 @@ static const struct TrainerMon sTrainerMons_CamperChris2[] = {
         .iv = 40,
         .lvl = 24,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 24,
         .species = SPECIES_CHARMANDER,
+        .gender = MON_MALE,
     },
 };
 
@@ -9856,11 +11329,13 @@ static const struct TrainerMon sTrainerMons_CamperChris3[] = {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 29,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
 };
 
@@ -9869,11 +11344,13 @@ static const struct TrainerMon sTrainerMons_CamperChris4[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_CHARMELEON,
+        .gender = MON_MALE,
     },
 };
 
@@ -9882,6 +11359,7 @@ static const struct TrainerMon sTrainerMons_PicnickerAlicia2[] = {
         .iv = 40,
         .lvl = 25,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -9890,6 +11368,7 @@ static const struct TrainerMon sTrainerMons_PicnickerAlicia3[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
 };
 
@@ -9898,6 +11377,7 @@ static const struct TrainerMon sTrainerMons_PicnickerAlicia4[] = {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
 };
 
@@ -9906,11 +11386,13 @@ static const struct TrainerMon sTrainerMons_HikerJeremy2[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -9919,11 +11401,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacMark3[] = {
         .iv = 150,
         .lvl = 54,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
     },
     {
         .iv = 150,
         .lvl = 54,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
     },
 };
 
@@ -9932,11 +11416,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacHerman2[] = {
         .iv = 90,
         .lvl = 29,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
     },
     {
         .iv = 90,
         .lvl = 29,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
     },
 };
 
@@ -9945,11 +11431,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacHerman3[] = {
         .iv = 150,
         .lvl = 54,
         .species = SPECIES_MAROWAK,
+        .gender = MON_MALE,
     },
     {
         .iv = 150,
         .lvl = 54,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
     },
 };
 
@@ -9958,11 +11446,13 @@ static const struct TrainerMon sTrainerMons_HikerTrent2[] = {
         .iv = 60,
         .lvl = 31,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 31,
         .species = SPECIES_GRAVELER,
+        .gender = MON_MALE,
     },
 };
 
@@ -9971,26 +11461,31 @@ static const struct TrainerMon sTrainerMons_LassMegan2[] = {
         .iv = 40,
         .lvl = 22,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 22,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 23,
         .species = SPECIES_NIDORAN_M,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 21,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 40,
         .lvl = 22,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -9999,26 +11494,31 @@ static const struct TrainerMon sTrainerMons_LassMegan3[] = {
         .iv = 80,
         .lvl = 46,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -10027,16 +11527,19 @@ static const struct TrainerMon sTrainerMons_SuperNerdGlenn2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };
 
@@ -10045,11 +11548,13 @@ static const struct TrainerMon sTrainerMons_GamerRich2[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_GROWLITHE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_VULPIX,
+        .gender = MON_MALE,
     },
 };
 
@@ -10058,11 +11563,13 @@ static const struct TrainerMon sTrainerMons_BikerJaren2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };
 
@@ -10071,21 +11578,25 @@ static const struct TrainerMon sTrainerMons_FishermanElliot2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -10094,11 +11605,13 @@ static const struct TrainerMon sTrainerMons_RockerLuca2[] = {
         .iv = 60,
         .lvl = 33,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 60,
         .lvl = 33,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -10107,11 +11620,13 @@ static const struct TrainerMon sTrainerMons_BeautySheila2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
 };
 
@@ -10120,21 +11635,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperRobert2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10143,21 +11662,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperRobert3[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10166,26 +11689,31 @@ static const struct TrainerMon sTrainerMons_PicnickerSusie2[] = {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_MEOWTH,
+        .gender = MON_MALE,
     },
 };
 
@@ -10194,26 +11722,31 @@ static const struct TrainerMon sTrainerMons_PicnickerSusie3[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
 };
 
@@ -10222,26 +11755,31 @@ static const struct TrainerMon sTrainerMons_PicnickerSusie4[] = {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
     },
 };
 
@@ -10250,21 +11788,25 @@ static const struct TrainerMon sTrainerMons_BikerLukas2[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_KOFFING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
 };
 
@@ -10273,11 +11815,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperBenny2[] = {
         .iv = 60,
         .lvl = 32,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 32,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10286,11 +11830,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperBenny3[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10299,16 +11845,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperMarlon2[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10317,16 +11866,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperMarlon3[] = {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10335,11 +11887,13 @@ static const struct TrainerMon sTrainerMons_BeautyGrace2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_WIGGLYTUFF,
+        .gender = MON_MALE,
     },
 };
 
@@ -10348,16 +11902,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperChester2[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_DODUO,
+        .gender = MON_MALE,
     },
 };
 
@@ -10366,16 +11923,19 @@ static const struct TrainerMon sTrainerMons_BirdKeeperChester3[] = {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_DODRIO,
+        .gender = MON_MALE,
     },
 };
 
@@ -10384,11 +11944,13 @@ static const struct TrainerMon sTrainerMons_PicnickerBecky2[] = {
         .iv = 60,
         .lvl = 32,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 32,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -10397,11 +11959,13 @@ static const struct TrainerMon sTrainerMons_PicnickerBecky3[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -10410,11 +11974,13 @@ static const struct TrainerMon sTrainerMons_PicnickerBecky4[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_RAICHU,
+        .gender = MON_MALE,
     },
 };
 
@@ -10423,12 +11989,14 @@ static const struct TrainerMon sTrainerMons_CrushKinRonMya2[] = {
         .iv = 110,
         .lvl = 33,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 110,
         .lvl = 33,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10438,12 +12006,14 @@ static const struct TrainerMon sTrainerMons_CrushKinRonMya3[] = {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10453,12 +12023,14 @@ static const struct TrainerMon sTrainerMons_CrushKinRonMya4[] = {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10468,16 +12040,19 @@ static const struct TrainerMon sTrainerMons_BikerRuben2[] = {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 48,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
 };
 
@@ -10486,11 +12061,13 @@ static const struct TrainerMon sTrainerMons_CueBallCamron2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -10499,11 +12076,13 @@ static const struct TrainerMon sTrainerMons_BikerJaxon2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };
 
@@ -10512,11 +12091,13 @@ static const struct TrainerMon sTrainerMons_CueBallIsaiah2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
     },
 };
 
@@ -10525,11 +12106,13 @@ static const struct TrainerMon sTrainerMons_CueBallCorey2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
     },
 };
 
@@ -10538,21 +12121,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperJacob2[] = {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 28,
         .species = SPECIES_SPEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10561,21 +12148,25 @@ static const struct TrainerMon sTrainerMons_BirdKeeperJacob3[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10584,11 +12175,13 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleAlice2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -10597,21 +12190,25 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleDarrin2[] = {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -10620,11 +12217,13 @@ static const struct TrainerMon sTrainerMons_PicnickerMissy2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -10633,11 +12232,13 @@ static const struct TrainerMon sTrainerMons_PicnickerMissy3[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -10646,31 +12247,37 @@ static const struct TrainerMon sTrainerMons_FishermanWade2[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_MAGIKARP,
+        .gender = MON_MALE,
     },
 };
 
@@ -10679,6 +12286,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleJack2[] = {
         .iv = 80,
         .lvl = 50,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -10687,11 +12295,13 @@ static const struct TrainerMon sTrainerMons_SisAndBroLilIan2[] = {
         .iv = 80,
         .lvl = 50,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 50,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -10700,11 +12310,13 @@ static const struct TrainerMon sTrainerMons_SisAndBroLilIan3[] = {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -10713,6 +12325,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleFinn2[] = {
         .iv = 80,
         .lvl = 50,
         .species = SPECIES_STARMIE,
+        .gender = MON_GENDERLESS,
     },
 };
 
@@ -10721,12 +12334,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlSharon2[] = {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_MANKEY,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10736,12 +12351,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlSharon3[] = {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10751,12 +12368,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlTanya2[] = {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10766,12 +12385,14 @@ static const struct TrainerMon sTrainerMons_CrushGirlTanya3[] = {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10781,12 +12402,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltShea2[] = {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10796,12 +12419,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltShea3[] = {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10811,12 +12436,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltHugh2[] = {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10826,12 +12453,14 @@ static const struct TrainerMon sTrainerMons_BlackBeltHugh3[] = {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10841,12 +12470,14 @@ static const struct TrainerMon sTrainerMons_CrushKinMikKia2[] = {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10856,12 +12487,14 @@ static const struct TrainerMon sTrainerMons_CrushKinMikKia3[] = {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -10871,16 +12504,19 @@ static const struct TrainerMon sTrainerMons_TuberAmira2[] = {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 47,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
 };
 
@@ -10889,11 +12525,13 @@ static const struct TrainerMon sTrainerMons_TwinsJoyMeg2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
 };
 
@@ -10902,6 +12540,7 @@ static const struct TrainerMon sTrainerMons_PainterRayna2[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_SMEARGLE,
+        .gender = MON_MALE,
         .moves = {MOVE_CROSS_CHOP, MOVE_MEGAHORN, MOVE_DOUBLE_EDGE, MOVE_SELF_DESTRUCT},
     },
 };
@@ -10911,11 +12550,13 @@ static const struct TrainerMon sTrainerMons_YoungsterDestin2[] = {
         .iv = 120,
         .lvl = 53,
         .species = SPECIES_RATICATE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 53,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
 };
 
@@ -10924,16 +12565,19 @@ static const struct TrainerMon sTrainerMons_PkmnBreederAlize2[] = {
         .iv = 150,
         .lvl = 53,
         .species = SPECIES_PIKACHU,
+        .gender = MON_MALE,
     },
     {
         .iv = 150,
         .lvl = 53,
         .species = SPECIES_CLEFAIRY,
+        .gender = MON_MALE,
     },
     {
         .iv = 150,
         .lvl = 53,
         .species = SPECIES_MARILL,
+        .gender = MON_MALE,
     },
 };
 
@@ -10942,11 +12586,13 @@ static const struct TrainerMon sTrainerMons_YoungCoupleGiaJes2[] = {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_NIDORINA,
+        .gender = MON_FEMALE,
     },
     {
         .iv = 60,
         .lvl = 30,
         .species = SPECIES_NIDORINO,
+        .gender = MON_MALE,
     },
 };
 
@@ -10955,11 +12601,13 @@ static const struct TrainerMon sTrainerMons_YoungCoupleGiaJes3[] = {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_NIDOKING,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_NIDOQUEEN,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -10968,11 +12616,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperMilo2[] = {
         .iv = 120,
         .lvl = 53,
         .species = SPECIES_PIDGEOTTO,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_PIDGEOT,
+        .gender = MON_MALE,
     },
 };
 
@@ -10981,11 +12631,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperChaz2[] = {
         .iv = 120,
         .lvl = 53,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_FEAROW,
+        .gender = MON_MALE,
     },
 };
 
@@ -10994,11 +12646,13 @@ static const struct TrainerMon sTrainerMons_BirdKeeperHarold2[] = {
         .iv = 120,
         .lvl = 53,
         .species = SPECIES_NOCTOWL,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_NOCTOWL,
+        .gender = MON_MALE,
     },
 };
 
@@ -11007,6 +12661,7 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleNicole2[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_MARILL,
+        .gender = MON_MALE,
     },
 };
 
@@ -11015,18 +12670,21 @@ static const struct TrainerMon sTrainerMons_PsychicJaclyn2[] = {
         .iv = 220,
         .lvl = 52,
         .species = SPECIES_NATU,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_CONFUSE_RAY, MOVE_FUTURE_SIGHT, MOVE_WISH},
     },
     {
         .iv = 220,
         .lvl = 52,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_HEADBUTT, MOVE_AMNESIA, MOVE_YAWN},
     },
     {
         .iv = 220,
         .lvl = 54,
         .species = SPECIES_KADABRA,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT},
     },
 };
@@ -11036,6 +12694,7 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleSamir2[] = {
         .iv = 120,
         .lvl = 55,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
     },
 };
 
@@ -11044,11 +12703,13 @@ static const struct TrainerMon sTrainerMons_HikerEarl2[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_ONIX,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
     },
 };
 
@@ -11057,11 +12718,13 @@ static const struct TrainerMon sTrainerMons_RuinManiacLarry2[] = {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_MACHOKE,
+        .gender = MON_MALE,
     },
 };
 
@@ -11070,11 +12733,13 @@ static const struct TrainerMon sTrainerMons_PokemaniacHector2[] = {
         .iv = 150,
         .lvl = 55,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
     },
     {
         .iv = 150,
         .lvl = 55,
         .species = SPECIES_KANGASKHAN,
+        .gender = MON_FEMALE,
     },
 };
 
@@ -11083,6 +12748,7 @@ static const struct TrainerMon sTrainerMons_PsychicDario2[] = {
         .iv = 220,
         .lvl = 56,
         .species = SPECIES_GIRAFARIG,
+        .gender = MON_MALE,
         .moves = {MOVE_CRUNCH, MOVE_PSYBEAM, MOVE_ODOR_SLEUTH, MOVE_AGILITY},
     },
 };
@@ -11092,18 +12758,21 @@ static const struct TrainerMon sTrainerMons_PsychicRodette2[] = {
         .iv = 220,
         .lvl = 53,
         .species = SPECIES_NATU,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_CONFUSE_RAY, MOVE_WISH, MOVE_FUTURE_SIGHT},
     },
     {
         .iv = 220,
         .lvl = 53,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_DISABLE, MOVE_PSYCH_UP, MOVE_FUTURE_SIGHT},
     },
     {
         .iv = 220,
         .lvl = 53,
         .species = SPECIES_HYPNO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_HYPNOSIS, MOVE_PSYCH_UP, MOVE_FUTURE_SIGHT},
     },
 };
@@ -11113,21 +12782,25 @@ static const struct TrainerMon sTrainerMons_JugglerMason2[] = {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_PINECO,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_ELECTRODE,
+        .gender = MON_GENDERLESS,
     },
     {
         .iv = 120,
         .lvl = 52,
         .species = SPECIES_PINECO,
+        .gender = MON_MALE,
     },
 };
 
@@ -11136,12 +12809,14 @@ static const struct TrainerMon sTrainerMons_PkmnRangerNicolas2[] = {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_VICTREEBEL,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_STUN_SPORE, MOVE_WRAP},
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_VICTREEBEL,
+        .gender = MON_MALE,
         .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_SLEEP_POWDER, MOVE_SLAM},
     },
 };
@@ -11151,12 +12826,14 @@ static const struct TrainerMon sTrainerMons_PkmnRangerMadeline2[] = {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_VILEPLUME,
+        .gender = MON_MALE,
         .moves = {MOVE_PETAL_DANCE, MOVE_MOONLIGHT, MOVE_ACID, MOVE_SLEEP_POWDER},
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_VILEPLUME,
+        .gender = MON_MALE,
         .moves = {MOVE_PETAL_DANCE, MOVE_MOONLIGHT, MOVE_ACID, MOVE_STUN_SPORE},
     },
 };
@@ -11166,18 +12843,21 @@ static const struct TrainerMon sTrainerMons_CrushGirlCyndy2[] = {
         .iv = 170,
         .lvl = 54,
         .species = SPECIES_PRIMEAPE,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 170,
         .lvl = 54,
         .species = SPECIES_HITMONTOP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
     {
         .iv = 170,
         .lvl = 54,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .heldItem = ITEM_BLACK_BELT,
     },
 };
@@ -11187,16 +12867,19 @@ static const struct TrainerMon sTrainerMons_TamerEvan2[] = {
         .iv = 160,
         .lvl = 52,
         .species = SPECIES_SANDSLASH,
+        .gender = MON_MALE,
     },
     {
         .iv = 160,
         .lvl = 52,
         .species = SPECIES_LICKITUNG,
+        .gender = MON_MALE,
     },
     {
         .iv = 160,
         .lvl = 55,
         .species = SPECIES_URSARING,
+        .gender = MON_MALE,
     },
 };
 
@@ -11205,18 +12888,21 @@ static const struct TrainerMon sTrainerMons_PkmnRangerJackson2[] = {
         .iv = 220,
         .lvl = 53,
         .species = SPECIES_TANGELA,
+        .gender = MON_MALE,
         .moves = {MOVE_SLAM, MOVE_MEGA_DRAIN, MOVE_BIND, MOVE_INGRAIN},
     },
     {
         .iv = 220,
         .lvl = 54,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .moves = {MOVE_CONFUSION, MOVE_EGG_BOMB, MOVE_STUN_SPORE, MOVE_REFLECT},
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .moves = {MOVE_CONFUSION, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_STOMP},
     },
 };
@@ -11226,6 +12912,7 @@ static const struct TrainerMon sTrainerMons_PkmnRangerKatelyn2[] = {
         .iv = 220,
         .lvl = 56,
         .species = SPECIES_CHANSEY,
+        .gender = MON_FEMALE,
         .moves = {MOVE_EGG_BOMB, MOVE_DEFENSE_CURL, MOVE_MINIMIZE, MOVE_SOFT_BOILED},
     },
 };
@@ -11235,30 +12922,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerLeroy2[] = {
         .iv = 220,
         .lvl = 52,
         .species = SPECIES_RHYDON,
+        .gender = MON_MALE,
         .moves = {MOVE_EARTHQUAKE, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_SCARY_FACE},
     },
     {
         .iv = 220,
         .lvl = 54,
         .species = SPECIES_SLOWBRO,
+        .gender = MON_MALE,
         .moves = {MOVE_PSYCHIC, MOVE_HEADBUTT, MOVE_AMNESIA, MOVE_DISABLE},
     },
     {
         .iv = 220,
         .lvl = 52,
         .species = SPECIES_KANGASKHAN,
+        .gender = MON_FEMALE,
         .moves = {MOVE_DIZZY_PUNCH, MOVE_BITE, MOVE_ENDURE, MOVE_REVERSAL},
     },
     {
         .iv = 220,
         .lvl = 52,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .moves = {MOVE_CROSS_CHOP, MOVE_VITAL_THROW, MOVE_REVENGE, MOVE_SEISMIC_TOSS},
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_URSARING,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_FAINT_ATTACK, MOVE_SNORE, MOVE_REST},
     },
 };
@@ -11268,30 +12960,35 @@ static const struct TrainerMon sTrainerMons_CooltrainerMichelle2[] = {
         .iv = 220,
         .lvl = 53,
         .species = SPECIES_PERSIAN,
+        .gender = MON_MALE,
         .moves = {MOVE_SLASH, MOVE_SCREECH, MOVE_FAINT_ATTACK, MOVE_BITE},
     },
     {
         .iv = 220,
         .lvl = 53,
         .species = SPECIES_DEWGONG,
+        .gender = MON_MALE,
         .moves = {MOVE_ICE_BEAM, MOVE_TAKE_DOWN, MOVE_ICY_WIND, MOVE_SHEER_COLD},
     },
     {
         .iv = 220,
         .lvl = 54,
         .species = SPECIES_NINETALES,
+        .gender = MON_MALE,
         .moves = {MOVE_FLAMETHROWER, MOVE_CONFUSE_RAY, MOVE_WILL_O_WISP, MOVE_GRUDGE},
     },
     {
         .iv = 220,
         .lvl = 54,
         .species = SPECIES_RAPIDASH,
+        .gender = MON_MALE,
         .moves = {MOVE_BOUNCE, MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN},
     },
     {
         .iv = 220,
         .lvl = 56,
         .species = SPECIES_GIRAFARIG,
+        .gender = MON_MALE,
         .moves = {MOVE_CRUNCH, MOVE_PSYBEAM, MOVE_STOMP, MOVE_ODOR_SLEUTH},
     },
 };
@@ -11301,12 +12998,14 @@ static const struct TrainerMon sTrainerMons_CoolCoupleLexNya2[] = {
         .iv = 220,
         .lvl = 57,
         .species = SPECIES_MILTANK,
+        .gender = MON_FEMALE,
         .moves = {MOVE_BODY_SLAM, MOVE_MILK_DRINK, MOVE_GROWL, MOVE_DEFENSE_CURL},
     },
     {
         .iv = 220,
         .lvl = 57,
         .species = SPECIES_TAUROS,
+        .gender = MON_MALE,
         .moves = {MOVE_TAKE_DOWN, MOVE_SCARY_FACE, MOVE_PURSUIT, MOVE_SWAGGER},
     },
 };
@@ -11316,16 +13015,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherColton2[] = {
         .iv = 20,
         .lvl = 19,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 19,
         .species = SPECIES_WEEDLE,
+        .gender = MON_MALE,
     },
     {
         .iv = 20,
         .lvl = 19,
         .species = SPECIES_METAPOD,
+        .gender = MON_MALE,
     },
 };
 
@@ -11334,16 +13036,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherColton3[] = {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_BUTTERFREE,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_KAKUNA,
+        .gender = MON_MALE,
     },
     {
         .iv = 60,
         .lvl = 27,
         .species = SPECIES_BUTTERFREE,
+        .gender = MON_MALE,
     },
 };
 
@@ -11352,16 +13057,19 @@ static const struct TrainerMon sTrainerMons_BugCatcherColton4[] = {
         .iv = 120,
         .lvl = 51,
         .species = SPECIES_BUTTERFREE,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 54,
         .species = SPECIES_BEEDRILL,
+        .gender = MON_MALE,
     },
     {
         .iv = 120,
         .lvl = 51,
         .species = SPECIES_BUTTERFREE,
+        .gender = MON_MALE,
     },
 };
 
@@ -11370,11 +13078,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleMatthew2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_POLIWRATH,
+        .gender = MON_MALE,
     },
 };
 
@@ -11383,11 +13093,13 @@ static const struct TrainerMon sTrainerMons_SwimmerMaleTony2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEADRA,
+        .gender = MON_MALE,
     },
 };
 
@@ -11396,11 +13108,13 @@ static const struct TrainerMon sTrainerMons_SwimmerFemaleMelissa2[] = {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_POLIWHIRL,
+        .gender = MON_MALE,
     },
     {
         .iv = 80,
         .lvl = 49,
         .species = SPECIES_SEAKING,
+        .gender = MON_MALE,
     },
 };
 
@@ -11410,6 +13124,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei2[] = {
         .lvl = 70,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DEWGONG,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_SIGNAL_BEAM, MOVE_DOUBLE_TEAM},
     },
@@ -11418,6 +13133,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei2[] = {
         .lvl = 69,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_CLOYSTER,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_SUPERSONIC, MOVE_RAIN_DANCE},
     },
@@ -11426,6 +13142,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei2[] = {
         .lvl = 69,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_PILOSWINE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_BLIZZARD, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE},
     },
@@ -11434,6 +13151,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_JYNX,
+        .gender = MON_FEMALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_LOVELY_KISS, MOVE_ATTRACT},
     },
@@ -11442,6 +13160,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLorelei2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_LAPRAS,
+        .gender = MON_MALE,
         .heldItem = ITEM_CHERI_BERRY,
         .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_PSYCHIC, MOVE_THUNDER},
     },
@@ -11453,6 +13172,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno2[] = {
         .lvl = 71,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_STEELIX,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_CRUNCH, MOVE_ROCK_TOMB},
     },
@@ -11461,6 +13181,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno2[] = {
         .lvl = 71,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HITMONCHAN,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SKY_UPPERCUT, MOVE_MACH_PUNCH, MOVE_ROCK_SLIDE, MOVE_COUNTER},
     },
@@ -11469,6 +13190,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno2[] = {
         .lvl = 71,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HITMONLEE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_MEGA_KICK, MOVE_FORESIGHT, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE},
     },
@@ -11477,6 +13199,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_STEELIX,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_CRUNCH, MOVE_DRAGON_BREATH},
     },
@@ -11485,6 +13208,7 @@ static const struct TrainerMon sTrainerMons_EliteFourBruno2[] = {
         .lvl = 74,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_MACHAMP,
+        .gender = MON_MALE,
         .heldItem = ITEM_PERSIM_BERRY,
         .moves = {MOVE_CROSS_CHOP, MOVE_EARTHQUAKE, MOVE_BRICK_BREAK, MOVE_ROCK_SLIDE},
     },
@@ -11496,6 +13220,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GENGAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CONFUSE_RAY, MOVE_HYPNOSIS},
     },
@@ -11504,6 +13229,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_CROBAT,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_AIR_CUTTER, MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY},
     },
@@ -11512,6 +13238,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_MISDREAVUS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_ATTRACT},
     },
@@ -11520,6 +13247,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha2[] = {
         .lvl = 74,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ARBOK,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_DOUBLE_TEAM},
     },
@@ -11528,6 +13256,7 @@ static const struct TrainerMon sTrainerMons_EliteFourAgatha2[] = {
         .lvl = 76,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GENGAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_CHESTO_BERRY,
         .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB},
     },
@@ -11539,6 +13268,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance2[] = {
         .lvl = 74,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_THUNDER_WAVE},
     },
@@ -11547,6 +13277,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DRAGONITE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_FLAMETHROWER},
     },
@@ -11555,6 +13286,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance2[] = {
         .lvl = 72,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_KINGDRA,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_DRAGON_DANCE, MOVE_SURF, MOVE_ICE_BEAM},
     },
@@ -11563,6 +13295,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance2[] = {
         .lvl = 76,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_AERODACTYL,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYPER_BEAM, MOVE_ANCIENT_POWER, MOVE_AERIAL_ACE, MOVE_EARTHQUAKE},
     },
@@ -11571,6 +13304,7 @@ static const struct TrainerMon sTrainerMons_EliteFourLance2[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_DRAGONITE,
+        .gender = MON_MALE,
         .heldItem = ITEM_PERSIM_BERRY,
         .moves = {MOVE_HYPER_BEAM, MOVE_OUTRAGE, MOVE_THUNDERBOLT, MOVE_ICE_BEAM},
     },
@@ -11582,6 +13316,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchSquirtle[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HERACROSS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_MEGAHORN, MOVE_EARTHQUAKE, MOVE_COUNTER, MOVE_ROCK_TOMB},
     },
@@ -11589,6 +13324,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchSquirtle[] = {
         .iv = 255,
         .lvl = 79,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND, MOVE_REFLECT},
     },
@@ -11597,6 +13333,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchSquirtle[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_TYRANITAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_THUNDERBOLT, MOVE_AERIAL_ACE},
     },
@@ -11605,6 +13342,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchSquirtle[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EXTREME_SPEED, MOVE_OVERHEAT, MOVE_AERIAL_ACE, MOVE_IRON_TAIL},
     },
@@ -11613,6 +13351,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchSquirtle[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_GIGA_DRAIN, MOVE_PSYCHIC, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN},
     },
@@ -11621,6 +13360,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchSquirtle[] = {
         .lvl = 81,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_BLASTOISE,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_EARTHQUAKE, MOVE_RAIN_DANCE},
     },
@@ -11632,6 +13372,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchBulbasaur[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HERACROSS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_MEGAHORN, MOVE_EARTHQUAKE, MOVE_COUNTER, MOVE_ROCK_TOMB},
     },
@@ -11640,6 +13381,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchBulbasaur[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND, MOVE_REFLECT},
     },
@@ -11648,6 +13390,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchBulbasaur[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_TYRANITAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_THUNDERBOLT, MOVE_AERIAL_ACE},
     },
@@ -11656,6 +13399,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchBulbasaur[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM},
     },
@@ -11664,6 +13408,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchBulbasaur[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ARCANINE,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EXTREME_SPEED, MOVE_OVERHEAT, MOVE_AERIAL_ACE, MOVE_IRON_TAIL},
     },
@@ -11672,6 +13417,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchBulbasaur[] = {
         .lvl = 81,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_VENUSAUR,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_SOLAR_BEAM, MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_SUNNY_DAY},
     },
@@ -11683,6 +13429,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchCharmander[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_HERACROSS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_MEGAHORN, MOVE_EARTHQUAKE, MOVE_COUNTER, MOVE_ROCK_TOMB},
     },
@@ -11691,6 +13438,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchCharmander[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_ALAKAZAM,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND, MOVE_REFLECT},
     },
@@ -11699,6 +13447,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchCharmander[] = {
         .lvl = 78,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_TYRANITAR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_THUNDERBOLT, MOVE_AERIAL_ACE},
     },
@@ -11707,6 +13456,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchCharmander[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_EXEGGUTOR,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_GIGA_DRAIN, MOVE_PSYCHIC, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN},
     },
@@ -11715,6 +13465,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchCharmander[] = {
         .lvl = 79,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_GYARADOS,
+        .gender = MON_MALE,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM},
     },
@@ -11723,6 +13474,7 @@ static const struct TrainerMon sTrainerMons_ChampionRematchCharmander[] = {
         .lvl = 81,
         .evs = MAX_EV_SPREAD,
         .species = SPECIES_CHARIZARD,
+        .gender = MON_MALE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_FIRE_BLAST, MOVE_DRAGON_CLAW, MOVE_AERIAL_ACE, MOVE_EARTHQUAKE},
     },
@@ -11733,10 +13485,12 @@ static const struct TrainerMon sTrainerMons_CueBallPaxton[] = {
         .iv = 50,
         .lvl = 39,
         .species = SPECIES_WEEZING,
+        .gender = MON_MALE,
     },
     {
         .iv = 50,
         .lvl = 39,
         .species = SPECIES_MUK,
+        .gender = MON_MALE,
     },
 };

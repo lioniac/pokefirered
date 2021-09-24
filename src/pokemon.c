@@ -4740,7 +4740,8 @@ u8 GetNature(struct Pokemon *mon)
 
 static u8 GetNatureFromPersonality(u32 personality)
 {
-    return personality % 25;
+    personality = personality % NUM_NATURES;
+    return (personality == 0) ? NATURE_HARDY : personality;
 }
 
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
