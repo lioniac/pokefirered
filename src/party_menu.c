@@ -1296,7 +1296,7 @@ static u16 PartyMenuButtonHandler(s8 *slotPtr)
 {
     s8 movementDir;
 
-    switch (gMain.newAndRepeatedKeys)
+    switch (gMain.newKeys)
     {
     case DPAD_UP:
         movementDir = MENU_DIR_UP;
@@ -1311,7 +1311,7 @@ static u16 PartyMenuButtonHandler(s8 *slotPtr)
         movementDir = MENU_DIR_RIGHT;
         break;
     default:
-        switch (GetLRKeysPressedAndHeld())
+        switch (GetLRKeysState())
         {
         case MENU_L_PRESSED:
             movementDir = MENU_DIR_UP;
@@ -3104,9 +3104,9 @@ static void Task_HandleSelectionMenuInput(u8 taskId)
         s16 *data = gTasks[taskId].data;
 
         if (sPartyMenuInternal->numActions <= 3)
-            input = Menu_ProcessInputNoWrapAround_other();
+            input = Menu_ProcessInputNoWrapAround();
         else
-            input = Menu_ProcessInput_other();
+            input = Menu_ProcessInput();
         if (data[0] != Menu_GetCursorPos())
             sub_8122138(sPartyMenuInternal->actions[Menu_GetCursorPos()]);
         data[0] = Menu_GetCursorPos();
